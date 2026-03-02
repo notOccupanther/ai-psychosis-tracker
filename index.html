@@ -476,6 +476,18 @@
     </div>
   </div>
 
+  <!-- COMMENTARY -->
+  <div class="card" id="commentaryCard" style="margin-bottom:2rem;display:none">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem">
+      <div class="card-title" style="margin-bottom:0">🔍 Analyst Commentary</div>
+      <span id="commentaryDate" style="font-size:0.72rem;color:var(--muted)"></span>
+    </div>
+    <div id="commentaryText" style="font-size:0.9rem;line-height:1.8;color:var(--text)"></div>
+    <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.75rem;color:var(--muted)">
+      ℹ️ Commentary is AI-generated weekly based on all tracked cases. It reflects patterns in the data, not editorial opinion.
+    </div>
+  </div>
+
   <div class="controls">
     <div class="search-wrap">
       <input type="text" id="searchInput" placeholder="Search cases, sources, keywords…" oninput="renderTimeline()" />
@@ -781,6 +793,21 @@ function esc(str) {
 }
 
 loadData();
+loadCommentary();
+
+async function loadCommentary() {
+  try {
+    const r = await fetch('commentary.json?t=' + Date.now());
+    if (!r.ok) return;
+    const d = await r.json();
+    if (!d.commentary) return;
+    // Split into paragraphs and render
+    const paras = d.commentary.split(/\n\n+/).filter(p => p.trim());
+    document.getElementById('commentaryText').innerHTML = paras.map(p => `<p style="margin-bottom:1rem">${esc(p)}</p>`).join('');
+    document.getElementById('commentaryDate').textContent = 'Generated: ' + new Date(d.generated_at).toLocaleDateString('en-IE', {year:'numeric',month:'short',day:'numeric'}) + ' · Based on ' + d.total_cases + ' cases';
+    document.getElementById('commentaryCard').style.display = 'block';
+  } catch(e) {}
+}
 </script>
 </body>
 </html>
