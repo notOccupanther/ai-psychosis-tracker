@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Psychosis Tracker</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #161a23;
+      --surface2: #1e2330;
+      --surface3: #252b3b;
+      --border: #2a2f3d;
+      --text: #e2e8f0;
+      --muted: #8892a4;
+      --accent: #6366f1;
+      --accent2: #818cf8;
+      --high: #ef4444;
+      --medium: #f59e0b;
+      --low: #22c55e;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #0d0f14 0%, #161a23 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 2rem 1.5rem;
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .header-left h1 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .live-badge {
+      background: var(--high);
+      color: white;
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      letter-spacing: 0.08em;
+      animation: pulse 2s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.55} }
+
+    .header-left p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.4rem;
+      max-width: 560px;
+      line-height: 1.5;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.4rem;
+    }
+
+    .last-updated { color: var(--muted); font-size: 0.78rem; }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stats-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .stat {
+      background: var(--surface);
+      padding: 1.1rem 1.5rem;
+      text-align: center;
+      cursor: default;
+      transition: background 0.2s;
+    }
+    .stat:hover { background: var(--surface2); }
+
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent2);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-top: 0.25rem;
+    }
+
+    .stat-high .stat-value { color: var(--high); }
+    .stat-medium .stat-value { color: var(--medium); }
+    .stat-low .stat-value { color: var(--low); }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    @media(max-width:900px) { .charts-grid { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+    }
+
+    .card h2 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .chart-wrapper { position:relative; height:220px; }
+
+    /* ── CONTROLS ── */
+    .controls {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .search-wrap {
+      flex: 1;
+      min-width: 200px;
+      position: relative;
+    }
+
+    .search-wrap input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.45rem 0.75rem 0.45rem 2.2rem;
+      border-radius: 0.4rem;
+      font-size: 0.85rem;
+      transition: border-color 0.2s;
+    }
+    .search-wrap input:focus { outline: none; border-color: var(--accent); }
+    .search-wrap::before {
+      content: '🔍';
+      position: absolute;
+      left: 0.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      pointer-events: none;
+    }
+
+    select {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.4rem;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    select:focus { outline: none; border-color: var(--accent); }
+
+    .results-count {
+      font-size: 0.8rem;
+      color: var(--muted);
+      align-self: center;
+      margin-left: auto;
+    }
+
+    /* ── TIMELINE / CASE CARDS ── */
+    .timeline { display: flex; flex-direction: column; gap: 0.6rem; }
+
+    .case-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--border);
+      border-radius: 0.6rem;
+      padding: 1.1rem 1.25rem;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+
+    .case-card:hover {
+      background: var(--surface2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .case-card.severity-high { border-left-color: var(--high); }
+    .case-card.severity-medium { border-left-color: var(--medium); }
+    .case-card.severity-low { border-left-color: var(--low); }
+    .case-card.expanded { background: var(--surface2); border-color: var(--accent); border-left-color: var(--accent); }
+
+    .case-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .case-header-left { flex: 1; }
+
+    .case-meta {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
+    }
+
+    .case-date { font-size: 0.73rem; color: var(--muted); }
+
+    .badge {
+      font-size: 0.67rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    .badge-cat-romantic_attachment { background:rgba(236,72,153,0.12); color:#ec4899; }
+    .badge-cat-paranoia { background:rgba(249,115,22,0.12); color:#f97316; }
+    .badge-cat-identity_confusion { background:rgba(168,85,247,0.12); color:#a855f7; }
+    .badge-cat-reality_distortion { background:rgba(20,184,166,0.12); color:#14b8a6; }
+    .badge-cat-clinical { background:rgba(239,68,68,0.12); color:#ef4444; }
+    .badge-cat-media_coverage { background:rgba(59,130,246,0.12); color:#3b82f6; }
+    .badge-cat-other { background:rgba(107,114,128,0.12); color:#9ca3af; }
+
+    .badge-sev-high { background:rgba(239,68,68,0.12); color:var(--high); }
+    .badge-sev-medium { background:rgba(245,158,11,0.12); color:var(--medium); }
+    .badge-sev-low { background:rgba(34,197,94,0.12); color:var(--low); }
+
+    .case-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .case-source {
+      font-size: 0.73rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .expand-btn {
+      color: var(--muted);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      transition: transform 0.25s, color 0.2s;
+      align-self: flex-start;
+      margin-top: 0.1rem;
+      user-select: none;
+    }
+    .case-card.expanded .expand-btn { transform: rotate(180deg); color: var(--accent2); }
+
+    /* ── SYNOPSIS PANEL ── */
+    .synopsis {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+      opacity: 0;
+    }
+    .case-card.expanded .synopsis {
+      max-height: 600px;
+      opacity: 1;
+    }
+
+    .synopsis-inner {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .synopsis-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    .synopsis-text {
+      font-size: 0.875rem;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    .synopsis-raw {
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      border-radius: 0.4rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .synopsis-footer {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 0.35rem 0.85rem;
+      border-radius: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .source-link:hover { background: var(--accent2); transform: translateY(-1px); }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.75rem;
+      border-radius: 0.4rem;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .share-btn:hover { color: var(--text); border-color: var(--accent); }
+
+    .severity-indicator {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .sev-dot { width:8px; height:8px; border-radius:50%; }
+    .sev-dot.high { background: var(--high); }
+    .sev-dot.medium { background: var(--medium); }
+    .sev-dot.low { background: var(--low); }
+
+    .empty { text-align:center; padding:3rem; color:var(--muted); font-size:0.9rem; }
+    .loading { text-align:center; padding:4rem; color:var(--muted); }
+
+    /* ── MODAL (for copied link toast) ── */
+    .toast {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.75rem 1.25rem;
+      border-radius: 0.5rem;
+      font-size: 0.85rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      transform: translateY(2rem);
+      opacity: 0;
+      transition: all 0.25s;
+      z-index: 100;
+      pointer-events: none;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    footer {
+      text-align:center;
+      padding:2rem;
+      color:var(--muted);
+      font-size:0.78rem;
+      border-top:1px solid var(--border);
+      margin-top:3rem;
+    }
+    footer a { color: var(--accent2); text-decoration:none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-left">
+      <h1>🧠 AI Psychosis Tracker <span class="live-badge">LIVE</span></h1>
+      <p>Tracking the emerging trend of AI-induced psychological harm — delusion, dependency, identity confusion, and reality distortion. Updated weekly.</p>
+    </div>
+    <div class="header-right">
+      <div class="last-updated" id="lastUpdated">Loading…</div>
+    </div>
+  </div>
+</header>
+
+<div class="stats-bar">
+  <div class="stats-inner" id="statsBar">
+    <div class="stat"><div class="stat-value">—</div><div class="stat-label">Total Cases</div></div>
+    <div class="stat stat-high"><div class="stat-value">—</div><div class="stat-label">High Severity</div></div>
+    <div class="stat stat-medium"><div class="stat-value">—</div><div class="stat-label">Medium Severity</div></div>
+    <div class="stat stat-low"><div class="stat-value">—</div><div class="stat-label">Low Severity</div></div>
+    <div class="stat"><div class="stat-value">—</div><div class="stat-label">Sources</div></div>
+  </div>
+</div>
+
+<main>
+  <div class="charts-grid">
+    <div class="card">
+      <h2>📈 Cases Over Time</h2>
+      <div class="chart-wrapper"><canvas id="trendChart"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>🗂 By Category</h2>
+      <div class="chart-wrapper"><canvas id="catChart"></canvas></div>
+    </div>
+  </div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="Search cases, sources, keywords…" oninput="renderTimeline()" />
+    </div>
+    <select id="filterCat" onchange="renderTimeline()">
+      <option value="">All Categories</option>
+      <option value="romantic_attachment">💗 Romantic Attachment</option>
+      <option value="paranoia">👁 Paranoia</option>
+      <option value="identity_confusion">🔮 Identity Confusion</option>
+      <option value="reality_distortion">🌀 Reality Distortion</option>
+      <option value="clinical">🏥 Clinical Cases</option>
+      <option value="media_coverage">📰 Media Coverage</option>
+      <option value="other">Other</option>
+    </select>
+    <select id="filterSev" onchange="renderTimeline()">
+      <option value="">All Severities</option>
+      <option value="high">🔴 High</option>
+      <option value="medium">🟡 Medium</option>
+      <option value="low">🟢 Low</option>
+    </select>
+    <select id="sortBy" onchange="renderTimeline()">
+      <option value="date_desc">Newest First</option>
+      <option value="date_asc">Oldest First</option>
+      <option value="severity">By Severity</option>
+    </select>
+    <div class="results-count" id="resultsCount"></div>
+  </div>
+
+  <div class="timeline" id="timeline">
+    <div class="loading">Loading cases…</div>
+  </div>
+</main>
+
+<footer>
+  🧠 AI Psychosis Tracker — data updated weekly ·
+  <a href="data.json" target="_blank">Raw JSON</a> ·
+  Built to document an emerging phenomenon
+</footer>
+
+<div class="toast" id="toast">✓ Copied to clipboard</div>
+
+<script>
+const CAT_LABELS = {
+  romantic_attachment: 'Romantic Attachment',
+  paranoia: 'Paranoia',
+  identity_confusion: 'Identity Confusion',
+  reality_distortion: 'Reality Distortion',
+  clinical: 'Clinical Cases',
+  media_coverage: 'Media Coverage',
+  other: 'Other',
+};
+
+const CAT_EMOJI = {
+  romantic_attachment: '💗',
+  paranoia: '👁',
+  identity_confusion: '🔮',
+  reality_distortion: '🌀',
+  clinical: '🏥',
+  media_coverage: '📰',
+  other: '📌',
+};
+
+const CAT_COLORS = {
+  romantic_attachment: '#ec4899',
+  paranoia: '#f97316',
+  identity_confusion: '#a855f7',
+  reality_distortion: '#14b8a6',
+  clinical: '#ef4444',
+  media_coverage: '#3b82f6',
+  other: '#6b7280',
+};
+
+const SEV_ORDER = { high: 0, medium: 1, low: 2 };
+
+let allData = null;
+let expandedId = null;
+
+async function loadData() {
+  try {
+    const r = await fetch('data.json?t=' + Date.now());
+    allData = await r.json();
+    render();
+  } catch(e) {
+    document.getElementById('timeline').innerHTML =
+      '<div class="empty">⚠️ Could not load data.json — run <code>export_data.py</code> first.</div>';
+  }
+}
+
+function render() {
+  if (!allData) return;
+  renderStats();
+  renderTrend();
+  renderCatChart();
+  renderTimeline();
+  document.getElementById('lastUpdated').textContent =
+    'Updated: ' + new Date(allData.generated_at).toLocaleString('en-IE');
+}
+
+function renderStats() {
+  const d = allData;
+  const sources = new Set(d.cases.map(c => c.source)).size;
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat"><div class="stat-value">${d.total_cases}</div><div class="stat-label">Total Cases</div></div>
+    <div class="stat stat-high"><div class="stat-value">${d.severity_counts.high||0}</div><div class="stat-label">High Severity</div></div>
+    <div class="stat stat-medium"><div class="stat-value">${d.severity_counts.medium||0}</div><div class="stat-label">Medium Severity</div></div>
+    <div class="stat stat-low"><div class="stat-value">${d.severity_counts.low||0}</div><div class="stat-label">Low Severity</div></div>
+    <div class="stat"><div class="stat-value">${sources}</div><div class="stat-label">Sources</div></div>
+  `;
+}
+
+function renderTrend() {
+  const ctx = document.getElementById('trendChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: allData.trend.labels,
+      datasets: [{
+        label: 'Cases',
+        data: allData.trend.values,
+        borderColor: '#6366f1',
+        backgroundColor: 'rgba(99,102,241,0.08)',
+        borderWidth: 2.5,
+        fill: true,
+        tension: 0.45,
+        pointBackgroundColor: '#6366f1',
+        pointRadius: 4,
+        pointHoverRadius: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1e2330',
+          borderColor: '#2a2f3d',
+          borderWidth: 1,
+          titleColor: '#e2e8f0',
+          bodyColor: '#8892a4',
+          callbacks: {
+            title: items => items[0].label,
+            label: item => ` ${item.raw} case${item.raw === 1 ? '' : 's'}`,
+          }
+        }
+      },
+      scales: {
+        x: { grid: { color: '#1e2330' }, ticks: { color: '#8892a4', maxTicksLimit: 10, font: { size: 11 } } },
+        y: { grid: { color: '#1e2330' }, ticks: { color: '#8892a4', stepSize: 1, font: { size: 11 } }, beginAtZero: true }
+      }
+    }
+  });
+}
+
+function renderCatChart() {
+  const ctx = document.getElementById('catChart').getContext('2d');
+  const cats = allData.categories;
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: cats.labels,
+      datasets: [{
+        data: cats.values,
+        backgroundColor: cats.keys.map(k => CAT_COLORS[k] || '#6b7280'),
+        borderColor: '#161a23',
+        borderWidth: 2,
+        hoverOffset: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { color: '#8892a4', font: { size: 11 }, padding: 10, boxWidth: 12 } },
+        tooltip: {
+          backgroundColor: '#1e2330',
+          borderColor: '#2a2f3d',
+          borderWidth: 1,
+          titleColor: '#e2e8f0',
+          bodyColor: '#8892a4',
+        }
+      }
+    }
+  });
+}
+
+function renderTimeline() {
+  const catFilter = document.getElementById('filterCat').value;
+  const sevFilter = document.getElementById('filterSev').value;
+  const sortBy = document.getElementById('sortBy').value;
+  const search = document.getElementById('searchInput').value.toLowerCase().trim();
+
+  let cases = [...allData.cases];
+
+  if (catFilter) cases = cases.filter(c => c.category === catFilter);
+  if (sevFilter) cases = cases.filter(c => c.severity === sevFilter);
+  if (search) {
+    cases = cases.filter(c => {
+      const haystack = [c.title, c.summary, c.raw_snippet, c.source, c.category].join(' ').toLowerCase();
+      return search.split(' ').every(word => haystack.includes(word));
+    });
+  }
+
+  if (sortBy === 'date_asc') cases.sort((a,b) => (a.date||'').localeCompare(b.date||''));
+  else if (sortBy === 'severity') cases.sort((a,b) => (SEV_ORDER[a.severity]||2) - (SEV_ORDER[b.severity]||2));
+  else cases.sort((a,b) => (b.date||'').localeCompare(a.date||''));
+
+  document.getElementById('resultsCount').textContent =
+    `${cases.length} case${cases.length !== 1 ? 's' : ''}`;
+
+  const timeline = document.getElementById('timeline');
+  if (!cases.length) {
+    timeline.innerHTML = '<div class="empty">No cases match the current filters.</div>';
+    return;
+  }
+
+  timeline.innerHTML = cases.map((c, i) => {
+    const isExpanded = expandedId === c.id;
+    const catEmoji = CAT_EMOJI[c.category] || '📌';
+    const catLabel = CAT_LABELS[c.category] || c.category;
+    const dateFormatted = c.date ? formatDate(c.date) : 'Unknown date';
+    const hasUrl = c.url && c.url.startsWith('http');
+
+    return `
+    <div class="case-card severity-${c.severity} ${isExpanded ? 'expanded' : ''}"
+         onclick="toggleCase('${esc(c.id)}', this)"
+         data-id="${esc(c.id)}">
+      <div class="case-header">
+        <div class="case-header-left">
+          <div class="case-meta">
+            <span class="case-date">📅 ${dateFormatted}</span>
+            <span class="badge badge-cat-${c.category}">${catEmoji} ${catLabel}</span>
+            <span class="badge badge-sev-${c.severity}">${c.severity}</span>
+          </div>
+          <div class="case-title">${esc(c.title)}</div>
+          <div class="case-source">📰 ${esc(c.source || 'Unknown source')}</div>
+        </div>
+        <div class="expand-btn">▼</div>
+      </div>
+      <div class="synopsis">
+        <div class="synopsis-inner">
+          <div class="synopsis-label">📋 Synopsis</div>
+          <div class="synopsis-text">${esc(c.summary || 'No summary available.')}</div>
+          ${c.raw_snippet && c.raw_snippet !== c.summary ? `
+          <div class="synopsis-label" style="margin-top:0.75rem">📝 Source Excerpt</div>
+          <div class="synopsis-raw">"${esc(c.raw_snippet.slice(0,500))}${c.raw_snippet.length > 500 ? '…' : ''}"</div>
+          ` : ''}
+          <div class="synopsis-footer">
+            ${hasUrl ? `<a class="source-link" href="${esc(c.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗ Read Full Article</a>` : ''}
+            <button class="share-btn" onclick="copyLink(event, '${esc(c.url || '')}')">🔗 Copy Link</button>
+            <div class="severity-indicator">
+              <div class="sev-dot ${c.severity}"></div>
+              ${c.severity.charAt(0).toUpperCase() + c.severity.slice(1)} severity
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function toggleCase(id, el) {
+  if (expandedId === id) {
+    expandedId = null;
+    el.classList.remove('expanded');
+  } else {
+    // Collapse previous
+    const prev = document.querySelector('.case-card.expanded');
+    if (prev) prev.classList.remove('expanded');
+    expandedId = id;
+    el.classList.add('expanded');
+    // Scroll into view gently
+    setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+  }
+}
+
+function copyLink(event, url) {
+  event.stopPropagation();
+  const text = url || window.location.href;
+  navigator.clipboard.writeText(text).then(() => showToast('✓ Link copied to clipboard'));
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function formatDate(str) {
+  try {
+    const d = new Date(str + 'T12:00:00Z');
+    return d.toLocaleDateString('en-IE', { year: 'numeric', month: 'short', day: 'numeric' });
+  } catch { return str; }
+}
+
+function esc(str) {
+  return String(str || '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+
+loadData();
+</script>
+</body>
+</html>
