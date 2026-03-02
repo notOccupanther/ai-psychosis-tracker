@@ -477,13 +477,45 @@
     </div>
   </div>
 
+  <!-- INTRO SECTION -->
+  <div class="card" style="margin-bottom:1.5rem;border-left:3px solid var(--accent)">
+    <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem">
+      <span style="font-size:1.1rem">🧠</span>
+      <div class="card-title" style="margin-bottom:0">What is this site?</div>
+    </div>
+    <div style="font-size:0.9rem;line-height:1.8;color:var(--text);display:grid;gap:0.75rem">
+      <p>AI Psychosis Tracker is an independent, open project documenting reported cases of psychological harm linked to AI interactions — things like emotional dependency on chatbots, delusional thinking reinforced by AI, identity confusion, and in more serious cases, real clinical harm.</p>
+      <p>The site exists because this is happening, it's being reported, and someone should be keeping count. We're not here to sensationalise it — we're here to make the pattern visible.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;margin-top:0.25rem">
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.85rem">
+          <div style="font-size:0.72rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem">How cases are found</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5">A scraper runs weekly, searching news sources for reports of AI-related psychological harm. Cases are collected automatically and reviewed for relevance.</div>
+        </div>
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.85rem">
+          <div style="font-size:0.72rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem">What gets included</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5">Reported incidents of emotional harm, dependency, clinical disturbance, or death linked to AI interactions. Media coverage and academic reports are included.</div>
+        </div>
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.85rem">
+          <div style="font-size:0.72rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem">Limitations</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5">This is not a scientific study. Cases reflect what's been publicly reported, not the full picture. Many incidents go unreported. Severity ratings are approximate.</div>
+        </div>
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.85rem">
+          <div style="font-size:0.72rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem">Why it matters</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5">Regulators, researchers, and the public need visibility on AI harm. Tracking it publicly is one small way to ensure it can't be quietly ignored.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- COMMENTARY -->
   <div class="card" id="commentaryCard" style="margin-bottom:2rem;display:none">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem">
-      <div class="card-title" style="margin-bottom:0">🔍 Analyst Commentary</div>
+      <div class="card-title" style="margin-bottom:0">🔍 Weekly Commentary</div>
       <span id="commentaryDate" style="font-size:0.72rem;color:var(--muted)"></span>
     </div>
-    <div id="commentaryText" style="font-size:0.9rem;line-height:1.8;color:var(--text)"></div>
+    <div id="commentaryPreview" style="font-size:0.9rem;line-height:1.8;color:var(--text)"></div>
+    <div id="commentaryFull" style="font-size:0.9rem;line-height:1.8;color:var(--text);display:none"></div>
+    <button id="commentaryToggle" onclick="toggleCommentary()" style="margin-top:0.75rem;background:none;border:1px solid var(--border);color:var(--accent2);padding:0.35rem 0.85rem;border-radius:0.4rem;font-size:0.78rem;cursor:pointer;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">Read more ↓</button>
     <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.75rem;color:var(--muted)">
       ℹ️ Commentary is AI-generated weekly based on all tracked cases. It reflects patterns in the data, not editorial opinion.
     </div>
@@ -933,15 +965,29 @@ function esc(str) {
 loadData();
 loadCommentary();
 
+let _commentaryExpanded = false;
+
+function toggleCommentary() {
+  _commentaryExpanded = !_commentaryExpanded;
+  document.getElementById('commentaryFull').style.display = _commentaryExpanded ? 'block' : 'none';
+  document.getElementById('commentaryToggle').textContent = _commentaryExpanded ? 'Show less ↑' : 'Read more ↓';
+}
+
 async function loadCommentary() {
   try {
     const r = await fetch('commentary.json?t=' + Date.now());
     if (!r.ok) return;
     const d = await r.json();
     if (!d.commentary) return;
-    // Split into paragraphs and render
     const paras = d.commentary.split(/\n\n+/).filter(p => p.trim());
-    document.getElementById('commentaryText').innerHTML = paras.map(p => `<p style="margin-bottom:1rem">${esc(p)}</p>`).join('');
+    const fmt = p => `<p style="margin-bottom:1rem">${esc(p)}</p>`;
+    // Show only first paragraph in preview; rest behind toggle
+    document.getElementById('commentaryPreview').innerHTML = fmt(paras[0]);
+    if (paras.length > 1) {
+      document.getElementById('commentaryFull').innerHTML = paras.slice(1).map(fmt).join('');
+    } else {
+      document.getElementById('commentaryToggle').style.display = 'none';
+    }
     document.getElementById('commentaryDate').textContent = 'Generated: ' + new Date(d.generated_at).toLocaleDateString('en-IE', {year:'numeric',month:'short',day:'numeric'}) + ' · Based on ' + d.total_cases + ' cases';
     document.getElementById('commentaryCard').style.display = 'block';
   } catch(e) {}
