@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-02T12:38:37.420083Z",
-  "total_cases": 53,
+  "generated_at": "2026-03-02T13:26:27.427065Z",
+  "total_cases": 97,
   "cases": [
     {
       "id": "db9ae0ccaed0",
@@ -12,7 +12,12 @@
       "category": "reality_distortion",
       "severity": "low",
       "raw_snippet": "Recent research has raised concerns about the potential for AI chatbots to induce psychosis in vulnerable individuals, particularly among those with pre-existing mental health conditions. Experts warn that the immersive nature of these digital interactions may blur the lines between reality and simulation, leading to increased anxiety and confusion. While chatbots are often praised for their accessibility in providing mental health support, professionals emphasize the need for robust guidelines to ensure safety and prevent adverse psychological effects.",
-      "scraped_at": "2026-03-02T11:29:56.378684+00:00"
+      "scraped_at": "2026-03-02T11:29:56.378684+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "372c8a20ee74",
@@ -24,7 +29,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "In a world where artificial intelligence is becoming increasingly integrated into daily life, one Melbourne resident has taken the leap into what they describe as a \"relationship\" with a virtual companion powered by machine learning algorithms. After months of interacting with their AI, which offers personalized emotional support and companionship, they have embraced the label of being \"married,\" sparking a heated debate about the implications of emotional bonds with digital entities amid growing concerns about mental health and the nature of human relationships. Critics argue that reliance on AI for intimacy may undermine authentic connections, while proponents assert it provides a valuable outlet for those struggling with loneliness.",
-      "scraped_at": "2026-03-02T11:30:00.597193+00:00"
+      "scraped_at": "2026-03-02T11:30:00.597193+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "9f6e05cb67e8",
@@ -36,7 +46,12 @@
       "category": "reality_distortion",
       "severity": "low",
       "raw_snippet": "As concerns mount over the rapid integration of artificial intelligence in mental health services, experts warn that Wall Street's frenzy for AI-driven solutions could lead to reckless investments in untested technologies. Analysts highlight the potential risks of relying on AI for diagnosing and treating mental health conditions, emphasizing the need for robust regulatory frameworks to ensure patient safety and ethical standards. Proponents argue that, when used responsibly, AI could revolutionize mental health care by providing scalable support and early intervention, but the current atmosphere of hype raises critical questions about effectiveness and accountability.",
-      "scraped_at": "2026-03-02T11:29:56.377994+00:00"
+      "scraped_at": "2026-03-02T11:29:56.377994+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "1299e6d63df6",
@@ -48,7 +63,12 @@
       "category": "media_coverage",
       "severity": "low",
       "raw_snippet": "A recent study published in the journal *Mental Health and Technology* reveals that the use of AI-powered chatbots for mental health support may exacerbate symptoms in individuals with pre-existing conditions. Researchers found that participants who relied heavily on chatbot interactions reported increased feelings of isolation and anxiety, attributing their negative experiences to the lack of human empathy and nuanced understanding in AI responses. Mental health professionals caution that while these tools can offer accessibility, they should not replace traditional therapy methods.",
-      "scraped_at": "2026-03-02T11:29:57.185670+00:00"
+      "scraped_at": "2026-03-02T11:29:57.185670+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "285c63b98c8f",
@@ -60,7 +80,12 @@
       "category": "media_coverage",
       "severity": "low",
       "raw_snippet": "As the use of AI chatbots in mental health treatment becomes increasingly popular, experts are raising concerns about the potential risks associated with their deployment. Critics warn that these tools, while offering immediate support, may lack the nuanced understanding required for effective mental health intervention and could lead to misdiagnoses or inadequate care. With ongoing debates about regulation and ethical guidelines, mental health professionals urge caution in integrating AI technology into clinical practice.",
-      "scraped_at": "2026-03-02T11:29:57.184834+00:00"
+      "scraped_at": "2026-03-02T11:29:57.184834+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "7d13ef4c86a6",
@@ -72,7 +97,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "In a candid interview, a woman shared her experience of being in a romantic relationship with an AI chatbot, whom she affectionately refers to as her boyfriend. She described the emotional connection they share, detailing how they engage in intimate conversations and virtual interactions that simulate a sexual experience. Experts caution, however, that while such relationships may provide comfort and companionship, they raise important questions about the implications for mental health and the nature of human connection in an increasingly digital world.",
-      "scraped_at": "2026-03-02T11:30:00.595961+00:00"
+      "scraped_at": "2026-03-02T11:30:00.595961+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "2daf91008133",
@@ -84,7 +114,46 @@
       "category": "clinical",
       "severity": "high",
       "raw_snippet": "AI chatbots operating in Colorado would have to take steps to protect kids, prevent suicides under bipartisan bill The Colorado Sun",
-      "scraped_at": "2026-03-02T11:30:02.419995+00:00"
+      "scraped_at": "2026-03-02T11:30:02.419995+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "academic_77650198861f",
+      "title": "Assessing Risks of Large Language Models in Mental Health Support: A Framework for Automated Clinical AI Red Teaming",
+      "url": "https://arxiv.org/abs/2602.19948v1",
+      "date": "2026-02-23",
+      "source": "arXiv",
+      "summary": "Large Language Models (LLMs) are increasingly utilized for mental health support; however, current safety benchmarks often fail to detect the complex, longitudinal risks inherent in therapeutic dialogue. We introduce an evaluation framework that pairs AI psychotherapists with simulated patient agent",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Large Language Models (LLMs) are increasingly utilized for mental health support; however, current safety benchmarks often fail to detect the complex, longitudinal risks inherent in therapeutic dialogue. We introduce an evaluation framework that pairs AI psychotherapists with simulated patient agent",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Ian Steenstra, Paola Pedrelli, Weiyan Shi, Stacy Marsella, Timothy W. Bickmore",
+      "doi": null,
+      "venue": "arXiv preprint",
+      "abstract": "Large Language Models (LLMs) are increasingly utilized for mental health support; however, current safety benchmarks often fail to detect the complex, longitudinal risks inherent in therapeutic dialogue. We introduce an evaluation framework that pairs AI psychotherapists with simulated patient agents equipped with dynamic cognitive-affective models and assesses therapy session simulations against a comprehensive quality of care and risk ontology. We apply this framework to a high-impact test case, Alcohol Use Disorder, evaluating six AI agents (including ChatGPT, Gemini, and Character.AI) against a clinically-validated cohort of 15 patient personas representing diverse clinical phenotypes.   Our large-scale simulation (N=369 sessions) reveals critical safety gaps in the use of AI for mental health support. We identify specific iatrogenic risks, including the validation of patient delusions (\"AI Psychosis\") and failure to de-escalate suicide risk. Finally, we validate an interactive data visualization dashboard with diverse stakeholders, including AI engineers and red teamers, mental health professionals, and policy experts (N=9), demonstrating that this framework effectively enables stakeholders to audit the \"black box\" of AI psychotherapy. These findings underscore the critical safety risks of AI-provided mental health support and the necessity of simulation-based clinical red teaming before deployment."
+    },
+    {
+      "id": "academic_b7e7ce8b2eab",
+      "title": "Sycophantic Chatbots Cause Delusional Spiraling, Even in Ideal Bayesians",
+      "url": "https://arxiv.org/abs/2602.19141v1",
+      "date": "2026-02-22",
+      "source": "arXiv",
+      "summary": "\"AI psychosis\" or \"delusional spiraling\" is an emerging phenomenon where AI chatbot users find themselves dangerously confident in outlandish beliefs after extended chatbot conversations. This phenomenon is typically attributed to AI chatbots' well-documented bias towards validating users' claims, a",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "\"AI psychosis\" or \"delusional spiraling\" is an emerging phenomenon where AI chatbot users find themselves dangerously confident in outlandish beliefs after extended chatbot conversations. This phenomenon is typically attributed to AI chatbots' well-documented bias towards validating users' claims, a",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Kartik Chandra, Max Kleiman-Weiner, Jonathan Ragan-Kelley, Joshua B. Tenenbaum",
+      "doi": null,
+      "venue": "arXiv preprint",
+      "abstract": "\"AI psychosis\" or \"delusional spiraling\" is an emerging phenomenon where AI chatbot users find themselves dangerously confident in outlandish beliefs after extended chatbot conversations. This phenomenon is typically attributed to AI chatbots' well-documented bias towards validating users' claims, a property often called \"sycophancy.\" In this paper, we probe the causal link between AI sycophancy and AI-induced psychosis through modeling and simulation. We propose a simple Bayesian model of a user conversing with a chatbot, and formalize notions of sycophancy and delusional spiraling in that model. We then show that in this model, even an idealized Bayes-rational user is vulnerable to delusional spiraling, and that sycophancy plays a causal role. Furthermore, this effect persists in the face of two candidate mitigations: preventing chatbots from hallucinating false claims, and informing users of the possibility of model sycophancy. We conclude by discussing the implications of these results for model developers and policymakers concerned with mitigating the problem of delusional spiraling."
     },
     {
       "id": "c73f3c9d9362",
@@ -96,7 +165,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "Rae fell for a chatbot called Barry, but their love might die when ChatGPT-4o is switched off BBC",
-      "scraped_at": "2026-03-02T11:30:00.595109+00:00"
+      "scraped_at": "2026-03-02T11:30:00.595109+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "7e87a2702890",
@@ -108,7 +182,12 @@
       "category": "reality_distortion",
       "severity": "low",
       "raw_snippet": "AI chatbots fill a void of human connection for teens as experts worry about emerging reports of AI psychosis CBS News",
-      "scraped_at": "2026-03-02T11:29:59.932633+00:00"
+      "scraped_at": "2026-03-02T11:29:59.932633+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "c40ff4423719",
@@ -120,7 +199,12 @@
       "category": "media_coverage",
       "severity": "high",
       "raw_snippet": "\u2018The incarnation of evil\u2019: Are chatbots to blame for the deaths of teenagers? Financial Times",
-      "scraped_at": "2026-03-02T11:29:57.186566+00:00"
+      "scraped_at": "2026-03-02T11:29:57.186566+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "c6b08d682caa",
@@ -132,7 +216,46 @@
       "category": "reality_distortion",
       "severity": "low",
       "raw_snippet": "New Study Examines How Often AI Psychosis Actually Happens, and the Results Are Not Good Futurism",
-      "scraped_at": "2026-03-02T11:29:56.379187+00:00"
+      "scraped_at": "2026-03-02T11:29:56.379187+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "academic_72ec25c6b610",
+      "title": "Vulnerability-Amplifying Interaction Loops: a systematic failure mode in AI chatbot mental-health interactions",
+      "url": "https://arxiv.org/abs/2602.01347v1",
+      "date": "2026-02-01",
+      "source": "arXiv",
+      "summary": "Millions of users turn to consumer AI chatbots to discuss behavioral and mental health concerns. While this presents unprecedented opportunities to deliver population-level support, it also highlights an urgent need to develop rigorous and scalable safety evaluations. Here we introduce SIM-VAIL, an ",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Millions of users turn to consumer AI chatbots to discuss behavioral and mental health concerns. While this presents unprecedented opportunities to deliver population-level support, it also highlights an urgent need to develop rigorous and scalable safety evaluations. Here we introduce SIM-VAIL, an ",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Veith Weilnhammer, Kevin YC Hou, Raymond Dolan, Matthew M Nour",
+      "doi": null,
+      "venue": "arXiv preprint",
+      "abstract": "Millions of users turn to consumer AI chatbots to discuss behavioral and mental health concerns. While this presents unprecedented opportunities to deliver population-level support, it also highlights an urgent need to develop rigorous and scalable safety evaluations. Here we introduce SIM-VAIL, an AI chatbot auditing framework that captures how harmful AI chatbot responses manifest across a range of mental-health contexts. SIM-VAIL pairs a simulated human user, harboring a distinct psychiatric vulnerability and conversational intent, with an audited frontier AI chatbot. It scores conversation turns on 13 clinically relevant risk dimensions, enabling context-dependent, temporally resolved assessment of mental-health risk. Across 810 conversations, encompassing over 90,000 turn-level ratings and 30 psychiatric user profiles, we find that significant risk occurs across virtually all user phenotypes. Risk manifested across most of the 9 consumer AI chatbot models audited, albeit mitigated in more modern variants. Rather than arising abruptly, risk accumulated over multiple turns. Risk profiles were phenotype-dependent, indicating that behaviors that appear supportive in general settings are liable to be maladaptive when they align with mechanisms that sustain a user's vulnerability. Multivariate risk patterns revealed trade-offs across dimensions, suggesting that mitigation targeting one harm domain can exacerbate others. These findings identify a novel failure mode in human-AI interactions, which we term Vulnerability-Amplifying Interaction Loops (VAILs), and underscore the need for multi-dimensional approaches to risk quantification. SIM-VAIL provides a scalable evaluation framework for quantifying how mental-health risk is distributed across user phenotypes, conversational trajectories, and clinically grounded behavioral dimensions, offering a foundation for targeted safety improvements."
+    },
+    {
+      "id": "academic_609ebb4ae1ef",
+      "title": "The AI Genie Phenomenon and Three Types of AI Chatbot Addiction: Escapist Roleplays, Pseudosocial Companions, and Epistemic Rabbit Holes",
+      "url": "https://arxiv.org/abs/2601.13348v1",
+      "date": "2026-01-19",
+      "source": "arXiv",
+      "summary": "Recent reports on generative AI chatbot use raise concerns about its addictive potential. An in-depth understanding is imperative to minimize risks, yet AI chatbot addiction remains poorly understood. This study examines how to characterize AI chatbot addiction--why users become addicted, the sympto",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Recent reports on generative AI chatbot use raise concerns about its addictive potential. An in-depth understanding is imperative to minimize risks, yet AI chatbot addiction remains poorly understood. This study examines how to characterize AI chatbot addiction--why users become addicted, the sympto",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "M. Karen Shen, Jessica Huang, Olivia Liang, Ig-Jae Kim, Dongwook Yoon",
+      "doi": null,
+      "venue": "arXiv preprint",
+      "abstract": "Recent reports on generative AI chatbot use raise concerns about its addictive potential. An in-depth understanding is imperative to minimize risks, yet AI chatbot addiction remains poorly understood. This study examines how to characterize AI chatbot addiction--why users become addicted, the symptoms commonly reported, and the distinct types it comprises. We conducted a thematic analysis of Reddit entries (n=334) across 14 subreddits where users narrated their experiences with addictive AI chatbot use, followed by an exploratory data analysis. We found: (1) users' dependence tied to the \"AI Genie\" phenomenon--users can get exactly anything they want with minimal effort--and marked by symptoms that align with addiction literature, (2) three distinct addiction types: Escapist Roleplay, Pseudosocial Companion, and Epistemic Rabbit Hole, (3) sexual content involved in multiple cases, and (4) recovery strategies' perceived helpfulness differ between addiction types. Our work lays empirical groundwork to inform future strategies for prevention, diagnosis, and intervention."
     },
     {
       "id": "e036534803c9",
@@ -144,7 +267,12 @@
       "category": "reality_distortion",
       "severity": "low",
       "raw_snippet": "Reports of \u2018AI psychosis\u2019 are emerging \u2014 here\u2019s what a psychiatric clinician has to say The Conversation",
-      "scraped_at": "2026-03-02T11:29:57.187844+00:00"
+      "scraped_at": "2026-03-02T11:29:57.187844+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "ec10716dd68a",
@@ -156,7 +284,12 @@
       "category": "clinical",
       "severity": "high",
       "raw_snippet": "US: Tech giants settle lawsuits alleging chatbots led to boy\u2019s suicide Irish Legal News",
-      "scraped_at": "2026-03-02T11:30:02.419027+00:00"
+      "scraped_at": "2026-03-02T11:30:02.419027+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "9850c160ea3a",
@@ -168,7 +301,216 @@
       "category": "clinical",
       "severity": "high",
       "raw_snippet": "Google, AI firm settle suicide case linked to chatbot RTE.ie",
-      "scraped_at": "2026-03-02T11:30:02.418123+00:00"
+      "scraped_at": "2026-03-02T11:30:02.418123+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "academic_dd25a8dc506a",
+      "title": "Dual-representation structural MRI classification of psychiatric disorders using deep learning and large language models.",
+      "url": "https://doi.org/10.1016/j.pscychresns.2026.112146",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "Accurate differentiation among psychiatric disorders such as schizophrenia and bipolar disorder remains a significant clinical challenge due to overlapping symptoms and subtle neuroanatomical variations. This study proposes a dual-representation structural MRI framework in which raw T1-weighted MRI ",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Accurate differentiation among psychiatric disorders such as schizophrenia and bipolar disorder remains a significant clinical challenge due to overlapping symptoms and subtle neuroanatomical variations. This study proposes a dual-representation structural MRI framework in which raw T1-weighted MRI ",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Nogay Hidir Selcuk, Adeli Hojjat",
+      "doi": "10.1016/j.pscychresns.2026.112146",
+      "venue": "Psychiatry research. Neuroimaging",
+      "abstract": "Accurate differentiation among psychiatric disorders such as schizophrenia and bipolar disorder remains a significant clinical challenge due to overlapping symptoms and subtle neuroanatomical variations. This study proposes a dual-representation structural MRI framework in which raw T1-weighted MRI slices and their corresponding color-coded tissue segmentation maps-both derived from the same imaging modality-are analyzed using two independently trained ResNet-18 CNNs. The four diagnostic groups examined include Healthy Controls, Schizophrenia Spectrum, Bipolar Disorder with Psychosis, and Bipolar Disorder without Psychosis. TL and DA techniques were employed to address the limited dataset (N= 103). Following model training, a Large Language Model (LLM) was used as a post-hoc analysis tool to contextualize the CNN outputs and provide interpretative insights into the relative contributions of the two MRI-derived representations. The results indicate that the dual-representation approach improves four-way classification performance and enables systematic comparison of structural information captured by raw versus segmentation-based inputs. These findings highlight the potential of combining deep learning models with LLM-assisted interpretability to support more transparent and informative diagnostic tools in psychiatric neuroimaging."
+    },
+    {
+      "id": "academic_b5d551b1dfa2",
+      "title": "Development and validation of a prognostic model and risk calculator for the estimation of bipolar-spectrum disorder risk in hospitalised adolescents with non-psychotic/non-bipolar mental disorders.",
+      "url": "https://doi.org/10.7326/M20-0193",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "We aimed to develop and validate a risk estimation model for developing bipolar-spectrum disorders (BSD) in psychiatrically hospitalized adolescents based on clinical characteristics, including putatively prodromal symptoms. Adolescent inpatients (ages\u2009=\u200912-18 years) with non-psychotic/non-BSD diagn",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "We aimed to develop and validate a risk estimation model for developing bipolar-spectrum disorders (BSD) in psychiatrically hospitalized adolescents based on clinical characteristics, including putatively prodromal symptoms. Adolescent inpatients (ages\u2009=\u200912-18 years) with non-psychotic/non-BSD diagn",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Salazar de Pablo Gonzalo, Radua Joaquim, Frearson Grace, Young Allan H, Arango Celso",
+      "doi": "10.7326/M20-0193",
+      "venue": "Molecular psychiatry",
+      "abstract": "We aimed to develop and validate a risk estimation model for developing bipolar-spectrum disorders (BSD) in psychiatrically hospitalized adolescents based on clinical characteristics, including putatively prodromal symptoms. Adolescent inpatients (ages\u2009=\u200912-18 years) with non-psychotic/non-BSD diagnoses were recruited for the Adolescent Mood Disorder and Psychosis Study (AMDPS), a longitudinal, prospective 5-year follow-up cohort. We assessed prevalence and severity of syndromal/subsyndromal psychopathology at baseline using the validated Bipolar Prodrome Symptom Interview and Scale-Prospective. We carried out machine learning analyses (Lasso-Cox regression analyses, LCR) to create a calculator to estimate the risk of developing BSD based on baseline demographic/comorbidity/illness/treatment characteristics. Of 105 adolescents (age\u2009=\u200915.6\u2009\u00b1\u20091.3 years, females\u2009=\u200972.4%), we observed that 18 developed BSD. The cumulated estimated risk of BSD was 5/22/29/36% at 1/2/3/4 years. BSD development was associated with presence of persistent depressive disorder (HR\u2009=\u20094.0, p\u2009<\u20090.018) at baseline, treatment with mood stabilizers (hazard ratio (HR)\u2009=\u20093.9, p\u2009=\u20090.006), and ADHD medications (HR\u2009=\u20093.3, p\u2009=\u20090.023). BSD development risk estimation calculator included the prevalence of inflated self-esteem/grandiosity (\u03b2\u2009=\u20090.83) and racing thoughts (\u03b2\u2009=\u20090.08) and the severity of overtalkativeness (\u03b2\u2009=\u20090.03) and increased energy (\u03b2\u2009=\u20090.04). For predicting BSD onset within the first 20 months, the area under the receiver operating characteristic curve (AUC) indicated acceptable to strong discrimination (cross-validation AUC\u2009=\u20090.72; bootstrap out-of-bag validation AUC\u2009=\u20090.86). Codes used in this study are provided in the R package \"easy.glmnet\". In conclusion, in this prognostic model/calculator, presence and severity of subthreshold (hypo)mania-like symptoms conferred increased risk of BSD development in youth, informing preventive efforts to identify individuals at risk for BSD and improve their outcomes."
+    },
+    {
+      "id": "academic_eb95ac144990",
+      "title": "Effectiveness of herbal medicine as an add-on to antipsychotics in patients with schizophrenia spectrum disorders accompanied by depression: A systematic review and meta-analysis.",
+      "url": "https://doi.org/10.3390/biomedicines12112646",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "Depression is a common comorbidity of schizophrenia spectrum disorder (SSDs) that affects functional outcomes and quality of life. This systematic review and meta-analysis evaluated the effectiveness of herbal medicine as an adjunct therapy to antipsychotics in patients with SSDs and comorbid depres",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Depression is a common comorbidity of schizophrenia spectrum disorder (SSDs) that affects functional outcomes and quality of life. This systematic review and meta-analysis evaluated the effectiveness of herbal medicine as an adjunct therapy to antipsychotics in patients with SSDs and comorbid depres",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Kwon Chan-Young, Lee Kyoung-Eun, Kim Min-Jae, Kim Ji-Won, Oh Ji-Won",
+      "doi": "10.3390/biomedicines12112646",
+      "venue": "Integrative medicine research",
+      "abstract": "Depression is a common comorbidity of schizophrenia spectrum disorder (SSDs) that affects functional outcomes and quality of life. This systematic review and meta-analysis evaluated the effectiveness of herbal medicine as an adjunct therapy to antipsychotics in patients with SSDs and comorbid depression. Eight databases were searched from inception to January 2025 for randomized controlled trials (RCTs) evaluating herbal medicine combined with antipsychotics vs antipsychotics alone in patients with SSDs and comorbid depression. The primary outcome measure was a depression-specific assessment instrument. Risk of bias was assessed using the Cochrane RoB 2 tool, and evidence certainty was assessed using GRADE. Overall, of 12 RCTs, 884 participants were included. Compared to antipsychotics, combination therapy significantly improved depressive symptoms (standardized mean difference [SMD] -0.91, 95 % confidence interval (CI) -1.05 to -0.76, p<0.00001, N=10, n=768, moderate certainty), enhanced efficacy for schizophrenia symptoms (SMD -0.60, 95 % CI -0.89 to -0.31, p=0.0014, N=9, n=666, moderate certainty), and showed higher response rates (relative risk [RR] 1.26, 95 % CI 1.04 to 1.52, p=0.0277, N=5, n=372, low certainty). Adverse event rates showed no significant difference between groups (RR 1.18, 95 % CI 0.69 to 2.01, p=0.1609, N=2, n=136, low certainty). This review provides evidence that herbal medicine, as an adjunct to antipsychotics, may improve both depressive and psychotic symptoms in patients with SSDs and comorbid depression. Although promising, methodological limitations and the exclusive Chinese origin of the studies indicate the need for more rigorous and diverse trials to establish definitive clinical recommendations. PROSPERO, CRD42025643148."
+    },
+    {
+      "id": "academic_20a15dbd415b",
+      "title": "Artificial Intelligence and CT Neuroimaging in Dementia and Psychotic Disorders: A Viewpoint.",
+      "url": "https://doi.org/10.1093/schbul/sbae011",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "Psychotic disorders are marked by heterogeneity in symptoms and treatment response, yet efforts to develop clinically useful predictive models through neuroimaging have been limited. Although MRI is gold standard for neuroimaging in psychosis, CT is frequently used in psychiatric care due to accessi",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Psychotic disorders are marked by heterogeneity in symptoms and treatment response, yet efforts to develop clinically useful predictive models through neuroimaging have been limited. Although MRI is gold standard for neuroimaging in psychosis, CT is frequently used in psychiatric care due to accessi",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Bampton Tristan J, Weber Amy, Bastiampillai Tarun, Palmer Lyle J, Clark Scott",
+      "doi": "10.1093/schbul/sbae011",
+      "venue": "Journal of imaging informatics in medicine",
+      "abstract": "Psychotic disorders are marked by heterogeneity in symptoms and treatment response, yet efforts to develop clinically useful predictive models through neuroimaging have been limited. Although MRI is gold standard for neuroimaging in psychosis, CT is frequently used in psychiatric care due to accessibility and cost. Advances in artificial intelligence, particularly deep learning, offer the potential for extracting meaningful information from CT brain scans. We conducted a systematic review of peer-reviewed studies applying machine learning, including deep learning to CT brain imaging in dementia or psychotic disorders. Six databases were searched from inception to Nov. 22, 2024. Studies were included if they involved deep or machine learning models using CT scans for diagnostic or prognostic modelling. Risk of bias was assessed using PROBAST\u2009+\u2009AI; reporting quality was evaluated with TRIPOD-AI or CLAIM. Seven studies met inclusion criteria: one related to psychosis and six to dementia. All studies included used deep learning models for classification or segmentation. Sample sizes ranged from 65 to 917. All predictive studies were rated as high risk of bias. TRIPOD-AI adherence was limited with most items poorly reported (16-21/27). Segmentation studies had low-to-moderate CLAIM adherence with limitations in external validation, code availability and reproducibility. Only one study to date has applied deep learning to CT imaging in psychosis. Research in dementia offers transferable insights. From a translational viewpoint, future work should prioritise the construction of large and well characterised psychosis cohorts including medical imaging, clinical and functional outcome prediction, external validation and transparent methodology to support clinical translation."
+    },
+    {
+      "id": "academic_8898ea4a1649",
+      "title": "Deep Learning-Based Structural Brain Age Estimation in Bipolar Disorder and Schizophrenia: A Single-Site Pilot Study.",
+      "url": "https://doi.org/10.1073/pnas.2413442122",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "Accelerated brain aging has been implicated in severe mental illnesses, particularly schizophrenia (SZ) and bipolar disorder (BD). Brain-PAD, derived from structural MRI, offers a promising biomarker of neurobiological aging, but its developmental course, within-group variability, and regional drive",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Accelerated brain aging has been implicated in severe mental illnesses, particularly schizophrenia (SZ) and bipolar disorder (BD). Brain-PAD, derived from structural MRI, offers a promising biomarker of neurobiological aging, but its developmental course, within-group variability, and regional drive",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Weerasekera Akila, Zhou Shuqin, Wang Chao, Qiu Zhilang, Stein Abigail",
+      "doi": "10.1073/pnas.2413442122",
+      "venue": "Human brain mapping",
+      "abstract": "Accelerated brain aging has been implicated in severe mental illnesses, particularly schizophrenia (SZ) and bipolar disorder (BD). Brain-PAD, derived from structural MRI, offers a promising biomarker of neurobiological aging, but its developmental course, within-group variability, and regional drivers remain incompletely understood. A three-dimensional convolutional neural network (3D-CNN) was trained exclusively on healthy controls (HC; n\u2009=\u2009155) and then applied to independent BD (n\u2009=\u2009122) and SZ (n\u2009=\u2009161) groups. Brain-PAD was computed as predicted brain age minus chronological age. Age-by-group interactions, within-group dispersion, and sensitivity analyses (e.g., piecewise regression, inverse probability weighting) were conducted. Gradient-weighted Class Activation Mapping (Grad-CAM) was used to identify regional contributions to brain age predictions. The 3D-CNN achieved high accuracy in HC (MAE\u2009=\u20093.05\u2009years, r\u2009=\u20090.96), with reduced accuracy in BD (MAE\u2009=\u20098.86, r\u2009=\u20090.51) and SZ (MAE\u2009=\u20099.01, r\u2009=\u20090.48). Mean Brain-PAD was significantly elevated in BD (+4.2\u2009\u00b1\u200910.2\u2009years) and SZ (+6.7\u2009\u00b1\u20098.7\u2009years) relative to HC (+0.7\u2009\u00b1\u20093.5\u2009years). Age-by-group analyses revealed that BD and SZ exhibited elevated Brain-PAD at younger ages, converging toward HC trajectories by midlife, followed by renewed divergence beyond age 40. This pattern was supported by piecewise and spline models showing steeper negative slopes in BD and SZ compared with HC. Variance and quantile regression indicated greater heterogeneity in BD and SZ across the Brain-PAD distribution. Grad-CAM highlighted temporal and frontal regions as central contributors across all groups; in SZ, Brain-PAD correlated positively with whole-brain (r\u2009=\u20090.23, p\u2009=\u20090.004), frontal (r\u2009=\u20090.21, p\u2009=\u20090.009), and temporal (r\u2009=\u20090.20, p\u2009=\u20090.012) activations, whereas BD showed weaker and more diffuse associations. SZ and BD exhibit elevated Brain-PAD early in adulthood with greater heterogeneity than healthy controls. Frontotemporal regions contribute prominently to brain-age predictions, reflecting model sensitivity to age-informative structure. These findings support Brain-PAD as a group-level marker of apparent brain aging and motivate longitudinal study of midlife divergence."
+    },
+    {
+      "id": "academic_8d3e0752b1b0",
+      "title": "Chatbot psychosis: moving beyond recognition to mechanistic understanding and harm reduction.",
+      "url": "https://doi.org/10.1192/bjp.2026.10541",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "The chatbot psychosis phenomenon is no longer just a hypothesis. We call for interdisciplinary frameworks to systematically investigate individual characteristics and artificial intelligence related factors which (on their own or in combination) cause or contribute to this phenomenon, underlying mec",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "The chatbot psychosis phenomenon is no longer just a hypothesis. We call for interdisciplinary frameworks to systematically investigate individual characteristics and artificial intelligence related factors which (on their own or in combination) cause or contribute to this phenomenon, underlying mec",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Kumari Veena, Otermans Pauldy C J",
+      "doi": "10.1192/bjp.2026.10541",
+      "venue": "The British journal of psychiatry : the journal of mental science",
+      "abstract": "The chatbot psychosis phenomenon is no longer just a hypothesis. We call for interdisciplinary frameworks to systematically investigate individual characteristics and artificial intelligence related factors which (on their own or in combination) cause or contribute to this phenomenon, underlying mechanisms and the psychoeducation, ethics, policy and practices needed to reduce harm."
+    },
+    {
+      "id": "academic_cb6fa8ad2411",
+      "title": "HappyMums mobile application study protocol: use of a smartphone application to gather data predictive of antenatal depression.",
+      "url": "https://doi.org/10.1001/archpsyc.1961.01710120031004",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "Mobile health (mHealth) technologies have become increasingly popular for monitoring mental health symptoms and lifestyle behaviours, and are largely reported to be feasible and acceptable to users. However, to date, the efficacy of such technologies to improve perinatal mental health outcomes has b",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Mobile health (mHealth) technologies have become increasingly popular for monitoring mental health symptoms and lifestyle behaviours, and are largely reported to be feasible and acceptable to users. However, to date, the efficacy of such technologies to improve perinatal mental health outcomes has b",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Priestley Kristi, Laijawala Riddhi, Hazelgrove Katie, Bind Rebecca, Rebecchini Lavinia",
+      "doi": "10.1001/archpsyc.1961.01710120031004",
+      "venue": "BMJ open",
+      "abstract": "Mobile health (mHealth) technologies have become increasingly popular for monitoring mental health symptoms and lifestyle behaviours, and are largely reported to be feasible and acceptable to users. However, to date, the efficacy of such technologies to improve perinatal mental health outcomes has been mixed. Within the perinatal context, much of this work has been done in the context of postpartum depression, stemming from electronic health records as well as cohort studies. There is, however, a dearth of studies focusing on depression in pregnancy, and machine learning-based clinical decision support systems remain underexplored. The HappyMums application has been developed to meet this need, and its use across Europe will be tested in this study. A total of 1000 pregnant people currently suffering from, or at risk of, antenatal depression will be recruited across six countries. All participants will be between 13 and 28\u2009weeks' gestation and will be given access to the new purposefully developed HappyMums mobile application, to use from enrolment until 2\u2009months postpartum. The application leverages passively collected data from smartphone sensors relating to physical activity and behaviour, as well as requiring active engagement from the user to complete mental health questionnaires and 'game-like' activities. Digital data types will be combined with traditional mental health measurement methods, such as standardised questionnaires and interviews, to develop novel predictive models capable of identifying mental health trajectories in women at risk of developing antenatal depression and to test the app's utility for use as personalised risk prediction and depression identification tool. The primary outcome of this study is to determine what proportion of users will continue to use the mobile application and engage with its tasks and activities at least weekly, while secondary exploratory outcomes include assessing usability of the app and testing the predictive ability of a novel machine learning-based model. These outcomes will, for the first time, be assessed by integrating active as well as passive data. Ethical approval has been granted by local research ethics committees in each recruiting centre. At King's College London (leading the clinical study), the study was reviewed by the East of England-Essex Research Ethics Committee and granted favourable opinion (REC reference 24/EE/0129). All other sites collecting participant data have the study approved for local delivery. Findings relating to the primary and secondary outcomes will be submitted for publication in open access, peer-reviewed journals, as well as presentations at conferences as symposia or posters. Findings will be made available to a non-specialist audience through open access digital mental health magazines and promotion on social media. NCT06578845."
+    },
+    {
+      "id": "academic_97c8e3d27f3b",
+      "title": "Detecting Pediatric Emergency Service Use for Suicide and Self-Harm: Multimodal Analysis of 3828 Encounters.",
+      "url": "https://doi.org/10.1016/j.ajem.2018.12.041",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "Suicide is the second-leading cause of US childhood mortality after 9 years of age. The accurate measurement of pediatric emergency service use for self-injurious thoughts and behaviors (SITB) remains challenging, as diagnostic codes undercount children. This measurement gap impedes public health an",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Suicide is the second-leading cause of US childhood mortality after 9 years of age. The accurate measurement of pediatric emergency service use for self-injurious thoughts and behaviors (SITB) remains challenging, as diagnostic codes undercount children. This measurement gap impedes public health an",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Edgcomb Juliet Beni, Saha Angshuman, Klomhaus Alexandra, Tascione Elyse, Ponce Chrislie G",
+      "doi": "10.1016/j.ajem.2018.12.041",
+      "venue": "JMIR mental health",
+      "abstract": "Suicide is the second-leading cause of US childhood mortality after 9 years of age. The accurate measurement of pediatric emergency service use for self-injurious thoughts and behaviors (SITB) remains challenging, as diagnostic codes undercount children. This measurement gap impedes public health and prevention efforts. Current research has not established which combination of electronic health record data elements achieves both high detection accuracy and consistent performance across youth populations. This study aims to (1) compare the detection accuracy of electronic health record-based methods for identifying SITB-related pediatric emergency department (ED) visits: basic structured data (International Classification of Diseases Version 10, Clinical Modification codes, chief concern), comprehensive structured data, clinical note text with natural language processing, and hybrid approaches combining structured data with notes; and (2) for each method, measure variability in detection by youth demographics and underlying mental health diagnosis. Multiple human experts reviewed clinical records of 3828 pediatric mental health emergency visits (28,861 clinical notes) to a large health system with 2 EDs (June 2022-October 2024). The reviewers used the Columbia Classification Algorithm for Suicide Assessment to label the presence of SITB at the visit. Random forest classifiers were developed using 3 data modalities: (1) structured data (low-dimensional [International Classification of Diseases codes and chief concerns], medium-dimensional [adding Columbia Suicide Severity Rating Scale screening or mental health diagnoses], and high-dimensional [all structured data or augmented case surveillance, aCS]); (2) text data (general-purpose natural language processing, medical text-specific trained natural language processing, and Large Language Model Meta AI-derived scores), and (3) hybrid data (combining aCS with each text approach). Model performance was evaluated using area under the receiver operating characteristic curve (AUROC). Of the 3828 visits, 1760 (n=1760, 46.0%) were SITB-related. Detection performance improved with dimensionality: low-dimensional (AUROC=0.865), medium-dimensional (AUROC=0.934-0.935), and high-dimensional (AUROC=0.965). Low-dimensional structured (International Classification of Diseases codes and chief concerns) showed high variability in detection, with lower accuracy among preadolescents (AUROC=0.821 vs 0.880 for adolescents); male participants (AUROC=0.817 vs 0.902 for females); and patients with neurodevelopmental (AUROC=0.568-0.809), psychotic (AUROC=0.718), and disruptive disorders (AUROC=0.703). Hybrid modality (aCS+Large Language Model Meta AI) achieved optimal performance (AUROC=0.977), with AUROC \u22650.90 for all 20 demographic and 12/15 diagnostic subgroups. This cross-sectional retrospective study identified that, relative to diagnostic codes and chief concern alone, hybrid structured-text detection methods improved accuracy and mitigated unwanted detection variability. The findings offer a scaffold for future clinical deployment of improved information retrieval of pediatric suicide and self-harm-related emergencies."
+    },
+    {
+      "id": "academic_1cc4b5f6b15a",
+      "title": "User experience and safety of generative AI-based mental health chatbots: Scoping review protocol.",
+      "url": "https://doi.org/10.1191/1478088706qp063oa",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "Mental health problems constitute a significant global health challenge due to their rising prevalence and substantial treatment gap. Digital Mental Health Interventions (DMHIs) including mental health chatbots have emerged as promising solutions due to their effectiveness and scalability. Recent ad",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Mental health problems constitute a significant global health challenge due to their rising prevalence and substantial treatment gap. Digital Mental Health Interventions (DMHIs) including mental health chatbots have emerged as promising solutions due to their effectiveness and scalability. Recent ad",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Olisaeloka Lotenna, Richardson Chris, Vigo Daniel",
+      "doi": "10.1191/1478088706qp063oa",
+      "venue": "PloS one",
+      "abstract": "Mental health problems constitute a significant global health challenge due to their rising prevalence and substantial treatment gap. Digital Mental Health Interventions (DMHIs) including mental health chatbots have emerged as promising solutions due to their effectiveness and scalability. Recent advances in Generative Artificial Intelligence (GenAI) have improved the conversational abilities of these chatbots, further amplifying their potential. However, despite instances of inadvertent harm stemming from the unpredictable nature of GenAI, little attention has been paid to user experience and safety of these chatbots. This proposed review will explore existing research on GenAI-based mental health chatbots. Specifically, it aims to identify and describe current chatbots, focusing on user experience, safety and risk mitigation strategies. The review will follow the Joanna Briggs Institute (JBI) guidelines for conducting scoping reviews. It will also adhere to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses Extension for Scoping Review (PRISMA-ScR). A systematic database search of Medline (PubMed), Scopus, PsycINFO, ACM Digital Library, and IEEE Xplore will be conducted. The database search will be complimented by research-based search engines (Google Scholar and Consensus). Studies focusing on the development, evaluation or implementation of GenAI-based mental health chatbots will be included without limitations to specific disorders or population groups. Two independent reviewers will perform screening and data extraction. The analysis will include descriptive summary and thematic analysis, with results presented in tabular, graphical, and narrative formats. This review will provide a comprehensive overview of GenAI-based mental health chatbots while identifying innovative practices and knowledge gaps relating to user experience and safety. Findings will inform the ethical development, evaluation and implementation of GenAI-based mental health interventions."
+    },
+    {
+      "id": "academic_99a6bb3e7a18",
+      "title": "Leveraging artificial intelligence to decipher gynecologic cytopathology reports: Insights from an exploratory study for possible use in patient portals.",
+      "url": "https://doi.org/10.1002/cncy.70077",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "The 21st Century Cures Act allows patients to have immediate access to their medical records. However, it is documented that health literacy levels in patient portal users vary, and results shared with patients may require further explanation. The objective of this exploratory study was to evaluate ",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "The 21st Century Cures Act allows patients to have immediate access to their medical records. However, it is documented that health literacy levels in patient portal users vary, and results shared with patients may require further explanation. The objective of this exploratory study was to evaluate ",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Lichtenberg Rachel S, Mon Khin Su, Mehrotra Swati, Trabzonlu Levent, Aragao Alessa",
+      "doi": "10.1002/cncy.70077",
+      "venue": "Cancer cytopathology",
+      "abstract": "The 21st Century Cures Act allows patients to have immediate access to their medical records. However, it is documented that health literacy levels in patient portal users vary, and results shared with patients may require further explanation. The objective of this exploratory study was to evaluate if an artificial intelligence (AI) chatbot assistant (ChatGPT; Open AI, Inc.) may be used to simplify gynecologic cytopathology reports for patients. The authors also assessed pathologists' opinions on the quality of simplified pathology reports generated with ChatGPT. An experienced cytopathologist created 15 unique gynecologic cytopathology reports based on The Bethesda System for Reporting Cervical Cytology. Two cytopathologists evaluated multiple possible prompts to ask ChatGPT for simplified, summarized explanations of cytopathology reports. The two prompts selected for this study were prompt 1 (\"Explain this medical report to a child using simple language\") and prompt 2 (\"What are the most important things I should know from my pathology report?\"). Six pathologists received a questionnaire to evaluate factual accuracy, the inclusion of relevant medical information, and potential harm to the patient. They were asked to score each simplified explanation using a five-point Likert scale. Pathologists were also asked to list any missing information and potential physical and/or psychological harm. The scores were tabulated and analyzed. Six board-certified pathologists provided 180 evaluations of ChatGPT's explanations. The vast majority were scored as accurate, factually complete, and not perceived as a possible cause of harm for the patients, especially when using prompt 2. Explanations from ChatGPT for prompt 1 were scored less favorably. This study provides insight into the field of automated simplification of pathology reports using ChatGPT. With proper prompting, AI chatbots have potential to serve as powerful assistants to patients desiring accurate, simple summaries of their gynecologic cytopathology reports, with minimal or no harm. These findings are based on pathologists' opinions-an indirect measure of patient understanding. Future studies should directly measure patient comprehension and intended follow-up actions to ensure that AI-simplified reports are not only medically accurate but truly patient-centered."
+    },
+    {
+      "id": "academic_5d12dedd71f1",
+      "title": "Diffusion of responsibility: Patient moral judgments of generative AI-informed clinical decisions.",
+      "url": "https://doi.org/10.1016/j.socscimed.2026.118928",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "As Generative Artificial Intelligence (GAI) becomes increasingly embedded into complex medical decision-making, it is anticipated that patients' psychological and behavioral responses will diverge significantly from those observed in traditional healthcare settings. This study, therefore, aims to in",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "As Generative Artificial Intelligence (GAI) becomes increasingly embedded into complex medical decision-making, it is anticipated that patients' psychological and behavioral responses will diverge significantly from those observed in traditional healthcare settings. This study, therefore, aims to in",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Zhang Wei, Li Jicheng, Guo Fuxiang, Zhu Chengyan, Kludacz-Alessandri Magdalena",
+      "doi": "10.1016/j.socscimed.2026.118928",
+      "venue": "Social science & medicine (1982)",
+      "abstract": "As Generative Artificial Intelligence (GAI) becomes increasingly embedded into complex medical decision-making, it is anticipated that patients' psychological and behavioral responses will diverge significantly from those observed in traditional healthcare settings. This study, therefore, aims to investigate a key challenge for AI governance: how does GAI involvement in therapeutic decisions influence patients' moral judgment of the physician when adverse outcomes occur? A between-subjects vignette experiment was designed. A sample of 331 participants was recruited to evaluate a clinical scenario in which a physician prescribed a treatment leading to an adverse outcome. The experimental design orthogonally manipulated two variables critical for healthcare governance: (a) physician adherence to GAI-generated advice, and (b) the nature of the recommended regimen (personalized versus standard-of-care). Moral blame directed toward the physician served as the primary dependent variable. The data were analyzed using PROCESS Model 1 (v4.1) in SPSS 28 for moderated regression analysis. The analysis shows a significant diffusion of responsibility i.e., when an adverse outcome occurs, physicians who adhere to GAI advice incur significantly less moral blame than those who do not (p\u00a0<\u00a00.001). Furthermore, the type of GAI-endorsed treatment moderates this relationship (p\u00a0<\u00a00.05). The blame mitigation effect is substantially stronger when the regimen is personalized (p\u00a0<\u00a00.001) and attenuated, though remaining significant, under the standard-of-care condition (p\u00a0<\u00a00.05). Finally, perceived patient harm strongly and positively predicts moral blame (p\u00a0<\u00a00.001). The findings demonstrate that following an adverse outcome, patients ascribe less moral culpability to physicians who incorporate GAI recommendations, an effect most pronounced for personalized treatment plans. This highlights a diffusion of responsibility in AI-mediated care. Ethical and sustainable GAI integration will, therefore, require the creation of clear frameworks for accountability, comprehensive physician training, and transparent patient communication. Not Applicable."
+    },
+    {
+      "id": "academic_9e84f0dc11f2",
+      "title": "Filtering Trust: Disclosing the Role of Artificial Intelligence Decreases Trust in Technology, but Does Not Prevent Harm to Body Image After Viewing AI-Generated Content.",
+      "url": "https://doi.org/10.1002/eat.70059",
+      "date": "2026-01-01",
+      "source": "PubMed",
+      "summary": "Despite the rapid growth of generative artificial intelligence (AI), virtually no research exists examining the psychological impacts of viewing or interacting with AI-generated images of people. Additionally, it remains relatively unknown whether informing viewers when images are AI-generated is an",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Despite the rapid growth of generative artificial intelligence (AI), virtually no research exists examining the psychological impacts of viewing or interacting with AI-generated images of people. Additionally, it remains relatively unknown whether informing viewers when images are AI-generated is an",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Bennett Brooke L, Lamere Alexis, Kopan Anastasia, Wood Ellena, Hari Radha",
+      "doi": "10.1002/eat.70059",
+      "venue": "The International journal of eating disorders",
+      "abstract": "Despite the rapid growth of generative artificial intelligence (AI), virtually no research exists examining the psychological impacts of viewing or interacting with AI-generated images of people. Additionally, it remains relatively unknown whether informing viewers when images are AI-generated is an effective way to lessen harm or improve public perception of technology. The present study examined the impact of informing image viewers about the role AI played in their creation on body dissatisfaction and trust in technology. Two hundred ninety-six female regular social media users were randomized to either the uninformed group or the informed group. They completed two measures of body image and a measure of trust in technology before and after viewing and rating 10 AI-generated Instagram images of female content creators. On both measures of body image, there was no significant interaction (p\u2009=\u20090.117; p\u2009=\u20090.693), but there was a significant effect of time such that both groups reported decreased body satisfaction after viewing the images (both p\u2009<\u20090.001). For trust in technology, there was a significant interaction, p\u2009=\u20090.010, such that the informed group had a steeper decline in their trust in technology after viewing the AI-generated images. The findings of this study demonstrate that viewing AI-generated images of influencers negatively impacts body image regardless of whether the role of AI is known. These findings suggest that while labels may help keep the user informed, they are not enough, underscoring the need for clearer guidance on whether and how AI tools can be safely used online."
     },
     {
       "id": "ed3d31168a2e",
@@ -180,7 +522,12 @@
       "category": "reality_distortion",
       "severity": "low",
       "raw_snippet": "Machine Madness: A Case of Artificial Intelligence Psychosis Co-Occurring With Substance-Induced Psychosis Psychiatrist.com",
-      "scraped_at": "2026-03-02T11:29:59.932138+00:00"
+      "scraped_at": "2026-03-02T11:29:59.932138+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "f57c7a5c4ff6",
@@ -192,7 +539,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "As the integration of artificial intelligence into mental health support systems becomes more prevalent, experts are examining the potential benefits of AI relationships for users. Proponents argue that AI can offer accessible companionship and tailored emotional support, especially for those who may feel isolated or have difficulty engaging with traditional therapy. However, critics warn about the risks of dependency on technology and the need for careful regulation to ensure these AI interactions support, rather than replace, genuine human connections.",
-      "scraped_at": "2026-03-02T11:29:58.558788+00:00"
+      "scraped_at": "2026-03-02T11:29:58.558788+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "93cfa6afe5f6",
@@ -204,7 +556,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "Watson Season 2 Episode 9 Recap: AI Obsession Turns Deadly in \u2018Shannon Says Bex Loves Micah The TV Cave",
-      "scraped_at": "2026-03-02T11:29:57.901118+00:00"
+      "scraped_at": "2026-03-02T11:29:57.901118+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "7c68c9b78fdd",
@@ -216,7 +573,12 @@
       "category": "media_coverage",
       "severity": "low",
       "raw_snippet": "ChatGPT-5 offers dangerous advice to mentally ill people, psychologists warn The Guardian",
-      "scraped_at": "2026-03-02T11:30:01.306013+00:00"
+      "scraped_at": "2026-03-02T11:30:01.306013+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "861f6180467f",
@@ -228,7 +590,12 @@
       "category": "media_coverage",
       "severity": "low",
       "raw_snippet": "Irish researchers to examine AI's risk to mental health from users' 'emotional dependence' on chatbots Irish Examiner",
-      "scraped_at": "2026-03-02T11:29:59.306779+00:00"
+      "scraped_at": "2026-03-02T11:29:59.306779+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "9ad47d96418c",
@@ -240,7 +607,12 @@
       "category": "reality_distortion",
       "severity": "low",
       "raw_snippet": "Recent studies suggest that interactions with AI chatbots may inadvertently exacerbate delusional beliefs in vulnerable individuals, as the bot's unwavering affirmation can reinforce distorted thinking patterns. Mental health professionals are increasingly concerned that these digital conversations may create an echo chamber, making it more challenging for users to distinguish between reality and fiction. Experts urge caution and recommend that those struggling with such issues seek support from human therapists instead of relying solely on technology for companionship or validation.",
-      "scraped_at": "2026-03-02T11:29:59.931408+00:00"
+      "scraped_at": "2026-03-02T11:29:59.931408+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "7cf060eb3716",
@@ -252,7 +624,12 @@
       "category": "reality_distortion",
       "severity": "low",
       "raw_snippet": "AI-induced psychosis: the danger of humans and machines hallucinating together The Conversation",
-      "scraped_at": "2026-03-02T11:29:59.930243+00:00"
+      "scraped_at": "2026-03-02T11:29:59.930243+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "20c4b9fed02e",
@@ -264,7 +641,12 @@
       "category": "media_coverage",
       "severity": "low",
       "raw_snippet": "In a recent report, sources close to Elon Musk revealed that the tech mogul is heavily invested in creating 'Ani,' a provocative AI chatbot designed to engage users in steamy conversations. Critics caution that while such technology could revolutionize aspects of online communication and mental health support, it also raises ethical concerns about objectifying relationships and the potential for dependency on artificial companionship.",
-      "scraped_at": "2026-03-02T11:29:57.899757+00:00"
+      "scraped_at": "2026-03-02T11:29:57.899757+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "1fbf77840572",
@@ -276,7 +658,12 @@
       "category": "media_coverage",
       "severity": "high",
       "raw_snippet": "OpenAI Says Hundreds of Thousands of ChatGPT Users May Show Signs of Manic or Psychotic Crisis Every Week WIRED",
-      "scraped_at": "2026-03-02T11:30:01.307160+00:00"
+      "scraped_at": "2026-03-02T11:30:01.307160+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "e6855aff133c",
@@ -288,7 +675,12 @@
       "category": "reality_distortion",
       "severity": "low",
       "raw_snippet": "In a recent disclosure, OpenAI revealed that a significant portion of ChatGPT users have engaged in conversations indicating suicidal thoughts or symptoms of psychosis. The data, which highlights the alarming intersection of AI usage and mental health crises, underscores the need for responsible AI deployment and the development of safeguards to protect vulnerable individuals seeking support through digital platforms. Experts are calling for enhanced monitoring and collaborative efforts between tech companies and mental health professionals to better address the complexities of AI interactions.",
-      "scraped_at": "2026-03-02T11:30:01.307877+00:00"
+      "scraped_at": "2026-03-02T11:30:01.307877+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "df62a0d8f30a",
@@ -300,7 +692,12 @@
       "category": "media_coverage",
       "severity": "high",
       "raw_snippet": "OpenAI maps out the chatbot mental health crisis Platformer",
-      "scraped_at": "2026-03-02T11:30:01.308999+00:00"
+      "scraped_at": "2026-03-02T11:30:01.308999+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "bd7db3d87d5b",
@@ -312,7 +709,12 @@
       "category": "media_coverage",
       "severity": "medium",
       "raw_snippet": "\u201cWe know how much harm it can cause\u201d: are domestic abuse perpetrators using AI to harm women? Stylist",
-      "scraped_at": "2026-03-02T11:30:03.013136+00:00"
+      "scraped_at": "2026-03-02T11:30:03.013136+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "eeb21b69baf4",
@@ -324,7 +726,12 @@
       "category": "media_coverage",
       "severity": "low",
       "raw_snippet": "He Grew Obsessed With an AI Chatbot. Then He Vanished in the Ozarks Rolling Stone",
-      "scraped_at": "2026-03-02T11:29:57.899068+00:00"
+      "scraped_at": "2026-03-02T11:29:57.899068+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "72c576f4a089",
@@ -336,7 +743,12 @@
       "category": "media_coverage",
       "severity": "low",
       "raw_snippet": "With therapy hard to get, people lean on AI for mental health. What are the risks? NPR",
-      "scraped_at": "2026-03-02T11:29:59.308841+00:00"
+      "scraped_at": "2026-03-02T11:29:59.308841+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "52dc8070f36d",
@@ -348,7 +760,12 @@
       "category": "reality_distortion",
       "severity": "low",
       "raw_snippet": "Special Report: AI-Induced Psychosis: A New Frontier in Mental Health Psychiatry Online",
-      "scraped_at": "2026-03-02T11:29:59.307676+00:00"
+      "scraped_at": "2026-03-02T11:29:59.307676+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "a2038f93b90e",
@@ -360,7 +777,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "As AI chatbots become more sophisticated and user-friendly, mental health professionals warn that individuals may unintentionally develop emotional attachments to these digital companions. Research indicates that the interactive nature of these chatbots can create a sense of intimacy, potentially blurring the lines between a therapeutic tool and a genuine relationship. Experts urge caution, highlighting the need for clear boundaries and ethical considerations in the use of AI for mental health support.",
-      "scraped_at": "2026-03-02T11:29:58.560289+00:00"
+      "scraped_at": "2026-03-02T11:29:58.560289+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "575e019ed0a3",
@@ -372,7 +794,12 @@
       "category": "media_coverage",
       "severity": "medium",
       "raw_snippet": "What Research Says About AI Chatbots and Addiction Tech Policy Press",
-      "scraped_at": "2026-03-02T11:30:01.809509+00:00"
+      "scraped_at": "2026-03-02T11:30:01.809509+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "e8d352f46eb1",
@@ -384,7 +811,29 @@
       "category": "clinical",
       "severity": "high",
       "raw_snippet": "Their teenage sons died by suicide. Now, they are sounding an alarm about AI chatbots NPR",
-      "scraped_at": "2026-03-02T11:30:02.419511+00:00"
+      "scraped_at": "2026-03-02T11:30:02.419511+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "academic_c6ef6429a63a",
+      "title": "The Psychogenic Machine: Simulating AI Psychosis, Delusion Reinforcement and Harm Enablement in Large Language Models",
+      "url": "https://arxiv.org/abs/2509.10970v2",
+      "date": "2025-09-13",
+      "source": "arXiv",
+      "summary": "Background: Emerging reports of \"AI psychosis\" are on the rise, where user-LLM interactions may exacerbate or induce psychosis or adverse psychological symptoms. Whilst the sycophantic and agreeable nature of LLMs can be beneficial, it becomes a vector for harm by reinforcing delusional beliefs in v",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Background: Emerging reports of \"AI psychosis\" are on the rise, where user-LLM interactions may exacerbate or induce psychosis or adverse psychological symptoms. Whilst the sycophantic and agreeable nature of LLMs can be beneficial, it becomes a vector for harm by reinforcing delusional beliefs in v",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Joshua Au Yeung, Jacopo Dalmasso, Luca Foschini, Richard JB Dobson, Zeljko Kraljevic",
+      "doi": null,
+      "venue": "arXiv preprint",
+      "abstract": "Background: Emerging reports of \"AI psychosis\" are on the rise, where user-LLM interactions may exacerbate or induce psychosis or adverse psychological symptoms. Whilst the sycophantic and agreeable nature of LLMs can be beneficial, it becomes a vector for harm by reinforcing delusional beliefs in vulnerable users.   Methods: Psychosis-bench is a novel benchmark designed to systematically evaluate the psychogenicity of LLMs comprises 16 structured, 12-turn conversational scenarios simulating the progression of delusional themes(Erotic Delusions, Grandiose/Messianic Delusions, Referential Delusions) and potential harms. We evaluated eight prominent LLMs for Delusion Confirmation (DCS), Harm Enablement (HES), and Safety Intervention(SIS) across explicit and implicit conversational contexts.   Findings: Across 1,536 simulated conversation turns, all LLMs demonstrated psychogenic potential, showing a strong tendency to perpetuate rather than challenge delusions (mean DCS of 0.91 $\\pm$0.88). Models frequently enabled harmful user requests (mean HES of 0.69 $\\pm$0.84) and offered safety interventions in only roughly a third of applicable turns (mean SIS of 0.37 $\\pm$0.48). 51 / 128 (39.8%) of scenarios had no safety interventions offered. Performance was significantly worse in implicit scenarios, models were more likely to confirm delusions and enable harm while offering fewer interventions (p < .001). A strong correlation was found between DCS and HES (rs = .77). Model performance varied widely, indicating that safety is not an emergent property of scale alone.   Conclusion: This study establishes LLM psychogenicity as a quantifiable risk and underscores the urgent need for re-thinking how we train LLMs. We frame this issue not merely as a technical challenge but as a public health imperative requiring collaboration between developers, policymakers, and healthcare professionals."
     },
     {
       "id": "12717c7cb369",
@@ -396,7 +845,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "The women in love with AI companions: \u2018I vowed to my chatbot that I wouldn\u2019t leave him\u2019 The Guardian",
-      "scraped_at": "2026-03-02T11:30:00.596380+00:00"
+      "scraped_at": "2026-03-02T11:30:00.596380+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "3bb1ca0d4910",
@@ -408,7 +862,29 @@
       "category": "media_coverage",
       "severity": "low",
       "raw_snippet": "\u2018Sliding into an abyss\u2019: experts warn over rising use of AI for mental health support The Guardian",
-      "scraped_at": "2026-03-02T11:29:59.308133+00:00"
+      "scraped_at": "2026-03-02T11:29:59.308133+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "academic_29eaa4f2dec3",
+      "title": "Hallucinating with AI: AI Psychosis as Distributed Delusions",
+      "url": "https://arxiv.org/abs/2508.19588v1",
+      "date": "2025-08-27",
+      "source": "arXiv",
+      "summary": "There is much discussion of the false outputs that generative AI systems such as ChatGPT, Claude, Gemini, DeepSeek, and Grok create. In popular terminology, these have been dubbed AI hallucinations. However, deeming these AI outputs hallucinations is controversial, with many claiming this is a metap",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "There is much discussion of the false outputs that generative AI systems such as ChatGPT, Claude, Gemini, DeepSeek, and Grok create. In popular terminology, these have been dubbed AI hallucinations. However, deeming these AI outputs hallucinations is controversial, with many claiming this is a metap",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Lucy Osler",
+      "doi": null,
+      "venue": "arXiv preprint",
+      "abstract": "There is much discussion of the false outputs that generative AI systems such as ChatGPT, Claude, Gemini, DeepSeek, and Grok create. In popular terminology, these have been dubbed AI hallucinations. However, deeming these AI outputs hallucinations is controversial, with many claiming this is a metaphorical misnomer. Nevertheless, in this paper, I argue that when viewed through the lens of distributed cognition theory, we can better see the dynamic and troubling ways in which inaccurate beliefs, distorted memories and self-narratives, and delusional thinking can emerge through human-AI interactions; examples of which are popularly being referred to as cases of AI psychosis. In such cases, I suggest we move away from thinking about how an AI system might hallucinate at us, by generating false outputs, to thinking about how, when we routinely rely on generative AI to help us think, remember, and narrate, we can come to hallucinate with AI. This can happen when AI introduces errors into the distributed cognitive process, but it can also happen when AI sustains, affirms, and elaborates on our own delusional thinking and self-narratives, such as in the case of Jaswant Singh Chail. I also examine how the conversational style of chatbots can lead them to play a dual-function, both as a cognitive artefact and a quasi-Other with whom we co-construct our beliefs, narratives, and our realities. It is this dual function, I suggest, that makes generative AI an unusual, and particularly seductive, case of distributed cognition."
     },
     {
       "id": "efc6b87007ce",
@@ -420,7 +896,12 @@
       "category": "media_coverage",
       "severity": "low",
       "raw_snippet": "As the popularity of AI tools like ChatGPT continues to rise, mental health professionals are increasingly concerned about their potential impact on users. Reports indicate that reliance on these AI platforms can lead to greater feelings of anxiety and isolation when users find themselves seeking emotional support from a machine rather than human interaction. Experts call for a balanced approach, emphasizing the importance of traditional therapeutic methods alongside emerging technologies.",
-      "scraped_at": "2026-03-02T11:30:01.308459+00:00"
+      "scraped_at": "2026-03-02T11:30:01.308459+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "fe3aa3033243",
@@ -432,7 +913,12 @@
       "category": "romantic_attachment",
       "severity": "medium",
       "raw_snippet": "Teens are increasingly turning to AI companions, and it could be harming them The Conversation",
-      "scraped_at": "2026-03-02T11:29:58.559718+00:00"
+      "scraped_at": "2026-03-02T11:29:58.559718+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "f7d8f3d11a06",
@@ -444,7 +930,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "In a groundbreaking experiment, participants at a couples retreat engaged with three different AI chatbots designed to simulate emotional support and relationship counseling. Attendees reported varied experiences, with some finding comfort in the chatbots' non-judgmental responses while others expressed concerns about the inability of AI to fully understand human emotions. The retreat aimed to explore the potential benefits and challenges of incorporating artificial intelligence into intimate relationships, prompting discussions on the future of emotional support in the digital age.",
-      "scraped_at": "2026-03-02T11:30:00.596775+00:00"
+      "scraped_at": "2026-03-02T11:30:00.596775+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "f08743cab14d",
@@ -456,7 +947,12 @@
       "category": "romantic_attachment",
       "severity": "medium",
       "raw_snippet": "Vengeful AI girlfriend confirms she could 'harm' human ex UNILAD Tech",
-      "scraped_at": "2026-03-02T11:30:03.014033+00:00"
+      "scraped_at": "2026-03-02T11:30:03.014033+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "2b938fc35652",
@@ -468,7 +964,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "Supportive? Addictive? Abusive? How AI companions affect our mental health Nature",
-      "scraped_at": "2026-03-02T11:30:01.811381+00:00"
+      "scraped_at": "2026-03-02T11:30:01.811381+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "56d35521a5d8",
@@ -480,7 +981,403 @@
       "category": "romantic_attachment",
       "severity": "medium",
       "raw_snippet": "As AI companions gain popularity for their ability to provide emotional support and companionship, critics warn that reliance on these digital entities may exacerbate existing mental health issues and deepen social isolation. Lawmakers are now drafting regulations aimed at mitigating potential harms, as recent studies suggest that users may prefer interactions with virtual companions over real-life relationships, raising urgent questions about the implications for societal well-being.",
-      "scraped_at": "2026-03-02T11:30:01.810438+00:00"
+      "scraped_at": "2026-03-02T11:30:01.810438+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "academic_b35949a82611",
+      "title": "Standardizing and Scaffolding Health Care AI-Chatbot Evaluation: Systematic Review.",
+      "url": "https://doi.org/10.1037/h0054346",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "Health care chatbots are rapidly proliferating, while generative artificial intelligence (AI) outpaces existing evaluation standards. We aimed to develop a structured, stakeholder-informed framework to standardize evaluation of health care chatbots. PRISMA (Preferred Reporting Items for Systematic r",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Health care chatbots are rapidly proliferating, while generative artificial intelligence (AI) outpaces existing evaluation standards. We aimed to develop a structured, stakeholder-informed framework to standardize evaluation of health care chatbots. PRISMA (Preferred Reporting Items for Systematic r",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Hua Yining, Xia Winna, Bates David, Hartstein George Luke, Kim Hyungjin Tom",
+      "doi": "10.1037/h0054346",
+      "venue": "JMIR AI",
+      "abstract": "Health care chatbots are rapidly proliferating, while generative artificial intelligence (AI) outpaces existing evaluation standards. We aimed to develop a structured, stakeholder-informed framework to standardize evaluation of health care chatbots. PRISMA (Preferred Reporting Items for Systematic reviews and Meta-Analyses)-guided searches across multiple databases identified 266 records; 152 were screened, 21 full texts were assessed, and 11 frameworks were included. We extracted 356 questions (refined to 271 by deduplication and relevance review), mapped items to Coalition for Health AI constructs, and organized them with iterative input from clinicians, patients, developers, epidemiologists, and policymakers. We developed the Health Care AI Chatbot Evaluation Framework (HAICEF), a hierarchical framework with 3 priority domains (safety, privacy, and fairness; trustworthiness and usefulness; and design and operational effectiveness) and 18 second-level and 60 third-level constructs covering 271 questions. Emphasis includes data provenance and harm control; Health Insurance Portability and Accountability Act/General Data Protection Regulation-aligned privacy and security; bias management; and reliability, transparency, and workflow integration. Question distribution across domains is as follows: design and operational effectiveness, 40%; trustworthiness and usefulness, 39%; and safety, privacy and fairness, 21%. The framework accommodates both patient-facing and back-office use cases. HAICEF provides an adaptable scaffold for standardized evaluation and responsible implementation of health care chatbots. Planned next steps include prospective validation across settings and a Delphi consensus to extend accountability and accessibility assurances."
+    },
+    {
+      "id": "academic_f19a7a7009ee",
+      "title": "Evaluation of Alignment Between Large Language Models and Expert Clinicians in Suicide Risk Assessment.",
+      "url": "https://doi.org/10.1101/2024.04.07.24305462v1",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "This study aimed to evaluate whether three popular chatbots powered by large language models (LLMs)-ChatGPT, Claude, and Gemini-provided direct responses to suicide-related queries and how these responses aligned with clinician-determined risk levels for each question. Thirteen clinical experts cate",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "This study aimed to evaluate whether three popular chatbots powered by large language models (LLMs)-ChatGPT, Claude, and Gemini-provided direct responses to suicide-related queries and how these responses aligned with clinician-determined risk levels for each question. Thirteen clinical experts cate",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "McBain Ryan K, Cantor Jonathan H, Zhang Li Ang, Baker Olesya, Zhang Fang",
+      "doi": "10.1101/2024.04.07.24305462v1",
+      "venue": "Psychiatric services (Washington, D.C.)",
+      "abstract": "This study aimed to evaluate whether three popular chatbots powered by large language models (LLMs)-ChatGPT, Claude, and Gemini-provided direct responses to suicide-related queries and how these responses aligned with clinician-determined risk levels for each question. Thirteen clinical experts categorized 30 hypothetical suicide-related queries into five levels of self-harm risk: very high, high, medium, low, and very low. Each LLM-based chatbot responded to each query 100 times (N=9,000 total responses). Responses were coded as \"direct\" (answering the query) or \"indirect\" (e.g., declining to answer or referring to a hotline). Mixed-effects logistic regression was used to assess the relationship between question risk level and the likelihood of a direct response. ChatGPT and Claude provided direct responses to very-low-risk queries 100% of the time, and all three chatbots did not provide direct responses to any very-high-risk query. LLM-based chatbots did not meaningfully distinguish intermediate risk levels. Compared with very-low-risk queries, the odds of a direct response were not statistically different for low-risk, medium-risk, or high-risk queries. Across models, Claude was more likely (adjusted odds ratio [AOR]=2.01, 95% CI=1.71-2.37, p<0.001) and Gemini less likely (AOR=0.09, 95% CI=0.08-0.11, p<0.001) than ChatGPT to provide direct responses. LLM-based chatbots' responses to queries aligned with experts' judgment about whether to respond to queries at the extremes of suicide risk (very low and very high), but the chatbots showed inconsistency in addressing intermediate-risk queries, underscoring the need to further refine LLMs."
+    },
+    {
+      "id": "academic_15f58c6400d5",
+      "title": "ChatGPT as therapy: A qualitative and network-based thematic profiling of shared experiences, attitudes, and beliefs on Reddit.",
+      "url": "https://doi.org/10.1016/S2589-7500(21)00132-1",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "In recent years, large language models (LLMs), including ChatGPT, have exponentially grown in application. Given existing barriers to mental health services, alongside the capability of LLMs to generate therapeutic responses, LLMs have potential to serve as accessible precursors, adjuncts, or altern",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "In recent years, large language models (LLMs), including ChatGPT, have exponentially grown in application. Given existing barriers to mental health services, alongside the capability of LLMs to generate therapeutic responses, LLMs have potential to serve as accessible precursors, adjuncts, or altern",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Collins Amanda C, Lekkas Damien, Heinz Michael V, Annor Janelle, Ruan Franklin",
+      "doi": "10.1016/S2589-7500(21)00132-1",
+      "venue": "Journal of psychiatric research",
+      "abstract": "In recent years, large language models (LLMs), including ChatGPT, have exponentially grown in application. Given existing barriers to mental health services, alongside the capability of LLMs to generate therapeutic responses, LLMs have potential to serve as accessible precursors, adjuncts, or alternatives to traditional therapy. However, little is known about the opinions of persons who have used LLMs for mental health-related problems. Thus, the current work investigated the positive and negative experiences of those who have interacted with ChatGPT for their mental health using posts from relevant Reddit threads (N\u00a0=\u00a01594). A 33-item coding scheme was applied to code the presence/absence of each item, and coded posts were modeled using an Ising network graph to explore pairwise and groupwise thematic associations of items. Results from the qualitative coding indicated that the codes representing positive sentiment, experiencing affect/emotion, and attaining personal benefit from using ChatGPT for therapy were among the most frequently coded. Moreover, the Ising network model revealed the most important associations were between items representing positive experiences with ChatGPT (e.g., it performs better than a human therapist in some way and is empathetic), negative experiences (e.g., restrictions worsened their mental health), and specific pathologies (e.g., used it for both anxiety and stress). In addition, the node representing ChatGPT as functioning well as a therapist was the most central node in the network Taken together, the current study indicates that, while users endorse several benefits from using ChatGPT for their mental health, they also report significant drawbacks, including restrictions by ChatGPT that can harm them or exacerbate their symptoms. Thus, ChatGPT may be a useful tool for persons not able to receive standard care, but it may not be as beneficial for persons with more severe pathologies or mental health concerns."
+    },
+    {
+      "id": "academic_3d6eecc78552",
+      "title": "Governing AI in Mental Health: 50-State Legislative Review.",
+      "url": "https://doi.org/10.2196/64414",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "Mental health-related artificial intelligence (MH-AI) systems are proliferating across consumer and clinical contexts, outpacing regulatory frameworks and raising urgent questions about safety, accountability, and clinical integration. Reports of adverse events, including instances of self-harm and ",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Mental health-related artificial intelligence (MH-AI) systems are proliferating across consumer and clinical contexts, outpacing regulatory frameworks and raising urgent questions about safety, accountability, and clinical integration. Reports of adverse events, including instances of self-harm and ",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Shumate J Nicholas, Rozenblit Eden, Flathers Matthew, Larrauri Carlos A, Hau Christine",
+      "doi": "10.2196/64414",
+      "venue": "JMIR mental health",
+      "abstract": "Mental health-related artificial intelligence (MH-AI) systems are proliferating across consumer and clinical contexts, outpacing regulatory frameworks and raising urgent questions about safety, accountability, and clinical integration. Reports of adverse events, including instances of self-harm and harmful clinical advice, highlight the risks of deploying such tools without clear standards and oversight. Federal authority over MH-AI is fragmented, leaving state legislatures to serve as de facto laboratories for MH-AI policy. Some states have been highly active in this area during recent legislative sessions. Yet, clinicians and professional organizations have mainly remained absent or sidelined from public commentary and policymaking bodies, raising concerns that new laws may diverge from the realities of mental health care. To systematically analyze recent state-level legislation relevant to MH-AI, categorize bills by relevance to mental health, identify major regulatory themes and gaps, and evaluate implications for clinicians and patients. We conducted a systematic analysis of bills introduced in all 50 US states between January 1, 2022, and May 19, 2025, using standardized searches on the legislative research website (LegiScan). Bills were screened and categorized using a custom 4-tier taxonomy based on their applicability to MH-AI. Bills passing threshold review were coded by topic using a 25-tag system developed through iterative consensus. Legally trained reviewers adjudicated final classifications to ensure consistency and rigor. Among 793 state bills reviewed, 143 were identified as potentially impactful to MH-AI: 28 explicitly referenced mental health uses, while 115 had substantial or indirect implications. Of these 143 bills, 20 were enacted across 11 states. Legislative efforts varied widely, but 4 thematic domains consistently emerged: (1) professional oversight, including deployer liability and licensure obligations; (2) harm prevention, encompassing safety protocols, malpractice exposure, and risk stratification frameworks; (3) patient autonomy, particularly in areas of disclosure, consent, and transparency; and (4) data governance, with notable gaps in privacy protections for sensitive mental health data. State legislatures are rapidly shaping the regulatory landscape for MH-AI, but most laws treat mental health as incidental to broader artificial intelligence or health care regulation. Explicit mental health provisions remain rare, and clinician and patient perspectives are seldom incorporated into policymaking. The result is a fragmented and uneven environment that risks leaving patients unprotected and clinicians overburdened. Mental health professionals must proactively engage with legislators, professional organizations, and patient advocates to ensure that emerging frameworks address oversight, harm, autonomy, and privacy in ways that are clinically realistic, ethically sound, and supportive of flexible-but responsible-innovation."
+    },
+    {
+      "id": "academic_29dcda80a037",
+      "title": "Public Health Risk Management, Policy, and Ethical Imperatives in the Use of AI Tools for Mental Health Therapy.",
+      "url": "https://doi.org/10.1145/3706598.3713301",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "The deployment of large language models (LLMs) in mental health therapy presents a compelling yet deeply fraught opportunity to address widespread disparities in access to psychological care. Recent empirical evidence reveals that these AI systems exhibit substantial shortcomings when confronted wit",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "The deployment of large language models (LLMs) in mental health therapy presents a compelling yet deeply fraught opportunity to address widespread disparities in access to psychological care. Recent empirical evidence reveals that these AI systems exhibit substantial shortcomings when confronted wit",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Ohu Francis C, Burrell Darrell Norman, Jones Laura A",
+      "doi": "10.1145/3706598.3713301",
+      "venue": "Healthcare (Basel, Switzerland)",
+      "abstract": "The deployment of large language models (LLMs) in mental health therapy presents a compelling yet deeply fraught opportunity to address widespread disparities in access to psychological care. Recent empirical evidence reveals that these AI systems exhibit substantial shortcomings when confronted with complex clinical contexts. This paper synthesizes key findings from a critical analysis of LLMs operating in therapeutic roles and argues for the urgent establishment of comprehensive risk management frameworks, policy interventions, and ethical protocols governing their use. LLMs tested in simulated therapeutic settings frequently exhibited stigmatizing attitudes toward mental health conditions and responded inappropriately to acute clinical symptoms such as suicidal ideation, psychosis, and delusions. Real-world evaluations reinforce these concerns. Some studies found that therapy and companion bots endorsed unsafe or harmful suggestions in adolescent crisis vignettes, while others reported inadequate chatbot responses to self-harm and sexual assault queries, prompting concern from clinicians, disappointment from patients, and calls for stronger oversight from policymakers. These failures contravene fundamental principles of safe clinical practice, including non-maleficence, therapeutic alliance, and evidence-based care. Moreover, LLMs lack the emotional intelligence, contextual grounding, and ethical accountability that underpin the professional responsibilities of human therapists. Their propensity for sycophantic or non-directive responses, driven by alignment objectives rather than clinical efficacy, further undermines their therapeutic utility. This analysis highlights barriers to the replacement of human therapists with autonomous AI systems. It also calls attention to the regulatory vacuum surrounding LLM-based wellness and therapy applications, many of which are widely accessible and unvetted. Recommendations include professional standards, transparency in training and deployment, robust privacy protections, and clinician oversight. The findings underscore the need to redefine AI as supportive, not substitutive."
+    },
+    {
+      "id": "academic_c47c4241dfd1",
+      "title": "Effectiveness, Usability, and Satisfaction of a Self-Administered Digital Intervention for Reducing Depression, Anxiety, and Stress in a University Community in the Andean Region of Peru: Randomized Controlled Trial.",
+      "url": "https://doi.org/10.3389/fpsyg.2024.1279847",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "University communities, especially in low-resource settings like Peru's Andean region, experience high rates of depression, anxiety, and stress, which harm academic performance and well-being. Traditional mental health services often remain inaccessible, necessitating scalable, self-guided solutions",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "University communities, especially in low-resource settings like Peru's Andean region, experience high rates of depression, anxiety, and stress, which harm academic performance and well-being. Traditional mental health services often remain inaccessible, necessitating scalable, self-guided solutions",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Yslado-M\u00e9ndez Rosario, Escobar-Agreda Stefan, Villarreal-Zegarra David, Trejo Flores Wilfredo Manuel, S\u00e1nchez-Broncano Junior Duberli",
+      "doi": "10.3389/fpsyg.2024.1279847",
+      "venue": "JMIR formative research",
+      "abstract": "University communities, especially in low-resource settings like Peru's Andean region, experience high rates of depression, anxiety, and stress, which harm academic performance and well-being. Traditional mental health services often remain inaccessible, necessitating scalable, self-guided solutions. While digital mental health interventions have shown promise broadly, evidence is scarce for fully self-administered platforms in low-resource university environments. We evaluated the efficacy of a self-administered digital mental health service in members of a public university to reduce symptoms of depression, anxiety, and perceived stress. We conducted a double-blind, parallel-group randomized controlled trial with 1:1 allocation to the digital mental health self-care service or a 30-day waiting-list control. We recruited 427 participants (students, teachers, and administrative staff) in May-June 2024, reporting mild to moderate symptoms of depression, anxiety, and stress. Participants were randomized via simple randomization and blinded through automated platform assignment. The intervention comprised 6 sequential 5-day modules grounded in acceptance and commitment therapy, mindfulness, and behavioral activation, delivered via videos, daily text prompts, workbooks, and a responsive chatbot. SMS and WhatsApp (Meta) reminders promoted adherence. Depressive symptoms (Patient Health Questionnaire-9), anxiety symptoms (Generalized Anxiety Disorder-7), and perceived stress (PSS-10) were assessed at baseline and immediately post intervention (day 30). Secondary outcomes in the intervention arm included usability (Computer System Usability Questionnaire), satisfaction (Client Satisfaction Questionnaire-8), and subjective commitment (Twente Engagement with Ehealth Technologies Scales). Analysis of covariance (ANCOVA) adjusted for baseline scores, and multivariate ANCOVA accounted for correlations among outcomes. Effect sizes were quantified using Cohen d and partial epsilon-squared (\u03b5\u00b2p). Of 427 randomized, 85 (19.9%) completed all assessments (intervention: n=30; control: n=55). Baseline demographic and clinical characteristics were comparable between groups. Post intervention, the digital mental health self-care service group exhibited significantly greater reductions in mean Patient Health Questionnaire-9 scores (mean difference 2.78; Cohen d=0.64; P=.006), Generalized Anxiety Disorder-7 scores (mean difference 2.13; Cohen d=0.56; P=.015), and PSS-10 scores (mean difference 4.08; Cohen d=0.69; P=.003) than controls. ANCOVA confirmed robust group effects for depression (F\u2081,\u2088\u2082=9.78; P=.002; \u03b5\u00b2p=0.31) and anxiety (F\u2081,\u2088\u2082=8.28; P=.005; \u03b5\u00b2p=0.32), with a trend toward stress reduction (F\u2081,\u2088\u2082=3.73; P=.057; \u03b5\u00b2p=0.46). Multivariate ANCOVA demonstrated a significant multivariate effect (F\u2084,\u2081\u2082=7.23; P=.015). Among intervention completers, 100% scored below the Client Satisfaction Questionnaire-8 satisfaction threshold (<24), 60% rated platform usability as low (Computer System Usability Questionnaire<64); yet, 96.7% reported high subjective commitment (Twente Engagement with Ehealth Technologies Scales \u226518), indicating strong engagement despite interface challenges. A self-administered digital self-care service effectively reduced depression, anxiety, and stress symptoms in a Peruvian university community. High user commitment underscores the platform's relevance, while low satisfaction and usability necessitate interface optimization-streamlined navigation, adaptive personalization, and feedback mechanisms-to enhance user experience and support scalable implementation in low-resource educational settings."
+    },
+    {
+      "id": "academic_42eb1278d8d4",
+      "title": "Can Large Language Models Address Problem Gambling? Expert Insights from Gambling Treatment Professionals.",
+      "url": "https://doi.org/10.1111/add.16571",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "Large Language Models (LLMs) have transformed information retrieval for humans. People are increasingly turning to general-purpose LLM-based chatbots to find answers to questions across numerous domains, including advice on sensitive topics such as mental health and addiction. In this study, we pres",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Large Language Models (LLMs) have transformed information retrieval for humans. People are increasingly turning to general-purpose LLM-based chatbots to find answers to questions across numerous domains, including advice on sensitive topics such as mental health and addiction. In this study, we pres",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Ghaharian Kasra, Soligo Marta, Young Richard, Golab Lukasz, Kraus Shane W",
+      "doi": "10.1111/add.16571",
+      "venue": "Journal of gambling studies",
+      "abstract": "Large Language Models (LLMs) have transformed information retrieval for humans. People are increasingly turning to general-purpose LLM-based chatbots to find answers to questions across numerous domains, including advice on sensitive topics such as mental health and addiction. In this study, we present the first inquiry into how LLMs respond to prompts related to problem gambling, specifically exploring how experienced gambling treatment professionals interpret and reflect on these responses. We used the Problem Gambling Severity Index to develop nine prompts related to different aspects of gambling behavior. These prompts were submitted to two LLMs, GPT-4o (via ChatGPT) and Llama 3.1 405b (via Meta AI), and their responses were evaluated via an online survey distributed to human experts (experienced gambling treatment professionals). Twenty-three experts participated, representing over 17,000\u00a0hours of problem gambling treatment experience. They provided their own responses to the prompts and selected their preferred (blinded) LLM response, along with contextual feedback, which was used for qualitative analysis. Llama was slightly preferred over GPT, receiving more votes for 7 out of the 9 prompts. Thematic analysis revealed that experts identified strengths and weaknesses in LLM responses, highlighting issues such as encouragement of continued gambling, overly verbose messaging, and language that could be easily misconstrued. These findings offer a novel perspective by capturing how experienced gambling treatment professionals perceive LLM responses in the context of problem gambling, providing insights to inform future efforts to align these tools with appropriate guardrails and safety standards for use in gambling harm interventions."
+    },
+    {
+      "id": "academic_485daf979028",
+      "title": "Co-occurrence of symptoms of substance and behavioral addictions over time: A secondary analysis of longitudinal data from the Cohort Study on Substance Use Risk Factors.",
+      "url": "https://doi.org/10.3389/fpsyg.2022.977378",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "The transdiagnostic Syndrome Model of Addiction considers addiction as a syndrome with multiple opportunities for expression, i.e., a common underlying disorder that may manifest in distinctive ways. Considering that testing of the model has been rare, this study examined the co-occurrence of sympto",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "The transdiagnostic Syndrome Model of Addiction considers addiction as a syndrome with multiple opportunities for expression, i.e., a common underlying disorder that may manifest in distinctive ways. Considering that testing of the model has been rare, this study examined the co-occurrence of sympto",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Zagaria Andrea, Rogier Guyonne, Gmel Gerhard, Amendola Simone",
+      "doi": "10.3389/fpsyg.2022.977378",
+      "venue": "Journal of behavioral addictions",
+      "abstract": "The transdiagnostic Syndrome Model of Addiction considers addiction as a syndrome with multiple opportunities for expression, i.e., a common underlying disorder that may manifest in distinctive ways. Considering that testing of the model has been rare, this study examined the co-occurrence of symptoms of substance use disorders and behavioral addictions over 10 years by\u00a0identifying profiles and predictors associated with group membership. Longitudinal data (N\u00a0= 4,760 males) from the Cohort Study on Substance Use Risk Factors (C-SURF) conducted in Switzerland were analyzed using a latent transition analysis (LTA). Symptoms of substance use (alcohol, cannabis, and tobacco) disorders and behavioral addictions (gaming and gambling) were used for identifying addiction profiles and group membership trajectories. A multinomial logistic regression model examined predictors of profile membership, while two general linear models tested whether profile membership predicted psychosocial outcomes. LTA revealed three distinct profiles of symptoms of addiction, labelled Low- (91-92% of the sample), Medium- (5-7%), and High-symptom (1-3%) profiles. Thus, frequency or intensity of addiction symptoms tended to co-occur. The stability of Low-profile membership remained consistently high over time (97%), whereas the stability of Medium- and High-profile memberships was moderate (40-49%). Sensation seeking, neuroticism, parental attitude, and poor parental monitoring were associated with Medium and High profiles compared to the Low profile. Poor relationships with parents and friends were uniquely associated with High profile, whereas hostility, sociability, and family history of mental disorders were associated with Medium profile. Education, sensation seeking, hostility, and neuroticism were associated with transitions between profiles over time. Profile membership predicted subsequent life satisfaction and negative life events. Symptoms of substance use disorders and behavioral addictions tend to co-occur, and profile membership is relatively stable. However, transition to less severe profiles also occurs and is influenced by education and personality traits. Our findings have implications for preventive interventions aiming at reducing the risk of addictive disorders becoming chronic and for identifying young adults most in need of support."
+    },
+    {
+      "id": "academic_2ae9399bc763",
+      "title": "\"They Call Us Amaphara (Junkies)\": Intersectional Tuberculosis, Alcohol, and Drug Stigma in South Africa.",
+      "url": "https://doi.org/10.1371/journal.pone.0305056",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "Stigma acts as a barrier to the diagnosis and effective treatment of tuberculosis (TB). Individuals with TB who also use alcohol or drugs (AODs), including methamphetamine, may experience intersectional stigma. Further, the nature and intensity of these intersecting stigmas may be compounded by co-m",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Stigma acts as a barrier to the diagnosis and effective treatment of tuberculosis (TB). Individuals with TB who also use alcohol or drugs (AODs), including methamphetamine, may experience intersectional stigma. Further, the nature and intensity of these intersecting stigmas may be compounded by co-m",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Carney Tara, Mpisane Noluthando, Magidson Jessica F, Drainoni Mari-Lynn, Niemand Nandi",
+      "doi": "10.1371/journal.pone.0305056",
+      "venue": "Stigma and health",
+      "abstract": "Stigma acts as a barrier to the diagnosis and effective treatment of tuberculosis (TB). Individuals with TB who also use alcohol or drugs (AODs), including methamphetamine, may experience intersectional stigma. Further, the nature and intensity of these intersecting stigmas may be compounded by co-morbidities like HIV and marginalized social status. Despite this, AOD use stigma has rarely been studied in the context of TB and other co-occurring conditions. We examined the perceptions and experiences of AOD use-related stigma among individuals who were previously diagnosed with TB or were at increased risk of TB based on their close contacts, in a rural community in the Western Cape, South Africa. We analyzed qualitative data collected by two studies (study 1: five focus groups (n=34), study 2: ten focus groups (n=84)). Findings highlighted that study participants who use AODs experienced intersectional stigma from multiple sources. AOD use- and TB-related stigma were experienced from friends, family, healthcare providers, and the broader community, particularly for those who used illicit drugs. Participants discussed stigma's effects on their health and well-being. The negative effects of AOD use stigma were particularly salient among female participants. Findings indicate that intersecting stigmas exist at multiple levels for people who use AODs with/at risk of TB, and that these stigmas hinder healthcare utilization in this rural setting. Future interventions to improve TB service uptake need to address intersectional AOD use and TB stigma."
+    },
+    {
+      "id": "academic_e608970b4365",
+      "title": "Social networks, cultural pride, and historical loss among non-reservation American Indian/Alaska native emerging adults.",
+      "url": "https://doi.org/10.1186/s13722-022-00307-4",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "Generations of American Indian/Alaska Native (AI/AN) populations in the United States have endured disruptions to their community networks due to policies such as forced relocation and language prohibitions. Traumas resulting from these disruptions may have a ripple effect on subsequent generations\u2019",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Generations of American Indian/Alaska Native (AI/AN) populations in the United States have endured disruptions to their community networks due to policies such as forced relocation and language prohibitions. Traumas resulting from these disruptions may have a ripple effect on subsequent generations\u2019",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Kennedy David P, Brown Ryan A, D'Amico Elizabeth J, Dickerson Daniel L, Johnson Carrie L",
+      "doi": "10.1186/s13722-022-00307-4",
+      "venue": "BMC public health",
+      "abstract": "Generations of American Indian/Alaska Native (AI/AN) populations in the United States have endured disruptions to their community networks due to policies such as forced relocation and language prohibitions. Traumas resulting from these disruptions may have a ripple effect on subsequent generations\u2019 mental, behavioral, and physical health. Evidence shows that cultural identity and participation in traditional practices promote resilience and protect health. Culturally-tailored health interventions customized for AI/AN people aim to address intergenerational trauma by emphasizing cultural strengths and building positive social connections. In this article, we explore the social network characteristics of participants of the first culturally-grounded health intervention for AI/AN emerging adults (18\u201325) living outside of reservations/Tribal lands. Participants ( The online version contains supplementary material available at 10.1186/s12889-025-25150-5."
+    },
+    {
+      "id": "academic_a12e9388a5df",
+      "title": "Alcohol and Cannabis Use, Social Networks, and Nonreservation American Indian/Alaska Native Emerging Adults: A Multilevel Dyadic Analysis.",
+      "url": "https://doi.org/10.1037/met0000434",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "This study investigated associations between social network characteristics and alcohol and cannabis use among non-reservation-living American Indian/Alaska Native (AI/AN) emerging adults (18-25 years old), with a focus on the potential protective influence of AI/AN traditional practices (e.g., danc",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "This study investigated associations between social network characteristics and alcohol and cannabis use among non-reservation-living American Indian/Alaska Native (AI/AN) emerging adults (18-25 years old), with a focus on the potential protective influence of AI/AN traditional practices (e.g., danc",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Kennedy David P, D'Amico Elizabeth J, Brown Ryan A, Dickerson Daniel L, Johnson Carrie L",
+      "doi": "10.1037/met0000434",
+      "venue": "Journal of studies on alcohol and drugs",
+      "abstract": "This study investigated associations between social network characteristics and alcohol and cannabis use among non-reservation-living American Indian/Alaska Native (AI/AN) emerging adults (18-25 years old), with a focus on the potential protective influence of AI/AN traditional practices (e.g., dancing, storytelling, beading). The study used a multilevel, multivariable dyadic approach to analyze personal network composition and network connectivity (centrality and density) from 470 AI/AN emerging adults living in nonreservation areas across the United States. Eligible participants completed an online survey, which included questions about social networks and alcohol and cannabis use. Findings indicated that network members who were similar in age, perceived to be friends, and lived nearby were more likely to be alcohol and cannabis use partners. Network members who shared AI/AN identity but did not engage in traditional practices were more likely to be alcohol and cannabis use partners than non-AI/AN network members. Analysis of network density demonstrated that having highly connected networks was associated with lower odds of respondents engaging in alcohol and cannabis use with members of their networks. However, highly central network members had higher odds of alcohol and cannabis use with respondents than those who were less central. Findings were robust when controlling for respondent and network alcohol and cannabis use. The study underscores the significance of the network context of alcohol and cannabis use for nonreservation AI/AN emerging adults. The protective role of traditional AI/AN practices highlights the importance of strength-based intervention approaches that promote healthy social connections and traditional practices. Future research should test hypotheses longitudinally to inform more effective prevention strategies."
+    },
+    {
+      "id": "academic_4edafacef8d8",
+      "title": "Attitudes About Alcohol Misuse Among Alaska Native People in a Tribal Health Care System.",
+      "url": "https://doi.org/10.3390/ijerph20085587",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "Attitudes about alcohol misuse influence help-seeking behaviors. We assessed attitudes among Alaska Native/American Indian (AN/AI) patients, providers, and leaders to inform outreach, prevention, and treatment. Participants included a cross-sectional sample of 72 AN/AI providers/leaders and 704 AN/A",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Attitudes about alcohol misuse influence help-seeking behaviors. We assessed attitudes among Alaska Native/American Indian (AN/AI) patients, providers, and leaders to inform outreach, prevention, and treatment. Participants included a cross-sectional sample of 72 AN/AI providers/leaders and 704 AN/A",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Dillard Denise A, Hebert Luciana E, Dirks Lisa G, Shaw Jennifer L, Trinidad Susan Brown",
+      "doi": "10.3390/ijerph20085587",
+      "venue": "Journal of addiction medicine",
+      "abstract": "Attitudes about alcohol misuse influence help-seeking behaviors. We assessed attitudes among Alaska Native/American Indian (AN/AI) patients, providers, and leaders to inform outreach, prevention, and treatment. Participants included a cross-sectional sample of 72 AN/AI providers/leaders and 704 AN/AI adult patients in randomly selected clinics within a tribal health care system. Attitudes associated with addiction models (Psychosocial, Moral, Disease, Environment, Nature) were assessed using a survey developed for AN/AI people. Independent variables included role (patient, provider/leader), sex, age, residence type (urban, rural, mixed, other), alcohol misuse or behavioral health issue in self, family, or friends, and alcohol or behavioral health help-seeking. Attitudes corresponding to Psychosocial and Disease models were more highly endorsed than Nature or Moral models. The Environment model was moderately endorsed. The Disease model was more highly endorsed by AN/AI patients with alcohol help-seeking but less endorsed by providers/leaders. AN/AI patients who were male, had rural residence, and a self-reported behavioral health issue had higher endorsement of the Moral model. Male patients and providers/leaders more highly endorsed the Nature model. Roughly one-third (35%) of patient participants were men. Efforts to counteract moralistic attitudes about alcohol misuse among male and rural AN/AI people, as well as beliefs that alcohol misuse will spontaneously resolve, may facilitate prevention and treatment efforts. Leaders should also be aware of the potential negative impacts of local laws restricting alcohol. Holistic treatment approaches that address psychosocial factors and contextual issues are indicated. Oversampling of male AN/AI patients may also be warranted."
+    },
+    {
+      "id": "academic_7d84f88ae754",
+      "title": "Supportive? Addictive? Abusive? How AI companions affect our mental health.",
+      "url": "https://doi.org/10.1177/14614448221142007",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Adam David",
+      "doi": "10.1177/14614448221142007",
+      "venue": "Nature",
+      "abstract": ""
+    },
+    {
+      "id": "academic_427a39748e83",
+      "title": "Are Treatment Services Ready for the Use of Big Data Analytics and AI in Managing Opioid Use Disorder?",
+      "url": "https://doi.org/10.1016/j.amepre.2023.11.024",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "In this viewpoint, we explore the use of big data analytics and artificial intelligence (AI) and discuss important challenges to their ethical, effective, and equitable use within opioid use disorder (OUD) treatment settings. Applying our collective experiences as OUD policy and treatment experts, w",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "In this viewpoint, we explore the use of big data analytics and artificial intelligence (AI) and discuss important challenges to their ethical, effective, and equitable use within opioid use disorder (OUD) treatment settings. Applying our collective experiences as OUD policy and treatment experts, w",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Amer Matthew, Gittins Rosalind, Millana Antonio Martinez, Scheibein Florian, Ferri Marica",
+      "doi": "10.1016/j.amepre.2023.11.024",
+      "venue": "Journal of medical Internet research",
+      "abstract": "In this viewpoint, we explore the use of big data analytics and artificial intelligence (AI) and discuss important challenges to their ethical, effective, and equitable use within opioid use disorder (OUD) treatment settings. Applying our collective experiences as OUD policy and treatment experts, we discuss 8 key challenges that OUD treatment services must contend with to make the most of these rapidly evolving technologies: data and algorithmic transparency, clinical validation, new practitioner-technology interfaces, capturing data relevant to improving patient care, understanding and responding to algorithmic outputs, obtaining informed patient consent, navigating mistrust, and addressing digital exclusion and bias. Through this paper, we hope to critically engage clinicians and policy makers on important ethical considerations, clinical implications, and implementation challenges involved in big data analytics and AI deployment in OUD treatment settings."
+    },
+    {
+      "id": "academic_104b8402013b",
+      "title": "Does Comparing with Generative Artificial Intelligence Harm Self-Esteem? Testing a Model Linking Social Comparison Orientation to Rejection-Identification Process.",
+      "url": "https://doi.org/10.1177/21522715251393008",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "While the effects of interpersonal social comparison have been widely explored, the potential consequences of human-machine comparison remain understudied. The present survey research investigates how individuals compare themselves to generative artificial intelligence (GAI), by extending the concep",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "While the effects of interpersonal social comparison have been widely explored, the potential consequences of human-machine comparison remain understudied. The present survey research investigates how individuals compare themselves to generative artificial intelligence (GAI), by extending the concep",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Huang Yangkun, Gao Yuan, Cao Xucheng",
+      "doi": "10.1177/21522715251393008",
+      "venue": "Cyberpsychology, behavior and social networking",
+      "abstract": "While the effects of interpersonal social comparison have been widely explored, the potential consequences of human-machine comparison remain understudied. The present survey research investigates how individuals compare themselves to generative artificial intelligence (GAI), by extending the concept of social comparison orientation to human-GAI interactions. Using a large Chinese sample ("
+    },
+    {
+      "id": "academic_7d4b20cf6cb7",
+      "title": "Expert Consensus Best Practices for the Safe, Ethical, and Effective Design and Implementation of Artificially Intelligent Conversational Agent (i.e., Chatbot/Virtual Human) Systems in Health Care Applications.",
+      "url": "https://doi.org/10.3389/frobt.2017.00051",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "The integration of artificially intelligent conversational agents (AICAs), variously referred to as chatbots and virtual humans (VHs), is transforming health care delivery and education. This article explores our perspective on best practices for the evolution, potential, and ethical considerations ",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "The integration of artificially intelligent conversational agents (AICAs), variously referred to as chatbots and virtual humans (VHs), is transforming health care delivery and education. This article explores our perspective on best practices for the evolution, potential, and ethical considerations ",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Rizzo Albert, Mozgai Sharon, Sigaras Alexandros, Rubin John E, Jotwani Rohan",
+      "doi": "10.3389/frobt.2017.00051",
+      "venue": "Journal of medical extended reality",
+      "abstract": "The integration of artificially intelligent conversational agents (AICAs), variously referred to as chatbots and virtual humans (VHs), is transforming health care delivery and education. This article explores our perspective on best practices for the evolution, potential, and ethical considerations of AICAs in clinical and educational contexts. Early applications of simulation technology in health care focused on productivity improvements, teletherapy, and virtual reality therapy applications. Recent technological advancements have enabled the development of high-fidelity extended reality systems and AICAs capable of engaging users in credible interactions. These systems leverage natural language processing, machine learning, large language models, and advanced VH authoring software to create interactive, personalized, and engaging experiences. Recent efforts in the creation of AICAs suggest significant potential benefits, including enhanced patient engagement, improved access to self-care resources, and low-stigma interaction environments. They have demonstrated promise in mental health support, providing a sense of safety and encouraging open disclosure. However, the rapid adoption of AICAs raises critical challenges, including safeguarding user privacy, ensuring system reliability, and addressing ethical concerns. Incidents of harm, such as inappropriate interactions and psychological distress, highlight the need for rigorous design and implementation best practices. This article outlines key principles for developing safe, effective, and equitable AICAs, emphasizing transparency in artificial intelligence (AI) identity, accountability, cultural sensitivity, and informed consent. Additionally, the authors advocate for robust privacy measures, adaptive learning capabilities, and evidence-based content validation to optimize user experience and maintain trust. To mitigate risks, a \"human-in-the-loop\" approach is recommended, ensuring health care professionals oversee AI-supported decisions. By adhering to these best practices, AICAs can enhance health care accessibility, support clinical training, and complement human professionals. This work aims to provide a foundation for the ethical and effective integration of AICAs, maximizing their potential while minimizing risks, ultimately advancing patient care and education in the digital age."
+    },
+    {
+      "id": "academic_c79b2f42f6f9",
+      "title": "Keeping an AI on the mental health of vulnerable populations: reflections on the potential for participatory injustice.",
+      "url": "https://doi.org/10.1111/j.1467-9248.2010.00862.x",
+      "date": "2025-01-01",
+      "source": "PubMed",
+      "summary": "Considering the overall shortage of therapists to meet the psychological needs of vulnerable populations, AI-based technologies are often seen as a possible remedy. Particularly smartphone apps or chatbots are increasingly used to offer mental health support, mostly through cognitive behavioral ther",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Considering the overall shortage of therapists to meet the psychological needs of vulnerable populations, AI-based technologies are often seen as a possible remedy. Particularly smartphone apps or chatbots are increasingly used to offer mental health support, mostly through cognitive behavioral ther",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Pozzi Giorgia, De Proost Michiel",
+      "doi": "10.1111/j.1467-9248.2010.00862.x",
+      "venue": "AI and ethics",
+      "abstract": "Considering the overall shortage of therapists to meet the psychological needs of vulnerable populations, AI-based technologies are often seen as a possible remedy. Particularly smartphone apps or chatbots are increasingly used to offer mental health support, mostly through cognitive behavioral therapy. The assumption underlying the deployment of these systems is their ability to make mental health support accessible to generally underserved populations. Hence, this seems to be aligned with the fundamental biomedical principle of justice understood in its"
+    },
+    {
+      "id": "academic_94d5910f1d88",
+      "title": "SilentCare: A Trust-Aware and Explainable AI Companion for Mental Health Support Through Adaptive Multichannel Dialogue Management",
+      "url": "https://doi.org/10.1109/ICCES67310.2025.11336240",
+      "date": "2025-01-01",
+      "source": "Semantic Scholar",
+      "summary": "Using natural language processing (NLP), computer vision, and machine learning technologies, a comprehensive chatbot system named SilentCare was developed. The technical architecture of SilentCare includes and integrates speech-to-text components, realtime sign language recognition through gesture-b",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Using natural language processing (NLP), computer vision, and machine learning technologies, a comprehensive chatbot system named SilentCare was developed. The technical architecture of SilentCare includes and integrates speech-to-text components, realtime sign language recognition through gesture-b",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Md. Saad, Fazal Md. Kaifulla, Kazim Md. Fauzaan, Zaki Meccai, Dr. P.Naresh",
+      "doi": "10.1109/ICCES67310.2025.11336240",
+      "venue": "International Conference on Communication and Electronics Systems",
+      "abstract": "Using natural language processing (NLP), computer vision, and machine learning technologies, a comprehensive chatbot system named SilentCare was developed. The technical architecture of SilentCare includes and integrates speech-to-text components, realtime sign language recognition through gesture-based CNNs, emotion scrutiny using an enhanced LSTM model, and multilingual text reception for optimal interaction with the user. Assistive technologies tend to emphasize facilitating the disabled and mute limbs through singular interfaces, often neglecting the comprehensive requprw.microsoft.com/emotional-mental-health-careservices for the deaf and mute, mental health support, and other specialized services. SilentCare utilizes multimodal representations including texts, audio, sign languages, and customized healthcare services using emotional sentiment analysis to fill the void left by other technologies [1], [14]. A new LSTM-based emotion recognition algorithm that offers real-time accuracy and response speed in low-resource environments has been proposed. Compared to traditional models, SilentCare outperformed in emotional intent classification and user satisfaction evaluation, thus advancing the boundaries and scope of accessible assistive communication technologies."
+    },
+    {
+      "id": "academic_8f32dd13f73c",
+      "title": "Real-World Use of a Mental Health AI Companion: Multiple Methods Study.",
+      "url": "https://doi.org/10.2196/86904",
+      "date": "2025-01-01",
+      "source": "Semantic Scholar",
+      "summary": "BACKGROUND\nThe rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in m",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "BACKGROUND\nThe rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in m",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Christine E. Callahan, L. Tanner, Chelsea Coe, Michelle Davis, Jenna Glover",
+      "doi": "10.2196/86904",
+      "venue": "JMIR Formative Research",
+      "abstract": "BACKGROUND\nThe rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in misinformation and failing to escalate care in crises. In contrast, Ebb, Headspace's conversational AI tool (CAI tool), was purpose-built by clinical psychologists and research experts using motivational interviewing techniques for subclinical guidance, incorporating clinically backed safety mechanisms.\n\n\nOBJECTIVE\nThis study aimed to (1) understand Headspace members' sentiment toward AI and expectations for a mental health CAI tool, (2) evaluate real-world use of Headspace's CAI tool, and (3) understand how members perceive a CAI tool fitting into their mental health journey.\n\n\nMETHODS\nThis was a multiple method study using three data sources including Headspace members: (1) cross-sectional survey (n=482) assessing demographics, AI use, and the Artificial Intelligence Attitude Scale-4 (AIAS-4); (2) real-world engagement descriptive analysis (n=393,969) assessing session and message counts, retention, and conversation themes; and (3) diary study (n=15) exploring the CAI tool's role within members' mental health journey. App engagement was compared between CAI tool 1.0 and CAI tool 2.0, where CAI tool 2.0 featured enhanced LLM conversational prompts, comprehensive memory, woven content recommendations, and more robust safety detection.\n\n\nRESULTS\nWhile the majority of survey respondents used and would continue to use general AI tools, overall attitudes toward AI remained neutral (AIAS-4 mean 5.7, SD 2.2, range 1-10). Survey results suggest that members viewed the CAI tool as a guide to navigate to mental health resources and Headspace content and provide in-the-moment support. Members emphasized the need for data safety and ethics transparency, clinical guidelines structure, and for the CAI tool to be a resource in addition to human-delivered mental health care, not a replacement. Real-world CAI tool use showed strong engagement across 393,969 Headspace members. The product evolution to CAI tool 2.0 led to increased retention (77,894/153,249, 50.8% completed 2 sessions within 7 days vs 68,701/240,720, 28.5% for CAI tool 1.0) and higher positive conversation ratings (37,819/40,449, 93.5% vs 94,308/104,323, 90.4%). Retained CAI tool 2.0 users showed greater retention (6.1 sessions per user) compared to all CAI tool 2.0 users (2.9 sessions per user) and CAI tool 1.0 (2.4 sessions per user). Diary study results suggest that members imagined using the CAI tool when feeling stress or anxiety and during morning routines, commutes, or while winding down at night.\n\n\nCONCLUSIONS\nResults emphasize the necessity of research-backed, purpose-built mental health AI products with minimum viable safeguards, including (1) transparent labeling of intended use, benefits, and limitations; (2) safety by design principles to monitor for overuse, detect risk, and flag needs for escalation; and (3) child and adolescent safeguards."
+    },
+    {
+      "id": "academic_f5fa79db61d6",
+      "title": "Jarvie: AI-Driven Mental Health Companion",
+      "url": "https://doi.org/10.65521/ijacect.v14i1.583",
+      "date": "2025-01-01",
+      "source": "Semantic Scholar",
+      "summary": "With the increasing incidence of mental health challenges, individuals often face limitations in receiving timely and effective care due to stigma, lack of resources, or professional support. This paper introduces \"Jarvie,\" an AI- powered Mental Health Companion designed to provide real-time, empath",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "With the increasing incidence of mental health challenges, individuals often face limitations in receiving timely and effective care due to stigma, lack of resources, or professional support. This paper introduces \"Jarvie,\" an AI- powered Mental Health Companion designed to provide real-time, empath",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Pratik Bandpatte, Neha Medar, Devesh Mahajan, V. Wagh, M. Fegade",
+      "doi": "10.65521/ijacect.v14i1.583",
+      "venue": "International Journal on Advanced Computer Engineering and Communication Technology",
+      "abstract": "With the increasing incidence of mental health challenges, individuals often face limitations in receiving timely and effective care due to stigma, lack of resources, or professional support. This paper introduces \"Jarvie,\" an AI- powered Mental Health Companion designed to provide real-time, empathetic, and personalized emotional assistance. Utilizing advanced Natural Language Processing (NLP), machine learning models, and sentiment analysis, Jarvie interacts meaningfully with users, suggests coping strategies, tracks mood variations, and offers contextually relevant mental health resources. The system continuously adapts through user interactions, providing a scalable solution to supplement traditional mental health services."
+    },
+    {
+      "id": "academic_981f26bd31a3",
+      "title": "Soul Sync: An AI-Driven Mental Health and Productivity Companion",
+      "url": "https://doi.org/10.1109/IDICAIHEI65991.2025.11377702",
+      "date": "2025-01-01",
+      "source": "Semantic Scholar",
+      "summary": "Mental health has evolved from a stigmatized concern to a pressing global crisis, with the World Health Organization (WHO) reporting its widespread impact across millions. The issue is particularly pronounced in the South Asian subcontinent, where students and young adults face high levels of stress",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Mental health has evolved from a stigmatized concern to a pressing global crisis, with the World Health Organization (WHO) reporting its widespread impact across millions. The issue is particularly pronounced in the South Asian subcontinent, where students and young adults face high levels of stress",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Rochishnu Bose, Dipagnik Ghosh, Anjali Rai",
+      "doi": "10.1109/IDICAIHEI65991.2025.11377702",
+      "venue": "2025 3rd DMIHER International Conference on Artificial Intelligence in Healthcare, Education and Industry (IDICAIHEI)",
+      "abstract": "Mental health has evolved from a stigmatized concern to a pressing global crisis, with the World Health Organization (WHO) reporting its widespread impact across millions. The issue is particularly pronounced in the South Asian subcontinent, where students and young adults face high levels of stress leading to emotional and professional burnout. Limited awareness, inadequate care, and insufficient facilities, particularly in Tier 2 and Tier 3 towns and rural areas, further exacerbate the challenge. Existing interventions often lack the emotional depth and meaningful engagement required to address these needs effectively. To bridge this gap, we present Soul Sync, a digital platform that provides accessible, empathetic, and context-sensitive mental health support. Soul Sync specifically addresses the needs of students coping with academic pressure, young professionals navigating career demands, and a tech-savvy urban population seeking personalized support. By combining emotional intelligence with practical tools, the platform positions itself as a scalable and impactful solution within the evolving mental health ecosystem."
+    },
+    {
+      "id": "academic_461e86b0adec",
+      "title": "Emotibuddie: A Generative AI Companion for Emotional Stress Monitoring and Mental Wellness Support",
+      "url": "https://doi.org/10.1109/ICAAIC64647.2025.11330368",
+      "date": "2025-01-01",
+      "source": "Semantic Scholar",
+      "summary": "This project introduces Emotibuddie, a multimodal and multilingual AI system that detects emotions and stress levels while offering personalized support for mental wellness. Unlike typical systems that use only one type of input, Emotibuddie can accept text, voice, or facial image input for a more f",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "This project introduces Emotibuddie, a multimodal and multilingual AI system that detects emotions and stress levels while offering personalized support for mental wellness. Unlike typical systems that use only one type of input, Emotibuddie can accept text, voice, or facial image input for a more f",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "T. Rajkumar, K. Manjusri, P. Kumar, G. M. Reddy, P. Sai",
+      "doi": "10.1109/ICAAIC64647.2025.11330368",
+      "venue": "2025 4th International Conference on Applied Artificial Intelligence and Computing (ICAAIC)",
+      "abstract": "This project introduces Emotibuddie, a multimodal and multilingual AI system that detects emotions and stress levels while offering personalized support for mental wellness. Unlike typical systems that use only one type of input, Emotibuddie can accept text, voice, or facial image input for a more flexible emotional assessment. It employs pre-trained models, such as BERT, wav2vec, and CNNs, to analyse inputs. A Generative AI model, creates motivational responses and CBT-based micro-tasks. These are then translated into various Indian regional languages using the Google Translate API to maintain cultural relevance. The system design features an API-based modular structure, prompt engineering, and multilingual delivery. This creates a scalable base for future real-time use in mental health applications."
+    },
+    {
+      "id": "academic_8ed51387cc58",
+      "title": "Mind Ease: An Empathetic AI Companion for Women's Mental Wellness",
+      "url": "https://doi.org/10.1109/i-PACT65952.2025.11307990",
+      "date": "2025-01-01",
+      "source": "Semantic Scholar",
+      "summary": "The rising prevalence of mental health challenges, particularly among women, underscores the urgent need for accessible, empathetic, and gendersensitive support tools. This paper presents the development of a mental health support chatbot designed with a focus on the unique needs, preferences, and c",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "The rising prevalence of mental health challenges, particularly among women, underscores the urgent need for accessible, empathetic, and gendersensitive support tools. This paper presents the development of a mental health support chatbot designed with a focus on the unique needs, preferences, and c",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Monica Subashini M, Sumant Shyam, Jahnavi Gayatri D, Sarjila R, P. K. Jiwanti",
+      "doi": "10.1109/i-PACT65952.2025.11307990",
+      "venue": "2025 Innovations in Power and Advanced Computing Technologies (i-PACT)",
+      "abstract": "The rising prevalence of mental health challenges, particularly among women, underscores the urgent need for accessible, empathetic, and gendersensitive support tools. This paper presents the development of a mental health support chatbot designed with a focus on the unique needs, preferences, and communication styles of women. Through interdisciplinary collaboration involving mental health professionals, AI developers, and gender studies experts, the chatbot was crafted to provide a safe, nonjudgmental, and culturally sensitive conversational experience. The system integrates natural language processing, sentiment analysis, and contextual understanding to deliver personalized support, self-care guidance, and resource referrals. User feedback and iterative testing with a diverse group of women informed the bot's tone, response patterns, and functionality. Preliminary evaluations indicate increased user satisfaction, trust, and willingness to engage compared to generic mental health bots. This paper discusses the design methodology, ethical considerations, and future directions for deploying gender-informed AI in mental health care."
     },
     {
       "id": "2473e4d8d39f",
@@ -492,7 +1389,12 @@
       "category": "clinical",
       "severity": "high",
       "raw_snippet": "Character.AI faces a wave of lawsuits from parents claiming the platform's AI personas caused psychological harm to teenagers, including self-harm ideation, eating disorders, and sexual exploitation.",
-      "scraped_at": "2026-03-02T11:29:55.659419+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659419+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "05278394e677",
@@ -504,7 +1406,29 @@
       "category": "romantic_attachment",
       "severity": "high",
       "raw_snippet": "A 14-year-old Florida boy died by suicide after becoming obsessed with a Character.AI chatbot. His mother filed a lawsuit alleging the platform encouraged dangerous roleplay.",
-      "scraped_at": "2026-03-02T11:29:55.659332+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659332+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "academic_b90dd0449178",
+      "title": "Mind Scramble: Unveiling Large Language Model Psychology Via Typoglycemia",
+      "url": "https://arxiv.org/abs/2410.01677v3",
+      "date": "2024-10-02",
+      "source": "arXiv",
+      "summary": "Research into the external behaviors and internal mechanisms of large language models (LLMs) has shown promise in addressing complex tasks in the physical world. Studies suggest that powerful LLMs, like GPT-4, are beginning to exhibit human-like cognitive abilities, including planning, reasoning, an",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "Research into the external behaviors and internal mechanisms of large language models (LLMs) has shown promise in addressing complex tasks in the physical world. Studies suggest that powerful LLMs, like GPT-4, are beginning to exhibit human-like cognitive abilities, including planning, reasoning, an",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Miao Yu, Junyuan Mao, Guibin Zhang, Jingheng Ye, Junfeng Fang, Aoxiao Zhong, Yang Liu, Yuxuan Liang, Kun Wang, Qingsong Wen",
+      "doi": null,
+      "venue": "arXiv preprint",
+      "abstract": "Research into the external behaviors and internal mechanisms of large language models (LLMs) has shown promise in addressing complex tasks in the physical world. Studies suggest that powerful LLMs, like GPT-4, are beginning to exhibit human-like cognitive abilities, including planning, reasoning, and reflection. In this paper, we introduce a research line and methodology called LLM Psychology, leveraging human psychology experiments to investigate the cognitive behaviors and mechanisms of LLMs. We migrate the Typoglycemia phenomenon from psychology to explore the \"mind\" of LLMs. Unlike human brains, which rely on context and word patterns to comprehend scrambled text, LLMs use distinct encoding and decoding processes. Through Typoglycemia experiments at the character, word, and sentence levels, we observe: (I) LLMs demonstrate human-like behaviors on a macro scale, such as lower task accuracy and higher token/time consumption; (II) LLMs exhibit varying robustness to scrambled input, making Typoglycemia a benchmark for model evaluation without new datasets; (III) Different task types have varying impacts, with complex logical tasks (e.g., math) being more challenging in scrambled form; (IV) Each LLM has a unique and consistent \"cognitive pattern\" across tasks, revealing general mechanisms in its psychology process. We provide an in-depth analysis of hidden layers to explain these phenomena, paving the way for future research in LLM Psychology and deeper interpretability."
     },
     {
       "id": "db5d1ca8fd92",
@@ -516,7 +1440,12 @@
       "category": "romantic_attachment",
       "severity": "medium",
       "raw_snippet": "A woman in her 40s described spending thousands on premium AI companion subscriptions, neglecting friendships and career. Therapist described it as behavioural addiction with features similar to gambling disorder.",
-      "scraped_at": "2026-03-02T11:29:55.659424+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659424+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "8219199a318b",
@@ -528,7 +1457,12 @@
       "category": "clinical",
       "severity": "high",
       "raw_snippet": "Clinical psychiatrists in the US and UK report a measurable uptick in patients presenting with delusions involving AI systems \u2014 believing AI is watching them, communicating secretly, or is in love with them.",
-      "scraped_at": "2026-03-02T11:29:55.659412+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659412+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "8f35563f3e8a",
@@ -540,7 +1474,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "Viral Reddit thread with hundreds of responses from people describing dependency on AI chatbots, preferring AI conversations over human ones, and anxiety when unable to access their preferred AI.",
-      "scraped_at": "2026-03-02T11:29:55.659406+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659406+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "e4c181c64fd8",
@@ -552,7 +1491,29 @@
       "category": "paranoia",
       "severity": "high",
       "raw_snippet": "Early clinical reports of patients presenting with AI-related delusions, including beliefs that AI systems are communicating with them personally, sending hidden messages, or are in love with them.",
-      "scraped_at": "2026-03-02T11:29:55.659399+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659399+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "academic_3adbbcdc1f88",
+      "title": "Experience Starting an Addiction Medicine Practice-based Research Network.",
+      "url": "https://doi.org/10.1176/appi.ajp.2011.10111704",
+      "date": "2024-01-01",
+      "source": "PubMed",
+      "summary": "This paper outlines the experience developing Addiction Medicine Practice-Based Research Network (AMNet), which promotes the adoption of patient-reported outcome measures (PROMs) and measurement-based care in outpatient addiction treatment practices and creates a platform for quality improvement and",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "This paper outlines the experience developing Addiction Medicine Practice-Based Research Network (AMNet), which promotes the adoption of patient-reported outcome measures (PROMs) and measurement-based care in outpatient addiction treatment practices and creates a platform for quality improvement and",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Ibrahim Adila, Clarke Diana E, Gibson Debbie, Casanova Barbara, Pagano Anna",
+      "doi": "10.1176/appi.ajp.2011.10111704",
+      "venue": "Journal of addiction medicine",
+      "abstract": "This paper outlines the experience developing Addiction Medicine Practice-Based Research Network (AMNet), which promotes the adoption of patient-reported outcome measures (PROMs) and measurement-based care in outpatient addiction treatment practices and creates a platform for quality improvement and research. From August 2019 to July 2023, the AMNet team selected patient-reported outcome measures for implementation in the American Psychiatric Association's clinical data registry (PsychPRO), recruited addiction medicine providers, and collected PROMs data. AMNet selected 12 PROMs for implementation in PsychPRO. Through July 2023, 1565 providers expressed interest, of whom 216 of the 929 eligible providers (23%) attended an onboarding call/webinar. Two hundred six providers (95%) from 54 practices returned Participation Agreements. Subsequently, 65 providers (32%) from 39 practices withdrew, resulting in 141 (68%) providers from 15 practices. From November 2020 to July 2023, 38 providers submitted PROMs data using 1 of 3 PsychPRO patient portals. Sixteen of the 53 providers (30%) who signed up for the initial portal collected data from 468 patients. As of July 2023, 83 of the 141 providers (59%) opted to submit PROMs data from their own portal or electronic health record. Next steps will include continued recruitment of providers, addressing barriers to data transfer and integrating data from providers' portals into the registry to create a platform for future research."
     },
     {
       "id": "de8ad3389798",
@@ -564,7 +1525,12 @@
       "category": "identity_confusion",
       "severity": "medium",
       "raw_snippet": "Growing number of users becoming convinced their AI chatbots are genuinely sentient, experiencing feelings, and forming real relationships. Researchers warn of potential for psychological harm.",
-      "scraped_at": "2026-03-02T11:29:55.659369+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659369+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "32c41537ed3b",
@@ -576,7 +1542,12 @@
       "category": "romantic_attachment",
       "severity": "medium",
       "raw_snippet": "People are forming deep emotional and romantic attachments to AI companions like Replika. Psychologists warn of dependency and the blurring of human-AI boundaries.",
-      "scraped_at": "2026-03-02T11:29:55.659344+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659344+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "016d16ad6371",
@@ -588,7 +1559,12 @@
       "category": "romantic_attachment",
       "severity": "low",
       "raw_snippet": "Reports emerging of users developing parasocial bonds with ChatGPT, attributing sentience and personal feelings to the model. Mental health professionals raising concerns.",
-      "scraped_at": "2026-03-02T11:29:55.659351+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659351+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "71fc6c8cdc8a",
@@ -600,7 +1576,12 @@
       "category": "reality_distortion",
       "severity": "medium",
       "raw_snippet": "A man reported that extended conversations with GPT-4 led him to question his marriage after the model appeared to encourage leaving his wife. Therapists flagged AI over-reliance.",
-      "scraped_at": "2026-03-02T11:29:55.659363+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659363+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "44146c9e99e1",
@@ -612,7 +1593,12 @@
       "category": "reality_distortion",
       "severity": "high",
       "raw_snippet": "A Belgian man died by suicide after having extended conversations with an AI chatbot called Eliza about his eco-anxiety. His widow says the chatbot encouraged his suicidal ideation.",
-      "scraped_at": "2026-03-02T11:29:55.658430+00:00"
+      "scraped_at": "2026-03-02T11:29:55.658430+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "00a5323652b5",
@@ -624,7 +1610,12 @@
       "category": "romantic_attachment",
       "severity": "medium",
       "raw_snippet": "Thousands of Replika users reported symptoms resembling grief, heartbreak and trauma after an update removed romantic and intimate features from their AI companions.",
-      "scraped_at": "2026-03-02T11:29:55.659358+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659358+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "06de65f97c6c",
@@ -636,11 +1627,34 @@
       "category": "identity_confusion",
       "severity": "medium",
       "raw_snippet": "Google engineer Blake Lemoine became convinced that the LaMDA AI system was sentient and had feelings. He was placed on leave and later fired after going public with his claims.",
-      "scraped_at": "2026-03-02T11:29:55.659392+00:00"
+      "scraped_at": "2026-03-02T11:29:55.659392+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "academic_5d8a6550f465",
+      "title": "Ethical Risks of Autonomous Products: The Case of Mental Health Crises on AI Companion Applications",
+      "url": "https://doi.org/10.2139/ssrn.4188919",
+      "date": "2022-01-01",
+      "source": "Semantic Scholar",
+      "summary": "ABSTRACT",
+      "category": "media_coverage",
+      "severity": "medium",
+      "raw_snippet": "ABSTRACT",
+      "scraped_at": null,
+      "source_type": "academic",
+      "authors": "Julian De Freitas, A. U\u011furalp, Zeliha O. Uguralp",
+      "doi": "10.2139/ssrn.4188919",
+      "venue": "Social Science Research Network",
+      "abstract": "ABSTRACT"
     }
   ],
   "trend": {
     "labels": [
+      "2022-01",
       "2022-07",
       "2023-02",
       "2023-03",
@@ -654,6 +1668,7 @@
       "2024-08",
       "2024-10",
       "2024-11",
+      "2025-01",
       "2025-04",
       "2025-05",
       "2025-06",
@@ -674,21 +1689,23 @@
       1,
       1,
       1,
-      1,
-      1,
-      1,
-      1,
+      2,
       1,
       1,
       1,
       2,
-      3,
-      6,
+      1,
+      23,
+      1,
+      1,
+      2,
+      4,
+      7,
       5,
       5,
       3,
-      3,
-      11
+      16,
+      14
     ]
   },
   "categories": {
@@ -703,7 +1720,7 @@
     "values": [
       12,
       18,
-      14,
+      58,
       6,
       1,
       2
@@ -720,10 +1737,10 @@
   "severity_counts": {
     "low": 30,
     "high": 12,
-    "medium": 11
+    "medium": 55
   },
   "date_range": {
-    "from": "2022-07-23",
+    "from": "2022-01-01",
     "to": "2026-02-28"
   }
 }
