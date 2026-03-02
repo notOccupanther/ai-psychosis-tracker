@@ -732,7 +732,7 @@ function renderTimeline() {
         <div class="synopsis-inner">
           <div class="synopsis-label">📋 Synopsis</div>
           <div class="synopsis-text">${esc(c.summary || 'No summary available.')}</div>
-          ${c.raw_snippet && c.raw_snippet !== c.summary ? `
+          ${shouldShowExcerpt(c) ? `
           <div class="synopsis-label" style="margin-top:0.75rem">📝 Source Excerpt</div>
           <div class="synopsis-raw">"${esc(c.raw_snippet.slice(0,500))}${c.raw_snippet.length > 500 ? '…' : ''}"</div>
           ` : ''}
@@ -783,6 +783,17 @@ function formatDate(str) {
     const d = new Date(str + 'T12:00:00Z');
     return d.toLocaleDateString('en-IE', { year: 'numeric', month: 'short', day: 'numeric' });
   } catch { return str; }
+}
+
+function shouldShowExcerpt(c) {
+  if (!c.raw_snippet) return false;
+  // Hide if it looks like HTML/link junk
+  if (c.raw_snippet.includes('<a ') || c.raw_snippet.includes('href=') || c.raw_snippet.includes('news.google.com')) return false;
+  // Hide if it's essentially the same as the synopsis
+  if (c.raw_snippet === c.summary) return false;
+  // Hide if too short to be meaningful
+  if (c.raw_snippet.length < 40) return false;
+  return true;
 }
 
 function esc(str) {
