@@ -222,7 +222,13 @@
     }
 
     /* ── TIMELINE / CASE CARDS ── */
-    .timeline { display: flex; flex-direction: column; gap: 0.6rem; }
+    .timeline { display: flex; flex-direction: column; gap: 0.75rem; }
+    .category-group { background: var(--surface); border: 1px solid var(--border); border-radius: 0.6rem; overflow: hidden; }
+    .category-group-header { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1rem; cursor: pointer; user-select: none; transition: background 0.15s; }
+    .category-group-header:hover { background: var(--surface2); }
+    .group-chevron { color: var(--muted); font-size: 0.8rem; transition: transform 0.2s; }
+    .group-chevron.open { transform: rotate(180deg); }
+    .category-group-body { padding: 0 0.75rem 0.75rem; }
 
     .case-card {
       background: var(--surface);
@@ -922,14 +928,66 @@ function renderTimeline() {
     return;
   }
 
-  timeline.innerHTML = cases.map((c, i) => {
-    const isExpanded = expandedId === c.id;
-    const catEmoji = CAT_EMOJI[c.category] || '📌';
-    const catLabel = CAT_LABELS[c.category] || c.category;
-    const dateFormatted = c.date ? formatDate(c.date) : 'Unknown date';
-    const hasUrl = c.url && c.url.startsWith('http');
+  // Group by category
+  const CAT_ORDER = ['romantic_attachment','paranoia','identity_confusion','reality_distortion','clinical','media_coverage','other'];
+  const grouped = {};
+  cases.forEach(c => {
+    const key = c.category || 'other';
+    if (!grouped[key]) grouped[key] = [];
+    grouped[key].push(c);
+  });
 
-    return `
+  // If filtering to single category or searching, show flat list instead
+  const isFiltered = catFilter || search;
+
+  if (isFiltered) {
+    timeline.innerHTML = cases.map(c => renderCaseCard(c)).join('');
+  } else {
+    // Grouped view
+    const groups = CAT_ORDER.filter(k => grouped[k]);
+    timeline.innerHTML = groups.map(catKey => {
+      const items = grouped[catKey];
+      const emoji = CAT_EMOJI[catKey] || '📌';
+      const label = CAT_LABELS[catKey] || catKey;
+      const highCount = items.filter(c => c.severity === 'high').length;
+      const gid = 'group_' + catKey;
+      // First group open by default, rest closed
+      const isOpen = catKey === groups[0];
+      return `
+      <div class="category-group" id="${gid}">
+        <div class="category-group-header" onclick="toggleGroup('${gid}')">
+          <div style="display:flex;align-items:center;gap:0.7rem">
+            <span style="font-size:1.1rem">${emoji}</span>
+            <span style="font-weight:700;color:var(--text);font-size:0.95rem">${label}</span>
+            <span style="background:var(--surface3);border:1px solid var(--border);border-radius:1rem;padding:0.15rem 0.6rem;font-size:0.72rem;color:var(--muted)">${items.length} case${items.length !== 1 ? 's' : ''}</span>
+            ${highCount ? `<span style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);border-radius:1rem;padding:0.15rem 0.6rem;font-size:0.72rem;color:#ef4444">🔴 ${highCount} high</span>` : ''}
+          </div>
+          <span class="group-chevron ${isOpen ? 'open' : ''}">▼</span>
+        </div>
+        <div class="category-group-body" style="display:${isOpen ? 'flex' : 'none'};flex-direction:column;gap:0.6rem;padding:0.75rem 0 0.25rem 0">
+          ${items.map(c => renderCaseCard(c)).join('')}
+        </div>
+      </div>`;
+    }).join('');
+  }
+}
+
+function toggleGroup(gid) {
+  const group = document.getElementById(gid);
+  const body = group.querySelector('.category-group-body');
+  const chevron = group.querySelector('.group-chevron');
+  const open = body.style.display === 'flex';
+  body.style.display = open ? 'none' : 'flex';
+  chevron.classList.toggle('open', !open);
+}
+
+function renderCaseCard(c) {
+  const isExpanded = expandedId === c.id;
+  const catEmoji = CAT_EMOJI[c.category] || '📌';
+  const catLabel = CAT_LABELS[c.category] || c.category;
+  const dateFormatted = c.date ? formatDate(c.date) : 'Unknown date';
+  const hasUrl = c.url && c.url.startsWith('http');
+  return `
     <div class="case-card severity-${c.severity} ${isExpanded ? 'expanded' : ''}"
          onclick="toggleCase('${esc(c.id)}', this)"
          data-id="${esc(c.id)}">
@@ -964,7 +1022,6 @@ function renderTimeline() {
         </div>
       </div>
     </div>`;
-  }).join('');
 }
 
 function toggleCase(id, el) {
