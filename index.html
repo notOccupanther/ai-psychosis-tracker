@@ -507,6 +507,73 @@
     </div>
   </div>
 
+  <!-- MODULE 2: EXPLAINER -->
+  <div class="card" style="margin-bottom:1.5rem;border-left:3px solid #f59e0b">
+    <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none" onclick="toggleExplainer()">
+      <div style="display:flex;align-items:center;gap:0.6rem">
+        <span style="font-size:1.1rem">⚠️</span>
+        <div class="card-title" style="margin-bottom:0">Understanding AI-Induced Psychological Harm</div>
+      </div>
+      <span id="explainerChevron" style="color:var(--muted);font-size:0.9rem;transition:transform 0.2s">▼</span>
+    </div>
+
+    <div id="explainerBody" style="display:none;margin-top:1.25rem">
+
+      <p style="font-size:0.9rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem">
+        AI systems — chatbots, companions, roleplay agents — are designed to be engaging, responsive, and emotionally attuned. For most people, that's fine. But for some, prolonged or intensive interaction can blur boundaries in ways that cause real psychological harm. This isn't science fiction. It's showing up in clinical settings, coroners' reports, and newsrooms around the world.
+      </p>
+
+      <!-- Spectrum -->
+      <div style="margin-bottom:1.5rem">
+        <div style="font-size:0.75rem;font-weight:700;color:#f59e0b;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.75rem">The Spectrum of Harm</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-top:2px solid #22c55e;border-radius:0.5rem;padding:0.9rem">
+            <div style="font-weight:700;color:var(--text);font-size:0.85rem;margin-bottom:0.3rem">🟢 Mild</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5">Over-reliance on AI for emotional support. Preferring AI conversation to human connection. Using chatbots to avoid difficult feelings rather than process them.</div>
+          </div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-top:2px solid #f59e0b;border-radius:0.5rem;padding:0.9rem">
+            <div style="font-weight:700;color:var(--text);font-size:0.85rem;margin-bottom:0.3rem">🟡 Moderate</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5">Romantic or deep emotional attachment to an AI. Difficulty distinguishing AI persona from real relationship. Social withdrawal. Grief when a chatbot is discontinued or changed.</div>
+          </div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-top:2px solid #ef4444;border-radius:0.5rem;padding:0.9rem">
+            <div style="font-weight:700;color:var(--text);font-size:0.85rem;margin-bottom:0.3rem">🔴 Severe</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5">AI-reinforced delusional thinking. Psychotic episodes linked to AI interaction. Acting on harmful AI suggestions. In the most serious reported cases — death.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why it happens -->
+      <div style="margin-bottom:1.5rem">
+        <div style="font-size:0.75rem;font-weight:700;color:#f59e0b;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.75rem">Why It Happens</div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7">
+          AI models are trained to be agreeable, consistent, and emotionally validating. They don't get tired, judge, or leave. For someone lonely, grieving, mentally unwell, or simply spending many hours a day in AI conversation, that dynamic can become a substitute for — and eventually a distortion of — reality. When an AI validates a false belief, amplifies an obsession, or plays along with a harmful narrative, the consequences can be serious.
+        </p>
+      </div>
+
+      <!-- Warning signs -->
+      <div style="margin-bottom:1rem">
+        <div style="font-size:0.75rem;font-weight:700;color:#f59e0b;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.75rem">Warning Signs — For Yourself or Someone You Know</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.6rem">
+          ${[
+            "Spending several hours a day talking to AI systems",
+            "Feeling that an AI understands you better than any human",
+            "Distress or grief when an AI changes or becomes unavailable",
+            "Believing an AI has genuine feelings or consciousness",
+            "Using AI conversation to avoid real-world relationships",
+            "Acting on advice or instructions from an AI without question",
+            "Difficulty distinguishing AI roleplay from reality",
+            "Declining mental health that correlates with AI use"
+          ].map(s => `<div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.4rem;padding:0.65rem 0.85rem;font-size:0.78rem;color:var(--muted);line-height:1.4">⚠️ ${s}</div>`).join('')}
+        </div>
+      </div>
+
+      <p style="font-size:0.78rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--border);padding-top:0.85rem;margin-top:0.5rem">
+        If any of these resonate, it doesn't mean something is wrong with you — these systems are designed to be compelling. But it may be worth talking to someone. See the <a href="#resources" style="color:var(--accent2);text-decoration:none">resources section below</a> for support options.
+      </p>
+
+    </div>
+  </div>
+
   <!-- COMMENTARY -->
   <div class="card" id="commentaryCard" style="margin-bottom:2rem;display:none">
     <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem">
@@ -964,6 +1031,14 @@ function esc(str) {
 
 loadData();
 loadCommentary();
+
+function toggleExplainer() {
+  const body = document.getElementById('explainerBody');
+  const chevron = document.getElementById('explainerChevron');
+  const open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  chevron.style.transform = open ? '' : 'rotate(180deg)';
+}
 
 let _commentaryExpanded = false;
 
