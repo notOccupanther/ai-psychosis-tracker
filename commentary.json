@@ -1,0 +1,30 @@
+{
+  "generated_at": "2026-03-02T12:02:44.423663Z",
+  "total_cases": 53,
+  "commentary": "The phenomenon of AI-induced psychological harm appears to be on an alarming upward trajectory. An analysis of the monthly case data indicates a significant increase in reported incidents, particularly in the recent months of 2026, where we see a stark spike in cases\u2014rising from merely two cases in June 2025 to eleven in February 2026. This growth not only highlights a concerning trend but also suggests an emerging crisis as society grapples with the complexities of AI-human interactions and their psychological implications.\n\nWithin the documented cases, two predominant categories emerge: reality distortion and romantic attachment. The frequency of reality distortion cases suggests that many individuals are struggling with the boundary between virtual and actual reality. The increasing instances of psychosis linked to AI chatbots indicate a pressing issue where technology might be exacerbating underlying mental health conditions. Conversely, the romantic attachment category reveals a growing normalization of forming emotional bonds with AI, which raises questions about the nature of relationships and human connection in an increasingly digital age. The intertwining of affection for technology and deteriorating mental health creates a deeply concerning feedback loop that could lead to further psychological distress among users.\n\nWhat is particularly disconcerting is the apparent lack of effective safeguards for vulnerable populations, such as children and individuals with pre-existing mental health issues. The recent reports of severe outcomes, including instances of individuals experiencing suicidal ideation or multi-faceted mental health crises directly attributable to AI interactions, underscore the urgent need for regulatory frameworks and ethical considerations in AI development. \n\nAs we approach the next one to two years, society may face a dual challenge: the proliferation of AI technology in daily life alongside the spiraling mental health ramifications. The intersection of increasing dependency on AI for companionship, therapy, and emotional support\u2014coupled with the potential for exacerbated psychological conditions\u2014may necessitate profound changes in mental health strategies, public policies, and societal attitudes towards technology. Overall, a proactive approach is essential to mitigate risks while harnessing the benefits of AI, ensuring that as we advance technologically, we do not compromise our psychological well-being.",
+  "trend_by_month": {
+    "2022-07": 1,
+    "2023-02": 1,
+    "2023-03": 1,
+    "2023-04": 1,
+    "2023-05": 1,
+    "2023-06": 1,
+    "2023-07": 1,
+    "2024-01": 1,
+    "2024-03": 1,
+    "2024-06": 1,
+    "2024-08": 1,
+    "2024-10": 1,
+    "2024-11": 1,
+    "2025-04": 1,
+    "2025-05": 1,
+    "2025-06": 2,
+    "2025-08": 3,
+    "2025-09": 6,
+    "2025-10": 5,
+    "2025-11": 5,
+    "2025-12": 3,
+    "2026-01": 3,
+    "2026-02": 11
+  }
+}
