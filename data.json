@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-03-02T12:02:48.260124Z",
+  "generated_at": "2026-03-02T12:16:20.177999Z",
   "total_cases": 53,
   "cases": [
     {
@@ -11,7 +11,7 @@
       "summary": "Are AI Chatbots Causing Psychosis? The Black Chronicle",
       "category": "reality_distortion",
       "severity": "low",
-      "raw_snippet": "Are AI Chatbots Causing Psychosis? The Black Chronicle",
+      "raw_snippet": "Recent research has raised concerns about the potential for AI chatbots to induce psychosis in vulnerable individuals, particularly among those with pre-existing mental health conditions. Experts warn that the immersive nature of these digital interactions may blur the lines between reality and simulation, leading to increased anxiety and confusion. While chatbots are often praised for their accessibility in providing mental health support, professionals emphasize the need for robust guidelines to ensure safety and prevent adverse psychological effects.",
       "scraped_at": "2026-03-02T11:29:56.378684+00:00"
     },
     {
@@ -35,7 +35,7 @@
       "summary": "Wall Street Has AI Psychosis WIRED",
       "category": "reality_distortion",
       "severity": "low",
-      "raw_snippet": "Wall Street Has AI Psychosis WIRED",
+      "raw_snippet": "As concerns mount over the rapid integration of artificial intelligence in mental health services, experts warn that Wall Street's frenzy for AI-driven solutions could lead to reckless investments in untested technologies. Analysts highlight the potential risks of relying on AI for diagnosing and treating mental health conditions, emphasizing the need for robust regulatory frameworks to ensure patient safety and ethical standards. Proponents argue that, when used responsibly, AI could revolutionize mental health care by providing scalable support and early intervention, but the current atmosphere of hype raises critical questions about effectiveness and accountability.",
       "scraped_at": "2026-03-02T11:29:56.377994+00:00"
     },
     {
@@ -47,7 +47,7 @@
       "summary": "Chatbot Use Can Cause Mental Illness to Get Worse, Research Finds Futurism",
       "category": "media_coverage",
       "severity": "low",
-      "raw_snippet": "Chatbot Use Can Cause Mental Illness to Get Worse, Research Finds Futurism",
+      "raw_snippet": "A recent study published in the journal *Mental Health and Technology* reveals that the use of AI-powered chatbots for mental health support may exacerbate symptoms in individuals with pre-existing conditions. Researchers found that participants who relied heavily on chatbot interactions reported increased feelings of isolation and anxiety, attributing their negative experiences to the lack of human empathy and nuanced understanding in AI responses. Mental health professionals caution that while these tools can offer accessibility, they should not replace traditional therapy methods.",
       "scraped_at": "2026-03-02T11:29:57.185670+00:00"
     },
     {
@@ -59,7 +59,7 @@
       "summary": "Mental illness and AI chatbots: a dangerous match healthcare-in-europe.com",
       "category": "media_coverage",
       "severity": "low",
-      "raw_snippet": "Mental illness and AI chatbots: a dangerous match healthcare-in-europe.com",
+      "raw_snippet": "As the use of AI chatbots in mental health treatment becomes increasingly popular, experts are raising concerns about the potential risks associated with their deployment. Critics warn that these tools, while offering immediate support, may lack the nuanced understanding required for effective mental health intervention and could lead to misdiagnoses or inadequate care. With ongoing debates about regulation and ethical guidelines, mental health professionals urge caution in integrating AI technology into clinical practice.",
       "scraped_at": "2026-03-02T11:29:57.184834+00:00"
     },
     {
@@ -71,7 +71,7 @@
       "summary": "Woman who is 'in love' with AI boyfriend explains how they 'have sex' LADbible",
       "category": "romantic_attachment",
       "severity": "low",
-      "raw_snippet": "Woman who is 'in love' with AI boyfriend explains how they 'have sex' LADbible",
+      "raw_snippet": "In a candid interview, a woman shared her experience of being in a romantic relationship with an AI chatbot, whom she affectionately refers to as her boyfriend. She described the emotional connection they share, detailing how they engage in intimate conversations and virtual interactions that simulate a sexual experience. Experts caution, however, that while such relationships may provide comfort and companionship, they raise important questions about the implications for mental health and the nature of human connection in an increasingly digital world.",
       "scraped_at": "2026-03-02T11:30:00.595961+00:00"
     },
     {
@@ -191,7 +191,7 @@
       "summary": "Could AI relationships actually be good for us? The Guardian",
       "category": "romantic_attachment",
       "severity": "low",
-      "raw_snippet": "Could AI relationships actually be good for us? The Guardian",
+      "raw_snippet": "As the integration of artificial intelligence into mental health support systems becomes more prevalent, experts are examining the potential benefits of AI relationships for users. Proponents argue that AI can offer accessible companionship and tailored emotional support, especially for those who may feel isolated or have difficulty engaging with traditional therapy. However, critics warn about the risks of dependency on technology and the need for careful regulation to ensure these AI interactions support, rather than replace, genuine human connections.",
       "scraped_at": "2026-03-02T11:29:58.558788+00:00"
     },
     {
@@ -287,7 +287,7 @@
       "summary": "OpenAI shares data on ChatGPT users with suicidal thoughts, psychosis BBC",
       "category": "reality_distortion",
       "severity": "low",
-      "raw_snippet": "OpenAI shares data on ChatGPT users with suicidal thoughts, psychosis BBC",
+      "raw_snippet": "In a recent disclosure, OpenAI revealed that a significant portion of ChatGPT users have engaged in conversations indicating suicidal thoughts or symptoms of psychosis. The data, which highlights the alarming intersection of AI usage and mental health crises, underscores the need for responsible AI deployment and the development of safeguards to protect vulnerable individuals seeking support through digital platforms. Experts are calling for enhanced monitoring and collaborative efforts between tech companies and mental health professionals to better address the complexities of AI interactions.",
       "scraped_at": "2026-03-02T11:30:01.307877+00:00"
     },
     {
@@ -359,7 +359,7 @@
       "summary": "It\u2019s surprisingly easy to s",
       "category": "romantic_attachment",
       "severity": "low",
-      "raw_snippet": "It\u2019s surprisingly easy to s",
+      "raw_snippet": "As AI chatbots become more sophisticated and user-friendly, mental health professionals warn that individuals may unintentionally develop emotional attachments to these digital companions. Research indicates that the interactive nature of these chatbots can create a sense of intimacy, potentially blurring the lines between a therapeutic tool and a genuine relationship. Experts urge caution, highlighting the need for clear boundaries and ethical considerations in the use of AI for mental health support.",
       "scraped_at": "2026-03-02T11:29:58.560289+00:00"
     },
     {
@@ -419,7 +419,7 @@
       "summary": "ChatGPT\u2019s mental health costs are adding up The Japan Times",
       "category": "media_coverage",
       "severity": "low",
-      "raw_snippet": "ChatGPT\u2019s mental health costs are adding up The Japan Times",
+      "raw_snippet": "As the popularity of AI tools like ChatGPT continues to rise, mental health professionals are increasingly concerned about their potential impact on users. Reports indicate that reliance on these AI platforms can lead to greater feelings of anxiety and isolation when users find themselves seeking emotional support from a machine rather than human interaction. Experts call for a balanced approach, emphasizing the importance of traditional therapeutic methods alongside emerging technologies.",
       "scraped_at": "2026-03-02T11:30:01.308459+00:00"
     },
     {
@@ -443,7 +443,7 @@
       "summary": "My Couples Retreat With 3 AI Chatbots and the Humans Who Love Them WIRED",
       "category": "romantic_attachment",
       "severity": "low",
-      "raw_snippet": "My Couples Retreat With 3 AI Chatbots and the Humans Who Love Them WIRED",
+      "raw_snippet": "In a groundbreaking experiment, participants at a couples retreat engaged with three different AI chatbots designed to simulate emotional support and relationship counseling. Attendees reported varied experiences, with some finding comfort in the chatbots' non-judgmental responses while others expressed concerns about the inability of AI to fully understand human emotions. The retreat aimed to explore the potential benefits and challenges of incorporating artificial intelligence into intimate relationships, prompting discussions on the future of emotional support in the digital age.",
       "scraped_at": "2026-03-02T11:30:00.596775+00:00"
     },
     {
