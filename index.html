@@ -852,10 +852,10 @@ function renderTimeline() {
         <div class="synopsis-inner">
           <div class="synopsis-label">📋 Synopsis</div>
           <div class="synopsis-text">${esc(c.summary || 'No summary available.')}</div>
-          ${shouldShowExcerpt(c) ? `
+          ${shouldShowExcerpt(c) ? (() => { const clean = cleanExcerpt(c.raw_snippet); return `
           <div class="synopsis-label" style="margin-top:0.75rem">📝 Source Excerpt</div>
-          <div class="synopsis-raw">"${esc(c.raw_snippet.slice(0,500))}${c.raw_snippet.length > 500 ? '…' : ''}"</div>
-          ` : ''}
+          <div class="synopsis-raw">"${esc(clean.slice(0,500))}${clean.length > 500 ? '…' : ''}"</div>
+          `; })() : ''}
           <div class="synopsis-footer">
             ${hasUrl ? `<a class="source-link" href="${esc(c.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗ Read Full Article</a>` : ''}
             <button class="share-btn" onclick="copyLink(event, '${esc(c.url || '')}')">🔗 Copy Link</button>
@@ -907,13 +907,20 @@ function formatDate(str) {
 
 function shouldShowExcerpt(c) {
   if (!c.raw_snippet) return false;
-  // Hide if it looks like HTML/link junk
-  if (c.raw_snippet.includes('<a ') || c.raw_snippet.includes('href=') || c.raw_snippet.includes('news.google.com')) return false;
-  // Hide if it's essentially the same as the synopsis
-  if (c.raw_snippet === c.summary) return false;
-  // Hide if too short to be meaningful
-  if (c.raw_snippet.length < 40) return false;
+  // Strip all HTML and check what's left
+  const stripped = c.raw_snippet.replace(/<[^>]+>/g, ' ').replace(/&\w+;/g, ' ').replace(/\s+/g, ' ').trim();
+  // Hide if stripping HTML leaves nothing useful
+  if (stripped.length < 40) return false;
+  // Hide if it still contains URL junk
+  if (stripped.includes('news.google.com') || stripped.includes('href=')) return false;
+  // Hide if essentially same as synopsis
+  if (stripped === (c.summary || '').trim()) return false;
   return true;
+}
+
+function cleanExcerpt(text) {
+  // Return clean text, stripping any residual HTML
+  return text.replace(/<[^>]+>/g, '').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
 }
 
 function esc(str) {
