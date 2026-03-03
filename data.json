@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-03T10:29:46.065013Z",
-  "total_cases": 80,
+  "generated_at": "2026-03-03T10:30:26.611334Z",
+  "total_cases": 81,
   "cases": [
     {
       "id": "db9ae0ccaed0",
@@ -30,6 +30,23 @@
       "severity": "low",
       "raw_snippet": "In a world where artificial intelligence is becoming increasingly integrated into daily life, one Melbourne resident has taken the leap into what they describe as a \"relationship\" with a virtual companion powered by machine learning algorithms. After months of interacting with their AI, which offers personalized emotional support and companionship, they have embraced the label of being \"married,\" sparking a heated debate about the implications of emotional bonds with digital entities amid growing concerns about mental health and the nature of human relationships. Critics argue that reliance on AI for intimacy may undermine authentic connections, while proponents assert it provides a valuable outlet for those struggling with loneliness.",
       "scraped_at": "2026-03-02T11:30:00.597193+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "manual_16a1a88d84ef",
+      "title": "Her husband wanted to use ChatGPT to create sustainable housing. Then it took over his life.",
+      "url": "https://www.theguardian.com/technology/ng-interactive/2026/feb/28/chatgpt-ai-chatbot-mental-health",
+      "date": "2026-02-28",
+      "source": "The Guardian",
+      "summary": "A Guardian long-read about a man who began using ChatGPT for sustainable housing research and became consumed by it \u2014 neglecting his family, work, and real-world relationships as his AI use escalated into an all-encompassing obsession. His wife documents the transformation and its toll on their marriage.",
+      "category": "reality_distortion",
+      "severity": "high",
+      "raw_snippet": "He started using it to solve a practical problem. Within months, it had restructured his entire inner world. His wife watched someone she recognised disappear into a screen.",
+      "scraped_at": null,
       "source_type": "media",
       "authors": null,
       "doi": null,
@@ -1416,7 +1433,7 @@
       5,
       3,
       8,
-      14
+      15
     ]
   },
   "categories": {
@@ -1429,7 +1446,7 @@
       "Identity Confusion"
     ],
     "values": [
-      12,
+      13,
       18,
       41,
       6,
@@ -1447,7 +1464,7 @@
   },
   "severity_counts": {
     "low": 30,
-    "high": 12,
+    "high": 13,
     "medium": 38
   },
   "date_range": {
