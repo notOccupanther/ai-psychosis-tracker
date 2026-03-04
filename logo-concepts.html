@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>APW Logo Concepts</title>
+<style>
+  body { background: #0e1018; display: flex; gap: 3rem; padding: 3rem; font-family: Inter, sans-serif; flex-wrap: wrap; align-items: flex-start; }
+  .concept { display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+  .label { color: #8892a4; font-size: 0.8rem; text-align: center; }
+  .sizes { display: flex; gap: 1rem; align-items: center; }
+</style>
+</head>
+<body>
+
+<!-- CONCEPT 1: Monogram badge -->
+<div class="concept">
+  <div class="sizes">
+    <!-- Large -->
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="80" height="80" rx="16" fill="#6366f1"/>
+      <text x="40" y="52" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="28" fill="white" letter-spacing="-1">APW</text>
+    </svg>
+    <!-- Small / favicon -->
+    <svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="80" height="80" rx="16" fill="#6366f1"/>
+      <text x="40" y="52" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="28" fill="white" letter-spacing="-1">APW</text>
+    </svg>
+  </div>
+  <div class="label">Option 1 — Badge monogram</div>
+</div>
+
+<!-- CONCEPT 2: A with brainwave crossbar -->
+<div class="concept">
+  <div class="sizes">
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="80" height="80" rx="16" fill="rgba(99,102,241,0.1)" stroke="#6366f1" stroke-width="1.5"/>
+      <!-- A left leg -->
+      <path d="M18 62 L32 18 L46 62" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- Brainwave crossbar instead of flat line -->
+      <path d="M22 46 Q26 38 29 44 Q31 48 33 42 Q35 36 38 44 Q40 49 42 46" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <!-- PW -->
+      <text x="50" y="62" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="26" fill="#e2e8f0" letter-spacing="-1">PW</text>
+    </svg>
+    <svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <rect width="80" height="80" rx="16" fill="rgba(99,102,241,0.1)" stroke="#6366f1" stroke-width="1.5"/>
+      <path d="M18 62 L32 18 L46 62" stroke="#e2e8f0" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <path d="M22 46 Q26 38 29 44 Q31 48 33 42 Q35 36 38 44 Q40 49 42 46" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+      <text x="50" y="62" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="26" fill="#e2e8f0" letter-spacing="-1">PW</text>
+    </svg>
+  </div>
+  <div class="label">Option 2 — A with brainwave crossbar</div>
+</div>
+
+<!-- CONCEPT 3: Circular seal -->
+<div class="concept">
+  <div class="sizes">
+    <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="40" cy="40" r="38" stroke="#6366f1" stroke-width="1.5" fill="rgba(99,102,241,0.06)"/>
+      <circle cx="40" cy="40" r="30" stroke="#6366f1" stroke-width="0.5" stroke-dasharray="2 3" fill="none"/>
+      <text x="40" y="46" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="22" fill="#e2e8f0" letter-spacing="-1">APW</text>
+      <!-- Circular text approximation - top arc text -->
+      <path id="topArc" d="M 10,40 A 30,30 0 0,1 70,40" fill="none"/>
+      <text font-family="Inter, system-ui" font-weight="600" font-size="6.5" fill="#6366f1" letter-spacing="2">
+        <textPath href="#topArc" startOffset="5%">AI PSYCHOSIS WATCH</textPath>
+      </text>
+    </svg>
+    <svg width="32" height="32" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="40" cy="40" r="38" stroke="#6366f1" stroke-width="1.5" fill="rgba(99,102,241,0.06)"/>
+      <text x="40" y="46" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="800" font-size="22" fill="#e2e8f0" letter-spacing="-1">APW</text>
+    </svg>
+  </div>
+  <div class="label">Option 3 — Institutional seal</div>
+</div>
+
+<!-- CONCEPT 4: Gradient wordmark, no box -->
+<div class="concept">
+  <div class="sizes">
+    <svg width="120" height="80" viewBox="0 0 120 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="g1" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#6366f1"/>
+          <stop offset="100%" stop-color="#8b5cf6"/>
+        </linearGradient>
+      </defs>
+      <text x="60" y="52" text-anchor="middle" font-family="Inter, system-ui, sans-serif" font-weight="900" font-size="42" fill="url(#g1)" letter-spacing="-2">APW</text>
+      <line x1="10" y1="60" x2="110" y2="60" stroke="rgba(99,102,241,0.3)" stroke-width="1"/>
+      <text x="60" y="72" text-anchor="middle" font-family="Inter, system-ui" font-weight="500" font-size="7" fill="#8892a4" letter-spacing="3">AI PSYCHOSIS WATCH</text>
+    </svg>
+  </div>
+  <div class="label">Option 4 — Gradient wordmark</div>
+</div>
+
+</body>
+</html>
