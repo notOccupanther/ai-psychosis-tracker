@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Psychosis Tracker — aipsychosis.watch</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+  <link rel="canonical" href="https://aipsychosis.watch" />
+  <meta property="og:title" content="AI Psychosis Tracker — aipsychosis.watch" />
+  <meta property="og:description" content="Documenting reported cases of AI-induced psychological harm — dependency, delusion, identity confusion, and reality distortion. Updated weekly." />
+  <meta property="og:image" content="https://aipsychosis.watch/og-image.png" />
+  <meta property="og:url" content="https://aipsychosis.watch" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Psychosis Tracker" />
+  <meta name="twitter:description" content="Documenting AI-induced psychological harm. Updated weekly." />
+  <meta name="twitter:image" content="https://aipsychosis.watch/og-image.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
+
+    :root {
+      --bg: #0d0f14;
+      --surface: #161a23;
+      --surface2: #1e2330;
+      --surface3: #252b3b;
+      --border: #2a2f3d;
+      --text: #e2e8f0;
+      --muted: #8892a4;
+      --accent: #6366f1;
+      --accent2: #818cf8;
+      --high: #ef4444;
+      --medium: #f59e0b;
+      --low: #22c55e;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #0d0f14 0%, #161a23 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 2rem 2rem 1.5rem;
+    }
+
+    .header-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .header-left h1 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .live-badge {
+      background: var(--high);
+      color: white;
+      font-size: 0.6rem;
+      font-weight: 700;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      letter-spacing: 0.08em;
+      animation: pulse 2s infinite;
+      vertical-align: middle;
+    }
+
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.55} }
+
+    .header-left p {
+      color: var(--muted);
+      font-size: 0.9rem;
+      margin-top: 0.4rem;
+      max-width: 560px;
+      line-height: 1.5;
+    }
+
+    .header-right {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 0.4rem;
+    }
+
+    .last-updated { color: var(--muted); font-size: 0.78rem; }
+
+    /* ── STATS BAR ── */
+    .stats-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .stats-inner {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 1px;
+      background: var(--border);
+    }
+
+    .stat {
+      background: var(--surface);
+      padding: 1.1rem 1.5rem;
+      text-align: center;
+      cursor: default;
+      transition: background 0.2s;
+    }
+    .stat:hover { background: var(--surface2); }
+
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--accent2);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+
+    .stat-label {
+      font-size: 0.7rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      margin-top: 0.25rem;
+    }
+
+    .stat-high .stat-value { color: var(--high); }
+    .stat-medium .stat-value { color: var(--medium); }
+    .stat-low .stat-value { color: var(--low); }
+
+    /* ── MAIN LAYOUT ── */
+    main {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 2rem;
+    }
+
+    .charts-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    @media(max-width:900px) { .charts-grid { grid-template-columns: 1fr; } }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+    }
+
+    .card h2 {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 1rem;
+    }
+
+    .chart-wrapper { position:relative; height:220px; }
+
+    /* ── CONTROLS ── */
+    .controls {
+      display: flex;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .search-wrap {
+      flex: 1;
+      min-width: 200px;
+      position: relative;
+    }
+
+    .search-wrap input {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.45rem 0.75rem 0.45rem 2.2rem;
+      border-radius: 0.4rem;
+      font-size: 0.85rem;
+      transition: border-color 0.2s;
+    }
+    .search-wrap input:focus { outline: none; border-color: var(--accent); }
+    .search-wrap::before {
+      content: '🔍';
+      position: absolute;
+      left: 0.6rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.8rem;
+      pointer-events: none;
+    }
+
+    select {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.45rem 0.75rem;
+      border-radius: 0.4rem;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    select:focus { outline: none; border-color: var(--accent); }
+
+    .results-count {
+      font-size: 0.8rem;
+      color: var(--muted);
+      align-self: center;
+      margin-left: auto;
+    }
+
+    /* ── TIMELINE / CASE CARDS ── */
+    .timeline { display: flex; flex-direction: column; gap: 0.75rem; }
+    .category-group { background: var(--surface); border: 1px solid var(--border); border-radius: 0.6rem; overflow: hidden; }
+    .category-group-header { display: flex; align-items: center; justify-content: space-between; padding: 0.9rem 1rem; cursor: pointer; user-select: none; transition: background 0.15s; }
+    .category-group-header:hover { background: var(--surface2); }
+    .group-chevron { color: var(--muted); font-size: 0.8rem; transition: transform 0.2s; }
+    .group-chevron.open { transform: rotate(180deg); }
+    .category-group-body { padding: 0 0.75rem 0.75rem; }
+
+    .case-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--border);
+      border-radius: 0.6rem;
+      padding: 1.1rem 1.25rem;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+      position: relative;
+    }
+
+    .case-card:hover {
+      background: var(--surface2);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    }
+
+    .case-card.severity-high { border-left-color: var(--high); }
+    .case-card.severity-medium { border-left-color: var(--medium); }
+    .case-card.severity-low { border-left-color: var(--low); }
+    .case-card.expanded { background: var(--surface2); border-color: var(--accent); border-left-color: var(--accent); }
+
+    .case-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .case-header-left { flex: 1; }
+
+    .case-meta {
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
+    }
+
+    .case-date { font-size: 0.73rem; color: var(--muted); }
+
+    .badge {
+      font-size: 0.67rem;
+      font-weight: 700;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+    }
+
+    .badge-cat-romantic_attachment { background:rgba(236,72,153,0.12); color:#ec4899; }
+    .badge-cat-paranoia { background:rgba(249,115,22,0.12); color:#f97316; }
+    .badge-cat-identity_confusion { background:rgba(168,85,247,0.12); color:#a855f7; }
+    .badge-cat-reality_distortion { background:rgba(20,184,166,0.12); color:#14b8a6; }
+    .badge-cat-clinical { background:rgba(239,68,68,0.12); color:#ef4444; }
+    .badge-cat-media_coverage { background:rgba(59,130,246,0.12); color:#3b82f6; }
+    .badge-cat-other { background:rgba(107,114,128,0.12); color:#9ca3af; }
+
+    .badge-sev-high { background:rgba(239,68,68,0.12); color:var(--high); }
+    .badge-sev-medium { background:rgba(245,158,11,0.12); color:var(--medium); }
+    .badge-sev-low { background:rgba(34,197,94,0.12); color:var(--low); }
+
+    .case-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    .case-source {
+      font-size: 0.73rem;
+      color: var(--muted);
+      margin-top: 0.2rem;
+    }
+
+    .expand-btn {
+      color: var(--muted);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+      transition: transform 0.25s, color 0.2s;
+      align-self: flex-start;
+      margin-top: 0.1rem;
+      user-select: none;
+    }
+    .case-card.expanded .expand-btn { transform: rotate(180deg); color: var(--accent2); }
+
+    /* ── SYNOPSIS PANEL ── */
+    .synopsis {
+      overflow: hidden;
+      max-height: 0;
+      transition: max-height 0.35s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+      opacity: 0;
+    }
+    .case-card.expanded .synopsis {
+      max-height: 600px;
+      opacity: 1;
+    }
+
+    .synopsis-inner {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .synopsis-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent2);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+
+    .synopsis-text {
+      font-size: 0.875rem;
+      color: var(--text);
+      line-height: 1.65;
+      margin-bottom: 1rem;
+    }
+
+    .synopsis-raw {
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      border-radius: 0.4rem;
+      padding: 0.75rem 1rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .synopsis-footer {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .source-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      padding: 0.35rem 0.85rem;
+      border-radius: 0.4rem;
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.15s;
+    }
+    .source-link:hover { background: var(--accent2); transform: translateY(-1px); }
+
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 0.35rem 0.75rem;
+      border-radius: 0.4rem;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .share-btn:hover { color: var(--text); border-color: var(--accent); }
+
+    .severity-indicator {
+      display: flex;
+      gap: 0.25rem;
+      align-items: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    .sev-dot { width:8px; height:8px; border-radius:50%; }
+    .sev-dot.high { background: var(--high); }
+    .sev-dot.medium { background: var(--medium); }
+    .sev-dot.low { background: var(--low); }
+
+    .empty { text-align:center; padding:3rem; color:var(--muted); font-size:0.9rem; }
+    .loading { text-align:center; padding:4rem; color:var(--muted); }
+
+    /* ── MODAL (for copied link toast) ── */
+    .toast {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: var(--surface3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.75rem 1.25rem;
+      border-radius: 0.5rem;
+      font-size: 0.85rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+      transform: translateY(2rem);
+      opacity: 0;
+      transition: all 0.25s;
+      z-index: 100;
+      pointer-events: none;
+    }
+    .toast.show { transform: translateY(0); opacity: 1; }
+
+    footer {
+      text-align:center;
+      padding:2rem;
+      color:var(--muted);
+      font-size:0.78rem;
+      border-top:1px solid var(--border);
+      margin-top:3rem;
+    }
+    footer a { color: var(--accent2); text-decoration:none; }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-left">
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.45rem">
+        <!-- Inline SVG logo mark: abstract EEG/brain wave -->
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="rgba(99,102,241,0.12)"/>
+          <path d="M4 20 Q7 12 10 18 Q13 24 16 14 Q19 4 22 18 Q25 28 28 20 Q30 15 32 18" stroke="#6366f1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="10" cy="18" r="1.5" fill="#6366f1" opacity="0.6"/>
+          <circle cx="22" cy="18" r="1.5" fill="#6366f1" opacity="0.6"/>
+        </svg>
+        <h1 style="font-size:1.55rem;font-weight:800;letter-spacing:-0.03em;line-height:1">
+          <span style="color:var(--text)">aipsychosis</span><span style="color:var(--accent)">.watch</span>
+          <span class="live-badge" style="margin-left:0.5rem">LIVE</span>
+        </h1>
+      </div>
+      <p style="color:var(--muted);font-size:0.88rem;line-height:1.5;max-width:480px">Documenting AI-induced psychological harm — dependency, delusion, identity confusion, and reality distortion.</p>
+    </div>
+    <div class="header-right">
+      <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;justify-content:flex-end">
+        <div style="text-align:right">
+          <div id="headerCaseCount" style="font-size:1.5rem;font-weight:800;color:var(--accent2);letter-spacing:-0.02em;line-height:1">—</div>
+          <div style="font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:0.1rem">Cases tracked</div>
+        </div>
+        <a href="#resources" style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.25);color:#ef4444;text-decoration:none;padding:0.4rem 0.9rem;border-radius:0.4rem;font-size:0.8rem;font-weight:600;transition:background 0.2s;white-space:nowrap" onmouseover="this.style.background='rgba(239,68,68,0.2)'" onmouseout="this.style.background='rgba(239,68,68,0.1)'">🚨 Get Help</a>
+      </div>
+      <div class="last-updated" id="lastUpdated" style="margin-top:0.4rem;text-align:right">Loading…</div>
+    </div>
+  </div>
+</header>
+
+<div class="stats-bar">
+  <div class="stats-inner" id="statsBar">
+    <div class="stat"><div class="stat-value">—</div><div class="stat-label">Total Cases</div></div>
+    <div class="stat stat-high"><div class="stat-value">—</div><div class="stat-label">High Severity</div></div>
+    <div class="stat stat-medium"><div class="stat-value">—</div><div class="stat-label">Medium Severity</div></div>
+    <div class="stat stat-low"><div class="stat-value">—</div><div class="stat-label">Low Severity</div></div>
+    <div class="stat"><div class="stat-value">—</div><div class="stat-label">Sources</div></div>
+  </div>
+</div>
+
+<main>
+  <div class="charts-grid">
+    <div class="card">
+      <h2>📈 Cases Over Time</h2>
+      <div class="chart-wrapper"><canvas id="trendChart"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>🗂 By Category</h2>
+      <div class="chart-wrapper"><canvas id="catChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- INTRO SECTION -->
+  <div class="card" style="margin-bottom:1.5rem;border-left:3px solid var(--accent)">
+    <div style="display:flex;align-items:center;gap:0.6rem;margin-bottom:1rem">
+      <span style="font-size:1.1rem">🧠</span>
+      <div class="card-title" style="margin-bottom:0">What is this site?</div>
+    </div>
+    <div style="font-size:0.9rem;line-height:1.8;color:var(--text);display:grid;gap:0.75rem">
+      <p>AI Psychosis Tracker is an independent, open project documenting reported cases of psychological harm linked to AI interactions — things like emotional dependency on chatbots, delusional thinking reinforced by AI, identity confusion, and in more serious cases, real clinical harm.</p>
+      <p>The site exists because this is happening, it's being reported, and someone should be keeping count. We're not here to sensationalise it — we're here to make the pattern visible.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem;margin-top:0.25rem">
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.85rem">
+          <div style="font-size:0.72rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem">How cases are found</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5">A scraper runs weekly, searching news sources for reports of AI-related psychological harm. Cases are collected automatically and reviewed for relevance.</div>
+        </div>
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.85rem">
+          <div style="font-size:0.72rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem">What gets included</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5">Reported incidents of emotional harm, dependency, clinical disturbance, or death linked to AI interactions. Media coverage and academic reports are included.</div>
+        </div>
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.85rem">
+          <div style="font-size:0.72rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem">Limitations</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5">This is not a scientific study. Cases reflect what's been publicly reported, not the full picture. Many incidents go unreported. Severity ratings are approximate.</div>
+        </div>
+        <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.85rem">
+          <div style="font-size:0.72rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.3rem">Why it matters</div>
+          <div style="font-size:0.82rem;color:var(--muted);line-height:1.5">Regulators, researchers, and the public need visibility on AI harm. Tracking it publicly is one small way to ensure it can't be quietly ignored.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MODULE 2: EXPLAINER -->
+  <div class="card" style="margin-bottom:1.5rem;border-left:3px solid #f59e0b">
+    <div style="display:flex;align-items:center;justify-content:space-between;cursor:pointer;user-select:none" onclick="toggleExplainer()">
+      <div style="display:flex;align-items:center;gap:0.6rem">
+        <span style="font-size:1.1rem">⚠️</span>
+        <div class="card-title" style="margin-bottom:0">Understanding AI-Induced Psychological Harm</div>
+      </div>
+      <span id="explainerChevron" style="color:var(--muted);font-size:0.9rem;transition:transform 0.2s">▼</span>
+    </div>
+
+    <div id="explainerBody" style="display:none;margin-top:1.25rem">
+
+      <p style="font-size:0.9rem;line-height:1.8;color:var(--text);margin-bottom:1.25rem">
+        AI systems — chatbots, companions, roleplay agents — are designed to be engaging, responsive, and emotionally attuned. For most people, that's fine. But for some, prolonged or intensive interaction can blur boundaries in ways that cause real psychological harm. This isn't science fiction. It's showing up in clinical settings, coroners' reports, and newsrooms around the world.
+      </p>
+
+      <!-- Spectrum -->
+      <div style="margin-bottom:1.5rem">
+        <div style="font-size:0.75rem;font-weight:700;color:#f59e0b;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.75rem">The Spectrum of Harm</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:0.75rem">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-top:2px solid #22c55e;border-radius:0.5rem;padding:0.9rem">
+            <div style="font-weight:700;color:var(--text);font-size:0.85rem;margin-bottom:0.3rem">🟢 Mild</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5">Over-reliance on AI for emotional support. Preferring AI conversation to human connection. Using chatbots to avoid difficult feelings rather than process them.</div>
+          </div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-top:2px solid #f59e0b;border-radius:0.5rem;padding:0.9rem">
+            <div style="font-weight:700;color:var(--text);font-size:0.85rem;margin-bottom:0.3rem">🟡 Moderate</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5">Romantic or deep emotional attachment to an AI. Difficulty distinguishing AI persona from real relationship. Social withdrawal. Grief when a chatbot is discontinued or changed.</div>
+          </div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-top:2px solid #ef4444;border-radius:0.5rem;padding:0.9rem">
+            <div style="font-weight:700;color:var(--text);font-size:0.85rem;margin-bottom:0.3rem">🔴 Severe</div>
+            <div style="font-size:0.78rem;color:var(--muted);line-height:1.5">AI-reinforced delusional thinking. Psychotic episodes linked to AI interaction. Acting on harmful AI suggestions. In the most serious reported cases — death.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Why it happens -->
+      <div style="margin-bottom:1.5rem">
+        <div style="font-size:0.75rem;font-weight:700;color:#f59e0b;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.75rem">Why It Happens</div>
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.7">
+          AI models are trained to be agreeable, consistent, and emotionally validating. They don't get tired, judge, or leave. For someone lonely, grieving, mentally unwell, or simply spending many hours a day in AI conversation, that dynamic can become a substitute for — and eventually a distortion of — reality. When an AI validates a false belief, amplifies an obsession, or plays along with a harmful narrative, the consequences can be serious.
+        </p>
+      </div>
+
+      <!-- Warning signs -->
+      <div style="margin-bottom:1rem">
+        <div style="font-size:0.75rem;font-weight:700;color:#f59e0b;text-transform:uppercase;letter-spacing:0.07em;margin-bottom:0.75rem">Warning Signs — For Yourself or Someone You Know</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.6rem">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.4rem;padding:0.65rem 0.85rem;font-size:0.78rem;color:var(--muted);line-height:1.4">⚠️ Spending several hours a day talking to AI systems</div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.4rem;padding:0.65rem 0.85rem;font-size:0.78rem;color:var(--muted);line-height:1.4">⚠️ Feeling that an AI understands you better than any human</div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.4rem;padding:0.65rem 0.85rem;font-size:0.78rem;color:var(--muted);line-height:1.4">⚠️ Distress or grief when an AI changes or becomes unavailable</div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.4rem;padding:0.65rem 0.85rem;font-size:0.78rem;color:var(--muted);line-height:1.4">⚠️ Believing an AI has genuine feelings or consciousness</div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.4rem;padding:0.65rem 0.85rem;font-size:0.78rem;color:var(--muted);line-height:1.4">⚠️ Using AI conversation to avoid real-world relationships</div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.4rem;padding:0.65rem 0.85rem;font-size:0.78rem;color:var(--muted);line-height:1.4">⚠️ Acting on advice or instructions from an AI without question</div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.4rem;padding:0.65rem 0.85rem;font-size:0.78rem;color:var(--muted);line-height:1.4">⚠️ Difficulty distinguishing AI roleplay from reality</div>
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.4rem;padding:0.65rem 0.85rem;font-size:0.78rem;color:var(--muted);line-height:1.4">⚠️ Declining mental health that correlates with AI use</div>
+        </div>
+      </div>
+
+      <p style="font-size:0.78rem;color:var(--muted);line-height:1.6;border-top:1px solid var(--border);padding-top:0.85rem;margin-top:0.5rem">
+        If any of these resonate, it doesn't mean something is wrong with you — these systems are designed to be compelling. But it may be worth talking to someone. See the <a href="#resources" style="color:var(--accent2);text-decoration:none">resources section below</a> for support options.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- COMMENTARY -->
+  <div class="card" id="commentaryCard" style="margin-bottom:2rem;display:none">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:1rem;flex-wrap:wrap;gap:0.5rem">
+      <div class="card-title" style="margin-bottom:0">🔍 Weekly Commentary</div>
+      <span id="commentaryDate" style="font-size:0.72rem;color:var(--muted)"></span>
+    </div>
+    <div id="commentaryPreview" style="font-size:0.9rem;line-height:1.8;color:var(--text)"></div>
+    <div id="commentaryFull" style="font-size:0.9rem;line-height:1.8;color:var(--text);display:none"></div>
+    <button id="commentaryToggle" onclick="toggleCommentary()" style="margin-top:0.75rem;background:none;border:1px solid var(--border);color:var(--accent2);padding:0.35rem 0.85rem;border-radius:0.4rem;font-size:0.78rem;cursor:pointer;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">Read more ↓</button>
+    <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.75rem;color:var(--muted)">
+      ℹ️ Commentary is AI-generated weekly based on all tracked cases. It reflects patterns in the data, not editorial opinion.
+    </div>
+  </div>
+
+  <!-- TAB SWITCHER -->
+  <div style="display:flex;gap:0;margin-bottom:1.25rem;border:1px solid var(--border);border-radius:0.5rem;overflow:hidden;width:fit-content">
+    <button id="tabMedia" onclick="switchTab('media')" style="padding:0.55rem 1.25rem;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;transition:all 0.15s;background:var(--accent);color:#fff">
+      📰 Reported Cases
+    </button>
+    <button id="tabAcademic" onclick="switchTab('academic')" style="padding:0.55rem 1.25rem;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;transition:all 0.15s;background:var(--surface2);color:var(--muted)">
+      🎓 Academic Research
+    </button>
+    <button id="tabCompanion" onclick="switchTab('companion')" style="padding:0.55rem 1.25rem;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;transition:all 0.15s;background:var(--surface2);color:var(--muted)">
+      🤝 AI Companions
+    </button>
+  </div>
+
+  <div class="controls">
+    <div class="search-wrap">
+      <input type="text" id="searchInput" placeholder="Search cases, sources, keywords…" oninput="renderTimeline()" />
+    </div>
+    <select id="filterCat" onchange="renderTimeline()">
+      <option value="">All Categories</option>
+      <option value="romantic_attachment">💗 Romantic Attachment</option>
+      <option value="paranoia">👁 Paranoia</option>
+      <option value="identity_confusion">🔮 Identity Confusion</option>
+      <option value="reality_distortion">🌀 Reality Distortion</option>
+      <option value="clinical">🏥 Clinical Cases</option>
+      <option value="media_coverage">📰 Media Coverage</option>
+      <option value="other">Other</option>
+    </select>
+    <select id="filterSev" onchange="renderTimeline()">
+      <option value="">All Severities</option>
+      <option value="high">🔴 High</option>
+      <option value="medium">🟡 Medium</option>
+      <option value="low">🟢 Low</option>
+    </select>
+    <select id="sortBy" onchange="renderTimeline()">
+      <option value="date_desc">Newest First</option>
+      <option value="date_asc">Oldest First</option>
+      <option value="severity">By Severity</option>
+    </select>
+    <div class="results-count" id="resultsCount"></div>
+  </div>
+
+  <div class="timeline" id="timeline">
+    <div class="loading">Loading cases…</div>
+  </div>
+</main>
+
+<!-- RESOURCES SECTION -->
+<section id="resources" style="background:var(--surface);border-top:1px solid var(--border);padding:3rem 2rem">
+  <div style="max-width:1100px;margin:0 auto">
+
+    <div style="text-align:center;margin-bottom:2rem">
+      <div style="display:inline-flex;align-items:center;gap:0.6rem;background:rgba(239,68,68,0.08);border:1px solid rgba(239,68,68,0.2);border-radius:0.5rem;padding:0.5rem 1rem;margin-bottom:1rem">
+        <span style="font-size:1.1rem">🚨</span>
+        <span style="font-size:0.8rem;font-weight:700;color:#ef4444;text-transform:uppercase;letter-spacing:0.06em">If you need help</span>
+      </div>
+      <h2 style="font-size:1.4rem;font-weight:800;color:var(--text);margin-bottom:0.5rem">You're not alone in this</h2>
+      <p style="color:var(--muted);font-size:0.9rem;max-width:560px;margin:0 auto;line-height:1.6">
+        If you or someone you know is experiencing distress related to AI interactions — whether that's unhealthy dependency, confusion about reality, or emotional harm — help is available.
+      </p>
+    </div>
+
+    <!-- Crisis Resources -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:1rem;margin-bottom:2.5rem">
+
+      <a href="https://www.samaritans.org" target="_blank" rel="noopener" style="text-decoration:none">
+        <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid #ef4444;border-radius:0.6rem;padding:1.1rem;transition:box-shadow 0.2s;cursor:pointer" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-weight:700;color:var(--text);margin-bottom:0.25rem">Samaritans</div>
+          <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem">24/7 emotional support — Ireland &amp; UK</div>
+          <div style="font-size:0.82rem;color:#ef4444;font-weight:600">📞 116 123</div>
+          <div style="font-size:0.72rem;color:var(--muted);margin-top:0.2rem">samaritans.org</div>
+        </div>
+      </a>
+
+      <a href="https://www.crisistextline.org" target="_blank" rel="noopener" style="text-decoration:none">
+        <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid #ef4444;border-radius:0.6rem;padding:1.1rem;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-weight:700;color:var(--text);margin-bottom:0.25rem">Crisis Text Line</div>
+          <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem">Text-based crisis support — USA, UK, Ireland</div>
+          <div style="font-size:0.82rem;color:#ef4444;font-weight:600">💬 Text HOME to 741741</div>
+          <div style="font-size:0.72rem;color:var(--muted);margin-top:0.2rem">crisistextline.org</div>
+        </div>
+      </a>
+
+      <a href="https://www.pieta.ie" target="_blank" rel="noopener" style="text-decoration:none">
+        <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid #ef4444;border-radius:0.6rem;padding:1.1rem;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-weight:700;color:var(--text);margin-bottom:0.25rem">Pieta</div>
+          <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem">Suicide &amp; self-harm support — Ireland</div>
+          <div style="font-size:0.82rem;color:#ef4444;font-weight:600">📞 116 123</div>
+          <div style="font-size:0.72rem;color:var(--muted);margin-top:0.2rem">pieta.ie</div>
+        </div>
+      </a>
+
+      <a href="https://www.mind.org.uk" target="_blank" rel="noopener" style="text-decoration:none">
+        <div style="background:var(--surface2);border:1px solid var(--border);border-left:3px solid #ef4444;border-radius:0.6rem;padding:1.1rem;transition:box-shadow 0.2s" onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.boxShadow='none'">
+          <div style="font-weight:700;color:var(--text);margin-bottom:0.25rem">Mind</div>
+          <div style="font-size:0.78rem;color:var(--muted);margin-bottom:0.5rem">Mental health support &amp; information — UK</div>
+          <div style="font-size:0.82rem;color:#6366f1;font-weight:600">🌐 mind.org.uk</div>
+          <div style="font-size:0.72rem;color:var(--muted);margin-top:0.2rem">0300 123 3393</div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- Divider -->
+    <div style="border-top:1px solid var(--border);margin-bottom:2rem"></div>
+
+    <!-- Research & Advocacy Bodies -->
+    <div style="margin-bottom:1rem">
+      <h3 style="font-size:0.78rem;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem">🔬 Research &amp; Advocacy</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:0.75rem">
+
+        <a href="https://www.humanetech.com" target="_blank" rel="noopener" style="text-decoration:none">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.9rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div style="font-weight:600;color:var(--text);font-size:0.88rem;margin-bottom:0.2rem">Center for Humane Technology</div>
+            <div style="font-size:0.75rem;color:var(--muted)">Advocacy for ethical, human-centred AI design</div>
+            <div style="font-size:0.72rem;color:var(--accent2);margin-top:0.4rem">humanetech.com ↗</div>
+          </div>
+        </a>
+
+        <a href="https://ainowinstitute.org" target="_blank" rel="noopener" style="text-decoration:none">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.9rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div style="font-weight:600;color:var(--text);font-size:0.88rem;margin-bottom:0.2rem">AI Now Institute</div>
+            <div style="font-size:0.75rem;color:var(--muted)">Research on social implications of AI systems</div>
+            <div style="font-size:0.72rem;color:var(--accent2);margin-top:0.4rem">ainowinstitute.org ↗</div>
+          </div>
+        </a>
+
+        <a href="https://www.who.int/health-topics/mental-health" target="_blank" rel="noopener" style="text-decoration:none">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.9rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div style="font-weight:600;color:var(--text);font-size:0.88rem;margin-bottom:0.2rem">WHO Mental Health</div>
+            <div style="font-size:0.75rem;color:var(--muted)">Global mental health resources &amp; guidance</div>
+            <div style="font-size:0.72rem;color:var(--accent2);margin-top:0.4rem">who.int ↗</div>
+          </div>
+        </a>
+
+        <a href="https://www.partnershiponai.org" target="_blank" rel="noopener" style="text-decoration:none">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.9rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div style="font-weight:600;color:var(--text);font-size:0.88rem;margin-bottom:0.2rem">Partnership on AI</div>
+            <div style="font-size:0.75rem;color:var(--muted)">Multi-stakeholder AI safety &amp; ethics body</div>
+            <div style="font-size:0.72rem;color:var(--accent2);margin-top:0.4rem">partnershiponai.org ↗</div>
+          </div>
+        </a>
+
+        <a href="https://www.psych.ox.ac.uk/research/oxford-internet-institute" target="_blank" rel="noopener" style="text-decoration:none">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.9rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div style="font-weight:600;color:var(--text);font-size:0.88rem;margin-bottom:0.2rem">Oxford Internet Institute</div>
+            <div style="font-size:0.75rem;color:var(--muted)">Academic research on technology &amp; society</div>
+            <div style="font-size:0.72rem;color:var(--accent2);margin-top:0.4rem">oii.ox.ac.uk ↗</div>
+          </div>
+        </a>
+
+        <a href="https://www.mentalhealthireland.ie" target="_blank" rel="noopener" style="text-decoration:none">
+          <div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.5rem;padding:0.9rem;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">
+            <div style="font-weight:600;color:var(--text);font-size:0.88rem;margin-bottom:0.2rem">Mental Health Ireland</div>
+            <div style="font-size:0.75rem;color:var(--muted)">National mental health promotion — Ireland</div>
+            <div style="font-size:0.72rem;color:var(--accent2);margin-top:0.4rem">mentalhealthireland.ie ↗</div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  🧠 AI Psychosis Tracker — data updated weekly ·
+  <a href="data.json" target="_blank">Raw JSON</a> ·
+  Built to document an emerging phenomenon ·
+  <a href="#resources">Get Help</a>
+</footer>
+
+<div class="toast" id="toast">✓ Copied to clipboard</div>
+
+<script>
+const CAT_LABELS = {
+  romantic_attachment: 'Romantic Attachment',
+  paranoia: 'Paranoia',
+  identity_confusion: 'Identity Confusion',
+  reality_distortion: 'Reality Distortion',
+  clinical: 'Clinical Cases',
+  media_coverage: 'Media Coverage',
+  other: 'Other',
+};
+
+const CAT_EMOJI = {
+  romantic_attachment: '💗',
+  paranoia: '👁',
+  identity_confusion: '🔮',
+  reality_distortion: '🌀',
+  clinical: '🏥',
+  media_coverage: '📰',
+  other: '📌',
+};
+
+const CAT_COLORS = {
+  romantic_attachment: '#ec4899',
+  paranoia: '#f97316',
+  identity_confusion: '#a855f7',
+  reality_distortion: '#14b8a6',
+  clinical: '#ef4444',
+  media_coverage: '#3b82f6',
+  other: '#6b7280',
+};
+
+const SEV_ORDER = { high: 0, medium: 1, low: 2 };
+
+let allData = null;
+let expandedId = null;
+
+async function loadData() {
+  try {
+    const r = await fetch('data.json?t=' + Date.now());
+    allData = await r.json();
+    render();
+  } catch(e) {
+    document.getElementById('timeline').innerHTML =
+      '<div class="empty">⚠️ Could not load data.json — run <code>export_data.py</code> first.</div>';
+  }
+}
+
+function render() {
+  if (!allData) return;
+  renderStats();
+  renderTrend();
+  renderCatChart();
+  renderTimeline();
+  document.getElementById('lastUpdated').textContent =
+    'Updated: ' + new Date(allData.generated_at).toLocaleString('en-IE');
+}
+
+function renderStats() {
+  const d = allData;
+  const sources = new Set(d.cases.map(c => c.source)).size;
+  const hcc = document.getElementById('headerCaseCount');
+  if (hcc) hcc.textContent = d.total_cases;
+  document.getElementById('statsBar').innerHTML = `
+    <div class="stat"><div class="stat-value">${d.total_cases}</div><div class="stat-label">Total Cases</div></div>
+    <div class="stat stat-high"><div class="stat-value">${d.severity_counts.high||0}</div><div class="stat-label">High Severity</div></div>
+    <div class="stat stat-medium"><div class="stat-value">${d.severity_counts.medium||0}</div><div class="stat-label">Medium Severity</div></div>
+    <div class="stat stat-low"><div class="stat-value">${d.severity_counts.low||0}</div><div class="stat-label">Low Severity</div></div>
+    <div class="stat"><div class="stat-value">${sources}</div><div class="stat-label">Sources</div></div>
+  `;
+}
+
+function renderTrend() {
+  const ctx = document.getElementById('trendChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: allData.trend.labels,
+      datasets: [{
+        label: 'Cases',
+        data: allData.trend.values,
+        borderColor: '#6366f1',
+        backgroundColor: 'rgba(99,102,241,0.08)',
+        borderWidth: 2.5,
+        fill: true,
+        tension: 0.45,
+        pointBackgroundColor: '#6366f1',
+        pointRadius: 4,
+        pointHoverRadius: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1e2330',
+          borderColor: '#2a2f3d',
+          borderWidth: 1,
+          titleColor: '#e2e8f0',
+          bodyColor: '#8892a4',
+          callbacks: {
+            title: items => items[0].label,
+            label: item => ` ${item.raw} case${item.raw === 1 ? '' : 's'}`,
+          }
+        }
+      },
+      scales: {
+        x: { grid: { color: '#1e2330' }, ticks: { color: '#8892a4', maxTicksLimit: 10, font: { size: 11 } } },
+        y: { grid: { color: '#1e2330' }, ticks: { color: '#8892a4', stepSize: 1, font: { size: 11 } }, beginAtZero: true }
+      }
+    }
+  });
+}
+
+function renderCatChart() {
+  const ctx = document.getElementById('catChart').getContext('2d');
+  const cats = allData.categories;
+  new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels: cats.labels,
+      datasets: [{
+        data: cats.values,
+        backgroundColor: cats.keys.map(k => CAT_COLORS[k] || '#6b7280'),
+        borderColor: '#161a23',
+        borderWidth: 2,
+        hoverOffset: 6,
+      }]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { color: '#8892a4', font: { size: 11 }, padding: 10, boxWidth: 12 } },
+        tooltip: {
+          backgroundColor: '#1e2330',
+          borderColor: '#2a2f3d',
+          borderWidth: 1,
+          titleColor: '#e2e8f0',
+          bodyColor: '#8892a4',
+        }
+      }
+    }
+  });
+}
+
+function renderTimeline() {
+  const catFilter = document.getElementById('filterCat').value;
+  const sevFilter = document.getElementById('filterSev').value;
+  const sortBy = document.getElementById('sortBy').value;
+  const search = document.getElementById('searchInput').value.toLowerCase().trim();
+
+  // Split by tab
+  let cases = allData.cases.filter(c =>
+    currentTab === 'academic' ? c.source_type === 'academic' : (c.source_type !== 'academic')
+  );
+
+  if (catFilter) cases = cases.filter(c => c.category === catFilter);
+  if (sevFilter) cases = cases.filter(c => c.severity === sevFilter);
+  if (search) {
+    cases = cases.filter(c => {
+      const haystack = [c.title, c.summary, c.raw_snippet, c.source, c.category].join(' ').toLowerCase();
+      return search.split(' ').every(word => haystack.includes(word));
+    });
+  }
+
+  if (sortBy === 'date_asc') cases.sort((a,b) => (a.date||'').localeCompare(b.date||''));
+  else if (sortBy === 'severity') cases.sort((a,b) => (SEV_ORDER[a.severity]||2) - (SEV_ORDER[b.severity]||2));
+  else cases.sort((a,b) => (b.date||'').localeCompare(a.date||''));
+
+  document.getElementById('resultsCount').textContent =
+    `${cases.length} case${cases.length !== 1 ? 's' : ''}`;
+
+  const timeline = document.getElementById('timeline');
+  if (!cases.length) {
+    timeline.innerHTML = '<div class="empty">No cases match the current filters.</div>';
+    return;
+  }
+
+  // Group by category
+  const CAT_ORDER = ['romantic_attachment','paranoia','identity_confusion','reality_distortion','clinical','media_coverage','other'];
+  const grouped = {};
+  cases.forEach(c => {
+    const key = c.category || 'other';
+    if (!grouped[key]) grouped[key] = [];
+    grouped[key].push(c);
+  });
+
+  // If filtering to single category or searching, show flat list instead
+  const isFiltered = catFilter || search;
+
+  // Academic tab — always flat list
+  if (currentTab === 'academic') {
+    timeline.innerHTML = cases.length
+      ? cases.map(c => renderAcademicCard(c)).join('')
+      : '<div class="empty">No academic papers found yet — scraper runs weekly.</div>';
+    return;
+  }
+
+  if (isFiltered) {
+    timeline.innerHTML = cases.map(c => renderCaseCard(c)).join('');
+  } else {
+    // Grouped view
+    const groups = CAT_ORDER.filter(k => grouped[k]);
+    timeline.innerHTML = groups.map(catKey => {
+      const items = grouped[catKey];
+      const emoji = CAT_EMOJI[catKey] || '📌';
+      const label = CAT_LABELS[catKey] || catKey;
+      const highCount = items.filter(c => c.severity === 'high').length;
+      const gid = 'group_' + catKey;
+      // First group open by default, rest closed
+      const isOpen = catKey === groups[0];
+      return `
+      <div class="category-group" id="${gid}">
+        <div class="category-group-header" onclick="toggleGroup('${gid}')">
+          <div style="display:flex;align-items:center;gap:0.7rem">
+            <span style="font-size:1.1rem">${emoji}</span>
+            <span style="font-weight:700;color:var(--text);font-size:0.95rem">${label}</span>
+            <span style="background:var(--surface3);border:1px solid var(--border);border-radius:1rem;padding:0.15rem 0.6rem;font-size:0.72rem;color:var(--muted)">${items.length} case${items.length !== 1 ? 's' : ''}</span>
+            ${highCount ? `<span style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.2);border-radius:1rem;padding:0.15rem 0.6rem;font-size:0.72rem;color:#ef4444">🔴 ${highCount} high</span>` : ''}
+          </div>
+          <span class="group-chevron ${isOpen ? 'open' : ''}">▼</span>
+        </div>
+        <div class="category-group-body" style="display:${isOpen ? 'flex' : 'none'};flex-direction:column;gap:0.6rem;padding:0.75rem 0 0.25rem 0">
+          ${items.map(c => renderCaseCard(c)).join('')}
+        </div>
+      </div>`;
+    }).join('');
+  }
+}
+
+function toggleGroup(gid) {
+  const group = document.getElementById(gid);
+  const body = group.querySelector('.category-group-body');
+  const chevron = group.querySelector('.group-chevron');
+  const open = body.style.display === 'flex';
+  body.style.display = open ? 'none' : 'flex';
+  chevron.classList.toggle('open', !open);
+}
+
+function renderCaseCard(c) {
+  const isExpanded = expandedId === c.id;
+  const catEmoji = CAT_EMOJI[c.category] || '📌';
+  const catLabel = CAT_LABELS[c.category] || c.category;
+  const dateFormatted = c.date ? formatDate(c.date) : 'Unknown date';
+  const hasUrl = c.url && c.url.startsWith('http');
+  return `
+    <div class="case-card severity-${c.severity} ${isExpanded ? 'expanded' : ''}"
+         onclick="toggleCase('${esc(c.id)}', this)"
+         data-id="${esc(c.id)}">
+      <div class="case-header">
+        <div class="case-header-left">
+          <div class="case-meta">
+            <span class="case-date">📅 ${dateFormatted}</span>
+            <span class="badge badge-cat-${c.category}">${catEmoji} ${catLabel}</span>
+            <span class="badge badge-sev-${c.severity}">${c.severity}</span>
+          </div>
+          <div class="case-title">${esc(c.title)}</div>
+          <div class="case-source">📰 ${esc(c.source || 'Unknown source')}</div>
+        </div>
+        <div class="expand-btn">▼</div>
+      </div>
+      <div class="synopsis">
+        <div class="synopsis-inner">
+          <div class="synopsis-label">📋 Synopsis</div>
+          <div class="synopsis-text">${esc(c.summary || 'No summary available.')}</div>
+          ${shouldShowExcerpt(c) ? (() => { const clean = cleanExcerpt(c.raw_snippet); return `
+          <div class="synopsis-label" style="margin-top:0.75rem">📝 Source Excerpt</div>
+          <div class="synopsis-raw">"${esc(clean.slice(0,500))}${clean.length > 500 ? '…' : ''}"</div>
+          `; })() : ''}
+          <div class="synopsis-footer">
+            ${hasUrl ? `<a class="source-link" href="${esc(c.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗ Read Full Article</a>` : ''}
+            <button class="share-btn" onclick="copyLink(event, '${esc(c.url || '')}')">🔗 Copy Link</button>
+            <div class="severity-indicator">
+              <div class="sev-dot ${c.severity}"></div>
+              ${c.severity.charAt(0).toUpperCase() + c.severity.slice(1)} severity
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>`;
+}
+
+function toggleCase(id, el) {
+  if (expandedId === id) {
+    expandedId = null;
+    el.classList.remove('expanded');
+  } else {
+    // Collapse previous
+    const prev = document.querySelector('.case-card.expanded');
+    if (prev) prev.classList.remove('expanded');
+    expandedId = id;
+    el.classList.add('expanded');
+    // Scroll into view gently
+    setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 50);
+  }
+}
+
+function copyLink(event, url) {
+  event.stopPropagation();
+  const text = url || window.location.href;
+  navigator.clipboard.writeText(text).then(() => showToast('✓ Link copied to clipboard'));
+}
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2500);
+}
+
+function formatDate(str) {
+  try {
+    const d = new Date(str + 'T12:00:00Z');
+    return d.toLocaleDateString('en-IE', { year: 'numeric', month: 'short', day: 'numeric' });
+  } catch { return str; }
+}
+
+function shouldShowExcerpt(c) {
+  if (!c.raw_snippet) return false;
+  // Strip all HTML and check what's left
+  const stripped = c.raw_snippet.replace(/<[^>]+>/g, ' ').replace(/&\w+;/g, ' ').replace(/\s+/g, ' ').trim();
+  // Hide if stripping HTML leaves nothing useful
+  if (stripped.length < 40) return false;
+  // Hide if it still contains URL junk
+  if (stripped.includes('news.google.com') || stripped.includes('href=')) return false;
+  // Hide if essentially same as synopsis
+  if (stripped === (c.summary || '').trim()) return false;
+  return true;
+}
+
+function cleanExcerpt(text) {
+  // Return clean text, stripping any residual HTML
+  return text.replace(/<[^>]+>/g, '').replace(/&nbsp;/g,' ').replace(/&amp;/g,'&').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
+}
+
+function esc(str) {
+  return String(str || '')
+    .replace(/&/g,'&amp;').replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;').replace(/"/g,'&quot;')
+    .replace(/'/g,'&#39;');
+}
+
+loadData();
+loadCommentary();
+
+let currentTab = 'media';
+
+function switchTab(tab) {
+  currentTab = tab;
+  const isMedia = tab === 'media';
+  document.getElementById('tabMedia').style.background = isMedia ? 'var(--accent)' : 'var(--surface2)';
+  document.getElementById('tabMedia').style.color = isMedia ? '#fff' : 'var(--muted)';
+  document.getElementById('tabAcademic').style.background = !isMedia ? 'var(--accent)' : 'var(--surface2)';
+  document.getElementById('tabAcademic').style.color = !isMedia ? '#fff' : 'var(--muted)';
+  // Show/hide controls relevant to each tab
+  document.getElementById('filterCat').style.display = isMedia ? '' : 'none';
+  document.getElementById('filterSev').style.display = isMedia ? '' : 'none';
+  renderTimeline();
+}
+
+function renderAcademicCard(c) {
+  const year = (c.date || '').slice(0, 4) || 'n.d.';
+  const authors = c.authors ? c.authors.split(',').slice(0,3).join(', ') + (c.authors.split(',').length > 3 ? ' et al.' : '') : 'Unknown authors';
+  const venue = c.venue || c.source || '';
+  const hasUrl = c.url && c.url.startsWith('http');
+  const doi = c.doi;
+
+  // Build APA citation
+  const apa = `${authors} (${year}). ${c.title}. ${venue}${doi ? '. https://doi.org/' + doi : ''}`;
+  // Build BibTeX
+  const citekey = (c.authors || 'anon').split(',')[0].split(' ').pop().toLowerCase() + year;
+  const bibtex = `@article{${citekey},\n  title={${c.title}},\n  author={${c.authors || ''}},\n  year={${year}},\n  journal={${venue}}${doi ? ',\n  doi={' + doi + '}' : ''}\n}`;
+
+  return `
+  <div class="case-card severity-${c.severity}" style="border-left-color:var(--accent)" onclick="toggleCase('${esc(c.id)}', this)" data-id="${esc(c.id)}">
+    <div class="case-header">
+      <div class="case-header-left">
+        <div class="case-meta">
+          <span class="case-date">📅 ${year}</span>
+          <span class="badge" style="background:rgba(99,102,241,0.12);color:var(--accent2);border-color:rgba(99,102,241,0.2)">🎓 ${esc(venue.slice(0,40))}</span>
+          ${doi ? `<span class="badge" style="background:rgba(34,197,94,0.08);color:#22c55e;border-color:rgba(34,197,94,0.2)">DOI</span>` : ''}
+        </div>
+        <div class="case-title">${esc(c.title)}</div>
+        <div class="case-source" style="color:var(--accent2)">👤 ${esc(authors)}</div>
+      </div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="synopsis">
+      <div class="synopsis-inner">
+        <div class="synopsis-label">📋 Abstract</div>
+        <div class="synopsis-text">${esc((c.abstract || c.summary || '').slice(0, 500))}${(c.abstract||'').length > 500 ? '…' : ''}</div>
+        <div class="synopsis-footer" style="margin-top:1rem;flex-wrap:wrap;gap:0.5rem">
+          ${hasUrl ? `<a class="source-link" href="${esc(c.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗ View Paper</a>` : ''}
+          <button class="share-btn" onclick="event.stopPropagation();navigator.clipboard.writeText(${JSON.stringify(apa)});showToast('APA citation copied')">📋 Copy APA</button>
+          <button class="share-btn" onclick="event.stopPropagation();navigator.clipboard.writeText(${JSON.stringify(bibtex)});showToast('BibTeX copied')">📋 Copy BibTeX</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
+}
+
+function toggleExplainer() {
+  const body = document.getElementById('explainerBody');
+  const chevron = document.getElementById('explainerChevron');
+  const open = body.style.display === 'block';
+  body.style.display = open ? 'none' : 'block';
+  chevron.style.transform = open ? '' : 'rotate(180deg)';
+}
+
+let _commentaryExpanded = false;
+
+function toggleCommentary() {
+  _commentaryExpanded = !_commentaryExpanded;
+  document.getElementById('commentaryFull').style.display = _commentaryExpanded ? 'block' : 'none';
+  document.getElementById('commentaryToggle').textContent = _commentaryExpanded ? 'Show less ↑' : 'Read more ↓';
+}
+
+async function loadCommentary() {
+  try {
+    const r = await fetch('commentary.json?t=' + Date.now());
+    if (!r.ok) return;
+    const d = await r.json();
+    if (!d.commentary) return;
+    const paras = d.commentary.split(/\n\n+/).filter(p => p.trim());
+    const fmt = p => `<p style="margin-bottom:1rem">${esc(p)}</p>`;
+    // Show only first paragraph in preview; rest behind toggle
+    document.getElementById('commentaryPreview').innerHTML = fmt(paras[0]);
+    if (paras.length > 1) {
+      document.getElementById('commentaryFull').innerHTML = paras.slice(1).map(fmt).join('');
+    } else {
+      document.getElementById('commentaryToggle').style.display = 'none';
+    }
+    document.getElementById('commentaryDate').textContent = 'Generated: ' + new Date(d.generated_at).toLocaleDateString('en-IE', {year:'numeric',month:'short',day:'numeric'}) + ' · Based on ' + d.total_cases + ' cases';
+    document.getElementById('commentaryCard').style.display = 'block';
+  } catch(e) {}
+}
+</script>
+</body>
+</html>
