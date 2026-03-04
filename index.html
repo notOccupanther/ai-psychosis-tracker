@@ -502,7 +502,8 @@
 </div>
 
 <main>
-  <div class="charts-grid">
+  <!-- Media charts -->
+  <div class="charts-grid" id="mediaCharts">
     <div class="card">
       <h2>📈 Cases Over Time</h2>
       <div class="chart-wrapper"><canvas id="trendChart"></canvas></div>
@@ -510,6 +511,18 @@
     <div class="card">
       <h2>🗂 By Category</h2>
       <div class="chart-wrapper"><canvas id="catChart"></canvas></div>
+    </div>
+  </div>
+
+  <!-- Companions charts -->
+  <div class="charts-grid" id="companionCharts" style="display:none">
+    <div class="card">
+      <h2>🛡 By Safety Level</h2>
+      <div class="chart-wrapper"><canvas id="compSafetyChart"></canvas></div>
+    </div>
+    <div class="card">
+      <h2>🗂 By Type</h2>
+      <div class="chart-wrapper"><canvas id="compCatChart"></canvas></div>
     </div>
   </div>
 
@@ -1248,6 +1261,8 @@ loadCommentary();
 
 let currentTab = 'media';
 
+let _compSafetyChart = null, _compCatChart = null;
+
 function switchTab(tab) {
   currentTab = tab;
   const tabs = ['tabMedia','tabAcademic','tabCompanion'];
@@ -1258,9 +1273,72 @@ function switchTab(tab) {
     document.getElementById(tid).style.color = active ? '#fff' : 'var(--muted)';
   });
   const isMedia = tab === 'media';
+  const isCompanion = tab === 'companion';
   document.getElementById('filterCat').style.display = isMedia ? '' : 'none';
   document.getElementById('filterSev').style.display = isMedia ? '' : 'none';
+  document.getElementById('mediaCharts').style.display = isMedia ? '' : 'none';
+  document.getElementById('companionCharts').style.display = isCompanion ? '' : 'none';
+  if (isCompanion) renderCompanionCharts();
   renderTimeline();
+}
+
+function renderCompanionCharts() {
+  const companions = allData.cases.filter(c => c.source_type === 'companion');
+
+  // Safety chart
+  let supervised = 0, unsupervised = 0;
+  companions.forEach(c => {
+    let meta = {}; try { meta = JSON.parse(c.abstract||'{}'); } catch(e){}
+    if (meta.clinical_oversight) supervised++; else unsupervised++;
+  });
+
+  const safetyCtx = document.getElementById('compSafetyChart').getContext('2d');
+  if (_compSafetyChart) _compSafetyChart.destroy();
+  _compSafetyChart = new Chart(safetyCtx, {
+    type: 'doughnut',
+    data: {
+      labels: ['✅ Clinically Supervised', '⚠️ No Clinical Oversight'],
+      datasets: [{ data: [supervised, unsupervised],
+        backgroundColor: ['#22c55e', '#ef4444'],
+        borderColor: '#161a23', borderWidth: 2, hoverOffset: 6 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { color: '#8892a4', font: { size: 11 }, padding: 10, boxWidth: 12 } },
+        tooltip: { backgroundColor: '#1e2330', borderColor: '#2a2f3d', borderWidth: 1, titleColor: '#e2e8f0', bodyColor: '#8892a4' }
+      }
+    }
+  });
+
+  // Category chart
+  const catCounts = {};
+  const catLabels = {'therapy_structured':'Structured Therapy','companion_open':'Open Companion','assistant_empathic':'Empathic Assistant','tracker':'Mood Tracker'};
+  const catColors = {'therapy_structured':'#6366f1','companion_open':'#ef4444','assistant_empathic':'#3b82f6','tracker':'#8b5cf6'};
+  companions.forEach(c => {
+    let meta = {}; try { meta = JSON.parse(c.abstract||'{}'); } catch(e){}
+    const k = meta.category || 'other';
+    catCounts[k] = (catCounts[k] || 0) + 1;
+  });
+
+  const catCtx = document.getElementById('compCatChart').getContext('2d');
+  if (_compCatChart) _compCatChart.destroy();
+  _compCatChart = new Chart(catCtx, {
+    type: 'doughnut',
+    data: {
+      labels: Object.keys(catCounts).map(k => catLabels[k] || k),
+      datasets: [{ data: Object.values(catCounts),
+        backgroundColor: Object.keys(catCounts).map(k => catColors[k] || '#6b7280'),
+        borderColor: '#161a23', borderWidth: 2, hoverOffset: 6 }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'right', labels: { color: '#8892a4', font: { size: 11 }, padding: 10, boxWidth: 12 } },
+        tooltip: { backgroundColor: '#1e2330', borderColor: '#2a2f3d', borderWidth: 1, titleColor: '#e2e8f0', bodyColor: '#8892a4' }
+      }
+    }
+  });
 }
 
 function renderCompanionCard(c) {
