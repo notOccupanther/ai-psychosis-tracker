@@ -681,6 +681,30 @@
   </div>
 </main>
 
+<!-- MODULE 3B: SUBMIT A CASE -->
+<section id="submit" style="background:var(--surface);border-top:1px solid var(--border);padding:3rem 2rem">
+  <div style="max-width:1100px;margin:0 auto">
+    <div style="text-align:center;margin-bottom:2rem">
+      <div style="display:inline-flex;align-items:center;gap:0.6rem;background:rgba(99,102,241,0.08);border:1px solid rgba(99,102,241,0.2);border-radius:0.5rem;padding:0.5rem 1rem;margin-bottom:1rem">
+        <span style="font-size:1rem">📬</span>
+        <span style="font-size:0.78rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em">Submit a case</span>
+      </div>
+      <h2 style="font-size:1.4rem;font-weight:800;color:var(--text);margin-bottom:0.5rem">Know of a case we've missed?</h2>
+      <p style="color:var(--muted);font-size:0.9rem;max-width:520px;margin:0 auto;line-height:1.6">
+        Spotted a news article, academic paper, or first-hand account of AI-induced psychological harm that isn't in the tracker? Submit it and we'll review it for inclusion.
+      </p>
+    </div>
+    <div style="max-width:700px;margin:0 auto;background:var(--surface2);border:1px solid var(--border);border-radius:0.75rem;overflow:hidden">
+      <iframe data-tally-src="https://tally.so/embed/A7leQo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0"
+        title="Submit a Case" style="background:transparent;display:block"></iframe>
+    </div>
+    <p style="text-align:center;font-size:0.75rem;color:var(--muted);margin-top:1rem">
+      All submissions are reviewed before being added. Please include a source URL where possible.
+    </p>
+  </div>
+</section>
+
 <!-- RESOURCES SECTION -->
 <section id="resources" style="background:var(--surface);border-top:1px solid var(--border);padding:3rem 2rem">
   <div style="max-width:1100px;margin:0 auto">
@@ -864,6 +888,7 @@
 <footer>
   🧠 AI Psychosis Tracker — data updated weekly ·
   <a href="data.json" target="_blank">Raw JSON</a> ·
+  <a href="#submit">Submit a Case</a> ·
   <a href="#support">Support this work</a> ·
   <a href="mailto:contact@aipsychosis.watch">Contact</a> ·
   <a href="#resources">Get Help</a>
@@ -1476,6 +1501,7 @@ async function loadCommentary() {
   } catch(e) {}
 }
 </script>
+  <script src="https://tally.so/widgets/embed.js" async></script>
   <script data-goatcounter="https://AiPsychosisWatch.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
