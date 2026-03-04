@@ -3,10 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Psychosis Tracker</title>
+  <title>AI Psychosis Tracker — aipsychosis.watch</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧠</text></svg>" />
+  <link rel="canonical" href="https://aipsychosis.watch" />
+  <meta property="og:title" content="AI Psychosis Tracker — aipsychosis.watch" />
+  <meta property="og:description" content="Documenting reported cases of AI-induced psychological harm — dependency, delusion, identity confusion, and reality distortion. Updated weekly." />
+  <meta property="og:image" content="https://aipsychosis.watch/og-image.png" />
+  <meta property="og:url" content="https://aipsychosis.watch" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AI Psychosis Tracker" />
+  <meta name="twitter:description" content="Documenting AI-induced psychological harm. Updated weekly." />
+  <meta name="twitter:image" content="https://aipsychosis.watch/og-image.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
 
     :root {
       --bg: #0d0f14;
@@ -451,12 +463,30 @@
 <header>
   <div class="header-inner">
     <div class="header-left">
-      <h1>🧠 AI Psychosis Tracker <span class="live-badge">LIVE</span></h1>
-      <p>Tracking the emerging trend of AI-induced psychological harm — delusion, dependency, identity confusion, and reality distortion. Updated weekly.</p>
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.45rem">
+        <!-- Inline SVG logo mark: abstract EEG/brain wave -->
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="36" height="36" rx="8" fill="rgba(99,102,241,0.12)"/>
+          <path d="M4 20 Q7 12 10 18 Q13 24 16 14 Q19 4 22 18 Q25 28 28 20 Q30 15 32 18" stroke="#6366f1" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="10" cy="18" r="1.5" fill="#6366f1" opacity="0.6"/>
+          <circle cx="22" cy="18" r="1.5" fill="#6366f1" opacity="0.6"/>
+        </svg>
+        <h1 style="font-size:1.55rem;font-weight:800;letter-spacing:-0.03em;line-height:1">
+          <span style="color:var(--text)">aipsychosis</span><span style="color:var(--accent)">.watch</span>
+          <span class="live-badge" style="margin-left:0.5rem">LIVE</span>
+        </h1>
+      </div>
+      <p style="color:var(--muted);font-size:0.88rem;line-height:1.5;max-width:480px">Documenting AI-induced psychological harm — dependency, delusion, identity confusion, and reality distortion.</p>
     </div>
     <div class="header-right">
-      <a href="#resources" style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.25);color:#ef4444;text-decoration:none;padding:0.35rem 0.85rem;border-radius:0.4rem;font-size:0.78rem;font-weight:600;transition:background 0.2s" onmouseover="this.style.background='rgba(239,68,68,0.2)'" onmouseout="this.style.background='rgba(239,68,68,0.1)'">🚨 Get Help</a>
-      <div class="last-updated" id="lastUpdated">Loading…</div>
+      <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;justify-content:flex-end">
+        <div style="text-align:right">
+          <div id="headerCaseCount" style="font-size:1.5rem;font-weight:800;color:var(--accent2);letter-spacing:-0.02em;line-height:1">—</div>
+          <div style="font-size:0.68rem;color:var(--muted);text-transform:uppercase;letter-spacing:0.07em;margin-top:0.1rem">Cases tracked</div>
+        </div>
+        <a href="#resources" style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.25);color:#ef4444;text-decoration:none;padding:0.4rem 0.9rem;border-radius:0.4rem;font-size:0.8rem;font-weight:600;transition:background 0.2s;white-space:nowrap" onmouseover="this.style.background='rgba(239,68,68,0.2)'" onmouseout="this.style.background='rgba(239,68,68,0.1)'">🚨 Get Help</a>
+      </div>
+      <div class="last-updated" id="lastUpdated" style="margin-top:0.4rem;text-align:right">Loading…</div>
     </div>
   </div>
 </header>
@@ -599,6 +629,9 @@
     </button>
     <button id="tabAcademic" onclick="switchTab('academic')" style="padding:0.55rem 1.25rem;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;transition:all 0.15s;background:var(--surface2);color:var(--muted)">
       🎓 Academic Research
+    </button>
+    <button id="tabCompanion" onclick="switchTab('companion')" style="padding:0.55rem 1.25rem;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;transition:all 0.15s;background:var(--surface2);color:var(--muted)">
+      🤝 AI Companions
     </button>
   </div>
 
@@ -822,6 +855,8 @@ function render() {
 function renderStats() {
   const d = allData;
   const sources = new Set(d.cases.map(c => c.source)).size;
+  const hcc = document.getElementById('headerCaseCount');
+  if (hcc) hcc.textContent = d.total_cases;
   document.getElementById('statsBar').innerHTML = `
     <div class="stat"><div class="stat-value">${d.total_cases}</div><div class="stat-label">Total Cases</div></div>
     <div class="stat stat-high"><div class="stat-value">${d.severity_counts.high||0}</div><div class="stat-label">High Severity</div></div>
@@ -915,9 +950,11 @@ function renderTimeline() {
   const search = document.getElementById('searchInput').value.toLowerCase().trim();
 
   // Split by tab
-  let cases = allData.cases.filter(c =>
-    currentTab === 'academic' ? c.source_type === 'academic' : (c.source_type !== 'academic')
-  );
+  let cases = allData.cases.filter(c => {
+    if (currentTab === 'academic') return c.source_type === 'academic';
+    if (currentTab === 'companion') return c.source_type === 'companion';
+    return c.source_type === 'media' || !c.source_type;
+  });
 
   if (catFilter) cases = cases.filter(c => c.category === catFilter);
   if (sevFilter) cases = cases.filter(c => c.severity === sevFilter);
@@ -953,11 +990,49 @@ function renderTimeline() {
   // If filtering to single category or searching, show flat list instead
   const isFiltered = catFilter || search;
 
-  // Academic tab — always flat list
+  // Academic tab
   if (currentTab === 'academic') {
     timeline.innerHTML = cases.length
       ? cases.map(c => renderAcademicCard(c)).join('')
       : '<div class="empty">No academic papers found yet — scraper runs weekly.</div>';
+    return;
+  }
+
+  // Companions tab
+  if (currentTab === 'companion') {
+    // Group by category
+    const compCats = ['therapy_structured','assistant_empathic','tracker','companion_open'];
+    const compLabels = {'therapy_structured':'✅ Structured Therapy Apps','assistant_empathic':'💬 Empathic Assistants','tracker':'📊 Mood Trackers','companion_open':'⚠️ Open Companion Apps'};
+    const compColors = {'therapy_structured':'#22c55e','assistant_empathic':'#3b82f6','tracker':'#8b5cf6','companion_open':'#ef4444'};
+    const grouped = {};
+    cases.forEach(c => {
+      let meta = {}; try { meta = JSON.parse(c.abstract||'{}'); } catch(e) {}
+      const key = meta.category || 'companion_open';
+      if (!grouped[key]) grouped[key] = [];
+      grouped[key].push(c);
+    });
+    const intro = `<div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.6rem;padding:1rem 1.25rem;margin-bottom:1rem;font-size:0.85rem;color:var(--muted);line-height:1.7">
+      🤝 <strong style="color:var(--text)">AI Mental Health Companions</strong> — tracking the social response to the crisis documented above. These apps range from clinically-supervised therapy tools to open-ended companion chatbots with little oversight. Understanding the landscape matters.
+    </div>`;
+    const groups = compCats.filter(k => grouped[k]);
+    timeline.innerHTML = intro + (groups.length
+      ? groups.map(k => {
+          const items = grouped[k];
+          const gid = 'cgroup_' + k;
+          return `<div class="category-group" id="${gid}">
+            <div class="category-group-header" onclick="toggleGroup('${gid}')">
+              <div style="display:flex;align-items:center;gap:0.7rem">
+                <span style="font-weight:700;color:${compColors[k]};font-size:0.95rem">${compLabels[k]}</span>
+                <span style="background:var(--surface3);border:1px solid var(--border);border-radius:1rem;padding:0.15rem 0.6rem;font-size:0.72rem;color:var(--muted)">${items.length}</span>
+              </div>
+              <span class="group-chevron open">▼</span>
+            </div>
+            <div class="category-group-body" style="display:flex;flex-direction:column;gap:0.6rem;padding:0.75rem 0 0.25rem 0">
+              ${items.map(c => renderCompanionCard(c)).join('')}
+            </div>
+          </div>`;
+        }).join('')
+      : '<div class="empty">No companion data yet.</div>');
     return;
   }
 
@@ -1112,15 +1187,75 @@ let currentTab = 'media';
 
 function switchTab(tab) {
   currentTab = tab;
+  const tabs = ['tabMedia','tabAcademic','tabCompanion'];
+  const ids  = ['media','academic','companion'];
+  tabs.forEach((tid, i) => {
+    const active = ids[i] === tab;
+    document.getElementById(tid).style.background = active ? 'var(--accent)' : 'var(--surface2)';
+    document.getElementById(tid).style.color = active ? '#fff' : 'var(--muted)';
+  });
   const isMedia = tab === 'media';
-  document.getElementById('tabMedia').style.background = isMedia ? 'var(--accent)' : 'var(--surface2)';
-  document.getElementById('tabMedia').style.color = isMedia ? '#fff' : 'var(--muted)';
-  document.getElementById('tabAcademic').style.background = !isMedia ? 'var(--accent)' : 'var(--surface2)';
-  document.getElementById('tabAcademic').style.color = !isMedia ? '#fff' : 'var(--muted)';
-  // Show/hide controls relevant to each tab
   document.getElementById('filterCat').style.display = isMedia ? '' : 'none';
   document.getElementById('filterSev').style.display = isMedia ? '' : 'none';
   renderTimeline();
+}
+
+function renderCompanionCard(c) {
+  let meta = {};
+  try { meta = JSON.parse(c.abstract || '{}'); } catch(e) {}
+  const safeIcon = meta.clinical_oversight ? '✅ Clinically supervised' : '⚠️ No clinical oversight';
+  const safeColor = meta.clinical_oversight ? '#22c55e' : '#f59e0b';
+  const catColors = {
+    'therapy_structured': '#6366f1',
+    'companion_open': '#ef4444',
+    'assistant_empathic': '#3b82f6',
+    'tracker': '#8b5cf6',
+  };
+  const catColor = catColors[meta.category] || 'var(--accent)';
+
+  return `
+  <div class="case-card" style="border-left:3px solid ${catColor}" onclick="toggleCase('${esc(c.id)}', this)" data-id="${esc(c.id)}">
+    <div class="case-header">
+      <div class="case-header-left">
+        <div class="case-meta">
+          <span class="badge" style="background:rgba(99,102,241,0.12);color:${catColor};border-color:${catColor}33">${esc(meta.category_label || meta.category || '')}</span>
+          <span class="badge" style="background:transparent;color:${safeColor};border-color:${safeColor}44;font-size:0.7rem">${safeIcon}</span>
+          <span class="case-date">Since ${esc(meta.launched || c.date?.slice(0,4) || '?')}</span>
+        </div>
+        <div class="case-title">${esc(c.title)}</div>
+        <div class="case-source">🏢 ${esc(meta.developer || c.source || '')}</div>
+      </div>
+      <div class="expand-btn">▼</div>
+    </div>
+    <div class="synopsis">
+      <div class="synopsis-inner">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem">
+          <div>
+            <div class="synopsis-label">🎯 Approach</div>
+            <div class="synopsis-text">${esc(meta.approach || '')}</div>
+          </div>
+          <div>
+            <div class="synopsis-label">🎪 Target Users</div>
+            <div class="synopsis-text">${esc(meta.target || '')}</div>
+          </div>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem">
+          <div>
+            <div class="synopsis-label" style="color:#22c55e">✅ Safety Features</div>
+            <div class="synopsis-text">${esc(meta.safety || '')}</div>
+          </div>
+          <div>
+            <div class="synopsis-label" style="color:#f59e0b">⚠️ Concerns</div>
+            <div class="synopsis-text">${esc(meta.concerns || '')}</div>
+          </div>
+        </div>
+        <div class="synopsis-footer">
+          <a class="source-link" href="${esc(c.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗ Visit Site</a>
+          <span style="font-size:0.78rem;color:var(--muted)">💰 ${esc(meta.cost || '')}</span>
+        </div>
+      </div>
+    </div>
+  </div>`;
 }
 
 function renderAcademicCard(c) {
