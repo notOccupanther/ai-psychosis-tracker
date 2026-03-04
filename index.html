@@ -1468,7 +1468,15 @@ function renderTrend() {
 
 function renderCatChart() {
   const ctx = document.getElementById('catChart').getContext('2d');
-  const cats = allData.categories;
+  // Build category counts from media cases only (exclude companions + academic)
+  const mediaCases = allData.cases.filter(c => c.source_type !== 'academic' && c.source_type !== 'companion');
+  const countMap = {};
+  mediaCases.forEach(c => { const k = c.category || 'other'; countMap[k] = (countMap[k]||0)+1; });
+  const cats = {
+    keys: Object.keys(countMap),
+    labels: Object.keys(countMap).map(k => CAT_LABELS[k] || k.replace(/_/g,' ').replace(/\b\w/g,l=>l.toUpperCase())),
+    values: Object.values(countMap)
+  };
   new Chart(ctx, {
     type: 'doughnut',
     data: {
