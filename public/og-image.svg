@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0d0f14"/>
+
+  <!-- Subtle grid lines -->
+  <line x1="0" y1="315" x2="1200" y2="315" stroke="#1e2330" stroke-width="1"/>
+  <line x1="600" y1="0" x2="600" y2="630" stroke="#1e2330" stroke-width="1"/>
+
+  <!-- Accent left bar -->
+  <rect x="0" y="0" width="6" height="630" fill="#6366f1"/>
+
+  <!-- EEG wave decoration -->
+  <path d="M100 420 Q150 380 200 420 Q250 460 300 380 Q350 300 400 420 Q450 520 500 400 Q550 280 600 420 Q650 540 700 400 Q750 280 800 420 Q850 520 900 440 Q950 380 1000 420 Q1050 460 1100 420" stroke="#6366f1" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.25"/>
+
+  <!-- Logo mark SVG (EEG wave in accent box) -->
+  <rect x="80" y="160" width="80" height="80" rx="16" fill="rgba(99,102,241,0.15)"/>
+  <path d="M90 205 Q100 185 110 205 Q120 225 130 195 Q140 165 150 205 Q160 240 170 215" stroke="#6366f1" stroke-width="3" stroke-linecap="round" fill="none"/>
+
+  <!-- Main wordmark -->
+  <text x="180" y="225" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="72" fill="#e2e8f0" letter-spacing="-2">aipsychosis</text>
+  <text x="918" y="225" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="72" fill="#6366f1" letter-spacing="-2">.watch</text>
+
+  <!-- Tagline -->
+  <text x="80" y="290" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="400" font-size="26" fill="#8892a4" letter-spacing="0">Documenting AI-induced psychological harm</text>
+
+  <!-- Divider -->
+  <line x1="80" y1="330" x2="560" y2="330" stroke="#2a2f3d" stroke-width="1.5"/>
+
+  <!-- Stat pills -->
+  <rect x="80" y="355" width="220" height="54" rx="10" fill="#161a23" stroke="#2a2f3d" stroke-width="1"/>
+  <text x="190" y="378" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="22" fill="#818cf8" text-anchor="middle" letter-spacing="-0.5">60+ Cases</text>
+  <text x="190" y="397" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="500" font-size="13" fill="#8892a4" text-anchor="middle" letter-spacing="0.5">TRACKED &amp; DOCUMENTED</text>
+
+  <rect x="320" y="355" width="220" height="54" rx="10" fill="#161a23" stroke="#2a2f3d" stroke-width="1"/>
+  <text x="430" y="378" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="800" font-size="22" fill="#ef4444" text-anchor="middle" letter-spacing="-0.5">Updated Weekly</text>
+  <text x="430" y="397" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="500" font-size="13" fill="#8892a4" text-anchor="middle" letter-spacing="0.5">INDEPENDENT PROJECT</text>
+
+  <!-- Category chips (bottom decoration) -->
+  <rect x="80" y="445" width="160" height="30" rx="15" fill="rgba(236,72,153,0.1)" stroke="rgba(236,72,153,0.25)" stroke-width="1"/>
+  <text x="160" y="465" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="13" fill="#ec4899" text-anchor="middle">Romantic Attachment</text>
+
+  <rect x="256" y="445" width="110" height="30" rx="15" fill="rgba(168,85,247,0.1)" stroke="rgba(168,85,247,0.25)" stroke-width="1"/>
+  <text x="311" y="465" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="13" fill="#a855f7" text-anchor="middle">Paranoia</text>
+
+  <rect x="382" y="445" width="155" height="30" rx="15" fill="rgba(20,184,166,0.1)" stroke="rgba(20,184,166,0.25)" stroke-width="1"/>
+  <text x="459" y="465" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="13" fill="#14b8a6" text-anchor="middle">Reality Distortion</text>
+
+  <rect x="553" y="445" width="130" height="30" rx="15" fill="rgba(239,68,68,0.1)" stroke="rgba(239,68,68,0.25)" stroke-width="1"/>
+  <text x="618" y="465" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="600" font-size="13" fill="#ef4444" text-anchor="middle">Clinical Cases</text>
+
+  <!-- Right side decorative brain/wave cluster -->
+  <g opacity="0.12">
+    <path d="M900 200 Q940 150 980 200 Q1020 250 1060 180 Q1100 110 1140 200 Q1180 280 1140 320" stroke="#6366f1" stroke-width="4" stroke-linecap="round" fill="none"/>
+    <circle cx="980" cy="200" r="6" fill="#6366f1"/>
+    <circle cx="1060" cy="180" r="6" fill="#6366f1"/>
+  </g>
+
+  <!-- Bottom domain reminder -->
+  <text x="1120" y="600" font-family="'Inter', -apple-system, BlinkMacSystemFont, sans-serif" font-weight="500" font-size="18" fill="#2a2f3d" text-anchor="end" letter-spacing="0">aipsychosis.watch</text>
+</svg>
