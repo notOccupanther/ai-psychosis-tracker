@@ -1295,9 +1295,12 @@ function renderTimeline() {
 
   // Academic tab
   if (currentTab === 'academic') {
+    const academicIntro = `<div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.6rem;padding:1rem 1.25rem;margin-bottom:1rem;font-size:0.85rem;color:var(--muted);line-height:1.7">
+      🎓 <strong style="color:var(--text)">Peer-Reviewed Research</strong> — indexed papers from arXiv, PubMed, and Semantic Scholar examining AI's psychological impact. Each paper passes a relevance gate requiring both an AI keyword and a harm keyword. Use the Copy APA / Copy BibTeX buttons to cite directly.
+    </div>`;
     timeline.innerHTML = cases.length
-      ? cases.map(c => renderAcademicCard(c)).join('')
-      : '<div class="empty">No academic papers found yet — scraper runs weekly.</div>';
+      ? academicIntro + cases.map(c => renderAcademicCard(c)).join('')
+      : academicIntro + '<div class="empty">No academic papers found yet — scraper runs weekly.</div>';
     return;
   }
 
@@ -1339,8 +1342,12 @@ function renderTimeline() {
     return;
   }
 
+  const mediaIntro = `<div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.6rem;padding:1rem 1.25rem;margin-bottom:1rem;font-size:0.85rem;color:var(--muted);line-height:1.7">
+    📰 <strong style="color:var(--text)">Reported Cases</strong> — media-sourced accounts of AI-induced psychological harm, grouped by category. Cases are scraped weekly and reviewed for relevance. Severity ratings reflect real-world impact on the individual. <strong style="color:var(--text)">Click any category to expand.</strong>
+  </div>`;
+
   if (isFiltered) {
-    timeline.innerHTML = cases.map(c => renderCaseCard(c)).join('');
+    timeline.innerHTML = mediaIntro + cases.map(c => renderCaseCard(c)).join('');
   } else {
     // Grouped view
     const groups = CAT_ORDER.filter(k => grouped[k]);
@@ -1368,6 +1375,7 @@ function renderTimeline() {
         </div>
       </div>`;
     }).join('');
+    timeline.innerHTML = mediaIntro + timeline.innerHTML;
   }
 }
 
