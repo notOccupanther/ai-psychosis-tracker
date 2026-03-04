@@ -1995,22 +1995,26 @@ async function loadCommentary() {
   }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
   observer.observe(tabSection);
 
-  // Show Get Help in sticky nav once user scrolls past the resources section
+  // Show Get Help in sticky nav as soon as resources header scrolls off top of screen
   var resourcesSection = document.getElementById('resources');
   if (resourcesSection && stickyHelp) {
     var helpObserver = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (!entry.isIntersecting) {
           var rect = resourcesSection.getBoundingClientRect();
-          // Scrolled past resources — show Get Help
-          if (rect.bottom < 0) {
+          if (rect.top < 0) {
+            // Scrolled past top — show in sticky
             stickyHelp.style.display = 'flex';
+          } else {
+            // Below viewport (hasn't been seen yet) — hide
+            stickyHelp.style.display = 'none';
           }
         } else {
+          // Currently visible — hide from sticky
           stickyHelp.style.display = 'none';
         }
       });
-    }, { threshold: 0 });
+    }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
     helpObserver.observe(resourcesSection);
   }
 })();
