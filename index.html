@@ -21,11 +21,11 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; }
 
     :root {
-      --bg: #0d0f14;
-      --surface: #161a23;
-      --surface2: #1e2330;
-      --surface3: #252b3b;
-      --border: #2a2f3d;
+      --bg: #0e1018;
+      --surface: #13161f;
+      --surface2: #181c27;
+      --surface3: #1e2333;
+      --border: #262c3d;
       --text: #e2e8f0;
       --muted: #8892a4;
       --accent: #6366f1;
@@ -249,13 +249,14 @@
       border-radius: 0.6rem;
       padding: 1.1rem 1.25rem;
       cursor: pointer;
-      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.25s, transform 0.25s;
       position: relative;
     }
 
     .case-card:hover {
       background: var(--surface2);
       box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+      transform: translateY(-1px);
     }
 
     .case-card.severity-high { border-left-color: var(--high); }
@@ -448,14 +449,63 @@
 
     footer {
       text-align:center;
-      padding:2rem;
+      padding:2.5rem 2rem;
       color:var(--muted);
       font-size:0.78rem;
-      border-top:1px solid var(--border);
-      margin-top:3rem;
+      border-top: none;
+      background: linear-gradient(180deg, var(--surface2) 0%, var(--bg) 100%);
+      box-shadow: 0 -1px 0 rgba(99,102,241,0.18), 0 -3px 0 rgba(99,102,241,0.06);
+      margin-top:0;
     }
     footer a { color: var(--accent2); text-decoration:none; }
     footer a:hover { text-decoration: underline; }
+
+    /* Section hero banners */
+    .section-hero {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      padding: 0 2rem;
+    }
+    .section-hero svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.85;
+    }
+    .section-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 2rem 0;
+    }
+    .section-hero-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      opacity: 0.7;
+      margin-bottom: 0.4rem;
+    }
+    .section-hero h2 {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      color: #fff;
+      margin-bottom: 0.35rem;
+    }
+    .section-hero p {
+      font-size: 0.85rem;
+      color: rgba(255,255,255,0.65);
+      max-width: 480px;
+      line-height: 1.5;
+    }
   </style>
 </head>
 <body>
@@ -682,11 +732,45 @@
 </main>
 
 <!-- NEWSLETTER SUBSCRIBE -->
-<section id="newsletter" style="background:var(--surface2);border-top:1px solid var(--border);padding:2rem">
+<section id="newsletter" style="background:var(--surface2);box-shadow:0 -1px 0 rgba(255,255,255,0.04);padding:0">
+
+  <!-- Hero banner -->
+  <div class="section-hero" style="background:linear-gradient(120deg,#111828 0%,#1a1f35 60%,#1c2040 100%);height:130px">
+    <svg viewBox="0 0 1200 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <!-- Envelope/connection motif -->
+      <defs>
+        <linearGradient id="ngGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#6366f1" stop-opacity="0.08"/>
+          <stop offset="100%" stop-color="#818cf8" stop-opacity="0.18"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="130" fill="url(#ngGrad)"/>
+      <!-- Envelope outline -->
+      <rect x="820" y="28" width="200" height="130" rx="8" fill="none" stroke="#6366f1" stroke-width="1.2" stroke-opacity="0.25"/>
+      <line x1="820" y1="28" x2="920" y2="90" stroke="#6366f1" stroke-width="1.2" stroke-opacity="0.2"/>
+      <line x1="1020" y1="28" x2="920" y2="90" stroke="#6366f1" stroke-width="1.2" stroke-opacity="0.2"/>
+      <!-- Connection dots -->
+      <circle cx="200" cy="65" r="3" fill="#818cf8" fill-opacity="0.3"/>
+      <circle cx="340" cy="40" r="2" fill="#818cf8" fill-opacity="0.2"/>
+      <circle cx="480" cy="85" r="2.5" fill="#818cf8" fill-opacity="0.25"/>
+      <circle cx="600" cy="50" r="2" fill="#818cf8" fill-opacity="0.2"/>
+      <line x1="200" y1="65" x2="340" y2="40" stroke="#6366f1" stroke-width="0.8" stroke-opacity="0.12"/>
+      <line x1="340" y1="40" x2="480" y2="85" stroke="#6366f1" stroke-width="0.8" stroke-opacity="0.12"/>
+      <line x1="480" y1="85" x2="600" y2="50" stroke="#6366f1" stroke-width="0.8" stroke-opacity="0.12"/>
+      <!-- Subtle wave -->
+      <path d="M0 95 Q200 75 400 95 Q600 115 800 90 Q1000 65 1200 85" fill="none" stroke="#6366f1" stroke-width="0.6" stroke-opacity="0.12"/>
+    </svg>
+    <div class="section-hero-content">
+      <div class="section-hero-label" style="color:#818cf8">Stay Informed</div>
+      <h2>📨 Weekly Digest</h2>
+      <p>New cases, academic papers, and analysis — delivered every Sunday.</p>
+    </div>
+  </div>
+
+  <div style="padding:2rem">
   <div style="max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem">
     <div>
-      <div style="font-weight:700;color:var(--text);font-size:1rem;margin-bottom:0.3rem">📨 Weekly Digest</div>
-      <div style="font-size:0.83rem;color:var(--muted);max-width:420px;line-height:1.5">New cases, academic papers, and analysis — delivered every Sunday. No spam, unsubscribe anytime.</div>
+      <div style="font-size:0.83rem;color:var(--muted);max-width:420px;line-height:1.5">No spam, unsubscribe anytime.</div>
     </div>
     <div style="display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center">
       <form action="https://buttondown.com/api/emails/embed-subscribe/clancynl" method="post" target="popupwindow"
@@ -703,10 +787,42 @@
       </form>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- MODULE 3B: SUBMIT A CASE -->
-<section id="submit" style="background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem">
+<section id="submit" style="background:var(--surface);box-shadow:0 -1px 0 rgba(255,255,255,0.04);padding:0">
+
+  <!-- Hero banner -->
+  <div class="section-hero" style="background:linear-gradient(120deg,#0f1225 0%,#141830 60%,#181e3a 100%);height:120px">
+    <svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="subGrad" x1="0" y1="1" x2="0" y2="0">
+          <stop offset="0%" stop-color="#6366f1" stop-opacity="0.04"/>
+          <stop offset="100%" stop-color="#6366f1" stop-opacity="0.14"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="120" fill="url(#subGrad)"/>
+      <!-- Upward arrow motif -->
+      <path d="M950 100 L950 30 M935 48 L950 30 L965 48" fill="none" stroke="#6366f1" stroke-width="1.8" stroke-opacity="0.3" stroke-linecap="round" stroke-linejoin="round"/>
+      <!-- Contribution dots rising -->
+      <circle cx="880" cy="90" r="3" fill="#6366f1" fill-opacity="0.2"/>
+      <circle cx="900" cy="72" r="2.5" fill="#6366f1" fill-opacity="0.25"/>
+      <circle cx="920" cy="55" r="2" fill="#6366f1" fill-opacity="0.3"/>
+      <circle cx="980" cy="60" r="2" fill="#818cf8" fill-opacity="0.25"/>
+      <circle cx="1000" cy="78" r="2.5" fill="#818cf8" fill-opacity="0.2"/>
+      <!-- Subtle grid lines -->
+      <line x1="0" y1="80" x2="800" y2="80" stroke="#6366f1" stroke-width="0.4" stroke-opacity="0.06"/>
+      <line x1="0" y1="40" x2="700" y2="40" stroke="#6366f1" stroke-width="0.4" stroke-opacity="0.06"/>
+    </svg>
+    <div class="section-hero-content">
+      <div class="section-hero-label" style="color:#818cf8">Contribute</div>
+      <h2>📬 Submit a Case</h2>
+      <p>Know of an incident we've missed? Help us keep the record complete.</p>
+    </div>
+  </div>
+
+  <div style="padding:1.5rem 2rem">
   <div style="max-width:1100px;margin:0 auto">
     <div class="category-group" id="submitGroup">
       <div class="category-group-header" onclick="toggleGroup('submitGroup')" style="padding:1rem">
@@ -732,10 +848,41 @@
       </div>
     </div>
   </div>
+  </div>
 </section>
 
 <!-- RESOURCES SECTION -->
-<section id="resources" style="background:var(--surface);border-top:1px solid var(--border);padding:3rem 2rem">
+<section id="resources" style="background:var(--surface);box-shadow:0 -1px 0 rgba(255,255,255,0.04);padding:0">
+
+  <!-- Hero banner -->
+  <div class="section-hero" style="background:linear-gradient(120deg,#0d1a18 0%,#0f2020 50%,#0e1c22 100%);height:140px">
+    <svg viewBox="0 0 1200 140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="resGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.06"/>
+          <stop offset="100%" stop-color="#22c55e" stop-opacity="0.14"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="140" fill="url(#resGrad)"/>
+      <!-- Calm wave horizon motif -->
+      <path d="M0 110 Q150 90 300 105 Q450 120 600 100 Q750 80 900 100 Q1050 118 1200 105" fill="none" stroke="#14b8a6" stroke-width="1.5" stroke-opacity="0.25"/>
+      <path d="M0 125 Q200 108 400 120 Q600 133 800 115 Q1000 97 1200 118" fill="none" stroke="#22c55e" stroke-width="0.8" stroke-opacity="0.12"/>
+      <!-- Gentle sun/horizon glow -->
+      <ellipse cx="960" cy="140" rx="200" ry="60" fill="#14b8a6" fill-opacity="0.04"/>
+      <!-- Node dots -->
+      <circle cx="150" cy="95" r="2" fill="#14b8a6" fill-opacity="0.3"/>
+      <circle cx="400" cy="110" r="2.5" fill="#22c55e" fill-opacity="0.2"/>
+      <circle cx="620" cy="88" r="2" fill="#14b8a6" fill-opacity="0.3"/>
+      <circle cx="850" cy="105" r="2" fill="#22c55e" fill-opacity="0.25"/>
+    </svg>
+    <div class="section-hero-content">
+      <div class="section-hero-label" style="color:#4ade80">If you need help</div>
+      <h2>🤝 Resources &amp; Help</h2>
+      <p>You're not alone in this. Support is available — right now.</p>
+    </div>
+  </div>
+
+  <div style="padding:3rem 2rem">
   <div style="max-width:1100px;margin:0 auto">
 
     <div style="text-align:center;margin-bottom:2rem">
@@ -791,7 +938,7 @@
     </div>
 
     <!-- Divider -->
-    <div style="border-top:1px solid var(--border);margin-bottom:2rem"></div>
+    <div style="border-top:none;box-shadow:0 -1px 0 rgba(255,255,255,0.05);margin-bottom:2rem;height:1px"></div>
 
     <!-- Research & Advocacy Bodies -->
     <div style="margin-bottom:1rem">
@@ -850,10 +997,41 @@
     </div>
 
   </div>
+  </div>
 </section>
 
 <!-- SUPPORT & CONTACT SECTION -->
-<section id="support" style="background:var(--surface2);border-top:1px solid var(--border);padding:3rem 2rem">
+<section id="support" style="background:var(--surface2);box-shadow:0 -1px 0 rgba(255,255,255,0.04);padding:0">
+
+  <!-- Hero banner -->
+  <div class="section-hero" style="background:linear-gradient(120deg,#130e1f 0%,#1a1228 55%,#1c1530 100%);height:130px">
+    <svg viewBox="0 0 1200 130" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <defs>
+        <linearGradient id="supGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%" stop-color="#a855f7" stop-opacity="0.05"/>
+          <stop offset="100%" stop-color="#c084fc" stop-opacity="0.14"/>
+        </linearGradient>
+      </defs>
+      <rect width="1200" height="130" fill="url(#supGrad)"/>
+      <!-- Heart motif -->
+      <path d="M950 55 C950 45 938 35 925 42 C912 35 900 45 900 55 C900 65 925 82 925 82 C925 82 950 65 950 55Z" fill="none" stroke="#a855f7" stroke-width="1.5" stroke-opacity="0.35"/>
+      <!-- Community circles -->
+      <circle cx="870" cy="65" r="18" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-opacity="0.15"/>
+      <circle cx="980" cy="65" r="18" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-opacity="0.15"/>
+      <circle cx="925" cy="100" r="18" fill="none" stroke="#a855f7" stroke-width="0.8" stroke-opacity="0.15"/>
+      <!-- Soft glow -->
+      <ellipse cx="925" cy="65" rx="100" ry="50" fill="#a855f7" fill-opacity="0.03"/>
+      <!-- Flow lines -->
+      <path d="M0 85 Q300 70 600 85 Q800 97 1000 78" fill="none" stroke="#a855f7" stroke-width="0.6" stroke-opacity="0.1"/>
+    </svg>
+    <div class="section-hero-content">
+      <div class="section-hero-label" style="color:#c084fc">Keep the light on</div>
+      <h2>💜 Support this Work</h2>
+      <p>Independent. Volunteer-run. No ads. No funding. Just conviction.</p>
+    </div>
+  </div>
+
+  <div style="padding:3rem 2rem">
   <div style="max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:2.5rem">
 
     <!-- Support this work -->
@@ -911,6 +1089,7 @@
       </div>
     </div>
 
+  </div>
   </div>
 </section>
 
