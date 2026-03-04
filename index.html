@@ -1532,7 +1532,7 @@ function renderTimeline() {
   }
 
   // Group by category
-  const CAT_ORDER = ['romantic_attachment','paranoia','identity_confusion','reality_distortion','clinical','media_coverage','other'];
+  const CAT_ORDER = ['reality_distortion','paranoia','identity_confusion','romantic_attachment','clinical','media_coverage','other'];
   const grouped = {};
   cases.forEach(c => {
     const key = c.category || 'other';
@@ -1608,7 +1608,12 @@ function renderTimeline() {
       const highCount = items.filter(c => c.severity === 'high').length;
       const gid = 'group_' + catKey;
       // First group open by default, rest closed
-      const isOpen = catKey === groups[0];
+      // Open the category with the most high-severity cases by default
+      const highestHighCat = groups.reduce((best, k) => {
+        const h = (grouped[k]||[]).filter(c => c.severity === 'high').length;
+        return h > ((grouped[best]||[]).filter(c => c.severity === 'high').length) ? k : best;
+      }, groups[0]);
+      const isOpen = catKey === highestHighCat;
       return `
       <div class="category-group" id="${gid}">
         <div class="category-group-header" onclick="toggleGroup('${gid}')">
