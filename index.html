@@ -682,26 +682,31 @@
 </main>
 
 <!-- MODULE 3B: SUBMIT A CASE -->
-<section id="submit" style="background:var(--surface);border-top:1px solid var(--border);padding:3rem 2rem">
+<section id="submit" style="background:var(--surface);border-top:1px solid var(--border);padding:1.5rem 2rem">
   <div style="max-width:1100px;margin:0 auto">
-    <div style="text-align:center;margin-bottom:2rem">
-      <div style="display:inline-flex;align-items:center;gap:0.6rem;background:rgba(99,102,241,0.08);border:1px solid rgba(99,102,241,0.2);border-radius:0.5rem;padding:0.5rem 1rem;margin-bottom:1rem">
-        <span style="font-size:1rem">📬</span>
-        <span style="font-size:0.78rem;font-weight:700;color:var(--accent2);text-transform:uppercase;letter-spacing:0.06em">Submit a case</span>
+    <div class="category-group" id="submitGroup">
+      <div class="category-group-header" onclick="toggleGroup('submitGroup')" style="padding:1rem">
+        <div style="display:flex;align-items:center;gap:0.7rem">
+          <span style="font-size:1.1rem">📬</span>
+          <span style="font-weight:700;color:var(--text);font-size:0.95rem">Submit a Case</span>
+          <span style="font-size:0.8rem;color:var(--muted);font-weight:400">— know of one we've missed?</span>
+        </div>
+        <span class="group-chevron">▼</span>
       </div>
-      <h2 style="font-size:1.4rem;font-weight:800;color:var(--text);margin-bottom:0.5rem">Know of a case we've missed?</h2>
-      <p style="color:var(--muted);font-size:0.9rem;max-width:520px;margin:0 auto;line-height:1.6">
-        Spotted a news article, academic paper, or first-hand account of AI-induced psychological harm that isn't in the tracker? Submit it and we'll review it for inclusion.
-      </p>
+      <div class="category-group-body" style="display:none;padding:1rem 1rem 1.25rem">
+        <p style="font-size:0.85rem;color:var(--muted);line-height:1.6;margin-bottom:1.25rem">
+          Spotted a news article, academic paper, or first-hand account of AI-induced psychological harm that isn't in the tracker? Submit it and we'll review it for inclusion.
+        </p>
+        <div style="background:var(--surface);border:1px solid var(--border);border-radius:0.5rem;overflow:hidden">
+          <iframe data-tally-src="https://tally.so/embed/A7leQo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+            loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0"
+            title="Submit a Case" style="background:transparent;display:block"></iframe>
+        </div>
+        <p style="font-size:0.72rem;color:var(--muted);margin-top:0.75rem">
+          All submissions are reviewed before being added. Please include a source URL where possible.
+        </p>
+      </div>
     </div>
-    <div style="max-width:700px;margin:0 auto;background:var(--surface2);border:1px solid var(--border);border-radius:0.75rem;overflow:hidden">
-      <iframe data-tally-src="https://tally.so/embed/A7leQo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-        loading="lazy" width="100%" height="400" frameborder="0" marginheight="0" marginwidth="0"
-        title="Submit a Case" style="background:transparent;display:block"></iframe>
-    </div>
-    <p style="text-align:center;font-size:0.75rem;color:var(--muted);margin-top:1rem">
-      All submissions are reviewed before being added. Please include a source URL where possible.
-    </p>
   </div>
 </section>
 
