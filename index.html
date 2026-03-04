@@ -752,6 +752,7 @@
     <button id="stickyTabCompanion" class="sticky-tab" onclick="switchTab('companion')">🤝 Companions</button>
   </div>
   <input class="sticky-search" type="text" placeholder="Search…" oninput="document.getElementById('searchInput').value=this.value;renderTimeline()" />
+  <a id="stickyHelp" href="#resources" style="display:none;align-items:center;gap:0.35rem;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);color:#ef4444;text-decoration:none;padding:0.3rem 0.75rem;border-radius:0.4rem;font-size:0.75rem;font-weight:600;white-space:nowrap;transition:background 0.2s;flex-shrink:0" onmouseover="this.style.background='rgba(239,68,68,0.22)'" onmouseout="this.style.background='rgba(239,68,68,0.12)'">🚨 Get Help</a>
 </div>
 
 <div class="stats-bar">
@@ -1970,13 +1971,14 @@ async function loadCommentary() {
 (function() {
   var tabSection = document.getElementById('tabSection');
   var stickyNav = document.getElementById('stickyNav');
+  var stickyHelp = document.getElementById('stickyHelp');
   if (!tabSection || !stickyNav) return;
+
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         stickyNav.classList.remove('visible');
       } else {
-        // Only show sticky when scrolled past (tab section below viewport top)
         var rect = tabSection.getBoundingClientRect();
         if (rect.top < 0) {
           stickyNav.classList.add('visible');
@@ -1987,6 +1989,25 @@ async function loadCommentary() {
     });
   }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
   observer.observe(tabSection);
+
+  // Show Get Help in sticky nav once user scrolls past the resources section
+  var resourcesSection = document.getElementById('resources');
+  if (resourcesSection && stickyHelp) {
+    var helpObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) {
+          var rect = resourcesSection.getBoundingClientRect();
+          // Scrolled past resources — show Get Help
+          if (rect.bottom < 0) {
+            stickyHelp.style.display = 'flex';
+          }
+        } else {
+          stickyHelp.style.display = 'none';
+        }
+      });
+    }, { threshold: 0 });
+    helpObserver.observe(resourcesSection);
+  }
 })();
 </script>
   <script data-goatcounter="https://aipsychosiswatch.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
