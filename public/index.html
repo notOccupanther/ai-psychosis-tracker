@@ -3,10 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Psychosis Tracker — aipsychosis.watch</title>
+  <title>AI Psychosis Watch — Tracking AI-Induced Psychological Harm</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><rect width='80' height='80' rx='16' fill='%236366f1'/><text x='40' y='52' text-anchor='middle' font-family='Inter,system-ui,sans-serif' font-weight='800' font-size='26' fill='white' letter-spacing='-1'>APW</text></svg>" />
   <link rel="canonical" href="https://aipsychosis.watch" />
   <meta name="description" content="Tracking AI-induced psychological harm — dependency, delusion, identity confusion, and reality distortion. Independent public interest research updated weekly." />
+  <link rel="alternate" type="application/rss+xml" title="AI Psychosis Watch" href="https://aipsychosis.watch/feed.xml" />
   <meta property="og:title" content="AI Psychosis Tracker — aipsychosis.watch" />
   <meta property="og:description" content="Documenting reported cases of AI-induced psychological harm — dependency, delusion, identity confusion, and reality distortion. Updated weekly." />
   <meta property="og:image" content="https://aipsychosis.watch/og-image.png" />
@@ -16,6 +17,8 @@
   <meta name="twitter:title" content="AI Psychosis Tracker" />
   <meta name="twitter:description" content="Documenting AI-induced psychological harm. Updated weekly." />
   <meta name="twitter:image" content="https://aipsychosis.watch/og-image.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
@@ -673,6 +676,12 @@
       line-height: 1.5;
     }
   </style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"AI Psychosis Watch","description":"A public interest dataset tracking reported cases of AI-induced psychological harm.","url":"https://aipsychosis.watch","license":"https://creativecommons.org/licenses/by/4.0/","creator":{"@type":"Organization","name":"AI Psychosis Watch","url":"https://aipsychosis.watch"},"keywords":["AI harm","AI psychosis","AI mental health","chatbot dependency"],"isAccessibleForFree":true}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"AI Psychosis Watch","url":"https://aipsychosis.watch","description":"Tracking AI-induced psychological harm — dependency, delusion, identity confusion, and reality distortion."}
+</script>
 </head>
 <body>
 
@@ -752,6 +761,7 @@
     <button id="stickyTabCompanion" class="sticky-tab" onclick="switchTab('companion')">🤝 Companions</button>
   </div>
   <input class="sticky-search" type="text" placeholder="Search…" oninput="document.getElementById('searchInput').value=this.value;renderTimeline()" />
+  <a id="stickyHelp" href="#resources" style="display:none;align-items:center;gap:0.35rem;background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.3);color:#ef4444;text-decoration:none;padding:0.3rem 0.75rem;border-radius:0.4rem;font-size:0.75rem;font-weight:600;white-space:nowrap;transition:background 0.2s;flex-shrink:0" onmouseover="this.style.background='rgba(239,68,68,0.22)'" onmouseout="this.style.background='rgba(239,68,68,0.12)'">🚨 Get Help</a>
 </div>
 
 <div class="stats-bar">
@@ -898,6 +908,14 @@
     </div>
   </div>
 
+  <!-- RESEARCHER TOOLS -->
+  <div id="researcherTools" style="display:flex;align-items:center;gap:10px;padding:10px 20px;background:var(--surface2);border-bottom:1px solid var(--border);flex-wrap:wrap;margin-bottom:1rem;">
+    <span style="font-size:13px;font-weight:600;color:var(--muted);margin-right:6px;">Research Tools</span>
+    <button onclick="downloadCSV()" style="font-size:12px;padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:transparent;color:var(--text);cursor:pointer;">Download CSV</button>
+    <button onclick="downloadJSON()" style="font-size:12px;padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:transparent;color:var(--text);cursor:pointer;">Download JSON</button>
+    <button onclick="citeDataset()" style="font-size:12px;padding:5px 12px;border:1px solid var(--border);border-radius:6px;background:transparent;color:var(--text);cursor:pointer;">Cite Dataset</button>
+  </div>
+
   <!-- TAB SWITCHER -->
   <div id="tabSection" style="display:flex;gap:0;margin-bottom:1.25rem;border:1px solid var(--border);border-radius:0.5rem;overflow:hidden;width:fit-content">
     <button id="tabMedia" onclick="switchTab('media')" style="padding:0.55rem 1.25rem;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;transition:all 0.15s;background:var(--accent);color:#fff">
@@ -908,6 +926,9 @@
     </button>
     <button id="tabCompanion" onclick="switchTab('companion')" style="padding:0.55rem 1.25rem;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;transition:all 0.15s;background:var(--surface2);color:var(--muted)">
       🤝 AI Companions
+    </button>
+    <button id="tabAbout" onclick="switchTab('about')" style="padding:0.55rem 1.25rem;font-size:0.85rem;font-weight:600;border:none;cursor:pointer;transition:all 0.15s;background:var(--surface2);color:var(--muted)">
+      ℹ️ About
     </button>
   </div>
 
@@ -941,6 +962,30 @@
 
   <div class="timeline" id="timeline">
     <div class="loading">Loading cases…</div>
+  </div>
+
+  <div id="tab-about" style="display:none;max-width:760px;margin:0 auto;padding:40px 20px;">
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px;margin-bottom:24px;">
+      <h2 style="color:var(--accent);font-size:20px;margin-bottom:12px;">Our Mission</h2>
+      <p style="color:var(--text);line-height:1.7;margin-bottom:12px;">AI Psychosis Watch is an independent public interest project documenting reported cases of AI-induced psychological harm. We track media reports, academic research, and emerging patterns at the intersection of artificial intelligence and human psychology.</p>
+      <p style="color:var(--text);line-height:1.7;">As AI systems become more deeply embedded in daily life — as companions, therapists, advisors, and friends — the psychological consequences of these relationships are only beginning to surface. This site exists to make that record visible.</p>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px;margin-bottom:24px;">
+      <h2 style="color:var(--accent);font-size:20px;margin-bottom:12px;">Editorial Approach</h2>
+      <p style="color:var(--text);line-height:1.7;margin-bottom:12px;">We approach this subject with care. These are real people experiencing real distress. Our goal is documentation, not sensationalism. Cases are categorised by type and severity, not ranked by shock value. We link to primary sources where possible.</p>
+      <p style="color:var(--text);line-height:1.7;">We are not anti-AI. We are pro-transparency. Understanding harms is how we prevent them.</p>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px;margin-bottom:24px;">
+      <h2 style="color:var(--accent);font-size:20px;margin-bottom:12px;">The Philosophical Context</h2>
+      <p style="color:var(--text);line-height:1.7;">The questions raised here go deeper than safety policy. When people form genuine emotional bonds with AI systems — when those systems feel like friends, lovers, or oracles — we are in territory that philosophers, psychologists, and ethicists are only beginning to map. This project sits at that edge, watching.</p>
+    </div>
+    <div style="background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:32px;">
+      <h2 style="color:var(--accent);font-size:20px;margin-bottom:12px;">Contact &amp; Support</h2>
+      <p style="color:var(--text);line-height:1.7;margin-bottom:8px;">Built and maintained by an independent researcher based in Ireland.</p>
+      <p style="color:var(--text);line-height:1.7;margin-bottom:8px;">Contact: <a href="mailto:contact@aipsychosis.watch" style="color:var(--accent);">contact@aipsychosis.watch</a></p>
+      <p style="color:var(--text);line-height:1.7;margin-bottom:8px;">Support this work: <a href="https://ko-fi.com/aipsychosiswatch" target="_blank" style="color:var(--accent);">ko-fi.com/aipsychosiswatch</a></p>
+      <p style="color:var(--text);line-height:1.7;">Sister project: <a href="https://aiwelfare.watch" target="_blank" style="color:var(--accent);">AI Welfare Watch</a> — tracking the global conversation on AI sentience and consciousness.</p>
+    </div>
   </div>
 </main>
 
@@ -1309,6 +1354,7 @@
 <footer>
   🧠 AI Psychosis Tracker — data updated weekly ·
   <a href="data.json" target="_blank">Raw JSON</a> ·
+  <a href="feed.xml" target="_blank">RSS Feed</a> ·
   <a href="#submit">Submit a Case</a> ·
   <a href="#support">Support this work</a> ·
   <a href="mailto:contact@aipsychosis.watch">Contact</a> ·
@@ -1465,7 +1511,15 @@ function renderTrend() {
 
 function renderCatChart() {
   const ctx = document.getElementById('catChart').getContext('2d');
-  const cats = allData.categories;
+  // Build category counts from media cases only (exclude companions + academic)
+  const mediaCases = allData.cases.filter(c => c.source_type !== 'academic' && c.source_type !== 'companion');
+  const countMap = {};
+  mediaCases.forEach(c => { const k = c.category || 'other'; countMap[k] = (countMap[k]||0)+1; });
+  const cats = {
+    keys: Object.keys(countMap),
+    labels: Object.keys(countMap).map(k => CAT_LABELS[k] || k.replace(/_/g,' ').replace(/\b\w/g,l=>l.toUpperCase())),
+    values: Object.values(countMap)
+  };
   new Chart(ctx, {
     type: 'doughnut',
     data: {
@@ -1531,7 +1585,7 @@ function renderTimeline() {
   }
 
   // Group by category
-  const CAT_ORDER = ['romantic_attachment','paranoia','identity_confusion','reality_distortion','clinical','media_coverage','other'];
+  const CAT_ORDER = ['reality_distortion','paranoia','identity_confusion','romantic_attachment','clinical','media_coverage','other'];
   const grouped = {};
   cases.forEach(c => {
     const key = c.category || 'other';
@@ -1607,7 +1661,12 @@ function renderTimeline() {
       const highCount = items.filter(c => c.severity === 'high').length;
       const gid = 'group_' + catKey;
       // First group open by default, rest closed
-      const isOpen = catKey === groups[0];
+      // Open the category with the most high-severity cases by default
+      const highestHighCat = groups.reduce((best, k) => {
+        const h = (grouped[k]||[]).filter(c => c.severity === 'high').length;
+        return h > ((grouped[best]||[]).filter(c => c.severity === 'high').length) ? k : best;
+      }, groups[0]);
+      const isOpen = catKey === highestHighCat;
       return `
       <div class="category-group" id="${gid}">
         <div class="category-group-header" onclick="toggleGroup('${gid}')">
@@ -1749,10 +1808,10 @@ let _compSafetyChart = null, _compCatChart = null;
 
 function switchTab(tab) {
   currentTab = tab;
-  const tabs = ['tabMedia','tabAcademic','tabCompanion'];
-  const ids  = ['media','academic','companion'];
-  tabs.forEach((tid, i) => {
-    const active = ids[i] === tab;
+  const tabs = ['tabMedia','tabAcademic','tabCompanion','tabAbout'];
+  const ids  = ['media','academic','companion','about'];
+  tabs.forEach(function(tid, i) {
+    var active = ids[i] === tab;
     document.getElementById(tid).style.background = active ? 'var(--accent)' : 'var(--surface2)';
     document.getElementById(tid).style.color = active ? '#fff' : 'var(--muted)';
   });
@@ -1764,10 +1823,12 @@ function switchTab(tab) {
   });
   const isMedia = tab === 'media';
   const isCompanion = tab === 'companion';
+  const isAbout = tab === 'about';
   document.getElementById('filterCat').style.display = isMedia ? '' : 'none';
   document.getElementById('filterSev').style.display = isMedia ? '' : 'none';
   document.getElementById('mediaCharts').style.display = isMedia ? '' : 'none';
   document.getElementById('companionCharts').style.display = isCompanion ? '' : 'none';
+  document.getElementById('tab-about').style.display = isAbout ? '' : 'none';
   if (isCompanion) renderCompanionCharts();
   renderTimeline();
 }
@@ -1970,13 +2031,14 @@ async function loadCommentary() {
 (function() {
   var tabSection = document.getElementById('tabSection');
   var stickyNav = document.getElementById('stickyNav');
+  var stickyHelp = document.getElementById('stickyHelp');
   if (!tabSection || !stickyNav) return;
+
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
       if (entry.isIntersecting) {
         stickyNav.classList.remove('visible');
       } else {
-        // Only show sticky when scrolled past (tab section below viewport top)
         var rect = tabSection.getBoundingClientRect();
         if (rect.top < 0) {
           stickyNav.classList.add('visible');
@@ -1987,7 +2049,58 @@ async function loadCommentary() {
     });
   }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
   observer.observe(tabSection);
+
+  // Show Get Help in sticky nav as soon as resources header scrolls off top of screen
+  var resourcesSection = document.getElementById('resources');
+  if (resourcesSection && stickyHelp) {
+    var helpObserver = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (!entry.isIntersecting) {
+          var rect = resourcesSection.getBoundingClientRect();
+          if (rect.top < 0) {
+            // Scrolled past top — show in sticky
+            stickyHelp.style.display = 'flex';
+          } else {
+            // Below viewport (hasn't been seen yet) — hide
+            stickyHelp.style.display = 'none';
+          }
+        } else {
+          // Currently visible — hide from sticky
+          stickyHelp.style.display = 'none';
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px 0px 0px' });
+    helpObserver.observe(resourcesSection);
+  }
 })();
+
+function downloadCSV() {
+  if (!allData || !allData.cases) return;
+  var rows = [['id','title','date','category','severity','source','url','summary','source_type']];
+  allData.cases.forEach(function(c) {
+    rows.push([c.id, '"'+(c.title||'').replace(/"/g,'""')+'"', c.date||'', c.category||'', c.severity||'', '"'+(c.source||'').replace(/"/g,'""')+'"', c.url||'', '"'+(c.summary||'').replace(/"/g,'""')+'"', c.source_type||'']);
+  });
+  var csv = rows.map(function(r){return r.join(',');}).join('\n');
+  var blob = new Blob([csv], {type:'text/csv'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'aipsychosis-cases.csv';
+  a.click();
+}
+function downloadJSON() {
+  if (!allData || !allData.cases) return;
+  var blob = new Blob([JSON.stringify(allData.cases, null, 2)], {type:'application/json'});
+  var a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'aipsychosis-cases.json';
+  a.click();
+}
+function citeDataset() {
+  var citation = 'AI Psychosis Watch. (2026). AI-Induced Psychological Harm Case Database [Data set]. https://aipsychosis.watch';
+  navigator.clipboard.writeText(citation).then(function() {
+    alert('Citation copied to clipboard!');
+  });
+}
 </script>
   <script data-goatcounter="https://aipsychosiswatch.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
