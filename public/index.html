@@ -2015,15 +2015,30 @@ async function loadCommentary() {
     const d = await r.json();
     if (!d.commentary) return;
     const paras = d.commentary.split(/\n\n+/).filter(p => p.trim());
-    const fmt = p => `<p style="margin-bottom:1rem">${esc(p)}</p>`;
-    // Show only first paragraph in preview; rest behind toggle
+    const fmt = p => '<p style="margin-bottom:1rem">' + esc(p) + '</p>';
+
+    // Build spotlight aside if present
+    var spotlightHtml = '';
+    if (d.spotlight && d.spotlight.title) {
+      var sp = d.spotlight;
+      spotlightHtml = '<aside style="border-left:3px solid var(--accent);background:var(--surface2);border-radius:0 8px 8px 0;padding:0.9rem 1.1rem;margin:1.2rem 0;max-width:520px">'
+        + '<div style="font-size:0.7rem;font-weight:700;letter-spacing:0.08em;color:var(--accent);text-transform:uppercase;margin-bottom:0.4rem">Case in focus</div>'
+        + '<div style="font-size:0.88rem;font-weight:600;color:var(--text);margin-bottom:0.45rem;line-height:1.4">' + esc(sp.title) + '</div>'
+        + '<div style="font-size:0.82rem;color:var(--muted);line-height:1.6;margin-bottom:0.6rem">' + esc(sp.context) + '</div>'
+        + '<a href="' + esc(sp.url) + '" target="_blank" rel="noopener" style="font-size:0.78rem;color:var(--accent);text-decoration:none;font-weight:600">Read the source \u2192</a>'
+        + '</aside>';
+    }
+
     document.getElementById('commentaryPreview').innerHTML = fmt(paras[0]);
     if (paras.length > 1) {
-      document.getElementById('commentaryFull').innerHTML = paras.slice(1).map(fmt).join('');
+      document.getElementById('commentaryFull').innerHTML = paras.slice(1).map(fmt).join('') + spotlightHtml;
     } else {
-      document.getElementById('commentaryToggle').style.display = 'none';
+      document.getElementById('commentaryFull').innerHTML = spotlightHtml;
+      if (!spotlightHtml) document.getElementById('commentaryToggle').style.display = 'none';
     }
-    document.getElementById('commentaryDate').textContent = 'Generated: ' + new Date(d.generated_at).toLocaleDateString('en-IE', {year:'numeric',month:'short',day:'numeric'}) + ' · Based on ' + d.total_cases + ' cases';
+    if (d.date) {
+      document.getElementById('commentaryDate').textContent = 'Week ' + (d.week || '') + ' \u00B7 ' + d.date;
+    }
     document.getElementById('commentaryCard').style.display = 'block';
   } catch(e) {}
 }
