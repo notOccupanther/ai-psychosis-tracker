@@ -1,9 +1,14 @@
 {
-  "generated_at": "2026-03-09T08:23:28Z",
-  "total_cases": 74,
+  "generated_at": "2026-03-09T08:24:50Z",
+  "total_cases": 109,
+  "by_type": {
+    "media": 74,
+    "academic": 27,
+    "companion": 8
+  },
   "severity_counts": {
     "high": 18,
-    "medium": 14,
+    "medium": 49,
     "low": 42
   },
   "trend": {
