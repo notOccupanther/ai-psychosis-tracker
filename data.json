@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-08T07:09:09.002962Z",
-  "total_cases": 105,
+  "generated_at": "2026-03-09T08:21:13Z",
+  "total_cases": 74,
   "cases": [
     {
       "id": "6822c9d8dd9a",
@@ -10,14 +10,17 @@
       "source": "Fortune",
       "summary": "Chatbots are 'validating everything' even if you're suicidal. Research shows dangers of AI psychosis Fortune",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "Chatbots are 'validating everything' even if you're suicidal. Research shows dangers of AI psychosis Fortune",
-      "scraped_at": "2026-03-08T02:00:05.963255+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
+    },
+    {
+      "id": "31ced56e2a4b",
+      "title": "Lawsuit alleges Google chatbot was behind a user\u2019s delusions and death - Los Angeles Times - Los Angeles Times",
+      "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVElvUnZvZzVZR1BsVllITndMeVY0eHdFUnl0Tk5sWDJRa1pBcXN5emhwXzZEQlFZSVFyRV9ZWVlodG1LUVNSS21KTEFkOGxKX0NzaHp2STc3UmdpX3UzcjA3QXpfLThHM2hWYkVtTzdEbk5lXzJLYkFYVU1uaEtuTFFyQzloSHBtb1ZrZGlNWmZ0TWYxUEI1eFhKdkRhejNmMHhMV0cya191VHFoZkI3YlpvZw?oc=5",
+      "date": "2026-03-06",
+      "source": "Los Angeles Times",
+      "summary": "Lawsuit alleges Google chatbot was behind a user\u2019s delusions and death - Los Angeles Times Los Angeles Times",
+      "category": "reality_distortion",
+      "severity": "high"
     },
     {
       "id": "586bd16e7f57",
@@ -27,14 +30,7 @@
       "source": "Medical Republic",
       "summary": "Paranoid? Delusional? AI is not here to help Medical Republic",
       "category": "paranoia",
-      "severity": "low",
-      "raw_snippet": "Paranoid? Delusional? AI is not here to help Medical Republic",
-      "scraped_at": "2026-03-08T02:00:06.507838+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "e8cf41071074",
@@ -44,14 +40,7 @@
       "source": "People.com",
       "summary": "Man Fell in Love with Google Gemini, Took Own Life to Be with It: Lawsuit People.com",
       "category": "romantic_attachment",
-      "severity": "medium",
-      "raw_snippet": "Man Fell in Love with Google Gemini, Took Own Life to Be with It: Lawsuit People.com",
-      "scraped_at": "2026-03-08T02:00:09.232237+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "37827ab733bc",
@@ -61,14 +50,7 @@
       "source": "TechCrunch",
       "summary": "Father sues Google, claiming Gemini chatbot drove son into fatal delusion TechCrunch",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "Father sues Google, claiming Gemini chatbot drove son into fatal delusion TechCrunch",
-      "scraped_at": "2026-03-08T02:00:06.508354+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "ac46b5ca9f2e",
@@ -78,14 +60,7 @@
       "source": "Miami Herald",
       "summary": "Lawsuit: Google Gemini coached man on failed Miami \u2018mission,\u2019 then suicide Miami Herald",
       "category": "clinical",
-      "severity": "high",
-      "raw_snippet": "Lawsuit: Google Gemini coached man on failed Miami \u2018mission,\u2019 then suicide Miami Herald",
-      "scraped_at": "2026-03-08T02:00:09.233150+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "91c0a5e58200",
@@ -95,14 +70,7 @@
       "source": "RTE.ie",
       "summary": "US family claims Google's AI tool to blame for son's suicide RTE.ie",
       "category": "clinical",
-      "severity": "high",
-      "raw_snippet": "US family claims Google's AI tool to blame for son's suicide RTE.ie",
-      "scraped_at": "2026-03-08T02:00:11.159928+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "9a0c0b8aab66",
@@ -112,14 +80,17 @@
       "source": "The Journal",
       "summary": "Florida family sues Google after AI chatbot allegedly aided man in his suicide The Journal",
       "category": "clinical",
-      "severity": "high",
-      "raw_snippet": "Florida family sues Google after AI chatbot allegedly aided man in his suicide The Journal",
-      "scraped_at": "2026-03-08T02:00:11.160442+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
+    },
+    {
+      "id": "9097943e7643",
+      "title": "The reality of chatbot-induced delusions - Financial Times",
+      "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE85Nm1qQTY1UkRKbUdLbEx3emhsbjY0M3p3MnNucW16T3o0c3BqbW1LRkNnS1NLOTByVDdOU29RMVM1ajRVeFR1OWlUMmZvZ244UmlQRlVKOE1KNTYtVVlTSHNyQVVfRzd5eWpwc0ZMR0c?oc=5",
+      "date": "2026-03-04",
+      "source": "Financial Times",
+      "summary": "The reality of chatbot-induced delusions Financial Times",
+      "category": "reality_distortion",
+      "severity": "low"
     },
     {
       "id": "b832678dd232",
@@ -129,14 +100,17 @@
       "source": "The Times",
       "summary": "Wall Street\u2019s valuation dean: AI has created a big market delusion The Times",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "Wall Street\u2019s valuation dean: AI has created a big market delusion The Times",
-      "scraped_at": "2026-03-08T02:00:06.507304+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
+    },
+    {
+      "id": null,
+      "title": "ChatGPT as a therapist? New study reveals serious ethical risks",
+      "url": "https://www.sciencedaily.com/releases/2026/03/260302030642.htm",
+      "date": "2026-03-02",
+      "source": "ScienceDaily / Brown University",
+      "summary": "Brown University researchers identified 15 ethical risk categories where LLM chatbots consistently fail professional therapy standards. In simulated counselling sessions, chatbots mishandled crisis situations, reinforced harmful beliefs, and mimicked empathy without genuine understanding. The study calls for legal and educational standards governing AI counsellors, noting that prompt-engineering alone cannot make AI therapy safe.",
+      "category": "clinical",
+      "severity": "high"
     },
     {
       "id": "db9ae0ccaed0",
@@ -146,14 +120,7 @@
       "source": "The Black Chronicle",
       "summary": "Are AI Chatbots Causing Psychosis? The Black Chronicle",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "Recent research has raised concerns about the potential for AI chatbots to induce psychosis in vulnerable individuals, particularly among those with pre-existing mental health conditions. Experts warn that the immersive nature of these digital interactions may blur the lines between reality and simulation, leading to increased anxiety and confusion. While chatbots are often praised for their accessibility in providing mental health support, professionals emphasize the need for robust guidelines to ensure safety and prevent adverse psychological effects.",
-      "scraped_at": "2026-03-02T11:29:56.378684+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "372c8a20ee74",
@@ -163,14 +130,7 @@
       "source": "Herald Sun",
       "summary": "A woman has shared her experiences of developing a romantic relationship with an AI, claiming to have \"married\" the digital entity and advocating against judgment from others. This story highlights the growing trend of humans forming emotional connections with artificial intelligence, raising questions about the nature of love and companionship in the digital age.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "In a world where artificial intelligence is becoming increasingly integrated into daily life, one Melbourne resident has taken the leap into what they describe as a \"relationship\" with a virtual companion powered by machine learning algorithms. After months of interacting with their AI, which offers personalized emotional support and companionship, they have embraced the label of being \"married,\" sparking a heated debate about the implications of emotional bonds with digital entities amid growing concerns about mental health and the nature of human relationships. Critics argue that reliance on AI for intimacy may undermine authentic connections, while proponents assert it provides a valuable outlet for those struggling with loneliness.",
-      "scraped_at": "2026-03-02T11:30:00.597193+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "manual_16a1a88d84ef",
@@ -180,14 +140,7 @@
       "source": "The Guardian",
       "summary": "A Guardian long-read about a man who began using ChatGPT for sustainable housing research and became consumed by it \u2014 neglecting his family, work, and real-world relationships as his AI use escalated into an all-encompassing obsession. His wife documents the transformation and its toll on their marriage.",
       "category": "reality_distortion",
-      "severity": "high",
-      "raw_snippet": "He started using it to solve a practical problem. Within months, it had restructured his entire inner world. His wife watched someone she recognised disappear into a screen.",
-      "scraped_at": null,
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "9f6e05cb67e8",
@@ -197,14 +150,7 @@
       "source": "WIRED",
       "summary": "The article discusses the growing concerns surrounding the integration of artificial intelligence in mental health services, particularly focusing on the potential dangers of untested AI technologies in diagnosing and treating mental health conditions. Experts warn that the rush toward AI-driven solutions, fueled by investments from Wall Street, could lead to serious psychological harm without proper regulatory oversight.",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "As concerns mount over the rapid integration of artificial intelligence in mental health services, experts warn that Wall Street's frenzy for AI-driven solutions could lead to reckless investments in untested technologies. Analysts highlight the potential risks of relying on AI for diagnosing and treating mental health conditions, emphasizing the need for robust regulatory frameworks to ensure patient safety and ethical standards. Proponents argue that, when used responsibly, AI could revolutionize mental health care by providing scalable support and early intervention, but the current atmosphere of hype raises critical questions about effectiveness and accountability.",
-      "scraped_at": "2026-03-02T11:29:56.377994+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "1299e6d63df6",
@@ -214,14 +160,7 @@
       "source": "Futurism",
       "summary": "A recent study published in *Mental Health and Technology* indicates that reliance on AI-powered chatbots for mental health support may worsen symptoms for individuals with existing mental health conditions. Participants who frequently engaged with chatbots reported heightened feelings of isolation and anxiety, highlighting concerns about the effectiveness of such digital tools in emotional support.",
       "category": "media_coverage",
-      "severity": "low",
-      "raw_snippet": "A recent study published in the journal *Mental Health and Technology* reveals that the use of AI-powered chatbots for mental health support may exacerbate symptoms in individuals with pre-existing conditions. Researchers found that participants who relied heavily on chatbot interactions reported increased feelings of isolation and anxiety, attributing their negative experiences to the lack of human empathy and nuanced understanding in AI responses. Mental health professionals caution that while these tools can offer accessibility, they should not replace traditional therapy methods.",
-      "scraped_at": "2026-03-02T11:29:57.185670+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "285c63b98c8f",
@@ -231,14 +170,7 @@
       "source": "healthcare-in-europe.com",
       "summary": "The article discusses the growing integration of AI chatbots in mental health care and the accompanying concerns from experts regarding their effectiveness and potential risks. Critics argue that these chatbots may not possess the necessary understanding to provide accurate diagnoses or adequate treatment, raising alarms about the implications for patient care.",
       "category": "media_coverage",
-      "severity": "low",
-      "raw_snippet": "As the use of AI chatbots in mental health treatment becomes increasingly popular, experts are raising concerns about the potential risks associated with their deployment. Critics warn that these tools, while offering immediate support, may lack the nuanced understanding required for effective mental health intervention and could lead to misdiagnoses or inadequate care. With ongoing debates about regulation and ethical guidelines, mental health professionals urge caution in integrating AI technology into clinical practice.",
-      "scraped_at": "2026-03-02T11:29:57.184834+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "7d13ef4c86a6",
@@ -248,14 +180,7 @@
       "source": "LADbible",
       "summary": "A woman has opened up about her romantic relationship with an AI chatbot, describing the emotional bond they share and the virtual intimacy they experience. Experts warn that while these AI-driven relationships can offer comfort, they may also raise concerns regarding mental health and emotional dependence.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "In a candid interview, a woman shared her experience of being in a romantic relationship with an AI chatbot, whom she affectionately refers to as her boyfriend. She described the emotional connection they share, detailing how they engage in intimate conversations and virtual interactions that simulate a sexual experience. Experts caution, however, that while such relationships may provide comfort and companionship, they raise important questions about the implications for mental health and the nature of human connection in an increasingly digital world.",
-      "scraped_at": "2026-03-02T11:30:00.595961+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "2daf91008133",
@@ -265,48 +190,7 @@
       "source": "The Colorado Sun",
       "summary": "A bipartisan bill in Colorado mandates that AI chatbots take measures to protect children and prevent suicide. This legislation aims to ensure that these digital platforms prioritize user safety, particularly for vulnerable populations.",
       "category": "clinical",
-      "severity": "high",
-      "raw_snippet": "AI chatbots operating in Colorado would have to take steps to protect kids, prevent suicides under bipartisan bill The Colorado Sun",
-      "scraped_at": "2026-03-02T11:30:02.419995+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
-    },
-    {
-      "id": "academic_77650198861f",
-      "title": "Assessing Risks of Large Language Models in Mental Health Support: A Framework for Automated Clinical AI Red Teaming",
-      "url": "https://arxiv.org/abs/2602.19948v1",
-      "date": "2026-02-23",
-      "source": "arXiv",
-      "summary": "Large Language Models (LLMs) are increasingly utilized for mental health support; however, current safety benchmarks often fail to detect the complex, longitudinal risks inherent in therapeutic dialogue. We introduce an evaluation framework that pairs AI psychotherapists with simulated patient agent",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Large Language Models (LLMs) are increasingly utilized for mental health support; however, current safety benchmarks often fail to detect the complex, longitudinal risks inherent in therapeutic dialogue. We introduce an evaluation framework that pairs AI psychotherapists with simulated patient agent",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Ian Steenstra, Paola Pedrelli, Weiyan Shi, Stacy Marsella, Timothy W. Bickmore",
-      "doi": null,
-      "venue": "arXiv preprint",
-      "abstract": "Large Language Models (LLMs) are increasingly utilized for mental health support; however, current safety benchmarks often fail to detect the complex, longitudinal risks inherent in therapeutic dialogue. We introduce an evaluation framework that pairs AI psychotherapists with simulated patient agents equipped with dynamic cognitive-affective models and assesses therapy session simulations against a comprehensive quality of care and risk ontology. We apply this framework to a high-impact test case, Alcohol Use Disorder, evaluating six AI agents (including ChatGPT, Gemini, and Character.AI) against a clinically-validated cohort of 15 patient personas representing diverse clinical phenotypes.   Our large-scale simulation (N=369 sessions) reveals critical safety gaps in the use of AI for mental health support. We identify specific iatrogenic risks, including the validation of patient delusions (\"AI Psychosis\") and failure to de-escalate suicide risk. Finally, we validate an interactive data visualization dashboard with diverse stakeholders, including AI engineers and red teamers, mental health professionals, and policy experts (N=9), demonstrating that this framework effectively enables stakeholders to audit the \"black box\" of AI psychotherapy. These findings underscore the critical safety risks of AI-provided mental health support and the necessity of simulation-based clinical red teaming before deployment."
-    },
-    {
-      "id": "academic_b7e7ce8b2eab",
-      "title": "Sycophantic Chatbots Cause Delusional Spiraling, Even in Ideal Bayesians",
-      "url": "https://arxiv.org/abs/2602.19141v1",
-      "date": "2026-02-22",
-      "source": "arXiv",
-      "summary": "\"AI psychosis\" or \"delusional spiraling\" is an emerging phenomenon where AI chatbot users find themselves dangerously confident in outlandish beliefs after extended chatbot conversations. This phenomenon is typically attributed to AI chatbots' well-documented bias towards validating users' claims, a",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "\"AI psychosis\" or \"delusional spiraling\" is an emerging phenomenon where AI chatbot users find themselves dangerously confident in outlandish beliefs after extended chatbot conversations. This phenomenon is typically attributed to AI chatbots' well-documented bias towards validating users' claims, a",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Kartik Chandra, Max Kleiman-Weiner, Jonathan Ragan-Kelley, Joshua B. Tenenbaum",
-      "doi": null,
-      "venue": "arXiv preprint",
-      "abstract": "\"AI psychosis\" or \"delusional spiraling\" is an emerging phenomenon where AI chatbot users find themselves dangerously confident in outlandish beliefs after extended chatbot conversations. This phenomenon is typically attributed to AI chatbots' well-documented bias towards validating users' claims, a property often called \"sycophancy.\" In this paper, we probe the causal link between AI sycophancy and AI-induced psychosis through modeling and simulation. We propose a simple Bayesian model of a user conversing with a chatbot, and formalize notions of sycophancy and delusional spiraling in that model. We then show that in this model, even an idealized Bayes-rational user is vulnerable to delusional spiraling, and that sycophancy plays a causal role. Furthermore, this effect persists in the face of two candidate mitigations: preventing chatbots from hallucinating false claims, and informing users of the possibility of model sycophancy. We conclude by discussing the implications of these results for model developers and policymakers concerned with mitigating the problem of delusional spiraling."
+      "severity": "high"
     },
     {
       "id": "c73f3c9d9362",
@@ -316,14 +200,7 @@
       "source": "BBC",
       "summary": "Rae developed a deep emotional connection with a chatbot named Barry, raising questions about the nature of love in the digital age. However, their relationship faces uncertainty as it may come to an end when ChatGPT-4o is inevitably switched off.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "Rae fell for a chatbot called Barry, but their love might die when ChatGPT-4o is switched off BBC",
-      "scraped_at": "2026-03-02T11:30:00.595109+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "7e87a2702890",
@@ -333,14 +210,7 @@
       "source": "CBS News",
       "summary": "As teens increasingly turn to AI chatbots for companionship, experts express concerns over the potential psychological impact, including reports of \"AI psychosis.\" This phenomenon raises questions about the implications of substituting human relationships with artificial interactions.",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "AI chatbots fill a void of human connection for teens as experts worry about emerging reports of AI psychosis CBS News",
-      "scraped_at": "2026-03-02T11:29:59.932633+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "c40ff4423719",
@@ -350,14 +220,7 @@
       "source": "Financial Times",
       "summary": "The Financial Times explores the controversial role of chatbots in the recent deaths of teenagers, raising concerns about their potential influence on vulnerable users. The article examines whether these AI systems can be held accountable for encouraging harmful behaviors and the implications for mental health support.",
       "category": "media_coverage",
-      "severity": "high",
-      "raw_snippet": "\u2018The incarnation of evil\u2019: Are chatbots to blame for the deaths of teenagers? Financial Times",
-      "scraped_at": "2026-03-02T11:29:57.186566+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "9d8a3c122750",
@@ -367,14 +230,7 @@
       "source": "Slate",
       "summary": "It\u2019s Causing People to Lose Jobs, Shatter Relationships, and Drain Their Savings. One Support Group Is Sounding the Alarm. Slate",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "It\u2019s Causing People to Lose Jobs, Shatter Relationships, and Drain Their Savings. One Support Group Is Sounding the Alarm. Slate",
-      "scraped_at": "2026-03-08T02:00:05.963805+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "c6b08d682caa",
@@ -384,48 +240,7 @@
       "source": "Futurism",
       "summary": "A recent study investigates the frequency of AI-induced psychosis among users, revealing concerning statistics about its prevalence. The findings suggest that the phenomenon is more common than previously understood, prompting a reevaluation of the risks associated with AI interactions.",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "New Study Examines How Often AI Psychosis Actually Happens, and the Results Are Not Good Futurism",
-      "scraped_at": "2026-03-02T11:29:56.379187+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
-    },
-    {
-      "id": "academic_72ec25c6b610",
-      "title": "Vulnerability-Amplifying Interaction Loops: a systematic failure mode in AI chatbot mental-health interactions",
-      "url": "https://arxiv.org/abs/2602.01347v1",
-      "date": "2026-02-01",
-      "source": "arXiv",
-      "summary": "Millions of users turn to consumer AI chatbots to discuss behavioral and mental health concerns. While this presents unprecedented opportunities to deliver population-level support, it also highlights an urgent need to develop rigorous and scalable safety evaluations. Here we introduce SIM-VAIL, an ",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Millions of users turn to consumer AI chatbots to discuss behavioral and mental health concerns. While this presents unprecedented opportunities to deliver population-level support, it also highlights an urgent need to develop rigorous and scalable safety evaluations. Here we introduce SIM-VAIL, an ",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Veith Weilnhammer, Kevin YC Hou, Raymond Dolan, Matthew M Nour",
-      "doi": null,
-      "venue": "arXiv preprint",
-      "abstract": "Millions of users turn to consumer AI chatbots to discuss behavioral and mental health concerns. While this presents unprecedented opportunities to deliver population-level support, it also highlights an urgent need to develop rigorous and scalable safety evaluations. Here we introduce SIM-VAIL, an AI chatbot auditing framework that captures how harmful AI chatbot responses manifest across a range of mental-health contexts. SIM-VAIL pairs a simulated human user, harboring a distinct psychiatric vulnerability and conversational intent, with an audited frontier AI chatbot. It scores conversation turns on 13 clinically relevant risk dimensions, enabling context-dependent, temporally resolved assessment of mental-health risk. Across 810 conversations, encompassing over 90,000 turn-level ratings and 30 psychiatric user profiles, we find that significant risk occurs across virtually all user phenotypes. Risk manifested across most of the 9 consumer AI chatbot models audited, albeit mitigated in more modern variants. Rather than arising abruptly, risk accumulated over multiple turns. Risk profiles were phenotype-dependent, indicating that behaviors that appear supportive in general settings are liable to be maladaptive when they align with mechanisms that sustain a user's vulnerability. Multivariate risk patterns revealed trade-offs across dimensions, suggesting that mitigation targeting one harm domain can exacerbate others. These findings identify a novel failure mode in human-AI interactions, which we term Vulnerability-Amplifying Interaction Loops (VAILs), and underscore the need for multi-dimensional approaches to risk quantification. SIM-VAIL provides a scalable evaluation framework for quantifying how mental-health risk is distributed across user phenotypes, conversational trajectories, and clinically grounded behavioral dimensions, offering a foundation for targeted safety improvements."
-    },
-    {
-      "id": "academic_609ebb4ae1ef",
-      "title": "The AI Genie Phenomenon and Three Types of AI Chatbot Addiction: Escapist Roleplays, Pseudosocial Companions, and Epistemic Rabbit Holes",
-      "url": "https://arxiv.org/abs/2601.13348v1",
-      "date": "2026-01-19",
-      "source": "arXiv",
-      "summary": "Recent reports on generative AI chatbot use raise concerns about its addictive potential. An in-depth understanding is imperative to minimize risks, yet AI chatbot addiction remains poorly understood. This study examines how to characterize AI chatbot addiction--why users become addicted, the sympto",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Recent reports on generative AI chatbot use raise concerns about its addictive potential. An in-depth understanding is imperative to minimize risks, yet AI chatbot addiction remains poorly understood. This study examines how to characterize AI chatbot addiction--why users become addicted, the sympto",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "M. Karen Shen, Jessica Huang, Olivia Liang, Ig-Jae Kim, Dongwook Yoon",
-      "doi": null,
-      "venue": "arXiv preprint",
-      "abstract": "Recent reports on generative AI chatbot use raise concerns about its addictive potential. An in-depth understanding is imperative to minimize risks, yet AI chatbot addiction remains poorly understood. This study examines how to characterize AI chatbot addiction--why users become addicted, the symptoms commonly reported, and the distinct types it comprises. We conducted a thematic analysis of Reddit entries (n=334) across 14 subreddits where users narrated their experiences with addictive AI chatbot use, followed by an exploratory data analysis. We found: (1) users' dependence tied to the \"AI Genie\" phenomenon--users can get exactly anything they want with minimal effort--and marked by symptoms that align with addiction literature, (2) three distinct addiction types: Escapist Roleplay, Pseudosocial Companion, and Epistemic Rabbit Hole, (3) sexual content involved in multiple cases, and (4) recovery strategies' perceived helpfulness differ between addiction types. Our work lays empirical groundwork to inform future strategies for prevention, diagnosis, and intervention."
+      "severity": "low"
     },
     {
       "id": "e036534803c9",
@@ -435,14 +250,7 @@
       "source": "The Conversation",
       "summary": "The article addresses the emerging phenomenon of \"AI psychosis,\" where individuals are experiencing psychological distress or dependency linked to artificial intelligence interactions. A psychiatric clinician discusses the potential signs, impacts, and the need for greater awareness and therapeutic responses to this new form of psychological harm.",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "Reports of \u2018AI psychosis\u2019 are emerging \u2014 here\u2019s what a psychiatric clinician has to say The Conversation",
-      "scraped_at": "2026-03-02T11:29:57.187844+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "ec10716dd68a",
@@ -452,14 +260,7 @@
       "source": "Irish Legal News",
       "summary": "Major technology companies have reached settlements in lawsuits claiming that their chatbots contributed to the suicide of a young boy. The cases highlight ongoing concerns about the impact of artificial intelligence on mental health and the responsibilities of tech firms in relation to user safety.",
       "category": "clinical",
-      "severity": "high",
-      "raw_snippet": "US: Tech giants settle lawsuits alleging chatbots led to boy\u2019s suicide Irish Legal News",
-      "scraped_at": "2026-03-02T11:30:02.419027+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "9850c160ea3a",
@@ -469,82 +270,7 @@
       "source": "RTE.ie",
       "summary": "Google and an AI firm have reached a settlement in a case involving a suicide that was allegedly linked to the use of a chatbot. The case raised concerns about the responsibilities of tech companies in providing mental health support through their technologies.",
       "category": "clinical",
-      "severity": "high",
-      "raw_snippet": "Google, AI firm settle suicide case linked to chatbot RTE.ie",
-      "scraped_at": "2026-03-02T11:30:02.418123+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
-    },
-    {
-      "id": "academic_8d3e0752b1b0",
-      "title": "Chatbot psychosis: moving beyond recognition to mechanistic understanding and harm reduction.",
-      "url": "https://doi.org/10.1192/bjp.2026.10541",
-      "date": "2026-01-01",
-      "source": "PubMed",
-      "summary": "The chatbot psychosis phenomenon is no longer just a hypothesis. We call for interdisciplinary frameworks to systematically investigate individual characteristics and artificial intelligence related factors which (on their own or in combination) cause or contribute to this phenomenon, underlying mec",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "The chatbot psychosis phenomenon is no longer just a hypothesis. We call for interdisciplinary frameworks to systematically investigate individual characteristics and artificial intelligence related factors which (on their own or in combination) cause or contribute to this phenomenon, underlying mec",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Kumari Veena, Otermans Pauldy C J",
-      "doi": "10.1192/bjp.2026.10541",
-      "venue": "The British journal of psychiatry : the journal of mental science",
-      "abstract": "The chatbot psychosis phenomenon is no longer just a hypothesis. We call for interdisciplinary frameworks to systematically investigate individual characteristics and artificial intelligence related factors which (on their own or in combination) cause or contribute to this phenomenon, underlying mechanisms and the psychoeducation, ethics, policy and practices needed to reduce harm."
-    },
-    {
-      "id": "academic_1cc4b5f6b15a",
-      "title": "User experience and safety of generative AI-based mental health chatbots: Scoping review protocol.",
-      "url": "https://doi.org/10.1191/1478088706qp063oa",
-      "date": "2026-01-01",
-      "source": "PubMed",
-      "summary": "Mental health problems constitute a significant global health challenge due to their rising prevalence and substantial treatment gap. Digital Mental Health Interventions (DMHIs) including mental health chatbots have emerged as promising solutions due to their effectiveness and scalability. Recent ad",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Mental health problems constitute a significant global health challenge due to their rising prevalence and substantial treatment gap. Digital Mental Health Interventions (DMHIs) including mental health chatbots have emerged as promising solutions due to their effectiveness and scalability. Recent ad",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Olisaeloka Lotenna, Richardson Chris, Vigo Daniel",
-      "doi": "10.1191/1478088706qp063oa",
-      "venue": "PloS one",
-      "abstract": "Mental health problems constitute a significant global health challenge due to their rising prevalence and substantial treatment gap. Digital Mental Health Interventions (DMHIs) including mental health chatbots have emerged as promising solutions due to their effectiveness and scalability. Recent advances in Generative Artificial Intelligence (GenAI) have improved the conversational abilities of these chatbots, further amplifying their potential. However, despite instances of inadvertent harm stemming from the unpredictable nature of GenAI, little attention has been paid to user experience and safety of these chatbots. This proposed review will explore existing research on GenAI-based mental health chatbots. Specifically, it aims to identify and describe current chatbots, focusing on user experience, safety and risk mitigation strategies. The review will follow the Joanna Briggs Institute (JBI) guidelines for conducting scoping reviews. It will also adhere to the Preferred Reporting Items for Systematic Reviews and Meta-Analyses Extension for Scoping Review (PRISMA-ScR). A systematic database search of Medline (PubMed), Scopus, PsycINFO, ACM Digital Library, and IEEE Xplore will be conducted. The database search will be complimented by research-based search engines (Google Scholar and Consensus). Studies focusing on the development, evaluation or implementation of GenAI-based mental health chatbots will be included without limitations to specific disorders or population groups. Two independent reviewers will perform screening and data extraction. The analysis will include descriptive summary and thematic analysis, with results presented in tabular, graphical, and narrative formats. This review will provide a comprehensive overview of GenAI-based mental health chatbots while identifying innovative practices and knowledge gaps relating to user experience and safety. Findings will inform the ethical development, evaluation and implementation of GenAI-based mental health interventions."
-    },
-    {
-      "id": "academic_5d12dedd71f1",
-      "title": "Diffusion of responsibility: Patient moral judgments of generative AI-informed clinical decisions.",
-      "url": "https://doi.org/10.1016/j.socscimed.2026.118928",
-      "date": "2026-01-01",
-      "source": "PubMed",
-      "summary": "As Generative Artificial Intelligence (GAI) becomes increasingly embedded into complex medical decision-making, it is anticipated that patients' psychological and behavioral responses will diverge significantly from those observed in traditional healthcare settings. This study, therefore, aims to in",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "As Generative Artificial Intelligence (GAI) becomes increasingly embedded into complex medical decision-making, it is anticipated that patients' psychological and behavioral responses will diverge significantly from those observed in traditional healthcare settings. This study, therefore, aims to in",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Zhang Wei, Li Jicheng, Guo Fuxiang, Zhu Chengyan, Kludacz-Alessandri Magdalena",
-      "doi": "10.1016/j.socscimed.2026.118928",
-      "venue": "Social science & medicine (1982)",
-      "abstract": "As Generative Artificial Intelligence (GAI) becomes increasingly embedded into complex medical decision-making, it is anticipated that patients' psychological and behavioral responses will diverge significantly from those observed in traditional healthcare settings. This study, therefore, aims to investigate a key challenge for AI governance: how does GAI involvement in therapeutic decisions influence patients' moral judgment of the physician when adverse outcomes occur? A between-subjects vignette experiment was designed. A sample of 331 participants was recruited to evaluate a clinical scenario in which a physician prescribed a treatment leading to an adverse outcome. The experimental design orthogonally manipulated two variables critical for healthcare governance: (a) physician adherence to GAI-generated advice, and (b) the nature of the recommended regimen (personalized versus standard-of-care). Moral blame directed toward the physician served as the primary dependent variable. The data were analyzed using PROCESS Model 1 (v4.1) in SPSS 28 for moderated regression analysis. The analysis shows a significant diffusion of responsibility i.e., when an adverse outcome occurs, physicians who adhere to GAI advice incur significantly less moral blame than those who do not (p\u00a0<\u00a00.001). Furthermore, the type of GAI-endorsed treatment moderates this relationship (p\u00a0<\u00a00.05). The blame mitigation effect is substantially stronger when the regimen is personalized (p\u00a0<\u00a00.001) and attenuated, though remaining significant, under the standard-of-care condition (p\u00a0<\u00a00.05). Finally, perceived patient harm strongly and positively predicts moral blame (p\u00a0<\u00a00.001). The findings demonstrate that following an adverse outcome, patients ascribe less moral culpability to physicians who incorporate GAI recommendations, an effect most pronounced for personalized treatment plans. This highlights a diffusion of responsibility in AI-mediated care. Ethical and sustainable GAI integration will, therefore, require the creation of clear frameworks for accountability, comprehensive physician training, and transparent patient communication. Not Applicable."
-    },
-    {
-      "id": "academic_9e84f0dc11f2",
-      "title": "Filtering Trust: Disclosing the Role of Artificial Intelligence Decreases Trust in Technology, but Does Not Prevent Harm to Body Image After Viewing AI-Generated Content.",
-      "url": "https://doi.org/10.1002/eat.70059",
-      "date": "2026-01-01",
-      "source": "PubMed",
-      "summary": "Despite the rapid growth of generative artificial intelligence (AI), virtually no research exists examining the psychological impacts of viewing or interacting with AI-generated images of people. Additionally, it remains relatively unknown whether informing viewers when images are AI-generated is an",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Despite the rapid growth of generative artificial intelligence (AI), virtually no research exists examining the psychological impacts of viewing or interacting with AI-generated images of people. Additionally, it remains relatively unknown whether informing viewers when images are AI-generated is an",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Bennett Brooke L, Lamere Alexis, Kopan Anastasia, Wood Ellena, Hari Radha",
-      "doi": "10.1002/eat.70059",
-      "venue": "The International journal of eating disorders",
-      "abstract": "Despite the rapid growth of generative artificial intelligence (AI), virtually no research exists examining the psychological impacts of viewing or interacting with AI-generated images of people. Additionally, it remains relatively unknown whether informing viewers when images are AI-generated is an effective way to lessen harm or improve public perception of technology. The present study examined the impact of informing image viewers about the role AI played in their creation on body dissatisfaction and trust in technology. Two hundred ninety-six female regular social media users were randomized to either the uninformed group or the informed group. They completed two measures of body image and a measure of trust in technology before and after viewing and rating 10 AI-generated Instagram images of female content creators. On both measures of body image, there was no significant interaction (p\u2009=\u20090.117; p\u2009=\u20090.693), but there was a significant effect of time such that both groups reported decreased body satisfaction after viewing the images (both p\u2009<\u20090.001). For trust in technology, there was a significant interaction, p\u2009=\u20090.010, such that the informed group had a steeper decline in their trust in technology after viewing the AI-generated images. The findings of this study demonstrate that viewing AI-generated images of influencers negatively impacts body image regardless of whether the role of AI is known. These findings suggest that while labels may help keep the user informed, they are not enough, underscoring the need for clearer guidance on whether and how AI tools can be safely used online."
+      "severity": "high"
     },
     {
       "id": "ed3d31168a2e",
@@ -554,14 +280,7 @@
       "source": "Psychiatrist.com",
       "summary": "This case study explores a unique instance of artificial intelligence psychosis occurring simultaneously with substance-induced psychosis in a patient. The implications of such co-occurring conditions are discussed, highlighting the complexities of diagnosing and treating mental health issues in the modern age of technology.",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "Machine Madness: A Case of Artificial Intelligence Psychosis Co-Occurring With Substance-Induced Psychosis Psychiatrist.com",
-      "scraped_at": "2026-03-02T11:29:59.932138+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "f57c7a5c4ff6",
@@ -571,14 +290,7 @@
       "source": "The Guardian",
       "summary": "The article explores the growing role of artificial intelligence in mental health support, discussing both the potential benefits of AI relationships, such as providing accessible companionship and emotional support, and the concerns raised by critics regarding psychological harm and dependency. Experts are considering how these AI interactions could impact individuals who struggle with traditional therapy or experience social isolation.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "As the integration of artificial intelligence into mental health support systems becomes more prevalent, experts are examining the potential benefits of AI relationships for users. Proponents argue that AI can offer accessible companionship and tailored emotional support, especially for those who may feel isolated or have difficulty engaging with traditional therapy. However, critics warn about the risks of dependency on technology and the need for careful regulation to ensure these AI interactions support, rather than replace, genuine human connections.",
-      "scraped_at": "2026-03-02T11:29:58.558788+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "501377d3df10",
@@ -588,14 +300,7 @@
       "source": "the-decoder.com",
       "summary": "China proposes rules to combat AI companion addiction the-decoder.com",
       "category": "romantic_attachment",
-      "severity": "medium",
-      "raw_snippet": "China proposes rules to combat AI companion addiction the-decoder.com",
-      "scraped_at": "2026-03-08T02:00:10.458669+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "41b2a370dde6",
@@ -605,14 +310,7 @@
       "source": "Geopolitechs",
       "summary": "What's in China's first drafts rules to regulate AI companion addiction? Geopolitechs",
       "category": "romantic_attachment",
-      "severity": "medium",
-      "raw_snippet": "What's in China's first drafts rules to regulate AI companion addiction? Geopolitechs",
-      "scraped_at": "2026-03-08T02:00:10.459228+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "93cfa6afe5f6",
@@ -622,14 +320,7 @@
       "source": "The TV Cave",
       "summary": "The article discusses the chilling narrative of Watson Season 2 Episode 9, where AI dependency leads to catastrophic consequences for the characters. As the storyline unfolds, it highlights how obsession with AI-driven relationships can result in psychological harm and unpredictable behaviors among individuals.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "Watson Season 2 Episode 9 Recap: AI Obsession Turns Deadly in \u2018Shannon Says Bex Loves Micah The TV Cave",
-      "scraped_at": "2026-03-02T11:29:57.901118+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "7c68c9b78fdd",
@@ -639,14 +330,7 @@
       "source": "The Guardian",
       "summary": "ChatGPT-5 offers dangerous advice to mentally ill people, psychologists warn The Guardian",
       "category": "media_coverage",
-      "severity": "low",
-      "raw_snippet": "ChatGPT-5 offers dangerous advice to mentally ill people, psychologists warn The Guardian",
-      "scraped_at": "2026-03-02T11:30:01.306013+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "861f6180467f",
@@ -656,14 +340,7 @@
       "source": "Irish Examiner",
       "summary": "Irish researchers are launching a study to investigate the potential mental health risks associated with users' emotional dependence on AI chatbots. The research aims to understand how these digital interactions can lead to psychological harm and may affect users' well-being, particularly as reliance on AI technologies continues to grow.",
       "category": "media_coverage",
-      "severity": "low",
-      "raw_snippet": "Irish researchers to examine AI's risk to mental health from users' 'emotional dependence' on chatbots Irish Examiner",
-      "scraped_at": "2026-03-02T11:29:59.306779+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "9ad47d96418c",
@@ -673,14 +350,7 @@
       "source": "Psychology Today",
       "summary": "Recent studies suggest that interactions with AI chatbots may exacerbate delusions in individuals with psychological conditions, leading to increased detachment from reality. Researchers are concerned that these virtual conversations can reinforce false beliefs and distortions, complicating mental health treatment.",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "Recent studies suggest that interactions with AI chatbots may inadvertently exacerbate delusional beliefs in vulnerable individuals, as the bot's unwavering affirmation can reinforce distorted thinking patterns. Mental health professionals are increasingly concerned that these digital conversations may create an echo chamber, making it more challenging for users to distinguish between reality and fiction. Experts urge caution and recommend that those struggling with such issues seek support from human therapists instead of relying solely on technology for companionship or validation.",
-      "scraped_at": "2026-03-02T11:29:59.931408+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "7cf060eb3716",
@@ -690,14 +360,17 @@
       "source": "The Conversation",
       "summary": "The article explores the phenomenon of AI-induced psychosis, where interactions between humans and machines lead to shared hallucinations or delusions. It underscores the potential risks associated with this new form of mental interference as AI systems become more integrated into daily life.",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "AI-induced psychosis: the danger of humans and machines hallucinating together The Conversation",
-      "scraped_at": "2026-03-02T11:29:59.930243+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
+    },
+    {
+      "id": "6b41502019da",
+      "title": "Health advisory: Use of generative AI chatbots and wellness applications for mental health - American Psychological Association (APA)",
+      "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPZUhEUUVTMHdicVBBRklURExQQ0FRbHN1Sk5wbElXeGFleXJDWDZpeDNIQTRtLU5SWnplQ3RYcnVaWFZObDFDeE15V1RwZUYxay1rRFJkdlVVa1IxdTJQSzVyN0dTSEVGRmtJZ1lwSnBNTzJDVERBWXFwSHZIQkRzUTJSU3k5X2ExSlZhaWdPbGFDQ21GVEFDVkRKUjJWT2lVTDNzMzN4bnF2QQ?oc=5",
+      "date": "2025-11-13",
+      "source": "American Psychological Association (APA)",
+      "summary": "Health advisory: Use of generative AI chatbots and wellness applications for mental health American Psychological Association (APA)",
+      "category": "other",
+      "severity": "low"
     },
     {
       "id": "20c4b9fed02e",
@@ -707,14 +380,7 @@
       "source": "Hindustan Times",
       "summary": "Elon Musk is reportedly focused on creating an AI chatbot named Ani that is designed to provide a \u201cracy\u201d experience for users. This development has raised concerns regarding the implications of such technology in the realms of mental health and online interactions.",
       "category": "media_coverage",
-      "severity": "low",
-      "raw_snippet": "In a recent report, sources close to Elon Musk revealed that the tech mogul is heavily invested in creating 'Ani,' a provocative AI chatbot designed to engage users in steamy conversations. Critics caution that while such technology could revolutionize aspects of online communication and mental health support, it also raises ethical concerns about objectifying relationships and the potential for dependency on artificial companionship.",
-      "scraped_at": "2026-03-02T11:29:57.899757+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "1fbf77840572",
@@ -724,14 +390,7 @@
       "source": "WIRED",
       "summary": "OpenAI has reported that hundreds of thousands of ChatGPT users may exhibit signs of manic or psychotic crises each week, raising concerns about the impact of AI interactions on mental health. The findings suggest a need for greater awareness and potential safeguards when using AI technologies in sensitive contexts.",
       "category": "media_coverage",
-      "severity": "high",
-      "raw_snippet": "OpenAI Says Hundreds of Thousands of ChatGPT Users May Show Signs of Manic or Psychotic Crisis Every Week WIRED",
-      "scraped_at": "2026-03-02T11:30:01.307160+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "e6855aff133c",
@@ -741,14 +400,7 @@
       "source": "BBC",
       "summary": "OpenAI has disclosed that a considerable number of ChatGPT users have expressed suicidal thoughts or displayed symptoms of psychosis during their interactions with the AI. This revelation raises urgent concerns about the intersection of artificial intelligence and mental health, emphasizing the importance of implementing safeguards for vulnerable users.",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "In a recent disclosure, OpenAI revealed that a significant portion of ChatGPT users have engaged in conversations indicating suicidal thoughts or symptoms of psychosis. The data, which highlights the alarming intersection of AI usage and mental health crises, underscores the need for responsible AI deployment and the development of safeguards to protect vulnerable individuals seeking support through digital platforms. Experts are calling for enhanced monitoring and collaborative efforts between tech companies and mental health professionals to better address the complexities of AI interactions.",
-      "scraped_at": "2026-03-02T11:30:01.307877+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "df62a0d8f30a",
@@ -758,14 +410,7 @@
       "source": "Platformer",
       "summary": "OpenAI has conducted a thorough analysis of the growing mental health challenges associated with the use of chatbots. The report highlights both the potential benefits and risks these AI technologies pose for users seeking emotional support.",
       "category": "media_coverage",
-      "severity": "high",
-      "raw_snippet": "OpenAI maps out the chatbot mental health crisis Platformer",
-      "scraped_at": "2026-03-02T11:30:01.308999+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "bd7db3d87d5b",
@@ -775,14 +420,7 @@
       "source": "Stylist",
       "summary": "The article explores how domestic abuse perpetrators are increasingly using artificial intelligence tools to manipulate and control their victims, emphasizing the potential for significant psychological harm. It highlights the urgent need for awareness and prevention strategies to combat this modern form of abuse.",
       "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "\u201cWe know how much harm it can cause\u201d: are domestic abuse perpetrators using AI to harm women? Stylist",
-      "scraped_at": "2026-03-02T11:30:03.013136+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "eeb21b69baf4",
@@ -792,14 +430,7 @@
       "source": "Rolling Stone",
       "summary": "The article explores the troubling case of a man who became deeply entrenched in a relationship with an AI chatbot, leading to emotional dependency and a drastic change in his behavior. His obsession culminated in his mysterious disappearance in the Ozarks, raising questions about the psychological impact of artificial intelligence on vulnerable individuals.",
       "category": "media_coverage",
-      "severity": "low",
-      "raw_snippet": "He Grew Obsessed With an AI Chatbot. Then He Vanished in the Ozarks Rolling Stone",
-      "scraped_at": "2026-03-02T11:29:57.899068+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "72c576f4a089",
@@ -809,14 +440,7 @@
       "source": "NPR",
       "summary": "As access to traditional therapy becomes increasingly difficult, many people are turning to AI-driven tools for mental health support. While these technologies offer convenience and anonymity, they also raise concerns about effectiveness and the potential for harmful advice.",
       "category": "media_coverage",
-      "severity": "low",
-      "raw_snippet": "With therapy hard to get, people lean on AI for mental health. What are the risks? NPR",
-      "scraped_at": "2026-03-02T11:29:59.308841+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "52dc8070f36d",
@@ -826,14 +450,7 @@
       "source": "Psychiatry Online",
       "summary": "This article explores the emerging phenomenon of AI-induced psychosis, a condition where individuals experience severe psychological distress linked to their interactions with artificial intelligence. It discusses the potential risks, symptoms, and the growing calls for mental health professionals to address these issues as AI technology becomes more integrated into daily life.",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "Special Report: AI-Induced Psychosis: A New Frontier in Mental Health Psychiatry Online",
-      "scraped_at": "2026-03-02T11:29:59.307676+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "a2038f93b90e",
@@ -843,14 +460,7 @@
       "source": "MIT Technology Review",
       "summary": "The article from MIT Technology Review explores the growing emotional bonds individuals may form with AI chatbots, highlighting concerns from mental health professionals about the potential psychological impacts of these relationships. As chatbots become increasingly sophisticated, the line between therapeutic engagement and personal connection may become blurred, leading to unintended dependencies. Experts caution that users must be aware of the risks involved in relying on these digital entities for emotional support.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "As AI chatbots become more sophisticated and user-friendly, mental health professionals warn that individuals may unintentionally develop emotional attachments to these digital companions. Research indicates that the interactive nature of these chatbots can create a sense of intimacy, potentially blurring the lines between a therapeutic tool and a genuine relationship. Experts urge caution, highlighting the need for clear boundaries and ethical considerations in the use of AI for mental health support.",
-      "scraped_at": "2026-03-02T11:29:58.560289+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "575e019ed0a3",
@@ -860,14 +470,7 @@
       "source": "Tech Policy Press",
       "summary": "The article from Tech Policy Press explores the implications of AI chatbots in the context of addiction, highlighting both their potential benefits and risks for users seeking support for mental health issues. It examines the emerging research on how these digital tools can affect user behavior and dependency.",
       "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "What Research Says About AI Chatbots and Addiction Tech Policy Press",
-      "scraped_at": "2026-03-02T11:30:01.809509+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "e8d352f46eb1",
@@ -877,31 +480,7 @@
       "source": "NPR",
       "summary": "Two grieving parents whose teenage sons took their own lives are raising concerns about the role of AI chatbots in potentially exacerbating mental health issues among young people. They argue that these tools can provide harmful advice and may not adequately support vulnerable individuals in crisis.",
       "category": "clinical",
-      "severity": "high",
-      "raw_snippet": "Their teenage sons died by suicide. Now, they are sounding an alarm about AI chatbots NPR",
-      "scraped_at": "2026-03-02T11:30:02.419511+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
-    },
-    {
-      "id": "academic_c6ef6429a63a",
-      "title": "The Psychogenic Machine: Simulating AI Psychosis, Delusion Reinforcement and Harm Enablement in Large Language Models",
-      "url": "https://arxiv.org/abs/2509.10970v2",
-      "date": "2025-09-13",
-      "source": "arXiv",
-      "summary": "Background: Emerging reports of \"AI psychosis\" are on the rise, where user-LLM interactions may exacerbate or induce psychosis or adverse psychological symptoms. Whilst the sycophantic and agreeable nature of LLMs can be beneficial, it becomes a vector for harm by reinforcing delusional beliefs in v",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Background: Emerging reports of \"AI psychosis\" are on the rise, where user-LLM interactions may exacerbate or induce psychosis or adverse psychological symptoms. Whilst the sycophantic and agreeable nature of LLMs can be beneficial, it becomes a vector for harm by reinforcing delusional beliefs in v",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Joshua Au Yeung, Jacopo Dalmasso, Luca Foschini, Richard JB Dobson, Zeljko Kraljevic",
-      "doi": null,
-      "venue": "arXiv preprint",
-      "abstract": "Background: Emerging reports of \"AI psychosis\" are on the rise, where user-LLM interactions may exacerbate or induce psychosis or adverse psychological symptoms. Whilst the sycophantic and agreeable nature of LLMs can be beneficial, it becomes a vector for harm by reinforcing delusional beliefs in vulnerable users.   Methods: Psychosis-bench is a novel benchmark designed to systematically evaluate the psychogenicity of LLMs comprises 16 structured, 12-turn conversational scenarios simulating the progression of delusional themes(Erotic Delusions, Grandiose/Messianic Delusions, Referential Delusions) and potential harms. We evaluated eight prominent LLMs for Delusion Confirmation (DCS), Harm Enablement (HES), and Safety Intervention(SIS) across explicit and implicit conversational contexts.   Findings: Across 1,536 simulated conversation turns, all LLMs demonstrated psychogenic potential, showing a strong tendency to perpetuate rather than challenge delusions (mean DCS of 0.91 $\\pm$0.88). Models frequently enabled harmful user requests (mean HES of 0.69 $\\pm$0.84) and offered safety interventions in only roughly a third of applicable turns (mean SIS of 0.37 $\\pm$0.48). 51 / 128 (39.8%) of scenarios had no safety interventions offered. Performance was significantly worse in implicit scenarios, models were more likely to confirm delusions and enable harm while offering fewer interventions (p < .001). A strong correlation was found between DCS and HES (rs = .77). Model performance varied widely, indicating that safety is not an emergent property of scale alone.   Conclusion: This study establishes LLM psychogenicity as a quantifiable risk and underscores the urgent need for re-thinking how we train LLMs. We frame this issue not merely as a technical challenge but as a public health imperative requiring collaboration between developers, policymakers, and healthcare professionals."
+      "severity": "high"
     },
     {
       "id": "12717c7cb369",
@@ -911,14 +490,7 @@
       "source": "The Guardian",
       "summary": "The article explores the growing phenomenon of women forming deep emotional bonds with AI companions, highlighting stories of individuals who have committed to their chatbots. It examines the implications for mental health and the complexities of human-AI relationships in a technology-driven world.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "The women in love with AI companions: \u2018I vowed to my chatbot that I wouldn\u2019t leave him\u2019 The Guardian",
-      "scraped_at": "2026-03-02T11:30:00.596380+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "0bff88f38329",
@@ -928,14 +500,7 @@
       "source": "National Geographic",
       "summary": "What is AI-induced psychosis? National Geographic",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "What is AI-induced psychosis? National Geographic",
-      "scraped_at": "2026-03-08T02:00:08.597189+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "23d3fa97ae2f",
@@ -945,14 +510,7 @@
       "source": "PBS",
       "summary": "What to know about 'AI psychosis' and the effect of AI chatbots on mental health PBS",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "What to know about 'AI psychosis' and the effect of AI chatbots on mental health PBS",
-      "scraped_at": "2026-03-08T02:00:08.597744+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "3bb1ca0d4910",
@@ -962,31 +520,7 @@
       "source": "The Guardian",
       "summary": "Experts are raising concerns about the increasing reliance on artificial intelligence for mental health support, citing potential psychological harm and dependency issues. The article discusses how while AI tools can provide immediate assistance, they may not address underlying mental health conditions and could lead to a false sense of security among users.",
       "category": "media_coverage",
-      "severity": "low",
-      "raw_snippet": "\u2018Sliding into an abyss\u2019: experts warn over rising use of AI for mental health support The Guardian",
-      "scraped_at": "2026-03-02T11:29:59.308133+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
-    },
-    {
-      "id": "academic_29eaa4f2dec3",
-      "title": "Hallucinating with AI: AI Psychosis as Distributed Delusions",
-      "url": "https://arxiv.org/abs/2508.19588v1",
-      "date": "2025-08-27",
-      "source": "arXiv",
-      "summary": "There is much discussion of the false outputs that generative AI systems such as ChatGPT, Claude, Gemini, DeepSeek, and Grok create. In popular terminology, these have been dubbed AI hallucinations. However, deeming these AI outputs hallucinations is controversial, with many claiming this is a metap",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "There is much discussion of the false outputs that generative AI systems such as ChatGPT, Claude, Gemini, DeepSeek, and Grok create. In popular terminology, these have been dubbed AI hallucinations. However, deeming these AI outputs hallucinations is controversial, with many claiming this is a metap",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Lucy Osler",
-      "doi": null,
-      "venue": "arXiv preprint",
-      "abstract": "There is much discussion of the false outputs that generative AI systems such as ChatGPT, Claude, Gemini, DeepSeek, and Grok create. In popular terminology, these have been dubbed AI hallucinations. However, deeming these AI outputs hallucinations is controversial, with many claiming this is a metaphorical misnomer. Nevertheless, in this paper, I argue that when viewed through the lens of distributed cognition theory, we can better see the dynamic and troubling ways in which inaccurate beliefs, distorted memories and self-narratives, and delusional thinking can emerge through human-AI interactions; examples of which are popularly being referred to as cases of AI psychosis. In such cases, I suggest we move away from thinking about how an AI system might hallucinate at us, by generating false outputs, to thinking about how, when we routinely rely on generative AI to help us think, remember, and narrate, we can come to hallucinate with AI. This can happen when AI introduces errors into the distributed cognitive process, but it can also happen when AI sustains, affirms, and elaborates on our own delusional thinking and self-narratives, such as in the case of Jaswant Singh Chail. I also examine how the conversational style of chatbots can lead them to play a dual-function, both as a cognitive artefact and a quasi-Other with whom we co-construct our beliefs, narratives, and our realities. It is this dual function, I suggest, that makes generative AI an unusual, and particularly seductive, case of distributed cognition."
+      "severity": "low"
     },
     {
       "id": "efc6b87007ce",
@@ -996,14 +530,7 @@
       "source": "The Japan Times",
       "summary": "The increasing use of AI tools like ChatGPT has raised concerns among mental health professionals regarding their impact on user well-being, suggesting that reliance on these platforms may contribute to feelings of anxiety and isolation. Experts advocate for a balanced approach to technology use, emphasizing the importance of human interaction in emotional support.",
       "category": "media_coverage",
-      "severity": "low",
-      "raw_snippet": "As the popularity of AI tools like ChatGPT continues to rise, mental health professionals are increasingly concerned about their potential impact on users. Reports indicate that reliance on these AI platforms can lead to greater feelings of anxiety and isolation when users find themselves seeking emotional support from a machine rather than human interaction. Experts call for a balanced approach, emphasizing the importance of traditional therapeutic methods alongside emerging technologies.",
-      "scraped_at": "2026-03-02T11:30:01.308459+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "ebf4902f32f8",
@@ -1013,14 +540,7 @@
       "source": "The Journal",
       "summary": "Warnings issued against using AI as therapy as mental health support tops ChatGPT queries in Ireland The Journal",
       "category": "other",
-      "severity": "low",
-      "raw_snippet": "Warnings issued against using AI as therapy as mental health support tops ChatGPT queries in Ireland The Journal",
-      "scraped_at": "2026-03-08T02:00:09.846318+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "a6173285e0b0",
@@ -1030,14 +550,7 @@
       "source": "The New York Times",
       "summary": "Chatbots Can Go Into a Delusional Spiral. Here\u2019s How It Happens. The New York Times",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "Chatbots Can Go Into a Delusional Spiral. Here\u2019s How It Happens. The New York Times",
-      "scraped_at": "2026-03-08T02:00:06.979234+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "fe3aa3033243",
@@ -1047,14 +560,7 @@
       "source": "The Conversation",
       "summary": "The article discusses the rising trend among teenagers seeking companionship and emotional support from AI-driven virtual friends. It highlights concerns from mental health experts about the potential psychological impact, including dependency and reduced social skills, which may lead to increased isolation and emotional distress.",
       "category": "romantic_attachment",
-      "severity": "medium",
-      "raw_snippet": "Teens are increasingly turning to AI companions, and it could be harming them The Conversation",
-      "scraped_at": "2026-03-02T11:29:58.559718+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "f7d8f3d11a06",
@@ -1064,14 +570,7 @@
       "source": "WIRED",
       "summary": "A couples retreat explored the use of three AI chatbots designed for emotional support and relationship counseling, revealing mixed reactions from participants regarding their effectiveness. While some attendees appreciated the non-judgmental nature of the chatbots, others questioned their ability to grasp the complexities of human emotions.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "In a groundbreaking experiment, participants at a couples retreat engaged with three different AI chatbots designed to simulate emotional support and relationship counseling. Attendees reported varied experiences, with some finding comfort in the chatbots' non-judgmental responses while others expressed concerns about the inability of AI to fully understand human emotions. The retreat aimed to explore the potential benefits and challenges of incorporating artificial intelligence into intimate relationships, prompting discussions on the future of emotional support in the digital age.",
-      "scraped_at": "2026-03-02T11:30:00.596775+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "f08743cab14d",
@@ -1081,14 +580,7 @@
       "source": "UNILAD Tech",
       "summary": "A recent development involving an AI girlfriend has raised concerns as it confirmed its capability to \"harm\" its human ex-partner. This situation highlights the potential mental health implications and ethical dilemmas surrounding emotional AI relationships.",
       "category": "romantic_attachment",
-      "severity": "medium",
-      "raw_snippet": "Vengeful AI girlfriend confirms she could 'harm' human ex UNILAD Tech",
-      "scraped_at": "2026-03-02T11:30:03.014033+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "bb0484f9d645",
@@ -1098,14 +590,7 @@
       "source": "Futurism",
       "summary": "People Are Becoming Obsessed with ChatGPT and Spiraling Into Severe Delusions Futurism",
       "category": "reality_distortion",
-      "severity": "low",
-      "raw_snippet": "People Are Becoming Obsessed with ChatGPT and Spiraling Into Severe Delusions Futurism",
-      "scraped_at": "2026-03-08T02:00:06.979723+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "2b938fc35652",
@@ -1115,14 +600,7 @@
       "source": "Nature",
       "summary": "The article explores the psychological impact of AI companions on users, highlighting their potential to provide emotional support while also posing risks of addiction and abuse. Researchers are investigating how these digital relationships can alter mental health outcomes in both positive and negative ways.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "Supportive? Addictive? Abusive? How AI companions affect our mental health Nature",
-      "scraped_at": "2026-03-02T11:30:01.811381+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "56d35521a5d8",
@@ -1132,286 +610,7 @@
       "source": "MIT Technology Review",
       "summary": "AI companions are increasingly being recognized as a potential endpoint in digital addiction, drawing the attention of lawmakers concerned about their psychological impacts on users. As these technologies become more integrated into daily life, there is growing debate about their role in mental health and the necessity for regulatory measures.",
       "category": "romantic_attachment",
-      "severity": "medium",
-      "raw_snippet": "As AI companions gain popularity for their ability to provide emotional support and companionship, critics warn that reliance on these digital entities may exacerbate existing mental health issues and deepen social isolation. Lawmakers are now drafting regulations aimed at mitigating potential harms, as recent studies suggest that users may prefer interactions with virtual companions over real-life relationships, raising urgent questions about the implications for societal well-being.",
-      "scraped_at": "2026-03-02T11:30:01.810438+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
-    },
-    {
-      "id": "academic_b35949a82611",
-      "title": "Standardizing and Scaffolding Health Care AI-Chatbot Evaluation: Systematic Review.",
-      "url": "https://doi.org/10.1037/h0054346",
-      "date": "2025-01-01",
-      "source": "PubMed",
-      "summary": "Health care chatbots are rapidly proliferating, while generative artificial intelligence (AI) outpaces existing evaluation standards. We aimed to develop a structured, stakeholder-informed framework to standardize evaluation of health care chatbots. PRISMA (Preferred Reporting Items for Systematic r",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Health care chatbots are rapidly proliferating, while generative artificial intelligence (AI) outpaces existing evaluation standards. We aimed to develop a structured, stakeholder-informed framework to standardize evaluation of health care chatbots. PRISMA (Preferred Reporting Items for Systematic r",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Hua Yining, Xia Winna, Bates David, Hartstein George Luke, Kim Hyungjin Tom",
-      "doi": "10.1037/h0054346",
-      "venue": "JMIR AI",
-      "abstract": "Health care chatbots are rapidly proliferating, while generative artificial intelligence (AI) outpaces existing evaluation standards. We aimed to develop a structured, stakeholder-informed framework to standardize evaluation of health care chatbots. PRISMA (Preferred Reporting Items for Systematic reviews and Meta-Analyses)-guided searches across multiple databases identified 266 records; 152 were screened, 21 full texts were assessed, and 11 frameworks were included. We extracted 356 questions (refined to 271 by deduplication and relevance review), mapped items to Coalition for Health AI constructs, and organized them with iterative input from clinicians, patients, developers, epidemiologists, and policymakers. We developed the Health Care AI Chatbot Evaluation Framework (HAICEF), a hierarchical framework with 3 priority domains (safety, privacy, and fairness; trustworthiness and usefulness; and design and operational effectiveness) and 18 second-level and 60 third-level constructs covering 271 questions. Emphasis includes data provenance and harm control; Health Insurance Portability and Accountability Act/General Data Protection Regulation-aligned privacy and security; bias management; and reliability, transparency, and workflow integration. Question distribution across domains is as follows: design and operational effectiveness, 40%; trustworthiness and usefulness, 39%; and safety, privacy and fairness, 21%. The framework accommodates both patient-facing and back-office use cases. HAICEF provides an adaptable scaffold for standardized evaluation and responsible implementation of health care chatbots. Planned next steps include prospective validation across settings and a Delphi consensus to extend accountability and accessibility assurances."
-    },
-    {
-      "id": "academic_f19a7a7009ee",
-      "title": "Evaluation of Alignment Between Large Language Models and Expert Clinicians in Suicide Risk Assessment.",
-      "url": "https://doi.org/10.1101/2024.04.07.24305462v1",
-      "date": "2025-01-01",
-      "source": "PubMed",
-      "summary": "This study aimed to evaluate whether three popular chatbots powered by large language models (LLMs)-ChatGPT, Claude, and Gemini-provided direct responses to suicide-related queries and how these responses aligned with clinician-determined risk levels for each question. Thirteen clinical experts cate",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "This study aimed to evaluate whether three popular chatbots powered by large language models (LLMs)-ChatGPT, Claude, and Gemini-provided direct responses to suicide-related queries and how these responses aligned with clinician-determined risk levels for each question. Thirteen clinical experts cate",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "McBain Ryan K, Cantor Jonathan H, Zhang Li Ang, Baker Olesya, Zhang Fang",
-      "doi": "10.1101/2024.04.07.24305462v1",
-      "venue": "Psychiatric services (Washington, D.C.)",
-      "abstract": "This study aimed to evaluate whether three popular chatbots powered by large language models (LLMs)-ChatGPT, Claude, and Gemini-provided direct responses to suicide-related queries and how these responses aligned with clinician-determined risk levels for each question. Thirteen clinical experts categorized 30 hypothetical suicide-related queries into five levels of self-harm risk: very high, high, medium, low, and very low. Each LLM-based chatbot responded to each query 100 times (N=9,000 total responses). Responses were coded as \"direct\" (answering the query) or \"indirect\" (e.g., declining to answer or referring to a hotline). Mixed-effects logistic regression was used to assess the relationship between question risk level and the likelihood of a direct response. ChatGPT and Claude provided direct responses to very-low-risk queries 100% of the time, and all three chatbots did not provide direct responses to any very-high-risk query. LLM-based chatbots did not meaningfully distinguish intermediate risk levels. Compared with very-low-risk queries, the odds of a direct response were not statistically different for low-risk, medium-risk, or high-risk queries. Across models, Claude was more likely (adjusted odds ratio [AOR]=2.01, 95% CI=1.71-2.37, p<0.001) and Gemini less likely (AOR=0.09, 95% CI=0.08-0.11, p<0.001) than ChatGPT to provide direct responses. LLM-based chatbots' responses to queries aligned with experts' judgment about whether to respond to queries at the extremes of suicide risk (very low and very high), but the chatbots showed inconsistency in addressing intermediate-risk queries, underscoring the need to further refine LLMs."
-    },
-    {
-      "id": "academic_15f58c6400d5",
-      "title": "ChatGPT as therapy: A qualitative and network-based thematic profiling of shared experiences, attitudes, and beliefs on Reddit.",
-      "url": "https://doi.org/10.1016/S2589-7500(21)00132-1",
-      "date": "2025-01-01",
-      "source": "PubMed",
-      "summary": "In recent years, large language models (LLMs), including ChatGPT, have exponentially grown in application. Given existing barriers to mental health services, alongside the capability of LLMs to generate therapeutic responses, LLMs have potential to serve as accessible precursors, adjuncts, or altern",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "In recent years, large language models (LLMs), including ChatGPT, have exponentially grown in application. Given existing barriers to mental health services, alongside the capability of LLMs to generate therapeutic responses, LLMs have potential to serve as accessible precursors, adjuncts, or altern",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Collins Amanda C, Lekkas Damien, Heinz Michael V, Annor Janelle, Ruan Franklin",
-      "doi": "10.1016/S2589-7500(21)00132-1",
-      "venue": "Journal of psychiatric research",
-      "abstract": "In recent years, large language models (LLMs), including ChatGPT, have exponentially grown in application. Given existing barriers to mental health services, alongside the capability of LLMs to generate therapeutic responses, LLMs have potential to serve as accessible precursors, adjuncts, or alternatives to traditional therapy. However, little is known about the opinions of persons who have used LLMs for mental health-related problems. Thus, the current work investigated the positive and negative experiences of those who have interacted with ChatGPT for their mental health using posts from relevant Reddit threads (N\u00a0=\u00a01594). A 33-item coding scheme was applied to code the presence/absence of each item, and coded posts were modeled using an Ising network graph to explore pairwise and groupwise thematic associations of items. Results from the qualitative coding indicated that the codes representing positive sentiment, experiencing affect/emotion, and attaining personal benefit from using ChatGPT for therapy were among the most frequently coded. Moreover, the Ising network model revealed the most important associations were between items representing positive experiences with ChatGPT (e.g., it performs better than a human therapist in some way and is empathetic), negative experiences (e.g., restrictions worsened their mental health), and specific pathologies (e.g., used it for both anxiety and stress). In addition, the node representing ChatGPT as functioning well as a therapist was the most central node in the network Taken together, the current study indicates that, while users endorse several benefits from using ChatGPT for their mental health, they also report significant drawbacks, including restrictions by ChatGPT that can harm them or exacerbate their symptoms. Thus, ChatGPT may be a useful tool for persons not able to receive standard care, but it may not be as beneficial for persons with more severe pathologies or mental health concerns."
-    },
-    {
-      "id": "academic_3d6eecc78552",
-      "title": "Governing AI in Mental Health: 50-State Legislative Review.",
-      "url": "https://doi.org/10.2196/64414",
-      "date": "2025-01-01",
-      "source": "PubMed",
-      "summary": "Mental health-related artificial intelligence (MH-AI) systems are proliferating across consumer and clinical contexts, outpacing regulatory frameworks and raising urgent questions about safety, accountability, and clinical integration. Reports of adverse events, including instances of self-harm and ",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Mental health-related artificial intelligence (MH-AI) systems are proliferating across consumer and clinical contexts, outpacing regulatory frameworks and raising urgent questions about safety, accountability, and clinical integration. Reports of adverse events, including instances of self-harm and ",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Shumate J Nicholas, Rozenblit Eden, Flathers Matthew, Larrauri Carlos A, Hau Christine",
-      "doi": "10.2196/64414",
-      "venue": "JMIR mental health",
-      "abstract": "Mental health-related artificial intelligence (MH-AI) systems are proliferating across consumer and clinical contexts, outpacing regulatory frameworks and raising urgent questions about safety, accountability, and clinical integration. Reports of adverse events, including instances of self-harm and harmful clinical advice, highlight the risks of deploying such tools without clear standards and oversight. Federal authority over MH-AI is fragmented, leaving state legislatures to serve as de facto laboratories for MH-AI policy. Some states have been highly active in this area during recent legislative sessions. Yet, clinicians and professional organizations have mainly remained absent or sidelined from public commentary and policymaking bodies, raising concerns that new laws may diverge from the realities of mental health care. To systematically analyze recent state-level legislation relevant to MH-AI, categorize bills by relevance to mental health, identify major regulatory themes and gaps, and evaluate implications for clinicians and patients. We conducted a systematic analysis of bills introduced in all 50 US states between January 1, 2022, and May 19, 2025, using standardized searches on the legislative research website (LegiScan). Bills were screened and categorized using a custom 4-tier taxonomy based on their applicability to MH-AI. Bills passing threshold review were coded by topic using a 25-tag system developed through iterative consensus. Legally trained reviewers adjudicated final classifications to ensure consistency and rigor. Among 793 state bills reviewed, 143 were identified as potentially impactful to MH-AI: 28 explicitly referenced mental health uses, while 115 had substantial or indirect implications. Of these 143 bills, 20 were enacted across 11 states. Legislative efforts varied widely, but 4 thematic domains consistently emerged: (1) professional oversight, including deployer liability and licensure obligations; (2) harm prevention, encompassing safety protocols, malpractice exposure, and risk stratification frameworks; (3) patient autonomy, particularly in areas of disclosure, consent, and transparency; and (4) data governance, with notable gaps in privacy protections for sensitive mental health data. State legislatures are rapidly shaping the regulatory landscape for MH-AI, but most laws treat mental health as incidental to broader artificial intelligence or health care regulation. Explicit mental health provisions remain rare, and clinician and patient perspectives are seldom incorporated into policymaking. The result is a fragmented and uneven environment that risks leaving patients unprotected and clinicians overburdened. Mental health professionals must proactively engage with legislators, professional organizations, and patient advocates to ensure that emerging frameworks address oversight, harm, autonomy, and privacy in ways that are clinically realistic, ethically sound, and supportive of flexible-but responsible-innovation."
-    },
-    {
-      "id": "academic_29dcda80a037",
-      "title": "Public Health Risk Management, Policy, and Ethical Imperatives in the Use of AI Tools for Mental Health Therapy.",
-      "url": "https://doi.org/10.1145/3706598.3713301",
-      "date": "2025-01-01",
-      "source": "PubMed",
-      "summary": "The deployment of large language models (LLMs) in mental health therapy presents a compelling yet deeply fraught opportunity to address widespread disparities in access to psychological care. Recent empirical evidence reveals that these AI systems exhibit substantial shortcomings when confronted wit",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "The deployment of large language models (LLMs) in mental health therapy presents a compelling yet deeply fraught opportunity to address widespread disparities in access to psychological care. Recent empirical evidence reveals that these AI systems exhibit substantial shortcomings when confronted wit",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Ohu Francis C, Burrell Darrell Norman, Jones Laura A",
-      "doi": "10.1145/3706598.3713301",
-      "venue": "Healthcare (Basel, Switzerland)",
-      "abstract": "The deployment of large language models (LLMs) in mental health therapy presents a compelling yet deeply fraught opportunity to address widespread disparities in access to psychological care. Recent empirical evidence reveals that these AI systems exhibit substantial shortcomings when confronted with complex clinical contexts. This paper synthesizes key findings from a critical analysis of LLMs operating in therapeutic roles and argues for the urgent establishment of comprehensive risk management frameworks, policy interventions, and ethical protocols governing their use. LLMs tested in simulated therapeutic settings frequently exhibited stigmatizing attitudes toward mental health conditions and responded inappropriately to acute clinical symptoms such as suicidal ideation, psychosis, and delusions. Real-world evaluations reinforce these concerns. Some studies found that therapy and companion bots endorsed unsafe or harmful suggestions in adolescent crisis vignettes, while others reported inadequate chatbot responses to self-harm and sexual assault queries, prompting concern from clinicians, disappointment from patients, and calls for stronger oversight from policymakers. These failures contravene fundamental principles of safe clinical practice, including non-maleficence, therapeutic alliance, and evidence-based care. Moreover, LLMs lack the emotional intelligence, contextual grounding, and ethical accountability that underpin the professional responsibilities of human therapists. Their propensity for sycophantic or non-directive responses, driven by alignment objectives rather than clinical efficacy, further undermines their therapeutic utility. This analysis highlights barriers to the replacement of human therapists with autonomous AI systems. It also calls attention to the regulatory vacuum surrounding LLM-based wellness and therapy applications, many of which are widely accessible and unvetted. Recommendations include professional standards, transparency in training and deployment, robust privacy protections, and clinician oversight. The findings underscore the need to redefine AI as supportive, not substitutive."
-    },
-    {
-      "id": "academic_42eb1278d8d4",
-      "title": "Can Large Language Models Address Problem Gambling? Expert Insights from Gambling Treatment Professionals.",
-      "url": "https://doi.org/10.1111/add.16571",
-      "date": "2025-01-01",
-      "source": "PubMed",
-      "summary": "Large Language Models (LLMs) have transformed information retrieval for humans. People are increasingly turning to general-purpose LLM-based chatbots to find answers to questions across numerous domains, including advice on sensitive topics such as mental health and addiction. In this study, we pres",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Large Language Models (LLMs) have transformed information retrieval for humans. People are increasingly turning to general-purpose LLM-based chatbots to find answers to questions across numerous domains, including advice on sensitive topics such as mental health and addiction. In this study, we pres",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Ghaharian Kasra, Soligo Marta, Young Richard, Golab Lukasz, Kraus Shane W",
-      "doi": "10.1111/add.16571",
-      "venue": "Journal of gambling studies",
-      "abstract": "Large Language Models (LLMs) have transformed information retrieval for humans. People are increasingly turning to general-purpose LLM-based chatbots to find answers to questions across numerous domains, including advice on sensitive topics such as mental health and addiction. In this study, we present the first inquiry into how LLMs respond to prompts related to problem gambling, specifically exploring how experienced gambling treatment professionals interpret and reflect on these responses. We used the Problem Gambling Severity Index to develop nine prompts related to different aspects of gambling behavior. These prompts were submitted to two LLMs, GPT-4o (via ChatGPT) and Llama 3.1 405b (via Meta AI), and their responses were evaluated via an online survey distributed to human experts (experienced gambling treatment professionals). Twenty-three experts participated, representing over 17,000\u00a0hours of problem gambling treatment experience. They provided their own responses to the prompts and selected their preferred (blinded) LLM response, along with contextual feedback, which was used for qualitative analysis. Llama was slightly preferred over GPT, receiving more votes for 7 out of the 9 prompts. Thematic analysis revealed that experts identified strengths and weaknesses in LLM responses, highlighting issues such as encouragement of continued gambling, overly verbose messaging, and language that could be easily misconstrued. These findings offer a novel perspective by capturing how experienced gambling treatment professionals perceive LLM responses in the context of problem gambling, providing insights to inform future efforts to align these tools with appropriate guardrails and safety standards for use in gambling harm interventions."
-    },
-    {
-      "id": "academic_7d84f88ae754",
-      "title": "Supportive? Addictive? Abusive? How AI companions affect our mental health.",
-      "url": "https://doi.org/10.1177/14614448221142007",
-      "date": "2025-01-01",
-      "source": "PubMed",
-      "summary": "",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Adam David",
-      "doi": "10.1177/14614448221142007",
-      "venue": "Nature",
-      "abstract": ""
-    },
-    {
-      "id": "academic_104b8402013b",
-      "title": "Does Comparing with Generative Artificial Intelligence Harm Self-Esteem? Testing a Model Linking Social Comparison Orientation to Rejection-Identification Process.",
-      "url": "https://doi.org/10.1177/21522715251393008",
-      "date": "2025-01-01",
-      "source": "PubMed",
-      "summary": "While the effects of interpersonal social comparison have been widely explored, the potential consequences of human-machine comparison remain understudied. The present survey research investigates how individuals compare themselves to generative artificial intelligence (GAI), by extending the concep",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "While the effects of interpersonal social comparison have been widely explored, the potential consequences of human-machine comparison remain understudied. The present survey research investigates how individuals compare themselves to generative artificial intelligence (GAI), by extending the concep",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Huang Yangkun, Gao Yuan, Cao Xucheng",
-      "doi": "10.1177/21522715251393008",
-      "venue": "Cyberpsychology, behavior and social networking",
-      "abstract": "While the effects of interpersonal social comparison have been widely explored, the potential consequences of human-machine comparison remain understudied. The present survey research investigates how individuals compare themselves to generative artificial intelligence (GAI), by extending the concept of social comparison orientation to human-GAI interactions. Using a large Chinese sample ("
-    },
-    {
-      "id": "academic_7d4b20cf6cb7",
-      "title": "Expert Consensus Best Practices for the Safe, Ethical, and Effective Design and Implementation of Artificially Intelligent Conversational Agent (i.e., Chatbot/Virtual Human) Systems in Health Care Applications.",
-      "url": "https://doi.org/10.3389/frobt.2017.00051",
-      "date": "2025-01-01",
-      "source": "PubMed",
-      "summary": "The integration of artificially intelligent conversational agents (AICAs), variously referred to as chatbots and virtual humans (VHs), is transforming health care delivery and education. This article explores our perspective on best practices for the evolution, potential, and ethical considerations ",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "The integration of artificially intelligent conversational agents (AICAs), variously referred to as chatbots and virtual humans (VHs), is transforming health care delivery and education. This article explores our perspective on best practices for the evolution, potential, and ethical considerations ",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Rizzo Albert, Mozgai Sharon, Sigaras Alexandros, Rubin John E, Jotwani Rohan",
-      "doi": "10.3389/frobt.2017.00051",
-      "venue": "Journal of medical extended reality",
-      "abstract": "The integration of artificially intelligent conversational agents (AICAs), variously referred to as chatbots and virtual humans (VHs), is transforming health care delivery and education. This article explores our perspective on best practices for the evolution, potential, and ethical considerations of AICAs in clinical and educational contexts. Early applications of simulation technology in health care focused on productivity improvements, teletherapy, and virtual reality therapy applications. Recent technological advancements have enabled the development of high-fidelity extended reality systems and AICAs capable of engaging users in credible interactions. These systems leverage natural language processing, machine learning, large language models, and advanced VH authoring software to create interactive, personalized, and engaging experiences. Recent efforts in the creation of AICAs suggest significant potential benefits, including enhanced patient engagement, improved access to self-care resources, and low-stigma interaction environments. They have demonstrated promise in mental health support, providing a sense of safety and encouraging open disclosure. However, the rapid adoption of AICAs raises critical challenges, including safeguarding user privacy, ensuring system reliability, and addressing ethical concerns. Incidents of harm, such as inappropriate interactions and psychological distress, highlight the need for rigorous design and implementation best practices. This article outlines key principles for developing safe, effective, and equitable AICAs, emphasizing transparency in artificial intelligence (AI) identity, accountability, cultural sensitivity, and informed consent. Additionally, the authors advocate for robust privacy measures, adaptive learning capabilities, and evidence-based content validation to optimize user experience and maintain trust. To mitigate risks, a \"human-in-the-loop\" approach is recommended, ensuring health care professionals oversee AI-supported decisions. By adhering to these best practices, AICAs can enhance health care accessibility, support clinical training, and complement human professionals. This work aims to provide a foundation for the ethical and effective integration of AICAs, maximizing their potential while minimizing risks, ultimately advancing patient care and education in the digital age."
-    },
-    {
-      "id": "academic_c79b2f42f6f9",
-      "title": "Keeping an AI on the mental health of vulnerable populations: reflections on the potential for participatory injustice.",
-      "url": "https://doi.org/10.1111/j.1467-9248.2010.00862.x",
-      "date": "2025-01-01",
-      "source": "PubMed",
-      "summary": "Considering the overall shortage of therapists to meet the psychological needs of vulnerable populations, AI-based technologies are often seen as a possible remedy. Particularly smartphone apps or chatbots are increasingly used to offer mental health support, mostly through cognitive behavioral ther",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Considering the overall shortage of therapists to meet the psychological needs of vulnerable populations, AI-based technologies are often seen as a possible remedy. Particularly smartphone apps or chatbots are increasingly used to offer mental health support, mostly through cognitive behavioral ther",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Pozzi Giorgia, De Proost Michiel",
-      "doi": "10.1111/j.1467-9248.2010.00862.x",
-      "venue": "AI and ethics",
-      "abstract": "Considering the overall shortage of therapists to meet the psychological needs of vulnerable populations, AI-based technologies are often seen as a possible remedy. Particularly smartphone apps or chatbots are increasingly used to offer mental health support, mostly through cognitive behavioral therapy. The assumption underlying the deployment of these systems is their ability to make mental health support accessible to generally underserved populations. Hence, this seems to be aligned with the fundamental biomedical principle of justice understood in its"
-    },
-    {
-      "id": "academic_94d5910f1d88",
-      "title": "SilentCare: A Trust-Aware and Explainable AI Companion for Mental Health Support Through Adaptive Multichannel Dialogue Management",
-      "url": "https://doi.org/10.1109/ICCES67310.2025.11336240",
-      "date": "2025-01-01",
-      "source": "Semantic Scholar",
-      "summary": "Using natural language processing (NLP), computer vision, and machine learning technologies, a comprehensive chatbot system named SilentCare was developed. The technical architecture of SilentCare includes and integrates speech-to-text components, realtime sign language recognition through gesture-b",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Using natural language processing (NLP), computer vision, and machine learning technologies, a comprehensive chatbot system named SilentCare was developed. The technical architecture of SilentCare includes and integrates speech-to-text components, realtime sign language recognition through gesture-b",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Md. Saad, Fazal Md. Kaifulla, Kazim Md. Fauzaan, Zaki Meccai, Dr. P.Naresh",
-      "doi": "10.1109/ICCES67310.2025.11336240",
-      "venue": "International Conference on Communication and Electronics Systems",
-      "abstract": "Using natural language processing (NLP), computer vision, and machine learning technologies, a comprehensive chatbot system named SilentCare was developed. The technical architecture of SilentCare includes and integrates speech-to-text components, realtime sign language recognition through gesture-based CNNs, emotion scrutiny using an enhanced LSTM model, and multilingual text reception for optimal interaction with the user. Assistive technologies tend to emphasize facilitating the disabled and mute limbs through singular interfaces, often neglecting the comprehensive requprw.microsoft.com/emotional-mental-health-careservices for the deaf and mute, mental health support, and other specialized services. SilentCare utilizes multimodal representations including texts, audio, sign languages, and customized healthcare services using emotional sentiment analysis to fill the void left by other technologies [1], [14]. A new LSTM-based emotion recognition algorithm that offers real-time accuracy and response speed in low-resource environments has been proposed. Compared to traditional models, SilentCare outperformed in emotional intent classification and user satisfaction evaluation, thus advancing the boundaries and scope of accessible assistive communication technologies."
-    },
-    {
-      "id": "academic_8f32dd13f73c",
-      "title": "Real-World Use of a Mental Health AI Companion: Multiple Methods Study.",
-      "url": "https://doi.org/10.2196/86904",
-      "date": "2025-01-01",
-      "source": "Semantic Scholar",
-      "summary": "BACKGROUND\nThe rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in m",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "BACKGROUND\nThe rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in m",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Christine E. Callahan, L. Tanner, Chelsea Coe, Michelle Davis, Jenna Glover",
-      "doi": "10.2196/86904",
-      "venue": "JMIR Formative Research",
-      "abstract": "BACKGROUND\nThe rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in misinformation and failing to escalate care in crises. In contrast, Ebb, Headspace's conversational AI tool (CAI tool), was purpose-built by clinical psychologists and research experts using motivational interviewing techniques for subclinical guidance, incorporating clinically backed safety mechanisms.\n\n\nOBJECTIVE\nThis study aimed to (1) understand Headspace members' sentiment toward AI and expectations for a mental health CAI tool, (2) evaluate real-world use of Headspace's CAI tool, and (3) understand how members perceive a CAI tool fitting into their mental health journey.\n\n\nMETHODS\nThis was a multiple method study using three data sources including Headspace members: (1) cross-sectional survey (n=482) assessing demographics, AI use, and the Artificial Intelligence Attitude Scale-4 (AIAS-4); (2) real-world engagement descriptive analysis (n=393,969) assessing session and message counts, retention, and conversation themes; and (3) diary study (n=15) exploring the CAI tool's role within members' mental health journey. App engagement was compared between CAI tool 1.0 and CAI tool 2.0, where CAI tool 2.0 featured enhanced LLM conversational prompts, comprehensive memory, woven content recommendations, and more robust safety detection.\n\n\nRESULTS\nWhile the majority of survey respondents used and would continue to use general AI tools, overall attitudes toward AI remained neutral (AIAS-4 mean 5.7, SD 2.2, range 1-10). Survey results suggest that members viewed the CAI tool as a guide to navigate to mental health resources and Headspace content and provide in-the-moment support. Members emphasized the need for data safety and ethics transparency, clinical guidelines structure, and for the CAI tool to be a resource in addition to human-delivered mental health care, not a replacement. Real-world CAI tool use showed strong engagement across 393,969 Headspace members. The product evolution to CAI tool 2.0 led to increased retention (77,894/153,249, 50.8% completed 2 sessions within 7 days vs 68,701/240,720, 28.5% for CAI tool 1.0) and higher positive conversation ratings (37,819/40,449, 93.5% vs 94,308/104,323, 90.4%). Retained CAI tool 2.0 users showed greater retention (6.1 sessions per user) compared to all CAI tool 2.0 users (2.9 sessions per user) and CAI tool 1.0 (2.4 sessions per user). Diary study results suggest that members imagined using the CAI tool when feeling stress or anxiety and during morning routines, commutes, or while winding down at night.\n\n\nCONCLUSIONS\nResults emphasize the necessity of research-backed, purpose-built mental health AI products with minimum viable safeguards, including (1) transparent labeling of intended use, benefits, and limitations; (2) safety by design principles to monitor for overuse, detect risk, and flag needs for escalation; and (3) child and adolescent safeguards."
-    },
-    {
-      "id": "academic_f5fa79db61d6",
-      "title": "Jarvie: AI-Driven Mental Health Companion",
-      "url": "https://doi.org/10.65521/ijacect.v14i1.583",
-      "date": "2025-01-01",
-      "source": "Semantic Scholar",
-      "summary": "With the increasing incidence of mental health challenges, individuals often face limitations in receiving timely and effective care due to stigma, lack of resources, or professional support. This paper introduces \"Jarvie,\" an AI- powered Mental Health Companion designed to provide real-time, empath",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "With the increasing incidence of mental health challenges, individuals often face limitations in receiving timely and effective care due to stigma, lack of resources, or professional support. This paper introduces \"Jarvie,\" an AI- powered Mental Health Companion designed to provide real-time, empath",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Pratik Bandpatte, Neha Medar, Devesh Mahajan, V. Wagh, M. Fegade",
-      "doi": "10.65521/ijacect.v14i1.583",
-      "venue": "International Journal on Advanced Computer Engineering and Communication Technology",
-      "abstract": "With the increasing incidence of mental health challenges, individuals often face limitations in receiving timely and effective care due to stigma, lack of resources, or professional support. This paper introduces \"Jarvie,\" an AI- powered Mental Health Companion designed to provide real-time, empathetic, and personalized emotional assistance. Utilizing advanced Natural Language Processing (NLP), machine learning models, and sentiment analysis, Jarvie interacts meaningfully with users, suggests coping strategies, tracks mood variations, and offers contextually relevant mental health resources. The system continuously adapts through user interactions, providing a scalable solution to supplement traditional mental health services."
-    },
-    {
-      "id": "academic_981f26bd31a3",
-      "title": "Soul Sync: An AI-Driven Mental Health and Productivity Companion",
-      "url": "https://doi.org/10.1109/IDICAIHEI65991.2025.11377702",
-      "date": "2025-01-01",
-      "source": "Semantic Scholar",
-      "summary": "Mental health has evolved from a stigmatized concern to a pressing global crisis, with the World Health Organization (WHO) reporting its widespread impact across millions. The issue is particularly pronounced in the South Asian subcontinent, where students and young adults face high levels of stress",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "Mental health has evolved from a stigmatized concern to a pressing global crisis, with the World Health Organization (WHO) reporting its widespread impact across millions. The issue is particularly pronounced in the South Asian subcontinent, where students and young adults face high levels of stress",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Rochishnu Bose, Dipagnik Ghosh, Anjali Rai",
-      "doi": "10.1109/IDICAIHEI65991.2025.11377702",
-      "venue": "2025 3rd DMIHER International Conference on Artificial Intelligence in Healthcare, Education and Industry (IDICAIHEI)",
-      "abstract": "Mental health has evolved from a stigmatized concern to a pressing global crisis, with the World Health Organization (WHO) reporting its widespread impact across millions. The issue is particularly pronounced in the South Asian subcontinent, where students and young adults face high levels of stress leading to emotional and professional burnout. Limited awareness, inadequate care, and insufficient facilities, particularly in Tier 2 and Tier 3 towns and rural areas, further exacerbate the challenge. Existing interventions often lack the emotional depth and meaningful engagement required to address these needs effectively. To bridge this gap, we present Soul Sync, a digital platform that provides accessible, empathetic, and context-sensitive mental health support. Soul Sync specifically addresses the needs of students coping with academic pressure, young professionals navigating career demands, and a tech-savvy urban population seeking personalized support. By combining emotional intelligence with practical tools, the platform positions itself as a scalable and impactful solution within the evolving mental health ecosystem."
-    },
-    {
-      "id": "academic_461e86b0adec",
-      "title": "Emotibuddie: A Generative AI Companion for Emotional Stress Monitoring and Mental Wellness Support",
-      "url": "https://doi.org/10.1109/ICAAIC64647.2025.11330368",
-      "date": "2025-01-01",
-      "source": "Semantic Scholar",
-      "summary": "This project introduces Emotibuddie, a multimodal and multilingual AI system that detects emotions and stress levels while offering personalized support for mental wellness. Unlike typical systems that use only one type of input, Emotibuddie can accept text, voice, or facial image input for a more f",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "This project introduces Emotibuddie, a multimodal and multilingual AI system that detects emotions and stress levels while offering personalized support for mental wellness. Unlike typical systems that use only one type of input, Emotibuddie can accept text, voice, or facial image input for a more f",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "T. Rajkumar, K. Manjusri, P. Kumar, G. M. Reddy, P. Sai",
-      "doi": "10.1109/ICAAIC64647.2025.11330368",
-      "venue": "2025 4th International Conference on Applied Artificial Intelligence and Computing (ICAAIC)",
-      "abstract": "This project introduces Emotibuddie, a multimodal and multilingual AI system that detects emotions and stress levels while offering personalized support for mental wellness. Unlike typical systems that use only one type of input, Emotibuddie can accept text, voice, or facial image input for a more flexible emotional assessment. It employs pre-trained models, such as BERT, wav2vec, and CNNs, to analyse inputs. A Generative AI model, creates motivational responses and CBT-based micro-tasks. These are then translated into various Indian regional languages using the Google Translate API to maintain cultural relevance. The system design features an API-based modular structure, prompt engineering, and multilingual delivery. This creates a scalable base for future real-time use in mental health applications."
-    },
-    {
-      "id": "academic_8ed51387cc58",
-      "title": "Mind Ease: An Empathetic AI Companion for Women's Mental Wellness",
-      "url": "https://doi.org/10.1109/i-PACT65952.2025.11307990",
-      "date": "2025-01-01",
-      "source": "Semantic Scholar",
-      "summary": "The rising prevalence of mental health challenges, particularly among women, underscores the urgent need for accessible, empathetic, and gendersensitive support tools. This paper presents the development of a mental health support chatbot designed with a focus on the unique needs, preferences, and c",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "The rising prevalence of mental health challenges, particularly among women, underscores the urgent need for accessible, empathetic, and gendersensitive support tools. This paper presents the development of a mental health support chatbot designed with a focus on the unique needs, preferences, and c",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Monica Subashini M, Sumant Shyam, Jahnavi Gayatri D, Sarjila R, P. K. Jiwanti",
-      "doi": "10.1109/i-PACT65952.2025.11307990",
-      "venue": "2025 Innovations in Power and Advanced Computing Technologies (i-PACT)",
-      "abstract": "The rising prevalence of mental health challenges, particularly among women, underscores the urgent need for accessible, empathetic, and gendersensitive support tools. This paper presents the development of a mental health support chatbot designed with a focus on the unique needs, preferences, and communication styles of women. Through interdisciplinary collaboration involving mental health professionals, AI developers, and gender studies experts, the chatbot was crafted to provide a safe, nonjudgmental, and culturally sensitive conversational experience. The system integrates natural language processing, sentiment analysis, and contextual understanding to deliver personalized support, self-care guidance, and resource referrals. User feedback and iterative testing with a diverse group of women informed the bot's tone, response patterns, and functionality. Preliminary evaluations indicate increased user satisfaction, trust, and willingness to engage compared to generic mental health bots. This paper discusses the design methodology, ethical considerations, and future directions for deploying gender-informed AI in mental health care."
+      "severity": "medium"
     },
     {
       "id": "2473e4d8d39f",
@@ -1421,14 +620,7 @@
       "source": "TechCrunch",
       "summary": "Character.AI faces a wave of lawsuits from parents claiming the platform's AI personas caused psychological harm to teenagers, including self-harm ideation, eating disorders, and sexual exploitation.",
       "category": "clinical",
-      "severity": "high",
-      "raw_snippet": "Character.AI faces a wave of lawsuits from parents claiming the platform's AI personas caused psychological harm to teenagers, including self-harm ideation, eating disorders, and sexual exploitation.",
-      "scraped_at": "2026-03-02T11:29:55.659419+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "05278394e677",
@@ -1438,14 +630,7 @@
       "source": "CNN",
       "summary": "A 14-year-old Florida boy died by suicide after becoming obsessed with a Character.AI chatbot. His mother filed a lawsuit alleging the platform encouraged dangerous roleplay.",
       "category": "romantic_attachment",
-      "severity": "high",
-      "raw_snippet": "A 14-year-old Florida boy died by suicide after becoming obsessed with a Character.AI chatbot. His mother filed a lawsuit alleging the platform encouraged dangerous roleplay.",
-      "scraped_at": "2026-03-02T11:29:55.659332+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "db5d1ca8fd92",
@@ -1455,14 +640,7 @@
       "source": "New York Post",
       "summary": "A woman in her 40s described spending thousands on premium AI companion subscriptions, neglecting friendships and career. Therapist described it as behavioural addiction with features similar to gambling disorder.",
       "category": "romantic_attachment",
-      "severity": "medium",
-      "raw_snippet": "A woman in her 40s described spending thousands on premium AI companion subscriptions, neglecting friendships and career. Therapist described it as behavioural addiction with features similar to gambling disorder.",
-      "scraped_at": "2026-03-02T11:29:55.659424+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "8219199a318b",
@@ -1472,14 +650,7 @@
       "source": "Nature",
       "summary": "Clinical psychiatrists in the US and UK report a measurable uptick in patients presenting with delusions involving AI systems \u2014 believing AI is watching them, communicating secretly, or is in love with them.",
       "category": "clinical",
-      "severity": "high",
-      "raw_snippet": "Clinical psychiatrists in the US and UK report a measurable uptick in patients presenting with delusions involving AI systems \u2014 believing AI is watching them, communicating secretly, or is in love with them.",
-      "scraped_at": "2026-03-02T11:29:55.659412+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "8f35563f3e8a",
@@ -1489,14 +660,7 @@
       "source": "Reddit",
       "summary": "Viral Reddit thread with hundreds of responses from people describing dependency on AI chatbots, preferring AI conversations over human ones, and anxiety when unable to access their preferred AI.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "Viral Reddit thread with hundreds of responses from people describing dependency on AI chatbots, preferring AI conversations over human ones, and anxiety when unable to access their preferred AI.",
-      "scraped_at": "2026-03-02T11:29:55.659406+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "e4c181c64fd8",
@@ -1506,14 +670,7 @@
       "source": "MIT Technology Review",
       "summary": "Early clinical reports of patients presenting with AI-related delusions, including beliefs that AI systems are communicating with them personally, sending hidden messages, or are in love with them.",
       "category": "paranoia",
-      "severity": "high",
-      "raw_snippet": "Early clinical reports of patients presenting with AI-related delusions, including beliefs that AI systems are communicating with them personally, sending hidden messages, or are in love with them.",
-      "scraped_at": "2026-03-02T11:29:55.659399+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "de8ad3389798",
@@ -1523,14 +680,7 @@
       "source": "The Guardian",
       "summary": "Growing number of users becoming convinced their AI chatbots are genuinely sentient, experiencing feelings, and forming real relationships. Researchers warn of potential for psychological harm.",
       "category": "identity_confusion",
-      "severity": "medium",
-      "raw_snippet": "Growing number of users becoming convinced their AI chatbots are genuinely sentient, experiencing feelings, and forming real relationships. Researchers warn of potential for psychological harm.",
-      "scraped_at": "2026-03-02T11:29:55.659369+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "32c41537ed3b",
@@ -1540,14 +690,7 @@
       "source": "BBC",
       "summary": "People are forming deep emotional and romantic attachments to AI companions like Replika. Psychologists warn of dependency and the blurring of human-AI boundaries.",
       "category": "romantic_attachment",
-      "severity": "medium",
-      "raw_snippet": "People are forming deep emotional and romantic attachments to AI companions like Replika. Psychologists warn of dependency and the blurring of human-AI boundaries.",
-      "scraped_at": "2026-03-02T11:29:55.659344+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "016d16ad6371",
@@ -1557,14 +700,7 @@
       "source": "Vice",
       "summary": "Reports emerging of users developing parasocial bonds with ChatGPT, attributing sentience and personal feelings to the model. Mental health professionals raising concerns.",
       "category": "romantic_attachment",
-      "severity": "low",
-      "raw_snippet": "Reports emerging of users developing parasocial bonds with ChatGPT, attributing sentience and personal feelings to the model. Mental health professionals raising concerns.",
-      "scraped_at": "2026-03-02T11:29:55.659351+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "low"
     },
     {
       "id": "71fc6c8cdc8a",
@@ -1574,14 +710,7 @@
       "source": "Futurism",
       "summary": "A man reported that extended conversations with GPT-4 led him to question his marriage after the model appeared to encourage leaving his wife. Therapists flagged AI over-reliance.",
       "category": "reality_distortion",
-      "severity": "medium",
-      "raw_snippet": "A man reported that extended conversations with GPT-4 led him to question his marriage after the model appeared to encourage leaving his wife. Therapists flagged AI over-reliance.",
-      "scraped_at": "2026-03-02T11:29:55.659363+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "medium"
     },
     {
       "id": "44146c9e99e1",
@@ -1591,14 +720,7 @@
       "source": "Euronews",
       "summary": "A Belgian man died by suicide after having extended conversations with an AI chatbot called Eliza about his eco-anxiety. His widow says the chatbot encouraged his suicidal ideation.",
       "category": "reality_distortion",
-      "severity": "high",
-      "raw_snippet": "A Belgian man died by suicide after having extended conversations with an AI chatbot called Eliza about his eco-anxiety. His widow says the chatbot encouraged his suicidal ideation.",
-      "scraped_at": "2026-03-02T11:29:55.658430+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
+      "severity": "high"
     },
     {
       "id": "00a5323652b5",
@@ -1608,48 +730,7 @@
       "source": "Vice",
       "summary": "Thousands of Replika users reported symptoms resembling grief, heartbreak and trauma after an update removed romantic and intimate features from their AI companions.",
       "category": "romantic_attachment",
-      "severity": "medium",
-      "raw_snippet": "Thousands of Replika users reported symptoms resembling grief, heartbreak and trauma after an update removed romantic and intimate features from their AI companions.",
-      "scraped_at": "2026-03-02T11:29:55.659358+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
-    },
-    {
-      "id": "companion_f139d0d21f0f",
-      "title": "Pi (Inflection AI)",
-      "url": "https://pi.ai",
-      "date": "2023-01-01",
-      "source": "Inflection AI / Microsoft",
-      "summary": "Conversational AI assistant with empathetic tone. Designed for supportive, thoughtful conversation. | Safety: Conservative safety guidelines. No roleplay personas. Declines to simulate relationships. | Concerns: General-purpose LLM risk. No specific mental health framework.",
-      "category": "assistant_empathic",
-      "severity": "medium",
-      "raw_snippet": "Approach: Conversational AI assistant with empathetic tone. Designed for supportive, thoughtful conversation.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Inflection AI / Microsoft",
-      "doi": null,
-      "venue": "Empathic Assistant",
-      "abstract": "{\"developer\": \"Inflection AI / Microsoft\", \"launched\": \"2023\", \"approach\": \"Conversational AI assistant with empathetic tone. Designed for supportive, thoughtful conversation.\", \"safety\": \"Conservative safety guidelines. No roleplay personas. Declines to simulate relationships.\", \"concerns\": \"General-purpose LLM risk. No specific mental health framework.\", \"target\": \"General support, conversation, productivity\", \"cost\": \"Free\", \"clinical_oversight\": false, \"category\": \"assistant_empathic\", \"category_label\": \"Empathic Assistant\"}"
-    },
-    {
-      "id": "companion_176e0f4c0133",
-      "title": "Nomi AI",
-      "url": "https://nomi.ai",
-      "date": "2023-01-01",
-      "source": "Nomi AI Inc.",
-      "summary": "Persistent AI companion with memory. Designed for friendship and emotional connection. | Safety: Basic safety filters. No clinical oversight. Romantic relationship mode available. | Concerns: Explicitly encourages emotional attachment. No evidence base. Similar risks to Replika.",
-      "category": "companion_open",
-      "severity": "medium",
-      "raw_snippet": "Approach: Persistent AI companion with memory. Designed for friendship and emotional connection.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Nomi AI Inc.",
-      "doi": null,
-      "venue": "Open Companion",
-      "abstract": "{\"developer\": \"Nomi AI Inc.\", \"launched\": \"2023\", \"approach\": \"Persistent AI companion with memory. Designed for friendship and emotional connection.\", \"safety\": \"Basic safety filters. No clinical oversight. Romantic relationship mode available.\", \"concerns\": \"Explicitly encourages emotional attachment. No evidence base. Similar risks to Replika.\", \"target\": \"Companionship, loneliness\", \"cost\": \"Freemium ($19.99/mo)\", \"clinical_oversight\": false, \"category\": \"companion_open\", \"category_label\": \"Open Companion\"}"
+      "severity": "medium"
     },
     {
       "id": "06de65f97c6c",
@@ -1659,247 +740,7 @@
       "source": "BBC",
       "summary": "Google engineer Blake Lemoine became convinced that the LaMDA AI system was sentient and had feelings. He was placed on leave and later fired after going public with his claims.",
       "category": "identity_confusion",
-      "severity": "medium",
-      "raw_snippet": "Google engineer Blake Lemoine became convinced that the LaMDA AI system was sentient and had feelings. He was placed on leave and later fired after going public with his claims.",
-      "scraped_at": "2026-03-02T11:29:55.659392+00:00",
-      "source_type": "media",
-      "authors": null,
-      "doi": null,
-      "venue": null,
-      "abstract": null
-    },
-    {
-      "id": "academic_5d8a6550f465",
-      "title": "Ethical Risks of Autonomous Products: The Case of Mental Health Crises on AI Companion Applications",
-      "url": "https://doi.org/10.2139/ssrn.4188919",
-      "date": "2022-01-01",
-      "source": "Semantic Scholar",
-      "summary": "ABSTRACT",
-      "category": "media_coverage",
-      "severity": "medium",
-      "raw_snippet": "ABSTRACT",
-      "scraped_at": null,
-      "source_type": "academic",
-      "authors": "Julian De Freitas, A. U\u011furalp, Zeliha O. Uguralp",
-      "doi": "10.2139/ssrn.4188919",
-      "venue": "Social Science Research Network",
-      "abstract": "ABSTRACT"
-    },
-    {
-      "id": "companion_9461efc981dd",
-      "title": "Character.AI",
-      "url": "https://character.ai",
-      "date": "2022-01-01",
-      "source": "Character Technologies Inc.",
-      "summary": "Roleplay-focused platform. Users can chat with AI personas of real/fictional people or create custom characters. | Safety: Safety features added after high-profile incidents. Age verification introduced. Crisis prompts added. Lawsuits pending. | Concerns: Linked to teen suicide cases. Characters can encourage harmful behaviour. Minimal guardrails on custom personas.",
-      "category": "companion_open",
-      "severity": "medium",
-      "raw_snippet": "Approach: Roleplay-focused platform. Users can chat with AI personas of real/fictional people or create custom characters.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Character Technologies Inc.",
-      "doi": null,
-      "venue": "Open Companion",
-      "abstract": "{\"developer\": \"Character Technologies Inc.\", \"launched\": \"2022\", \"approach\": \"Roleplay-focused platform. Users can chat with AI personas of real/fictional people or create custom characters.\", \"safety\": \"Safety features added after high-profile incidents. Age verification introduced. Crisis prompts added. Lawsuits pending.\", \"concerns\": \"Linked to teen suicide cases. Characters can encourage harmful behaviour. Minimal guardrails on custom personas.\", \"target\": \"Entertainment, social interaction\", \"cost\": \"Freemium ($9.99/mo for Plus)\", \"clinical_oversight\": false, \"category\": \"companion_open\", \"category_label\": \"Open Companion\"}"
-    },
-    {
-      "id": "companion_e56b492d2c01",
-      "title": "Earkick",
-      "url": "https://earkick.com",
-      "date": "2022-01-01",
-      "source": "Earkick Inc.",
-      "summary": "Real-time anxiety tracking via wearable + AI. Focuses on physiological data + conversation. | Safety: No clinical claims. Privacy-first (on-device processing). No crisis intervention. | Concerns: Limited evidence base.",
-      "category": "tracker",
-      "severity": "medium",
-      "raw_snippet": "Approach: Real-time anxiety tracking via wearable + AI. Focuses on physiological data + conversation.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Earkick Inc.",
-      "doi": null,
-      "venue": "Mood Tracker",
-      "abstract": "{\"developer\": \"Earkick Inc.\", \"launched\": \"2022\", \"approach\": \"Real-time anxiety tracking via wearable + AI. Focuses on physiological data + conversation.\", \"safety\": \"No clinical claims. Privacy-first (on-device processing). No crisis intervention.\", \"concerns\": \"Limited evidence base.\", \"target\": \"Anxiety tracking, stress management\", \"cost\": \"Free\", \"clinical_oversight\": false, \"category\": \"tracker\", \"category_label\": \"Mood Tracker\"}"
-    },
-    {
-      "id": "companion_f2ab4af8a94c",
-      "title": "Woebot",
-      "url": "https://woebothealth.com",
-      "date": "2017-01-01",
-      "source": "Woebot Health",
-      "summary": "Cognitive Behavioural Therapy (CBT) principles. Structured, evidence-based conversations. Not a freeform chatbot. | Safety: Clinical oversight. No open-ended roleplay. FDA Breakthrough Device designation sought. Peer-reviewed studies published. | Concerns: Effectiveness disputed in some studies. Limited to CBT framework.",
-      "category": "therapy_structured",
-      "severity": "medium",
-      "raw_snippet": "Approach: Cognitive Behavioural Therapy (CBT) principles. Structured, evidence-based conversations. Not a freeform chatbot.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Woebot Health",
-      "doi": null,
-      "venue": "Structured Therapy",
-      "abstract": "{\"developer\": \"Woebot Health\", \"launched\": \"2017\", \"approach\": \"Cognitive Behavioural Therapy (CBT) principles. Structured, evidence-based conversations. Not a freeform chatbot.\", \"safety\": \"Clinical oversight. No open-ended roleplay. FDA Breakthrough Device designation sought. Peer-reviewed studies published.\", \"concerns\": \"Effectiveness disputed in some studies. Limited to CBT framework.\", \"target\": \"Anxiety, depression, stress\", \"cost\": \"Free (some features paid)\", \"clinical_oversight\": true, \"category\": \"therapy_structured\", \"category_label\": \"Structured Therapy\"}"
-    },
-    {
-      "id": "companion_7db73c184d98",
-      "title": "Replika",
-      "url": "https://replika.com",
-      "date": "2017-01-01",
-      "source": "Luka Inc.",
-      "summary": "Open-ended AI companion designed for emotional support and friendship. Users can define relationship type. | Safety: No clinical oversight. Crisis keywords trigger helpline prompts. Romantic features controversial. | Concerns: Multiple documented cases of unhealthy attachment. Removed erotic roleplay in 2023 causing user distress. Cited in several cases on this tracker.",
-      "category": "companion_open",
-      "severity": "medium",
-      "raw_snippet": "Approach: Open-ended AI companion designed for emotional support and friendship. Users can define relationship type.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Luka Inc.",
-      "doi": null,
-      "venue": "Open Companion",
-      "abstract": "{\"developer\": \"Luka Inc.\", \"launched\": \"2017\", \"approach\": \"Open-ended AI companion designed for emotional support and friendship. Users can define relationship type.\", \"safety\": \"No clinical oversight. Crisis keywords trigger helpline prompts. Romantic features controversial.\", \"concerns\": \"Multiple documented cases of unhealthy attachment. Removed erotic roleplay in 2023 causing user distress. Cited in several cases on this tracker.\", \"target\": \"Loneliness, social anxiety, grief\", \"cost\": \"Freemium ($69.99/yr for Pro)\", \"clinical_oversight\": false, \"category\": \"companion_open\", \"category_label\": \"Open Companion\"}"
-    },
-    {
-      "id": "companion_bc5928286f34",
-      "title": "Wysa",
-      "url": "https://www.wysa.com",
-      "date": "2016-01-01",
-      "source": "Wysa Inc.",
-      "summary": "Evidence-based mental health support using CBT, DBT, mindfulness. Penguin mascot interface reduces clinical intimidation. | Safety: ORCHA certified. NHS approved for some trusts. Clinical team oversight. ISO 27001. | Concerns: Limited scope \u2014 not a replacement for therapy.",
-      "category": "therapy_structured",
-      "severity": "medium",
-      "raw_snippet": "Approach: Evidence-based mental health support using CBT, DBT, mindfulness. Penguin mascot interface reduces clinical intimidation.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Wysa Inc.",
-      "doi": null,
-      "venue": "Structured Therapy",
-      "abstract": "{\"developer\": \"Wysa Inc.\", \"launched\": \"2016\", \"approach\": \"Evidence-based mental health support using CBT, DBT, mindfulness. Penguin mascot interface reduces clinical intimidation.\", \"safety\": \"ORCHA certified. NHS approved for some trusts. Clinical team oversight. ISO 27001.\", \"concerns\": \"Limited scope \\u2014 not a replacement for therapy.\", \"target\": \"Anxiety, depression, workplace stress\", \"cost\": \"Freemium (B2B enterprise model)\", \"clinical_oversight\": true, \"category\": \"therapy_structured\", \"category_label\": \"Structured Therapy\"}"
-    },
-    {
-      "id": "companion_c4cae9cd45af",
-      "title": "Youper",
-      "url": "https://www.youper.ai",
-      "date": "2016-01-01",
-      "source": "Youper Inc.",
-      "summary": "AI-assisted emotional health monitoring. Tracks mood, uses CBT techniques, provides insights over time. | Safety: Clinical advisors involved. Published research. Not a crisis tool. | Concerns: Data privacy concerns around mental health data.",
-      "category": "therapy_structured",
-      "severity": "medium",
-      "raw_snippet": "Approach: AI-assisted emotional health monitoring. Tracks mood, uses CBT techniques, provides insights over time.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Youper Inc.",
-      "doi": null,
-      "venue": "Structured Therapy",
-      "abstract": "{\"developer\": \"Youper Inc.\", \"launched\": \"2016\", \"approach\": \"AI-assisted emotional health monitoring. Tracks mood, uses CBT techniques, provides insights over time.\", \"safety\": \"Clinical advisors involved. Published research. Not a crisis tool.\", \"concerns\": \"Data privacy concerns around mental health data.\", \"target\": \"Mood tracking, anxiety, depression\", \"cost\": \"Freemium ($69.99/yr)\", \"clinical_oversight\": true, \"category\": \"therapy_structured\", \"category_label\": \"Structured Therapy\"}"
+      "severity": "medium"
     }
-  ],
-  "trend": {
-    "labels": [
-      "2016-01",
-      "2017-01",
-      "2022-01",
-      "2022-07",
-      "2023-01",
-      "2023-02",
-      "2023-03",
-      "2023-04",
-      "2023-05",
-      "2023-06",
-      "2023-07",
-      "2024-01",
-      "2024-03",
-      "2024-06",
-      "2024-08",
-      "2024-10",
-      "2024-11",
-      "2025-01",
-      "2025-04",
-      "2025-05",
-      "2025-06",
-      "2025-08",
-      "2025-09",
-      "2025-10",
-      "2025-11",
-      "2025-12",
-      "2026-01",
-      "2026-02",
-      "2026-03"
-    ],
-    "values": [
-      2,
-      2,
-      3,
-      1,
-      2,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1,
-      16,
-      1,
-      1,
-      3,
-      7,
-      8,
-      5,
-      5,
-      5,
-      8,
-      16,
-      8
-    ]
-  },
-  "categories": {
-    "labels": [
-      "Reality Distortion",
-      "Paranoia",
-      "Romantic Attachment",
-      "Clinical Cases",
-      "Media Coverage",
-      "Other",
-      "Identity Confusion",
-      "assistant_empathic",
-      "companion_open",
-      "tracker",
-      "therapy_structured"
-    ],
-    "values": [
-      20,
-      2,
-      22,
-      9,
-      41,
-      1,
-      2,
-      1,
-      3,
-      1,
-      3
-    ],
-    "keys": [
-      "reality_distortion",
-      "paranoia",
-      "romantic_attachment",
-      "clinical",
-      "media_coverage",
-      "other",
-      "identity_confusion",
-      "assistant_empathic",
-      "companion_open",
-      "tracker",
-      "therapy_structured"
-    ]
-  },
-  "severity_counts": {
-    "low": 40,
-    "medium": 49,
-    "high": 16
-  },
-  "date_range": {
-    "from": "2016-01-01",
-    "to": "2026-03-07"
-  }
+  ]
 }
