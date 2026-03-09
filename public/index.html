@@ -902,6 +902,7 @@
       <span id="commentaryDate" style="font-size:0.72rem;color:var(--muted)"></span>
     </div>
     <div id="commentaryPreview" style="font-size:0.9rem;line-height:1.8;color:var(--text)"></div>
+    <div id="commentarySpotlight"></div>
     <div id="commentaryFull" style="font-size:0.9rem;line-height:1.8;color:var(--text);display:none"></div>
     <button id="commentaryToggle" onclick="toggleCommentary()" style="margin-top:0.75rem;background:none;border:1px solid var(--border);color:var(--accent2);padding:0.35rem 0.85rem;border-radius:0.4rem;font-size:0.78rem;cursor:pointer;transition:border-color 0.2s" onmouseover="this.style.borderColor='var(--accent)'" onmouseout="this.style.borderColor='var(--border)'">Read more ↓</button>
     <div style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--border);font-size:0.75rem;color:var(--muted)">
@@ -2030,11 +2031,12 @@ async function loadCommentary() {
     }
 
     document.getElementById('commentaryPreview').innerHTML = fmt(paras[0]);
+    // Spotlight always visible below first paragraph
+    if (spotlightHtml) document.getElementById('commentarySpotlight').innerHTML = spotlightHtml;
     if (paras.length > 1) {
-      document.getElementById('commentaryFull').innerHTML = paras.slice(1).map(fmt).join('') + spotlightHtml;
+      document.getElementById('commentaryFull').innerHTML = paras.slice(1).map(fmt).join('');
     } else {
-      document.getElementById('commentaryFull').innerHTML = spotlightHtml;
-      if (!spotlightHtml) document.getElementById('commentaryToggle').style.display = 'none';
+      document.getElementById('commentaryToggle').style.display = 'none';
     }
     if (d.date) {
       document.getElementById('commentaryDate').textContent = 'Week ' + (d.week || '') + ' \u00B7 ' + d.date;
