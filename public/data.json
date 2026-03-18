@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-03-16T05:52:46.285290Z",
-  "total_cases": 124,
+  "generated_at": "2026-03-16T09:00:13.059672Z",
+  "total_cases": 126,
   "cases": [
     {
       "id": "1d18df346066",
@@ -13,6 +13,23 @@
       "severity": "low",
       "raw_snippet": "The dangers of sycophantic AI: New study shows how chatbots are encouraging people with psychotic delusions Mint",
       "scraped_at": "2026-03-16T05:52:32.672532+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "2d30067797a1",
+      "title": "AI Chatbots May Fuel Delusional Thinking - \uc870\uc120\uc77c\ubcf4",
+      "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQNnVtOXhQUEJjdFQ1a1hnN05Bald6N21ubnVkZGZPUXMxdTZiNU1qcUgyMlQzbnRuMGR2SkpVYXFtY0FxbVJFYXpqdjZBaEM2V2FYUy1lNktQOWZqYlQ0dVNFbWxHYU5GbmNNdnQ0Qkg5QnBwRWtVbVE5ZkFIaEZEeWpUYjhPSlYw?oc=5",
+      "date": "2026-03-16",
+      "source": "\uc870\uc120\uc77c\ubcf4",
+      "summary": "AI Chatbots May Fuel Delusional Thinking \uc870\uc120\uc77c\ubcf4",
+      "category": "reality_distortion",
+      "severity": "low",
+      "raw_snippet": "AI Chatbots May Fuel Delusional Thinking \uc870\uc120\uc77c\ubcf4",
+      "scraped_at": "2026-03-16T09:00:05.359155+00:00",
       "source_type": "media",
       "authors": null,
       "doi": null,
@@ -81,6 +98,23 @@
       "severity": "low",
       "raw_snippet": "Who Is Sarah Griffin? The Canadian Author Who Fell in Love \u2014 and Got Intimate \u2014 With Her Irish-Accented AI Companion International Business Times UK",
       "scraped_at": "2026-03-16T05:52:35.908688+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "15131cbfd509",
+      "title": "AI hallucinations work both ways, study shows \u2014 using chatbots can amplify and reinforce our own delusions - Live Science",
+      "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxORS1fV2hfaHBNNVVjTXpLVHNQTmhzRHVlSTVndlAtbnctMkVRMU9EeFhXRXBCVVdRSnpobjJjOWRBWGRtTkRaQVBvZ2F3Ylo5MDF2NzQ4OUlmZEM5WVhGc3BtOFQ0MEl3NThKT0VjbEJ0ODZZZmUyNEpteFZBRHJKT3M0UjFnRUNqOFZwQ1BnQVp4SHZfa0NLTXRvN1VYX0IwM0p6b1pIS2RGWUdsdmtoZXFycExVUHZPRUNtTFRGTjZQY1Z2MUVIc2R3?oc=5",
+      "date": "2026-03-12",
+      "source": "Live Science",
+      "summary": "AI hallucinations work both ways, study shows \u2014 using chatbots can amplify and reinforce our own delusions Live Science",
+      "category": "reality_distortion",
+      "severity": "low",
+      "raw_snippet": "AI hallucinations work both ways, study shows \u2014 using chatbots can amplify and reinforce our own delusions Live Science",
+      "scraped_at": "2026-03-16T09:00:05.360947+00:00",
       "source_type": "media",
       "authors": null,
       "doi": null,
@@ -2174,7 +2208,7 @@
       5,
       9,
       17,
-      22
+      24
     ]
   },
   "categories": {
@@ -2192,7 +2226,7 @@
       "therapy_structured"
     ],
     "values": [
-      31,
+      33,
       26,
       4,
       2,
@@ -2219,7 +2253,7 @@
     ]
   },
   "severity_counts": {
-    "low": 56,
+    "low": 58,
     "medium": 50,
     "high": 18
   },
