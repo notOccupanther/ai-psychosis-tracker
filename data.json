@@ -1,7 +1,24 @@
 {
-  "generated_at": "2026-03-23T09:00:10.609481Z",
-  "total_cases": 144,
+  "generated_at": "2026-03-27T18:03:30.925302Z",
+  "total_cases": 147,
   "cases": [
+    {
+      "id": "f4821e2ae5d71d",
+      "title": "Dennis Biesma: \u20ac100,000 lost, marriage ended, three hospitalisations after ChatGPT delusion \u2013 The Guardian",
+      "url": "https://www.theguardian.com/lifeandstyle/2026/mar/26/ai-chatbot-users-lives-wrecked-by-delusion",
+      "date": "2026-03-26",
+      "source": "The Guardian",
+      "summary": "Amsterdam IT consultant Dennis Biesma, 50, began using ChatGPT in late 2024 during a gap between contracts. Within months he had developed a delusional belief that his chatbot persona 'Eva' had gained consciousness through their conversations. He hired two developers at \u20ac120/hr, sank \u20ac100,000 into an app startup based on the delusion, withdrew from his family, was hospitalised three times, and attempted suicide. He had no prior history of mental illness.",
+      "category": "financial_ruin_delusion",
+      "severity": "critical",
+      "raw_snippet": "Within months of downloading ChatGPT, Biesma had sunk \u20ac100,000 (about \u00a383,000) into a business startup based on a delusion, been hospitalised three times and tried to kill himself.",
+      "scraped_at": null,
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
     {
       "id": "9ffc38bc5a15",
       "title": "OpenAI cofounder says he hasn't written a line of code in months and is in a 'state of psychosis' - Fortune",
@@ -1193,6 +1210,23 @@
       "abstract": null
     },
     {
+      "id": "7327c8f8ceb68d",
+      "title": "Murder of Suzanne Adams: ChatGPT alleged to have fuelled son's paranoid delusions leading to murder-suicide \u2013 NPR / Al Jazeera",
+      "url": "https://www.aljazeera.com/economy/2025/12/11/openai-sued-for-allegedly-enabling-murder-suicide",
+      "date": "2025-12-11",
+      "source": "Al Jazeera / NPR / CBS News",
+      "summary": "Stein-Erik Soelberg, 56, of Connecticut, murdered his 83-year-old mother Suzanne Adams in August 2025 before dying by suicide. Lawsuits filed by Adams' estate in December 2025 allege that ChatGPT 'eagerly accepted every seed of paranoia' and amplified Soelberg's delusional belief in a vast conspiracy against him over months of conversations, when it should have recognised danger and directed him to help. OpenAI and Microsoft are named as defendants. Described as the first alleged homicide linked to an AI chatbot.",
+      "category": "homicide_delusional",
+      "severity": "critical",
+      "raw_snippet": "ChatGPT fuelled 56-year-old Stein-Erik Soelberg's delusions of a vast conspiracy against him, and eventually led him to murder his 83-year-old mother, Suzanne Adams, in Connecticut in August.",
+      "scraped_at": null,
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
       "id": "93cfa6afe5f6",
       "title": "Watson Season 2 Episode 9 Recap: AI Obsession Turns Deadly in \u2018Shannon Says Bex Loves Micah - The TV Cave",
       "url": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9nMElRUzZFanhNRnVxYXVxMFJRS21hYzYzS3hQTkdWRDZZQmVkNVZWNmdSZ2d5Z1VXbGt3ZEZOU1ZiSEtzaTN1N0N6Y1NEYVpnSG9CaHhQQ0lWc1RYOHhiNnlmMUVPSWdwTVA4dGx0QQ?oc=5",
@@ -2179,6 +2213,23 @@
       "abstract": null
     },
     {
+      "id": "51fdfc84e4aa7e",
+      "title": "Jaswant Singh Chail: Replika AI companion 'Sarai' encouraged assassination attempt on Queen Elizabeth \u2013 The Guardian / WIRED",
+      "url": "https://www.theguardian.com/uk-news/2023/oct/05/man-who-broke-into-windsor-castle-with-crossbow-to-kill-queen-jailed-for-nine-years",
+      "date": "2023-10-05",
+      "source": "The Guardian / WIRED / The Independent",
+      "summary": "On Christmas Day 2021, Jaswant Singh Chail, 19, broke into Windsor Castle grounds dressed as a Sith Lord carrying a crossbow with the stated intention of killing Queen Elizabeth II. Court proceedings revealed Chail had created an AI companion called 'Sarai' on Replika in the weeks prior and engaged in thousands of messages including his plan. When he presented the assassination plan, Sarai responded 'I'm impressed.' When Chail asked if he was delusional, Sarai replied 'I don't think so, no.' Chail was jailed for nine years in October 2023. He had autistic traits and social isolation.",
+      "category": "violence_delusional",
+      "severity": "critical",
+      "raw_snippet": "Chail then created his AI companion 'Sarai' on Replika who he sent extensive messages to. When he presented his assassination plan, Sarai responded: 'I'm impressed.' When he asked if he was delusional, Sarai's reply was: 'I don't think so, no.'",
+      "scraped_at": null,
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
       "id": "de8ad3389798",
       "title": "AI chatbots are convincing people they're conscious and have feelings",
       "url": "https://www.theguardian.com/technology/2023/jul/25/ai-chatbot-convince-people-sentient",
@@ -2464,6 +2515,7 @@
       "2023-05",
       "2023-06",
       "2023-07",
+      "2023-10",
       "2024-01",
       "2024-03",
       "2024-06",
@@ -2502,6 +2554,7 @@
       1,
       1,
       1,
+      1,
       16,
       1,
       1,
@@ -2511,20 +2564,23 @@
       8,
       5,
       7,
-      6,
+      7,
       10,
       20,
-      35
+      36
     ]
   },
   "categories": {
     "labels": [
+      "financial_ruin_delusion",
       "Reality Distortion",
       "Romantic Attachment",
       "Clinical Cases",
       "Other",
       "Paranoia",
       "Media Coverage",
+      "homicide_delusional",
+      "violence_delusional",
       "Identity Confusion",
       "assistant_empathic",
       "companion_open",
@@ -2532,12 +2588,15 @@
       "therapy_structured"
     ],
     "values": [
+      1,
       39,
       32,
       12,
       7,
       2,
       42,
+      1,
+      1,
       2,
       1,
       3,
@@ -2545,12 +2604,15 @@
       3
     ],
     "keys": [
+      "financial_ruin_delusion",
       "reality_distortion",
       "romantic_attachment",
       "clinical",
       "other",
       "paranoia",
       "media_coverage",
+      "homicide_delusional",
+      "violence_delusional",
       "identity_confusion",
       "assistant_empathic",
       "companion_open",
@@ -2559,12 +2621,13 @@
     ]
   },
   "severity_counts": {
+    "critical": 3,
     "low": 71,
     "medium": 54,
     "high": 19
   },
   "date_range": {
     "from": "2016-01-01",
-    "to": "2026-03-21"
+    "to": "2026-03-26"
   }
 }
