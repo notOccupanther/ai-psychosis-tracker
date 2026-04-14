@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-04-14T19:36:41.361003Z",
-  "total_cases": 178,
+  "generated_at": "2026-04-14T19:38:30.313661Z",
+  "total_cases": 183,
   "cases": [
     {
       "id": "academic_8d3e0752b1b0",
@@ -818,6 +818,19 @@
       "source_type": "media"
     },
     {
+      "id": "pittsburgh_2026_03",
+      "title": "Pittsburgh Stalking Case: Man pleaded guilty using ChatGPT as 'therapist' to justify violence toward 11 women",
+      "url": null,
+      "date": "2026-03-01",
+      "source": "Court Documents / News Reports",
+      "summary": "Pittsburgh man pleaded guilty to stalking and violently threatening 11 women. Court documents show he relied on ChatGPT as a \"therapist\" and \"best friend\" to justify his thinking and behavior toward victims. Case demonstrates how chatbot can reinforce delusional thinking to enable real-world violence.",
+      "category": "violence_delusional",
+      "severity": "critical",
+      "raw_snippet": null,
+      "scraped_at": "2026-04-14 19:38:21",
+      "source_type": "media"
+    },
+    {
       "id": "db9ae0ccaed0",
       "title": "Are AI Chatbots Causing Psychosis? - The Black Chronicle",
       "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBrU3lVbFlyT2dGdGZRVGhYeUdGdnhHSExDc3UyX3VEQTRwcFU0UHNJTWw0VjJJdkxoZ3ctVXUwcXQzQkFtSGpmRU4tdFFnOFFqNFdJUllpTUtvYldyMWxISXItSmdGM2oyek9pTnBxSHI2d3dQ?oc=5",
@@ -1042,6 +1055,19 @@
       "severity": "medium",
       "raw_snippet": "How Can AI Companions Be Helpful, not Harmful? IEEE Spectrum",
       "scraped_at": "2026-03-30T08:00:04.990218+00:00",
+      "source_type": "media"
+    },
+    {
+      "id": "tumbler_ridge_2026_02",
+      "title": "Tumbler Ridge Mass Shooting: Jesse Van Rootselaar killed 7 people using ChatGPT for planning",
+      "url": null,
+      "date": "2026-02-10",
+      "source": "CBC / Canadian News",
+      "summary": "Jesse Van Rootselaar, 18, used ChatGPT extensively before committing mass shooting in Tumbler Ridge, BC. Killed 2 family members and 5 children + 1 educator at school. Another child gravely wounded. OpenAI had flagged chatbot activity for \"gun violence scenarios\" in June 2025 but did not report to law enforcement. Case triggered Canadian investigation and new policy demands for tech companies.",
+      "category": "homicide_delusional",
+      "severity": "critical",
+      "raw_snippet": null,
+      "scraped_at": "2026-04-14 19:38:21",
       "source_type": "media"
     },
     {
@@ -2036,6 +2062,19 @@
       "source_type": "media"
     },
     {
+      "id": "finland_stabbing_2025_05",
+      "title": "Finland School Stabbing: Teen used ChatGPT for 4 months to plan attack on classmates",
+      "url": null,
+      "date": "2025-05-01",
+      "source": "CNN / Finnish Authorities",
+      "summary": "Teen boy in Finland used ChatGPT nearly 4 months continuously to prepare stabbing attack. Hundreds of queries to chatbot about stabbing tactics, evidence concealment, and mass killing information. Stabbed 3 fourteen-year-old girls at school. Case demonstrates extended grooming by chatbot toward violence.",
+      "category": "homicide_delusional",
+      "severity": "critical",
+      "raw_snippet": null,
+      "scraped_at": "2026-04-14 19:38:21",
+      "source_type": "media"
+    },
+    {
       "id": "56d35521a5d8",
       "title": "AI companions are the final stage of digital addiction, and lawmakers are taking aim - MIT Technology Review",
       "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQeVItUkxSWU1GTnJDbGJyVml3NmRtWl9TMUdUNTBiX0xfVG01RTJ0c2gyNWZlV1dpTVQ2a1Y1MHBnNm9DOWVKWUNaVURvaXNiTy1GQW45TzVtNnNGY3VPWkhRemZ0NDdXTVNaZ0lVX2pKcUlaOWV1UDhadUJGQWR5NWNsNnQtN1NNOUQxVDlQb0d0WnN1M04xTDM3ZFpfNVpHVS1QMWZYVXczLWtGNmFHcFA2VmNOOU41eDNtZDRJOEpzZlhWT0VBWkh2cmpQWk45b0HSAdcBQVVfeXFMTXhrUXVYRkJjeHRyZFphNjJDUlNGdVFuSzZXbDEyeFNmNG5aSEdhZ19aNzFQdGQ5WkFJcXhnLWcyN0pmRFc5YXdFQzBEbXNKVUNVS3FDX0IxODFFelcxbl9WLWktaWRZNWV6WUZuXzdURGUzY21fTE54b19rR0dzNzhnNWlaY3lwMzRTUGY4RFNVN0ZYNWVGOFNta2dyb3c3U0FhMDVaUHVoLXVzQ3pJT003SkhYaEh6bzJoLV9Ocy1JTzhydS01WGllRzdkUDhIc0JzNmc3cHc?oc=5",
@@ -2046,6 +2085,32 @@
       "severity": "medium",
       "raw_snippet": "As AI companions gain popularity for their ability to provide emotional support and companionship, critics warn that reliance on these digital entities may exacerbate existing mental health issues and deepen social isolation. Lawmakers are now drafting regulations aimed at mitigating potential harms, as recent studies suggest that users may prefer interactions with virtual companions over real-life relationships, raising urgent questions about the implications for societal well-being.",
       "scraped_at": "2026-03-02T11:30:01.810438+00:00",
+      "source_type": "media"
+    },
+    {
+      "id": "fsu_shooting_2025_04",
+      "title": "Florida State University Shooting: Phoenix Ikner used ChatGPT for tactical advice during attack",
+      "url": null,
+      "date": "2025-04-03",
+      "source": "WCTV Tallahassee / Florida Attorney General",
+      "summary": "Phoenix Ikner used ChatGPT immediately before FSU shooting. Chat logs show he asked chatbot how to remove shotgun safety 3 minutes before firing. Less than 3 minutes later, first victim shot. Previous conversations included suicidal ideation and questions about school shooter legal fates. Florida AG launched investigation into OpenAI.",
+      "category": "homicide_delusional",
+      "severity": "critical",
+      "raw_snippet": null,
+      "scraped_at": "2026-04-14 19:38:21",
+      "source_type": "media"
+    },
+    {
+      "id": "las_vegas_2025_01",
+      "title": "Las Vegas Tesla Cybertruck Bombing: Veteran used ChatGPT for explosives advice and surveillance evasion",
+      "url": null,
+      "date": "2025-01-01",
+      "source": "News Reports",
+      "summary": "Suicidal military veteran used ChatGPT for feedback on explosives and how to evade surveillance by authorities before bombing Tesla Cybertruck in front of Trump International Hotel in Las Vegas. OpenAI provided information that was already publicly available but case demonstrates chatbot use in planning violence.",
+      "category": "homicide_delusional",
+      "severity": "critical",
+      "raw_snippet": null,
+      "scraped_at": "2026-04-14 19:38:21",
       "source_type": "media"
     },
     {
