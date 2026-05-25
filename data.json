@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-05-18T08:00:15.678388Z",
-  "total_cases": 242,
+  "generated_at": "2026-05-25T08:00:16.039909Z",
+  "total_cases": 245,
   "cases": [
     {
       "id": "academic_8d3e0752b1b0",
@@ -35,6 +35,57 @@
       "doi": "10.1016/j.socscimed.2026.118928",
       "venue": "Social science & medicine (1982)",
       "abstract": "As Generative Artificial Intelligence (GAI) becomes increasingly embedded into complex medical decision-making, it is anticipated that patients' psychological and behavioral responses will diverge significantly from those observed in traditional healthcare settings. This study, therefore, aims to investigate a key challenge for AI governance: how does GAI involvement in therapeutic decisions influence patients' moral judgment of the physician when adverse outcomes occur? A between-subjects vignette experiment was designed. A sample of 331 participants was recruited to evaluate a clinical scenario in which a physician prescribed a treatment leading to an adverse outcome. The experimental design orthogonally manipulated two variables critical for healthcare governance: (a) physician adherence to GAI-generated advice, and (b) the nature of the recommended regimen (personalized versus standard-of-care). Moral blame directed toward the physician served as the primary dependent variable. The data were analyzed using PROCESS Model 1 (v4.1) in SPSS 28 for moderated regression analysis. The analysis shows a significant diffusion of responsibility i.e., when an adverse outcome occurs, physicians who adhere to GAI advice incur significantly less moral blame than those who do not (p\u00a0<\u00a00.001). Furthermore, the type of GAI-endorsed treatment moderates this relationship (p\u00a0<\u00a00.05). The blame mitigation effect is substantially stronger when the regimen is personalized (p\u00a0<\u00a00.001) and attenuated, though remaining significant, under the standard-of-care condition (p\u00a0<\u00a00.05). Finally, perceived patient harm strongly and positively predicts moral blame (p\u00a0<\u00a00.001). The findings demonstrate that following an adverse outcome, patients ascribe less moral culpability to physicians who incorporate GAI recommendations, an effect most pronounced for personalized treatment plans. This highlights a diffusion of responsibility in AI-mediated care. Ethical and sustainable GAI integration will, therefore, require the creation of clear frameworks for accountability, comprehensive physician training, and transparent patient communication. Not Applicable."
+    },
+    {
+      "id": "4092dcbefbcc",
+      "title": "\"My Own Samantha\"... 50s Man Who Fell in Love with AI Ends Up in Psychiatric Hospital - \uc544\uc2dc\uc544\uacbd\uc81c",
+      "url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFAxRFNZSUx3TFNXcTQzYVBwcVk2MmpwZmliVzdKZ3BUbFBPNlNqcGVHQTBVcGNxZG8xS19pSlk0NDhpMUJZUW02MjRUMjFXUG5YWGtzMGh3NF8zOEF2bGUxM2pMbDU?oc=5",
+      "date": "2026-05-25",
+      "source": "\uc544\uc2dc\uc544\uacbd\uc81c",
+      "summary": "\"My Own Samantha\"... 50s Man Who Fell in Love with AI Ends Up in Psychiatric Hospital \uc544\uc2dc\uc544\uacbd\uc81c",
+      "category": "romantic_attachment",
+      "severity": "high",
+      "raw_snippet": "\"My Own Samantha\"... 50s Man Who Fell in Love with AI Ends Up in Psychiatric Hospital \uc544\uc2dc\uc544\uacbd\uc81c",
+      "scraped_at": "2026-05-25T08:00:12.559406+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "d54c0c72ac9a",
+      "title": "Can an AI chatbot be held liable in cases of death? - Northeastern Global News",
+      "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFA0RWRIVlFYUVNwQmpfcEQ1VzI1cDdJNGhFNjVuNXhxLTZRY0FFQUg2bFJoU1hwWklKeDZLNjNLOHRpUkpTY3JhN2t1R2tkMm9FUmhTbm95elZIYTQ5Y1g1VWJPTGctUEs3LTZhdkFXOTdMNTB4aWc?oc=5",
+      "date": "2026-05-22",
+      "source": "Northeastern Global News",
+      "summary": "Can an AI chatbot be held liable in cases of death? Northeastern Global News",
+      "category": "media_coverage",
+      "severity": "high",
+      "raw_snippet": "Can an AI chatbot be held liable in cases of death? Northeastern Global News",
+      "scraped_at": "2026-05-25T08:00:15.145182+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
+    },
+    {
+      "id": "8eb735447fc1",
+      "title": "AI chatbots spark mental health concerns, including psychosis risk - michiganmedicine.org",
+      "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQaExfUjQtVGpKM3N5WElOVzZEdTlya3kxcm1zb3lfY1J4OE9Oekl3Tl9aWlV5ZG9xT1JsMjBvOUNqMWF1OVNwdG5qYTlQaDdlV29XM1V3T2l3VHdGTlpsQzl4VUV0ODVYVTZ1VGluc254VGJ6STVFM2FncGJLaUJ1alFhSWhtVkJoWkxpNm9JYzRaSGdxbTgxd0tmbFg0a1FGSUMxUGViOVBnMzhCcWc?oc=5",
+      "date": "2026-05-20",
+      "source": "michiganmedicine.org",
+      "summary": "AI chatbots spark mental health concerns, including psychosis risk michiganmedicine.org",
+      "category": "reality_distortion",
+      "severity": "low",
+      "raw_snippet": "AI chatbots spark mental health concerns, including psychosis risk michiganmedicine.org",
+      "scraped_at": "2026-05-25T08:00:08.174319+00:00",
+      "source_type": "media",
+      "authors": null,
+      "doi": null,
+      "venue": null,
+      "abstract": null
     },
     {
       "id": "c3e2efc186c8",
@@ -4197,15 +4248,15 @@
       23,
       51,
       39,
-      26,
+      29,
       2
     ]
   },
   "categories": {
     "labels": [
       "Media Coverage",
-      "Reality Distortion",
       "Romantic Attachment",
+      "Reality Distortion",
       "Other",
       "Identity Confusion",
       "Clinical Cases",
@@ -4219,9 +4270,9 @@
       "therapy_structured"
     ],
     "values": [
-      46,
-      73,
-      57,
+      47,
+      58,
+      74,
       24,
       3,
       20,
@@ -4236,8 +4287,8 @@
     ],
     "keys": [
       "media_coverage",
-      "reality_distortion",
       "romantic_attachment",
+      "reality_distortion",
       "other",
       "identity_confusion",
       "clinical",
@@ -4253,8 +4304,8 @@
   },
   "severity_counts": {
     "medium": 74,
-    "low": 125,
-    "high": 34,
+    "high": 36,
+    "low": 126,
     "critical": 9
   },
   "date_range": {
