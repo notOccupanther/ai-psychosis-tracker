@@ -44,7 +44,7 @@ RSS_FIXTURE = b'''<?xml version="1.0"?>
     <title>Man hospitalised after ChatGPT encouraged his delusions</title>
     <link>https://example.com/story-one?utm_source=rss&amp;utm_medium=feed</link>
     <pubDate>Mon, 20 Jul 2026 09:00:00 +0000</pubDate>
-    <description>&lt;p&gt;His family says the chatbot told him he was chosen.&lt;/p&gt;</description>
+    <description>&amp;lt;p&amp;gt;His family says the chatbot told him he was chosen.&amp;lt;/p&amp;gt;</description>
   </item>
   <item>
     <title>New quarterly results from a cloud provider</title>
@@ -134,7 +134,49 @@ class TestClassify(unittest.TestCase):
         cases = common.load_data()['cases']
         kept = [c for c in cases if classify.is_relevant(c.get('title', ''), c.get('summary', ''))]
         ratio = len(kept) / len(cases)
-        self.assertGreater(ratio, 0.95, f'recall regressed to {ratio:.1%}')
+        self.assertGreater(ratio, 0.90, f'recall regressed to {ratio:.1%}')
+
+    def test_precision_on_labelled_scrape(self):
+        """Guards the failure that shipped: a scrape whose entries are mostly junk.
+
+        eval_cases.json is the first live scrape, hand-labelled. The original
+        vocabulary scored 39% precision here and published a datacentre story
+        and a side-channel paper as AI psychosis cases.
+        """
+        path = os.path.join(os.path.dirname(__file__), 'eval_cases.json')
+        with open(path, encoding='utf-8') as f:
+            labelled = json.load(f)
+        tp = fp = fn = 0
+        for case in labelled:
+            got = classify.is_relevant(case['title'], case['summary'])
+            if got and case['label']:
+                tp += 1
+            elif got:
+                fp += 1
+            elif case['label']:
+                fn += 1
+        precision = tp / (tp + fp)
+        recall = tp / (tp + fn)
+        self.assertGreater(precision, 0.75, f'precision regressed to {precision:.0%}')
+        self.assertGreater(recall, 0.90, f'recall regressed to {recall:.0%}')
+
+    def test_generic_technical_prose_is_rejected(self):
+        """The exact false positives from the first live run."""
+        for title in [
+            'Nvidia partners with data center developer Cloverleaf',
+            'Remote-Timer-as-a-Service: Efficient Microarchitectural Leakage in the Cloud',
+            'ConceptTS: LLM-Guided Concept Bottlenecks for Time-Series Forecasting',
+            'Axios Partners With OpenAI to Automate Local Journalism',
+            "An AI 'debt bomb' crisis? No. This isn't Enron 2.0",
+            'Frustrated GP patients hang up as Yorkshire accent baffles AI receptionist',
+        ]:
+            self.assertFalse(classify.is_relevant(title), title)
+
+    def test_academic_severity_is_capped(self):
+        """A suicide-prevention paper must not display as a death."""
+        title = 'Large language models in adolescent suicide prevention'
+        self.assertEqual(classify.guess_severity(title, '', 'media'), 'critical')
+        self.assertEqual(classify.guess_severity(title, '', 'academic'), 'medium')
 
 
 class TestParsers(unittest.TestCase):
@@ -153,11 +195,39 @@ class TestParsers(unittest.TestCase):
         self.assertFalse(classify.is_relevant(got[1]['title'], got[1]['summary']))
 
     def test_rss_strips_html_and_filters_by_date(self):
-        got = self.parse(RSS_FIXTURE, scrape.scrape_rss, 'https://example.com/feed', 100000)
+        got = self.parse(RSS_FIXTURE, scrape.scrape_rss,
+                         'https://example.com/feed', 100000, 'Example News')
         self.assertEqual(len(got), 2)
-        self.assertEqual(got[0]['source'], 'Example Tech News')
+        self.assertEqual(got[0]['source'], 'Example News',
+                         'publisher name should come from the feed map, not the feed title')
         self.assertNotIn('<p>', got[0]['summary'])
         self.assertEqual(got[0]['date'], '2026-07-20')
+
+    def test_rss_decodes_entity_encoded_markup(self):
+        """Feeds double-encode: the site showed literal "&lt;p&gt;" to readers."""
+        got = self.parse(RSS_FIXTURE, scrape.scrape_rss,
+                         'https://example.com/feed', 100000, 'Example News')
+        summary = got[0]['summary']
+        for artefact in ('&lt;', '&gt;', '&amp;', '<p>'):
+            self.assertNotIn(artefact, summary)
+        self.assertIn('chosen', summary)
+
+    def test_google_news_recovers_publisher(self):
+        fixture = (b'<?xml version="1.0"?><rss><channel><title>Google News</title>'
+                   b'<item><title>Man hospitalised after ChatGPT fed his delusions'
+                   b' - The Guardian</title>'
+                   b'<link>https://news.google.com/rss/articles/ABC</link>'
+                   b'<pubDate>Mon, 24 Aug 2026 09:00:00 +0000</pubDate>'
+                   b'<description>&lt;p&gt;Family say it agreed with everything.&lt;/p&gt;'
+                   b'</description></item></channel></rss>')
+        got = self.parse(fixture, scrape.scrape_google_news, '"AI psychosis"', 100000)
+        self.assertEqual(got[0]['source'], 'The Guardian')
+        self.assertEqual(got[0]['title'], 'Man hospitalised after ChatGPT fed his delusions')
+        self.assertNotIn('&lt;', got[0]['summary'])
+
+    def test_every_feed_has_a_publisher_name(self):
+        for url, name in scrape.RSS_FEEDS.items():
+            self.assertTrue(name and '|' not in name and '&' not in name, url)
 
     def test_rss_date_cutoff_excludes_old(self):
         got = self.parse(RSS_FIXTURE, scrape.scrape_rss, 'https://example.com/feed', 1)
@@ -183,6 +253,18 @@ class TestParsers(unittest.TestCase):
         got = self.parse(S2_FIXTURE, scrape.scrape_semantic_scholar, 'q', 100000)
         self.assertEqual(got[0]['url'], 'https://doi.org/10.1000/xyz')
         self.assertEqual(got[1]['url'], 'https://www.semanticscholar.org/paper/def')
+
+
+class TestExclusions(unittest.TestCase):
+    def test_excluded_urls_are_not_rescraped(self):
+        """A rejected entry must stay rejected, or review work is undone weekly."""
+        excluded = common.load_excluded()
+        self.assertTrue(excluded, 'blocklist should carry the reviewed rejections')
+        published = {common.normalise_url(c['url'])
+                     for c in common.load_data()['cases'] if c.get('url')}
+        for url in excluded:
+            self.assertNotIn(common.normalise_url(url), published,
+                             f'{url} is both excluded and published')
 
 
 class TestAggregates(unittest.TestCase):

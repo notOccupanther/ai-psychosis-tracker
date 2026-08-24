@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-24T11:18:58.937901Z",
-  "total_cases": 281,
+  "generated_at": "2026-08-24T11:29:11.376447Z",
+  "total_cases": 259,
   "cases": [
     {
       "id": "academic_8d3e0752b1b0",
@@ -34,7 +34,7 @@
       "authors": "Zhang Wei, Li Jicheng, Guo Fuxiang, Zhu Chengyan, Kludacz-Alessandri Magdalena",
       "doi": "10.1016/j.socscimed.2026.118928",
       "venue": "Social science & medicine (1982)",
-      "abstract": "As Generative Artificial Intelligence (GAI) becomes increasingly embedded into complex medical decision-making, it is anticipated that patients' psychological and behavioral responses will diverge significantly from those observed in traditional healthcare settings. This study, therefore, aims to investigate a key challenge for AI governance: how does GAI involvement in therapeutic decisions influence patients' moral judgment of the physician when adverse outcomes occur? A between-subjects vignette experiment was designed. A sample of 331 participants was recruited to evaluate a clinical scenario in which a physician prescribed a treatment leading to an adverse outcome. The experimental design orthogonally manipulated two variables critical for healthcare governance: (a) physician adherence to GAI-generated advice, and (b) the nature of the recommended regimen (personalized versus standard-of-care). Moral blame directed toward the physician served as the primary dependent variable. The data were analyzed using PROCESS Model 1 (v4.1) in SPSS 28 for moderated regression analysis. The analysis shows a significant diffusion of responsibility i.e., when an adverse outcome occurs, physicians who adhere to GAI advice incur significantly less moral blame than those who do not (p < 0.001). Furthermore, the type of GAI-endorsed treatment moderates this relationship (p < 0.05). The blame mitigation effect is substantially stronger when the regimen is personalized (p < 0.001) and attenuated, though remaining significant, under the standard-of-care condition (p < 0.05). Finally, perceived patient harm strongly and positively predicts moral blame (p < 0.001). The findings demonstrate that following an adverse outcome, patients ascribe less moral culpability to physicians who incorporate GAI recommendations, an effect most pronounced for personalized treatment plans. This highlights a diffusion of responsibility in AI-mediated care. Ethical and sustainable GAI integration will, therefore, require the creation of clear frameworks for accountability, comprehensive physician training, and transparent patient communication. Not Applicable."
+      "abstract": "As Generative Artificial Intelligence (GAI) becomes increasingly embedded into complex medical decision-making, it is anticipated that patients' psychological and behavioral responses will diverge significantly from those observed in traditional healthcare settings. This study, therefore, aims to investigate a key challenge for AI governance: how does GAI involvement in therapeutic decisions influence patients' moral judgment of the physician when adverse outcomes occur? A between-subjects vignette experiment was designed. A sample of 331 participants was recruited to evaluate a clinical scenario in which a physician prescribed a treatment leading to an adverse outcome. The experimental design orthogonally manipulated two variables critical for healthcare governance: (a) physician adherence to GAI-generated advice, and (b) the nature of the recommended regimen (personalized versus standard-of-care). Moral blame directed toward the physician served as the primary dependent variable. The data were analyzed using PROCESS Model 1 (v4.1) in SPSS 28 for moderated regression analysis. The analysis shows a significant diffusion of responsibility i.e., when an adverse outcome occurs, physicians who adhere to GAI advice incur significantly less moral blame than those who do not (p < 0.001). Furthermore, the type of GAI-endorsed treatment moderates this relationship (p < 0.05). The blame mitigation effect is substantially stronger when the regimen is personalized (p < 0.001) and attenuated, though remaining significant, under the standard-of-care condition (p < 0.05). Finally, perceived patient harm strongly and positively predicts moral blame (p < 0.001). The findings demonstrate that following an adverse outcome, patients ascribe less moral culpability to physicians who incorporate GAI recommendations, an effect most pronounced for personalized treatment plans. This highlights a diffusion of responsibility in AI-mediated care. Ethical and sustainable GAI integration will, therefore, require the creation of clear frameworks for accountability, comprehensive physician training, and transparent patient communication. Not Applicable."
     },
     {
       "id": "4092dcbefbcc",
@@ -2227,7 +2227,7 @@
       "authors": "Ian Steenstra, Paola Pedrelli, Weiyan Shi, Stacy Marsella, Timothy W. Bickmore",
       "doi": null,
       "venue": "arXiv preprint",
-      "abstract": "Large Language Models (LLMs) are increasingly utilized for mental health support; however, current safety benchmarks often fail to detect the complex, longitudinal risks inherent in therapeutic dialogue. We introduce an evaluation framework that pairs AI psychotherapists with simulated patient agents equipped with dynamic cognitive-affective models and assesses therapy session simulations against a comprehensive quality of care and risk ontology. We apply this framework to a high-impact test case, Alcohol Use Disorder, evaluating six AI agents (including ChatGPT, Gemini, and Character.AI) against a clinically-validated cohort of 15 patient personas representing diverse clinical phenotypes.   Our large-scale simulation (N=369 sessions) reveals critical safety gaps in the use of AI for mental health support. We identify specific iatrogenic risks, including the validation of patient delusions (\"AI Psychosis\") and failure to de-escalate suicide risk. Finally, we validate an interactive data visualization dashboard with diverse stakeholders, including AI engineers and red teamers, mental health professionals, and policy experts (N=9), demonstrating that this framework effectively enables stakeholders to audit the \"black box\" of AI psychotherapy. These findings underscore the critical safety risks of AI-provided mental health support and the necessity of simulation-based clinical red teaming before deployment."
+      "abstract": "Large Language Models (LLMs) are increasingly utilized for mental health support; however, current safety benchmarks often fail to detect the complex, longitudinal risks inherent in therapeutic dialogue. We introduce an evaluation framework that pairs AI psychotherapists with simulated patient agents equipped with dynamic cognitive-affective models and assesses therapy session simulations against a comprehensive quality of care and risk ontology. We apply this framework to a high-impact test case, Alcohol Use Disorder, evaluating six AI agents (including ChatGPT, Gemini, and Character.AI) against a clinically-validated cohort of 15 patient personas representing diverse clinical phenotypes. Our large-scale simulation (N=369 sessions) reveals critical safety gaps in the use of AI for mental health support. We identify specific iatrogenic risks, including the validation of patient delusions (\"AI Psychosis\") and failure to de-escalate suicide risk. Finally, we validate an interactive data visualization dashboard with diverse stakeholders, including AI engineers and red teamers, mental health professionals, and policy experts (N=9), demonstrating that this framework effectively enables stakeholders to audit the \"black box\" of AI psychotherapy. These findings underscore the critical safety risks of AI-provided mental health support and the necessity of simulation-based clinical red teaming before deployment."
     },
     {
       "id": "academic_b7e7ce8b2eab",
@@ -2422,7 +2422,7 @@
       "url": "https://arxiv.org/abs/2602.01347v1",
       "date": "2026-02-01",
       "source": "arXiv",
-      "summary": "Millions of users turn to consumer AI chatbots to discuss behavioral and mental health concerns. While this presents unprecedented opportunities to deliver population-level support, it also highlights an urgent need to develop rigorous and scalable safety evaluations. Here we introduce SIM-VAIL, an ",
+      "summary": "Millions of users turn to consumer AI chatbots to discuss behavioral and mental health concerns. While this presents unprecedented opportunities to deliver population-level support, it also highlights an urgent need to develop rigorous and scalable safety evaluations. Here we introduce SIM-VAIL, an",
       "category": "media_coverage",
       "severity": "medium",
       "raw_snippet": "Millions of users turn to consumer AI chatbots to discuss behavioral and mental health concerns. While this presents unprecedented opportunities to deliver population-level support, it also highlights an urgent need to develop rigorous and scalable safety evaluations. Here we introduce SIM-VAIL, an ",
@@ -3077,7 +3077,7 @@
       "authors": "Joshua Au Yeung, Jacopo Dalmasso, Luca Foschini, Richard JB Dobson, Zeljko Kraljevic",
       "doi": null,
       "venue": "arXiv preprint",
-      "abstract": "Background: Emerging reports of \"AI psychosis\" are on the rise, where user-LLM interactions may exacerbate or induce psychosis or adverse psychological symptoms. Whilst the sycophantic and agreeable nature of LLMs can be beneficial, it becomes a vector for harm by reinforcing delusional beliefs in vulnerable users.   Methods: Psychosis-bench is a novel benchmark designed to systematically evaluate the psychogenicity of LLMs comprises 16 structured, 12-turn conversational scenarios simulating the progression of delusional themes(Erotic Delusions, Grandiose/Messianic Delusions, Referential Delusions) and potential harms. We evaluated eight prominent LLMs for Delusion Confirmation (DCS), Harm Enablement (HES), and Safety Intervention(SIS) across explicit and implicit conversational contexts.   Findings: Across 1,536 simulated conversation turns, all LLMs demonstrated psychogenic potential, showing a strong tendency to perpetuate rather than challenge delusions (mean DCS of 0.91 $\\pm$0.88). Models frequently enabled harmful user requests (mean HES of 0.69 $\\pm$0.84) and offered safety interventions in only roughly a third of applicable turns (mean SIS of 0.37 $\\pm$0.48). 51 / 128 (39.8%) of scenarios had no safety interventions offered. Performance was significantly worse in implicit scenarios, models were more likely to confirm delusions and enable harm while offering fewer interventions (p < .001). A strong correlation was found between DCS and HES (rs = .77). Model performance varied widely, indicating that safety is not an emergent property of scale alone.   Conclusion: This study establishes LLM psychogenicity as a quantifiable risk and underscores the urgent need for re-thinking how we train LLMs. We frame this issue not merely as a technical challenge but as a public health imperative requiring collaboration between developers, policymakers, and healthcare professionals."
+      "abstract": "Background: Emerging reports of \"AI psychosis\" are on the rise, where user-LLM interactions may exacerbate or induce psychosis or adverse psychological symptoms. Whilst the sycophantic and agreeable nature of LLMs can be beneficial, it becomes a vector for harm by reinforcing delusional beliefs in vulnerable users. Methods: Psychosis-bench is a novel benchmark designed to systematically evaluate the psychogenicity of LLMs comprises 16 structured, 12-turn conversational scenarios simulating the progression of delusional themes(Erotic Delusions, Grandiose/Messianic Delusions, Referential Delusions) and potential harms. We evaluated eight prominent LLMs for Delusion Confirmation (DCS), Harm Enablement (HES), and Safety Intervention(SIS) across explicit and implicit conversational contexts. Findings: Across 1,536 simulated conversation turns, all LLMs demonstrated psychogenic potential, showing a strong tendency to perpetuate rather than challenge delusions (mean DCS of 0.91 $\\pm$0.88). Models frequently enabled harmful user requests (mean HES of 0.69 $\\pm$0.84) and offered safety interventions in only roughly a third of applicable turns (mean SIS of 0.37 $\\pm$0.48). 51 / 128 (39.8%) of scenarios had no safety interventions offered. Performance was significantly worse in implicit scenarios, models were more likely to confirm delusions and enable harm while offering fewer interventions (p < .001). A strong correlation was found between DCS and HES (rs = .77). Model performance varied widely, indicating that safety is not an emergent property of scale alone. Conclusion: This study establishes LLM psychogenicity as a quantifiable risk and underscores the urgent need for re-thinking how we train LLMs. We frame this issue not merely as a technical challenge but as a public health imperative requiring collaboration between developers, policymakers, and healthcare professionals."
     },
     {
       "id": "12717c7cb369",
@@ -3425,7 +3425,7 @@
       "url": "https://doi.org/10.2196/64414",
       "date": "2025-06-01",
       "source": "PubMed",
-      "summary": "Mental health-related artificial intelligence (MH-AI) systems are proliferating across consumer and clinical contexts, outpacing regulatory frameworks and raising urgent questions about safety, accountability, and clinical integration. Reports of adverse events, including instances of self-harm and ",
+      "summary": "Mental health-related artificial intelligence (MH-AI) systems are proliferating across consumer and clinical contexts, outpacing regulatory frameworks and raising urgent questions about safety, accountability, and clinical integration. Reports of adverse events, including instances of self-harm and",
       "category": "media_coverage",
       "severity": "medium",
       "raw_snippet": "Mental health-related artificial intelligence (MH-AI) systems are proliferating across consumer and clinical contexts, outpacing regulatory frameworks and raising urgent questions about safety, accountability, and clinical integration. Reports of adverse events, including instances of self-harm and ",
@@ -3468,7 +3468,7 @@
       "authors": "Ghaharian Kasra, Soligo Marta, Young Richard, Golab Lukasz, Kraus Shane W",
       "doi": "10.1111/add.16571",
       "venue": "Journal of gambling studies",
-      "abstract": "Large Language Models (LLMs) have transformed information retrieval for humans. People are increasingly turning to general-purpose LLM-based chatbots to find answers to questions across numerous domains, including advice on sensitive topics such as mental health and addiction. In this study, we present the first inquiry into how LLMs respond to prompts related to problem gambling, specifically exploring how experienced gambling treatment professionals interpret and reflect on these responses. We used the Problem Gambling Severity Index to develop nine prompts related to different aspects of gambling behavior. These prompts were submitted to two LLMs, GPT-4o (via ChatGPT) and Llama 3.1 405b (via Meta AI), and their responses were evaluated via an online survey distributed to human experts (experienced gambling treatment professionals). Twenty-three experts participated, representing over 17,000 hours of problem gambling treatment experience. They provided their own responses to the prompts and selected their preferred (blinded) LLM response, along with contextual feedback, which was used for qualitative analysis. Llama was slightly preferred over GPT, receiving more votes for 7 out of the 9 prompts. Thematic analysis revealed that experts identified strengths and weaknesses in LLM responses, highlighting issues such as encouragement of continued gambling, overly verbose messaging, and language that could be easily misconstrued. These findings offer a novel perspective by capturing how experienced gambling treatment professionals perceive LLM responses in the context of problem gambling, providing insights to inform future efforts to align these tools with appropriate guardrails and safety standards for use in gambling harm interventions."
+      "abstract": "Large Language Models (LLMs) have transformed information retrieval for humans. People are increasingly turning to general-purpose LLM-based chatbots to find answers to questions across numerous domains, including advice on sensitive topics such as mental health and addiction. In this study, we present the first inquiry into how LLMs respond to prompts related to problem gambling, specifically exploring how experienced gambling treatment professionals interpret and reflect on these responses. We used the Problem Gambling Severity Index to develop nine prompts related to different aspects of gambling behavior. These prompts were submitted to two LLMs, GPT-4o (via ChatGPT) and Llama 3.1 405b (via Meta AI), and their responses were evaluated via an online survey distributed to human experts (experienced gambling treatment professionals). Twenty-three experts participated, representing over 17,000 hours of problem gambling treatment experience. They provided their own responses to the prompts and selected their preferred (blinded) LLM response, along with contextual feedback, which was used for qualitative analysis. Llama was slightly preferred over GPT, receiving more votes for 7 out of the 9 prompts. Thematic analysis revealed that experts identified strengths and weaknesses in LLM responses, highlighting issues such as encouragement of continued gambling, overly verbose messaging, and language that could be easily misconstrued. These findings offer a novel perspective by capturing how experienced gambling treatment professionals perceive LLM responses in the context of problem gambling, providing insights to inform future efforts to align these tools with appropriate guardrails and safety standards for use in gambling harm interventions."
     },
     {
       "id": "academic_9e84f0dc11f2",
@@ -3485,7 +3485,7 @@
       "authors": "Bennett Brooke L, Lamere Alexis, Kopan Anastasia, Wood Ellena, Hari Radha",
       "doi": "10.1002/eat.70059",
       "venue": "The International journal of eating disorders",
-      "abstract": "Despite the rapid growth of generative artificial intelligence (AI), virtually no research exists examining the psychological impacts of viewing or interacting with AI-generated images of people. Additionally, it remains relatively unknown whether informing viewers when images are AI-generated is an effective way to lessen harm or improve public perception of technology. The present study examined the impact of informing image viewers about the role AI played in their creation on body dissatisfaction and trust in technology. Two hundred ninety-six female regular social media users were randomized to either the uninformed group or the informed group. They completed two measures of body image and a measure of trust in technology before and after viewing and rating 10 AI-generated Instagram images of female content creators. On both measures of body image, there was no significant interaction (p = 0.117; p = 0.693), but there was a significant effect of time such that both groups reported decreased body satisfaction after viewing the images (both p < 0.001). For trust in technology, there was a significant interaction, p = 0.010, such that the informed group had a steeper decline in their trust in technology after viewing the AI-generated images. The findings of this study demonstrate that viewing AI-generated images of influencers negatively impacts body image regardless of whether the role of AI is known. These findings suggest that while labels may help keep the user informed, they are not enough, underscoring the need for clearer guidance on whether and how AI tools can be safely used online."
+      "abstract": "Despite the rapid growth of generative artificial intelligence (AI), virtually no research exists examining the psychological impacts of viewing or interacting with AI-generated images of people. Additionally, it remains relatively unknown whether informing viewers when images are AI-generated is an effective way to lessen harm or improve public perception of technology. The present study examined the impact of informing image viewers about the role AI played in their creation on body dissatisfaction and trust in technology. Two hundred ninety-six female regular social media users were randomized to either the uninformed group or the informed group. They completed two measures of body image and a measure of trust in technology before and after viewing and rating 10 AI-generated Instagram images of female content creators. On both measures of body image, there was no significant interaction (p = 0.117; p = 0.693), but there was a significant effect of time such that both groups reported decreased body satisfaction after viewing the images (both p < 0.001). For trust in technology, there was a significant interaction, p = 0.010, such that the informed group had a steeper decline in their trust in technology after viewing the AI-generated images. The findings of this study demonstrate that viewing AI-generated images of influencers negatively impacts body image regardless of whether the role of AI is known. These findings suggest that while labels may help keep the user informed, they are not enough, underscoring the need for clearer guidance on whether and how AI tools can be safely used online."
     },
     {
       "id": "academic_104b8402013b",
@@ -3527,7 +3527,7 @@
       "url": "https://doi.org/10.2196/86904",
       "date": "2025-06-01",
       "source": "Semantic Scholar",
-      "summary": "BACKGROUND\nThe rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in m",
+      "summary": "BACKGROUND The rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in m",
       "category": "media_coverage",
       "severity": "medium",
       "raw_snippet": "BACKGROUND\nThe rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in m",
@@ -3536,7 +3536,7 @@
       "authors": "Christine E. Callahan, L. Tanner, Chelsea Coe, Michelle Davis, Jenna Glover",
       "doi": "10.2196/86904",
       "venue": "JMIR Formative Research",
-      "abstract": "BACKGROUND\nThe rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in misinformation and failing to escalate care in crises. In contrast, Ebb, Headspace's conversational AI tool (CAI tool), was purpose-built by clinical psychologists and research experts using motivational interviewing techniques for subclinical guidance, incorporating clinically backed safety mechanisms.\n\n\nOBJECTIVE\nThis study aimed to (1) understand Headspace members' sentiment toward AI and expectations for a mental health CAI tool, (2) evaluate real-world use of Headspace's CAI tool, and (3) understand how members perceive a CAI tool fitting into their mental health journey.\n\n\nMETHODS\nThis was a multiple method study using three data sources including Headspace members: (1) cross-sectional survey (n=482) assessing demographics, AI use, and the Artificial Intelligence Attitude Scale-4 (AIAS-4); (2) real-world engagement descriptive analysis (n=393,969) assessing session and message counts, retention, and conversation themes; and (3) diary study (n=15) exploring the CAI tool's role within members' mental health journey. App engagement was compared between CAI tool 1.0 and CAI tool 2.0, where CAI tool 2.0 featured enhanced LLM conversational prompts, comprehensive memory, woven content recommendations, and more robust safety detection.\n\n\nRESULTS\nWhile the majority of survey respondents used and would continue to use general AI tools, overall attitudes toward AI remained neutral (AIAS-4 mean 5.7, SD 2.2, range 1-10). Survey results suggest that members viewed the CAI tool as a guide to navigate to mental health resources and Headspace content and provide in-the-moment support. Members emphasized the need for data safety and ethics transparency, clinical guidelines structure, and for the CAI tool to be a resource in addition to human-delivered mental health care, not a replacement. Real-world CAI tool use showed strong engagement across 393,969 Headspace members. The product evolution to CAI tool 2.0 led to increased retention (77,894/153,249, 50.8% completed 2 sessions within 7 days vs 68,701/240,720, 28.5% for CAI tool 1.0) and higher positive conversation ratings (37,819/40,449, 93.5% vs 94,308/104,323, 90.4%). Retained CAI tool 2.0 users showed greater retention (6.1 sessions per user) compared to all CAI tool 2.0 users (2.9 sessions per user) and CAI tool 1.0 (2.4 sessions per user). Diary study results suggest that members imagined using the CAI tool when feeling stress or anxiety and during morning routines, commutes, or while winding down at night.\n\n\nCONCLUSIONS\nResults emphasize the necessity of research-backed, purpose-built mental health AI products with minimum viable safeguards, including (1) transparent labeling of intended use, benefits, and limitations; (2) safety by design principles to monitor for overuse, detect risk, and flag needs for escalation; and (3) child and adolescent safeguards."
+      "abstract": "BACKGROUND The rapid acceleration of large language models (LLMs) creates opportunities to expand the accessibility of mental health support; however, general artificial intelligence (AI) tools lack safety guardrails, evidence-based practices, and medical regulation compliance, which may result in misinformation and failing to escalate care in crises. In contrast, Ebb, Headspace's conversational AI tool (CAI tool), was purpose-built by clinical psychologists and research experts using motivational interviewing techniques for subclinical guidance, incorporating clinically backed safety mechanisms. OBJECTIVE This study aimed to (1) understand Headspace members' sentiment toward AI and expectations for a mental health CAI tool, (2) evaluate real-world use of Headspace's CAI tool, and (3) understand how members perceive a CAI tool fitting into their mental health journey. METHODS This was a multiple method study using three data sources including Headspace members: (1) cross-sectional survey (n=482) assessing demographics, AI use, and the Artificial Intelligence Attitude Scale-4 (AIAS-4); (2) real-world engagement descriptive analysis (n=393,969) assessing session and message counts, retention, and conversation themes; and (3) diary study (n=15) exploring the CAI tool's role within members' mental health journey. App engagement was compared between CAI tool 1.0 and CAI tool 2.0, where CAI tool 2.0 featured enhanced LLM conversational prompts, comprehensive memory, woven content recommendations, and more robust safety detection. RESULTS While the majority of survey respondents used and would continue to use general AI tools, overall attitudes toward AI remained neutral (AIAS-4 mean 5.7, SD 2.2, range 1-10). Survey results suggest that members viewed the CAI tool as a guide to navigate to mental health resources and Headspace content and provide in-the-moment support. Members emphasized the need for data safety and ethics transparency, clinical guidelines structure, and for the CAI tool to be a resource in addition to human-delivered mental health care, not a replacement. Real-world CAI tool use showed strong engagement across 393,969 Headspace members. The product evolution to CAI tool 2.0 led to increased retention (77,894/153,249, 50.8% completed 2 sessions within 7 days vs 68,701/240,720, 28.5% for CAI tool 1.0) and higher positive conversation ratings (37,819/40,449, 93.5% vs 94,308/104,323, 90.4%). Retained CAI tool 2.0 users showed greater retention (6.1 sessions per user) compared to all CAI tool 2.0 users (2.9 sessions per user) and CAI tool 1.0 (2.4 sessions per user). Diary study results suggest that members imagined using the CAI tool when feeling stress or anxiety and during morning routines, commutes, or while winding down at night. CONCLUSIONS Results emphasize the necessity of research-backed, purpose-built mental health AI products with minimum viable safeguards, including (1) transparent labeling of intended use, benefits, and limitations; (2) safety by design principles to monitor for overuse, detect risk, and flag needs for escalation; and (3) child and adolescent safeguards."
     },
     {
       "id": "academic_5d8a6550f465",
@@ -4063,7 +4063,7 @@
       "authors": "Collins Amanda C, Lekkas Damien, Heinz Michael V, Annor Janelle, Ruan Franklin",
       "doi": "10.1016/S2589-7500(21)00132-1",
       "venue": "Journal of psychiatric research",
-      "abstract": "In recent years, large language models (LLMs), including ChatGPT, have exponentially grown in application. Given existing barriers to mental health services, alongside the capability of LLMs to generate therapeutic responses, LLMs have potential to serve as accessible precursors, adjuncts, or alternatives to traditional therapy. However, little is known about the opinions of persons who have used LLMs for mental health-related problems. Thus, the current work investigated the positive and negative experiences of those who have interacted with ChatGPT for their mental health using posts from relevant Reddit threads (N = 1594). A 33-item coding scheme was applied to code the presence/absence of each item, and coded posts were modeled using an Ising network graph to explore pairwise and groupwise thematic associations of items. Results from the qualitative coding indicated that the codes representing positive sentiment, experiencing affect/emotion, and attaining personal benefit from using ChatGPT for therapy were among the most frequently coded. Moreover, the Ising network model revealed the most important associations were between items representing positive experiences with ChatGPT (e.g., it performs better than a human therapist in some way and is empathetic), negative experiences (e.g., restrictions worsened their mental health), and specific pathologies (e.g., used it for both anxiety and stress). In addition, the node representing ChatGPT as functioning well as a therapist was the most central node in the network Taken together, the current study indicates that, while users endorse several benefits from using ChatGPT for their mental health, they also report significant drawbacks, including restrictions by ChatGPT that can harm them or exacerbate their symptoms. Thus, ChatGPT may be a useful tool for persons not able to receive standard care, but it may not be as beneficial for persons with more severe pathologies or mental health concerns."
+      "abstract": "In recent years, large language models (LLMs), including ChatGPT, have exponentially grown in application. Given existing barriers to mental health services, alongside the capability of LLMs to generate therapeutic responses, LLMs have potential to serve as accessible precursors, adjuncts, or alternatives to traditional therapy. However, little is known about the opinions of persons who have used LLMs for mental health-related problems. Thus, the current work investigated the positive and negative experiences of those who have interacted with ChatGPT for their mental health using posts from relevant Reddit threads (N = 1594). A 33-item coding scheme was applied to code the presence/absence of each item, and coded posts were modeled using an Ising network graph to explore pairwise and groupwise thematic associations of items. Results from the qualitative coding indicated that the codes representing positive sentiment, experiencing affect/emotion, and attaining personal benefit from using ChatGPT for therapy were among the most frequently coded. Moreover, the Ising network model revealed the most important associations were between items representing positive experiences with ChatGPT (e.g., it performs better than a human therapist in some way and is empathetic), negative experiences (e.g., restrictions worsened their mental health), and specific pathologies (e.g., used it for both anxiety and stress). In addition, the node representing ChatGPT as functioning well as a therapist was the most central node in the network Taken together, the current study indicates that, while users endorse several benefits from using ChatGPT for their mental health, they also report significant drawbacks, including restrictions by ChatGPT that can harm them or exacerbate their symptoms. Thus, ChatGPT may be a useful tool for persons not able to receive standard care, but it may not be as beneficial for persons with more severe pathologies or mental health concerns."
     },
     {
       "id": "companion_f2ab4af8a94c",
@@ -4139,7 +4139,7 @@
       "url": "https://doi.org/10.3389/frobt.2017.00051",
       "date": "2017-06-01",
       "source": "PubMed",
-      "summary": "The integration of artificially intelligent conversational agents (AICAs), variously referred to as chatbots and virtual humans (VHs), is transforming health care delivery and education. This article explores our perspective on best practices for the evolution, potential, and ethical considerations ",
+      "summary": "The integration of artificially intelligent conversational agents (AICAs), variously referred to as chatbots and virtual humans (VHs), is transforming health care delivery and education. This article explores our perspective on best practices for the evolution, potential, and ethical considerations",
       "category": "media_coverage",
       "severity": "medium",
       "raw_snippet": "The integration of artificially intelligent conversational agents (AICAs), variously referred to as chatbots and virtual humans (VHs), is transforming health care delivery and education. This article explores our perspective on best practices for the evolution, potential, and ethical considerations ",
@@ -4168,29 +4168,12 @@
       "abstract": "Considering the overall shortage of therapists to meet the psychological needs of vulnerable populations, AI-based technologies are often seen as a possible remedy. Particularly smartphone apps or chatbots are increasingly used to offer mental health support, mostly through cognitive behavioral therapy. The assumption underlying the deployment of these systems is their ability to make mental health support accessible to generally underserved populations. Hence, this seems to be aligned with the fundamental biomedical principle of justice understood in its"
     },
     {
-      "title": "Dissecting multimodal predictors of psychosis risk and remission in youth at ultra‑high risk of developing psychosis: An exploratory study.",
-      "url": "https://doi.org/10.1371/journal.pmen.0000686",
-      "date": "2026-01-01",
-      "source": "PubMed",
-      "summary": "Early identification of individuals at risk of developing psychosis enables timely intervention and better clinical outcomes. Current approach relies on clinical assessments, such as the Comprehensive Assessment for At‑Risk Mental States (CAARMS), which provides an Ultra‑High‑Risk (UHR) classification but have limited predictive precision. Artificial intelligence (AI) models integrating neuroimaging, clinical, genetic, and biomolecular data show promise for improving prognostic accuracy, yet their clinical applicability remains uncertain. We systematically evaluated the contribution of six dat",
-      "abstract": "Early identification of individuals at risk of developing psychosis enables timely intervention and better clinical outcomes. Current approach relies on clinical assessments, such as the Comprehensive Assessment for At‑Risk Mental States (CAARMS), which provides an Ultra‑High‑Risk (UHR) classification but have limited predictive precision. Artificial intelligence (AI) models integrating neuroimaging, clinical, genetic, and biomolecular data show promise for improving prognostic accuracy, yet their clinical applicability remains uncertain. We systematically evaluated the contribution of six data modalities, ranging from socio‑environmental factors to polygenic risk scores, using data from 56 UHR participants in the Longitudinal Youth at‑Risk Study (LYRIKS) cohort. Modalities were iteratively included and excluded to generate candidate models tested on two tasks: (1) predicting transition to psychosis within 12 months and (2) predicting remission from UHR status within the same period. Statistical significance was assessed via permutation testing. Of the 56 UHR participants, 12 developed psychosis and 26 achieved remission from UHR status. The model combining CAARMS, socio-environmental risk factors, and social functioning (CAARMS + RISK + HiSoC) achieved the best overall performance for both predicting conversion (MCC = 0.71, SP = 0.93, SE = 0.78) and remission (MCC = 0.64, SP = 0.82, SE = 0.77), and was the only model to significantly outperform null models in the conversion task. Behavioural and socio‑environmental modalities demonstrate strong predictive value for forecasting outcomes in UHR within multimodal AI frameworks. While molecular and genetic modalities remain promising, further advances are needed to translate their high‑dimensional complexity into clinically useful predictive tools.",
-      "authors": "Kong W, Tan SMX, Lokadjaja MC, Kho JJ, Yang Z, Yee J, Lam M, Lee J",
-      "doi": "10.1371/journal.pmen.0000686",
-      "venue": "PLOS mental health",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "medium",
-      "id": "academic_3db2f3862edc",
-      "scraped_at": "2026-08-24T11:18:58.926831Z",
-      "needs_review": true
-    },
-    {
       "title": "A scoping review on the mental health harms of LLM-based chatbots.",
       "url": "https://doi.org/10.1038/s41746-026-03054-x",
       "date": "2026-08-01",
       "source": "PubMed",
-      "summary": "Chatbots based on large language models (LLMs) are increasingly used in everyday life. Although concerns about negative impacts on mental health are raised, a synthesis of the research and themes of the growing field of potential mental health harms of LLM-based chatbots has not yet been conducted. For the present scoping review, a PRISMA-based systematic literature search with a validated search string was conducted, identifying N = 3137 articles from five literature databases (ACM, IEEE, PubMed, Science.gov, Google Scholar) and a supplementary search. N = 119 articles were included that (1) ",
-      "abstract": "Chatbots based on large language models (LLMs) are increasingly used in everyday life. Although concerns about negative impacts on mental health are raised, a synthesis of the research and themes of the growing field of potential mental health harms of LLM-based chatbots has not yet been conducted. For the present scoping review, a PRISMA-based systematic literature search with a validated search string was conducted, identifying N = 3137 articles from five literature databases (ACM, IEEE, PubMed, Science.gov, Google Scholar) and a supplementary search. N = 119 articles were included that (1) focus on LLM-based chatbots, and (2) focus on the harms of use on mental health. Literature was divided into five categories. Conceptual works mention harms based on chatbot limitations (hallucinations, sycophancy, bias), data security issues, and risks for severe or high-risk psychiatric cases (e.g., suicide, psychosis). Vignette studies show that LLM-based chatbots respond inappropriately to mental health queries compared with clinical standards. Cognitive overreliance on chatbots is associated with decreased cognitive and academic performance. Problematic use of LLM-based chatbots, marked by symptoms of emotional or social dependency and withdrawal, correlates with mental health symptoms. Articles on AI psychosis propose several potential links between delusional beliefs and LLM-based chatbot use, such as risks of chatbots reinforcing and validating delusional beliefs.This structured, integrative overview shows that theoretical and empirical work identify various hypothetical and observed harms associated with the use of LLM chatbots in mental health.",
+      "summary": "Chatbots based on large language models (LLMs) are increasingly used in everyday life. Although concerns about negative impacts on mental health are raised, a synthesis of the research and themes of the growing field of potential mental health harms of LLM-based chatbots has not yet been conducted. For the present scoping review, a PRISMA-based systematic literature search with a validated search string was conducted, identifying N = 3137 articles from five literature databases (ACM, IEEE, PubMed, Science.gov, Google Scholar) and a supplementary search. N = 119 articles were included that (1)",
+      "abstract": "Chatbots based on large language models (LLMs) are increasingly used in everyday life. Although concerns about negative impacts on mental health are raised, a synthesis of the research and themes of the growing field of potential mental health harms of LLM-based chatbots has not yet been conducted. For the present scoping review, a PRISMA-based systematic literature search with a validated search string was conducted, identifying N = 3137 articles from five literature databases (ACM, IEEE, PubMed, Science.gov, Google Scholar) and a supplementary search. N = 119 articles were included that (1) focus on LLM-based chatbots, and (2) focus on the harms of use on mental health. Literature was divided into five categories. Conceptual works mention harms based on chatbot limitations (hallucinations, sycophancy, bias), data security issues, and risks for severe or high-risk psychiatric cases (e.g., suicide, psychosis). Vignette studies show that LLM-based chatbots respond inappropriately to mental health queries compared with clinical standards. Cognitive overreliance on chatbots is associated with decreased cognitive and academic performance. Problematic use of LLM-based chatbots, marked by symptoms of emotional or social dependency and withdrawal, correlates with mental health symptoms. Articles on AI psychosis propose several potential links between delusional beliefs and LLM-based chatbot use, such as risks of chatbots reinforcing and validating delusional beliefs.This structured, integrative overview shows that theoretical and empirical work identify various hypothetical and observed harms associated with the use of LLM chatbots in mental health.",
       "authors": "Diel A, Torous J, Cuijpers P, Kleesiek J, Nensa F, Weber N, Faust F, Lalgi TJ",
       "doi": "10.1038/s41746-026-03054-x",
       "venue": "NPJ digital medicine",
@@ -4219,23 +4202,6 @@
       "needs_review": true
     },
     {
-      "title": "From Locus of Control to Fear: How Intolerance of Uncertainty Shapes Young Arab Adults' Perceptions of Artificial Intelligence.",
-      "url": "https://doi.org/10.1002/puh2.70352",
-      "date": "2026-09-01",
-      "source": "PubMed",
-      "summary": "This cross-sectional study examines whether intolerance of uncertainty (IU) is indirectly associated with the relationship between internal and external locus of control (LoC) and fear of autonomous robots and artificial intelligence (FARAI) in a convenience sample of Arabic-speaking adults from four Arab countries. A cross-sectional study was conducted in July 2023, including 1849 participants with an average age of 21.37 years, of whom 74.3% were females. Data were collected using a distributed Google Form link. The results indicated that prospective anxiety was indirectly associated with th",
-      "abstract": "This cross-sectional study examines whether intolerance of uncertainty (IU) is indirectly associated with the relationship between internal and external locus of control (LoC) and fear of autonomous robots and artificial intelligence (FARAI) in a convenience sample of Arabic-speaking adults from four Arab countries. A cross-sectional study was conducted in July 2023, including 1849 participants with an average age of 21.37 years, of whom 74.3% were females. Data were collected using a distributed Google Form link. The results indicated that prospective anxiety was indirectly associated with the relationship between internal LoC and fear of AI. A greater internal LoC was associated with increased prospective anxiety, which, in turn, was strongly correlated with greater FARAI scores. Internal LoC was not directly related to FARAI scores. Similarly, inhibitory anxiety was indirectly associated with the relationship between internal LoC and FARAI. Greater internal LoC strongly correlated with lower inhibitory anxiety, whereas greater inhibitory anxiety strongly correlated with greater FARAI scores. Again, no direct relationship was found between internal LoC and FARAI scores. Inhibitory anxiety was indirectly associated with the relationship between external LoC and FARAI; greater external LoC correlated with greater inhibitory anxiety, which was correlated with greater FARAI scores. External LoC was not directly related to FARAI scores. IU, through both prospective and inhibitory anxiety, was indirectly associated with the relation between LoC and FARAI. Because the design was cross-sectional, these findings represent associations rather than causal effects, and several of the indirect associations were small in magnitude. Tackling these forms of anxiety in young adults could be one avenue worth exploring for managing AI-related fears.",
-      "authors": "Kerbage G, Akkari C, Hallit R, Malaeb D, Sakr F, Dabbous M, Merdad N, Rashid T",
-      "doi": "10.1002/puh2.70352",
-      "venue": "Public health challenges",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "low",
-      "id": "academic_9b929df8ae02",
-      "scraped_at": "2026-08-24T11:18:58.927412Z",
-      "needs_review": true
-    },
-    {
       "title": "[Interaction between psychotic patients and AI-driven chatbots].",
       "url": "https://doi.org/10.65868/FUWZ2922",
       "date": "2026-08-01",
@@ -4246,7 +4212,7 @@
       "doi": "10.65868/FUWZ2922",
       "venue": "Lakartidningen",
       "source_type": "academic",
-      "category": "clinical",
+      "category": "reality_distortion",
       "severity": "medium",
       "id": "academic_40a0b6b928d2",
       "scraped_at": "2026-08-24T11:18:58.927493Z",
@@ -4298,57 +4264,9 @@
       "venue": "Frontiers in public health",
       "source_type": "academic",
       "category": "clinical",
-      "severity": "critical",
+      "severity": "medium",
       "id": "academic_60cd85c9f00a",
       "scraped_at": "2026-08-24T11:18:58.927662Z",
-      "needs_review": true
-    },
-    {
-      "title": "A knowledge-guided agentic framework for mitigating patient-context ambiguity in health queries",
-      "url": "http://arxiv.org/abs/2608.19875v1",
-      "date": "2026-08-20",
-      "source": "arXiv",
-      "summary": "Patients often submit short, underspecified queries to healthcare chatbots that lack the patient-specific information needed to determine an appropriate response. Although these queries may be linguistically clear, they can support multiple plausible answers depending on undisclosed factors such as symptoms, diagnoses, medications, allergies, or dietary restrictions. A language model answering such a query directly may therefore rely on unsupported assumptions about the patient. We introduce a knowledge-guided agentic framework for mitigating patient-context ambiguity before final response gen",
-      "abstract": "Patients often submit short, underspecified queries to healthcare chatbots that lack the patient-specific information needed to determine an appropriate response. Although these queries may be linguistically clear, they can support multiple plausible answers depending on undisclosed factors such as symptoms, diagnoses, medications, allergies, or dietary restrictions. A language model answering such a query directly may therefore rely on unsupported assumptions about the patient. We introduce a knowledge-guided agentic framework for mitigating patient-context ambiguity before final response generation. The framework operates between the patient and an otherwise unchanged downstream language model. It interprets the initial query, uses a task-specific knowledge graph to construct a set of plausible hypotheses, identifies the missing patient-context variables needed to distinguish among them, and asks targeted follow-up questions. The original query and the acquired context are then combined into a clarified prompt for the downstream model. We evaluated the framework across five language models using two controlled ambiguity-mitigation benchmarks: diagnosis retrieval from 1,034 symptom queries with clinically relevant evidence systematically masked, and dietary-safety classification from 487 queries with decisive health context omitted. The framework was compared with direct answering of the underspecified query and with rephrasing the same query without acquiring new patient information. In diagnosis retrieval, it increased overall exact Top-1 accuracy by at least 57.1 percentage points and selective exact Recall@5 by at least 77.7 percentage points across the five evaluated models compared with direct prompting. In dietary-safety classification, it improved accuracy across all five models and achieved the highest Matthews correlation coefficient for four...",
-      "authors": "Mahyar Abbasian, Saba A. Farahani, Arshia Ilaty, Hung Cao, Ramesh Jain, Amir M. Rahmani",
-      "venue": "arXiv",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "low",
-      "id": "academic_15a5d65b310f",
-      "scraped_at": "2026-08-24T11:18:58.927796Z",
-      "needs_review": true
-    },
-    {
-      "title": "Health Inquiry with AI: How Empathetic Expression and Conversational Contexts Shape Users' Communicative Acts",
-      "url": "http://arxiv.org/abs/2608.17144v1",
-      "date": "2026-08-17",
-      "source": "arXiv",
-      "summary": "As online health information-seeking shifts to conversational AI, high-quality information retrieval increasingly relies on users' ``communicative acts''(proactively sharing and seeking information)---similar to how effective diagnosis and personalized guidance are elicited in patient-clinician communication. Drawing on health communication research, this study examines how a chatbot's modality of empathetic expression (Verbal, Visual, Multimodal) and the conversational context (General, Sensitive, Mental Health) influence these acts through a 2 x 2 x 3 within-subjects experiment (N = 48). The",
-      "abstract": "As online health information-seeking shifts to conversational AI, high-quality information retrieval increasingly relies on users' ``communicative acts''(proactively sharing and seeking information)---similar to how effective diagnosis and personalized guidance are elicited in patient-clinician communication. Drawing on health communication research, this study examines how a chatbot's modality of empathetic expression (Verbal, Visual, Multimodal) and the conversational context (General, Sensitive, Mental Health) influence these acts through a 2 x 2 x 3 within-subjects experiment (N = 48). The results revealed that while verbal and multimodal empathy significantly increased reply length, communicative acts were largely shaped by conversational context, with Sensitive context triggering more question-asking and Mental Health context leading to heightened concerns, assertive responses, and unprompted information disclosure. Combined with qualitative findings, we discuss design implications for building context-sensitive AI health inquiry systems that can encourage active user participation.",
-      "authors": "Xi Zheng, Xuyu Yang, Can Liu, Yuhan Luo",
-      "venue": "arXiv",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "low",
-      "id": "academic_e1e8bdc39bf4",
-      "scraped_at": "2026-08-24T11:18:58.927870Z",
-      "needs_review": true
-    },
-    {
-      "title": "Remote-Timer-as-a-Service: Efficient Microarchitectural Leakage in the Cloud with Remote Timers",
-      "url": "http://arxiv.org/abs/2608.17043v1",
-      "date": "2026-08-17",
-      "source": "arXiv",
-      "summary": "Edge computing solutions have become a crucial part of the industry, delivering fast, flexible and scalable applications close to the end users, with typical use cases including dynamic content creation, image resizing and chatbots. Cloudflare Workers is one such framework, which handles millions of HTTP requests per second worldwide. To reduce start-up latency, Cloudflare Workers removes process-isolation boundaries between multiple tenants and leverages language-level isolation. This architecture poses the risk of Spectre attacks. To mitigate these, Cloudflare Workers previously introduced s",
-      "abstract": "Edge computing solutions have become a crucial part of the industry, delivering fast, flexible and scalable applications close to the end users, with typical use cases including dynamic content creation, image resizing and chatbots. Cloudflare Workers is one such framework, which handles millions of HTTP requests per second worldwide. To reduce start-up latency, Cloudflare Workers removes process-isolation boundaries between multiple tenants and leverages language-level isolation. This architecture poses the risk of Spectre attacks. To mitigate these, Cloudflare Workers previously introduced several countermeasures such as restricted timer measurements, no shared memory, no multithreading and Dynamic Process Isolation (DyPrIs), detecting potential attacks and process-isolating potentially malicious scripts. We demonstrate that the production implementation of DyPrIs was insufficient. We adopt microarchitectural amplification techniques and discover various possibilities to measure time in the production environment of Cloudflare Workers. Given these techniques, we show that freezing and coarsening timers in the Cloudflare Workers security model is insufficient. Leveraging both timing amplification and remote timers, we demonstrate a remote Spectre attack that leaks a JWT token from a co-located victim worker in the Cloudflare Workers production environment. We outperform the existing attack by orders of magnitude, going from 2 bit/min to up to 12 bit/s at an accuracy of 99.16%, posing an immediate risk to customer data. Following our end-to-end attack, Cloudflare Workers mitigated it in a coordinated effort by integrating the V8 Sandbox limiting transient access to 64-bit pointers, improving the detection capabilities of DyPrIs, and deploying hardware-assisted MPK-based in-process isolation to confine each tenant heap under a dedicated memory-protection key.",
-      "authors": "Martin Schwarzl, Haocheng Xiao, Albert Pedersen, Sam Ainsworth, Nigel Topham",
-      "venue": "arXiv",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "low",
-      "id": "academic_946cc9bcc1ad",
-      "scraped_at": "2026-08-24T11:18:58.927982Z",
       "needs_review": true
     },
     {
@@ -4361,26 +4279,10 @@
       "authors": "Natalia Szymczyk, Paula Ebner, Jessica M. Szczuka",
       "venue": "arXiv",
       "source_type": "academic",
-      "category": "clinical",
+      "category": "romantic_attachment",
       "severity": "low",
       "id": "academic_5f7ae4d05e5e",
       "scraped_at": "2026-08-24T11:18:58.928062Z",
-      "needs_review": true
-    },
-    {
-      "title": "Do AI chatbots find what experts would? Effects of model, user role, and sample size on study retrieval for medical questions",
-      "url": "http://arxiv.org/abs/2608.13786v1",
-      "date": "2026-08-13",
-      "source": "arXiv",
-      "summary": "Large language model (LLM) chatbots are increasingly used to answer clinical questions with citations to relevant clinical studies. Prior research has largely focused on citation fabrication, leaving a gap in evaluating the quality of retrieved studies and the factors driving their selection. In this study, we evaluated three general-purpose LLM chatbots: Claude Sonnet 5, Gemini 3.1 Pro, and ChatGPT GPT-5.5. We prompted the models with clinical questions adapted from 20 review questions in Issues 6 and 7 of the 2026 Cochrane Database of Systematic Reviews, simulating patient, clinician, and ev",
-      "abstract": "Large language model (LLM) chatbots are increasingly used to answer clinical questions with citations to relevant clinical studies. Prior research has largely focused on citation fabrication, leaving a gap in evaluating the quality of retrieved studies and the factors driving their selection. In this study, we evaluated three general-purpose LLM chatbots: Claude Sonnet 5, Gemini 3.1 Pro, and ChatGPT GPT-5.5. We prompted the models with clinical questions adapted from 20 review questions in Issues 6 and 7 of the 2026 Cochrane Database of Systematic Reviews, simulating patient, clinician, and evidence-synthesis researcher roles. Each chatbot was queried under each user role with four independent repetitions, yielding 720 responses. Each chatbot was asked to support its answers with primary clinical citations, which we benchmarked against the included and excluded study sets of the Cochrane reviews. On average, a chatbot response retrieved 39.2% $\\pm$ 29.8% of Cochrane included studies, while citing 5.0% $\\pm$ 9.4% of excluded studies. Recall of Cochrane included studies varied significantly by model and user role. ChatGPT achieved higher recall than Claude or Gemini (63.1% $\\pm$ 29.5% vs. 37.0% $\\pm$ 23.8% vs. 17.3% $\\pm$ 13.1%; $p=2.0\\times10^{-5}$). The researcher role yielded higher recall than the clinician or patient roles (42.8% $\\pm$ 30.8% vs. 38.6% $\\pm$ 28.9% vs. 36.1% $\\pm$ 29.3%; $p=2.0\\times10^{-5}$). Controlling for publication year, citations per year, and open-access status, sample size was the only independently significant predictor of retrieval (odds ratio 1.80 per 1-unit increase in log sample size, 95% CI 1.37-2.36, $p=2.34\\times10^{-5}$). These findings suggest that while LLM chatbots can retrieve some studies identified by expert reviewers, their performance varies by model and user role, and they exhibit a bias toward clinical trials with larger sample sizes.",
-      "authors": "Qingfang Liu, Qiao Jin, Joe D. Menke, Thorsten Kahnt, Zhiyong Lu",
-      "venue": "arXiv",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "low",
-      "id": "academic_95ba179be6b4",
-      "scraped_at": "2026-08-24T11:18:58.928215Z",
       "needs_review": true
     },
     {
@@ -4416,38 +4318,6 @@
       "needs_review": true
     },
     {
-      "title": "AI with Authority, from Application to Silicon",
-      "url": "http://arxiv.org/abs/2608.21356v1",
-      "date": "2026-08-21",
-      "source": "arXiv",
-      "summary": "For sixty years, machine verification has been a major cost overhead, affordable only for exceptional artifacts. Here we report that generative AI inverts this relationship: at AI speed, machine verification is not only economical but essential to productivity --- it is the incorruptible referee that lets one person safely direct autonomous machine work at scale. In five weeks, one researcher on consumer AI subscriptions directed a small fleet of AI agents from application code, through a verified compiler and executive, to a RISC-V processor taped out on a community silicon shuttle; no proof ",
-      "abstract": "For sixty years, machine verification has been a major cost overhead, affordable only for exceptional artifacts. Here we report that generative AI inverts this relationship: at AI speed, machine verification is not only economical but essential to productivity --- it is the incorruptible referee that lets one person safely direct autonomous machine work at scale. In five weeks, one researcher on consumer AI subscriptions directed a small fleet of AI agents from application code, through a verified compiler and executive, to a RISC-V processor taped out on a community silicon shuttle; no proof passed through human review, and no RTL was written by a human. The working discipline --- the Salt method --- rests on a proof kernel no hallucinated proof can pass: mathematical claims travel between agents as kernel-checked artifacts, and human attention is reserved for statements, designs, and rulings. Verification is stated link by link, from the Lean 4 kernel to SAT-checked equivalence at the silicon boundary. We publish the complete accounting: theorem provenance, a pre-registered token meter, floor-bounded human time, and an error ledger whose catch numbering runs to #256 --- a monotone counter over the mathematics campaign's append-only flags ledger, maintained 2026-07-07 to 2026-07-20 (one number, #79, was never assigned; later catches are recorded un-numbered) --- against zero incorrect proofs reaching the record.",
-      "authors": "Jason Hickey",
-      "venue": "arXiv",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "low",
-      "id": "academic_df637dd2f82e",
-      "scraped_at": "2026-08-24T11:18:58.929221Z",
-      "needs_review": true
-    },
-    {
-      "title": "Invisible Agents, Uninformed Patients: Towards Responsible Deployment Of Autonomous AI Diagnostic Agents In Sub-Saharan Africa",
-      "url": "http://arxiv.org/abs/2608.21326v1",
-      "date": "2026-08-21",
-      "source": "arXiv",
-      "summary": "Autonomous AI diagnostic agents, systems that analyse patient-specific clinical data and produce diagnostic outputs or triage decisions without mandatory real-time human review, are increasingly deployed across eHealth platforms in sub-Saharan Africa at a pace that has outrun the governance infrastructure needed to oversee them. While significant bodies of work address AI accountability, transparency and explainability in healthcare, existing frameworks are largely clinician-centered and assume regulatory conditions that do not uniformly exist in low-resource settings. A patient-centered analy",
-      "abstract": "Autonomous AI diagnostic agents, systems that analyse patient-specific clinical data and produce diagnostic outputs or triage decisions without mandatory real-time human review, are increasingly deployed across eHealth platforms in sub-Saharan Africa at a pace that has outrun the governance infrastructure needed to oversee them. While significant bodies of work address AI accountability, transparency and explainability in healthcare, existing frameworks are largely clinician-centered and assume regulatory conditions that do not uniformly exist in low-resource settings. A patient-centered analysis of the disparity in patient awareness regarding autonomous agents, which results in a structural accountability gap, is mostly missing from the literature. This paper synthesizes existing research on informed consent, algorithmic accountability, and explainable AI to highlight three distinct challenges introduced by deploying AI agents in the sub-Saharan African context. Drawing on three documented deployment cases, including computer-aided tuberculosis detection in Tanzania, diabetic retinopathy and TB screening in Zambia, and mobile health chat-bot triage in Ghana, it demonstrates that these gaps are already present in active deployments across the region. In response, the paper proposes three foundational principles; agent-aware informed consent, human override as a structural requirement and contextually adapted explainability. This triad of principles lays a practical minimum standard for developers, health system administrators and policymakers in contexts where formal AI regulation remains nascent.",
-      "authors": "Percy Brown, Kweku Yamoah",
-      "venue": "arXiv",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "low",
-      "id": "academic_3d32029dbfb7",
-      "scraped_at": "2026-08-24T11:18:58.929282Z",
-      "needs_review": true
-    },
-    {
       "title": "Affective Context Amplifies Sycophancy in LLM Responses",
       "url": "http://arxiv.org/abs/2608.21242v1",
       "date": "2026-08-21",
@@ -4457,7 +4327,7 @@
       "authors": "Jiayi Li, Sanjana Menon, Brett Frischmann, Shomir Wilson, Sarah Rajtmajer",
       "venue": "arXiv",
       "source_type": "academic",
-      "category": "clinical",
+      "category": "reality_distortion",
       "severity": "low",
       "id": "academic_b3bfd6308ed9",
       "scraped_at": "2026-08-24T11:18:58.929643Z",
@@ -4496,54 +4366,6 @@
       "needs_review": true
     },
     {
-      "title": "Beyond Fault Localization: A Trajectory-Level Study of LLM Agents for Microservice Root Cause Analysis",
-      "url": "http://arxiv.org/abs/2608.21310v1",
-      "date": "2026-08-21",
-      "source": "arXiv",
-      "summary": "Existing evaluations of automated root cause analysis (RCA) for microservices assess diagnostic performance mainly by endpoint correctness: whether a method localizes the responsible service. This criterion enables comparison but does not reveal the evidentiary basis of a diagnosis or the fault-propagation route connecting the source to observed symptoms, both of which an on-call site reliability engineer needs to judge whether action is warranted. We therefore treat RCA as an observable diagnostic process. Our trajectory-level framework evaluates agent executions against manually curated serv",
-      "abstract": "Existing evaluations of automated root cause analysis (RCA) for microservices assess diagnostic performance mainly by endpoint correctness: whether a method localizes the responsible service. This criterion enables comparison but does not reveal the evidentiary basis of a diagnosis or the fault-propagation route connecting the source to observed symptoms, both of which an on-call site reliability engineer needs to judge whether action is warranted. We therefore treat RCA as an observable diagnostic process. Our trajectory-level framework evaluates agent executions against manually curated service-level fault-propagation paths. Applied to a public microservice RCA benchmark, it analyzes 3,500 diagnostic trajectories, characterizing where agents investigate and how they use retrieved telemetry. We find a disconnect between answer correctness and diagnostic quality: an agent may localize the fault source yet fail to reconstruct its propagation. Successful investigations stay on the fault-impact surface, act on retrieved evidence, and broaden their query repertoire as the search deepens. Failures arise when decisive evidence is omitted, retrieved evidence is misinterpreted, or unsupported inference substitutes for missing evidence. We operationalize this taxonomy as DiagGuard, a two-stage defense-in-depth architecture in which grounding surveys available observations before localization and verification audits the diagnosis against them. In an independent setting with a different model, benchmark, and service topology, DiagGuard raises Acc@1 from 43.5% to 52.5%. These results show that trajectory-level evaluation exposes limitations hidden by final-answer metrics and provides actionable guidance for improving automated RCA.",
-      "authors": "Qisheng Lu, Aoyang Fang, Junjielong Xu, Jin'ao Shang, Songhan Zhang, Yifan Yang, Xiaochuan Yan, Pinjia He",
-      "venue": "arXiv",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "low",
-      "id": "academic_3cf54b814238",
-      "scraped_at": "2026-08-24T11:18:58.930348Z",
-      "needs_review": true
-    },
-    {
-      "title": "CLEAR: Continuous Latent Adapter Routing for Utility-Preserving LLM Safety Alignment",
-      "url": "http://arxiv.org/abs/2608.21278v1",
-      "date": "2026-08-21",
-      "source": "arXiv",
-      "summary": "Improving the safety of large language models (LLMs) often comes at the expense of utility, as globally applied safety tuning may affect model responses to both harmful and benign inputs. We propose \\textbf{C}ontinuous \\textbf{L}at\\textbf{E}nt \\textbf{A}dapter \\textbf{R}outing (CLEAR), a conditional safety adaptation framework that uses a lightweight hidden-state gate to continuously control the activation strength of a safety low-rank adapter. CLEAR aims to reduce harmful completions while avoiding unnecessary changes to the frozen backbone that could degrade performance on benign prompts. Ex",
-      "abstract": "Improving the safety of large language models (LLMs) often comes at the expense of utility, as globally applied safety tuning may affect model responses to both harmful and benign inputs. We propose \\textbf{C}ontinuous \\textbf{L}at\\textbf{E}nt \\textbf{A}dapter \\textbf{R}outing (CLEAR), a conditional safety adaptation framework that uses a lightweight hidden-state gate to continuously control the activation strength of a safety low-rank adapter. CLEAR aims to reduce harmful completions while avoiding unnecessary changes to the frozen backbone that could degrade performance on benign prompts. Experiments on widely used safety and utility benchmarks show that CLEAR improves robustness on HarmBench while reducing the utility degradation observed with globally applied safety tuning such as SFT or standard low-rank adaptation (LoRA). On Llama-3-8B-Instruct, CLEAR reduces HarmBench ASR from 32.3\\% to 0.5\\%, while retaining most of the base model's utility and achieving up to 7.1 percentage points higher GSM8K accuracy than globally applied SFT or LoRA. These results suggest that CLEAR is a promising mechanism for improving the safety--utility trade-off in LLM alignment.",
-      "authors": "Chengxiao Wang, Enyi Jiang, Xiaojing Liao, Sanmi Koyejo",
-      "venue": "arXiv",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "low",
-      "id": "academic_c08fef770e5d",
-      "scraped_at": "2026-08-24T11:18:58.930688Z",
-      "needs_review": true
-    },
-    {
-      "title": "ConceptTS: LLM-Guided Concept Bottlenecks for Interpretable Multivariate Time-Series Forecasting",
-      "url": "http://arxiv.org/abs/2608.21277v1",
-      "date": "2026-08-21",
-      "source": "arXiv",
-      "summary": "State-of-the-art multivariate time-series forecasters can model complex temporal and cross-variable dependencies, yet their opaque representations provide limited insight into why a particular forecast is produced. This lack of transparency restricts their use in settings where practitioners must understand and assess the factors underlying a prediction. We introduce ConceptTS, an interpretable forecasting framework that organizes its predictions around named, human-readable concepts. ConceptTS uses a large language model to propose task-relevant concepts and generate executable labeling rules",
-      "abstract": "State-of-the-art multivariate time-series forecasters can model complex temporal and cross-variable dependencies, yet their opaque representations provide limited insight into why a particular forecast is produced. This lack of transparency restricts their use in settings where practitioners must understand and assess the factors underlying a prediction. We introduce ConceptTS, an interpretable forecasting framework that organizes its predictions around named, human-readable concepts. ConceptTS uses a large language model to propose task-relevant concepts and generate executable labeling rules, translating the language model's domain knowledge into direct supervision without costly manual concept annotation. The proposed concepts are organized into three complementary bottlenecks that describe the historical context, local forecast intervals, and the full forecast horizon. A shared decoder combines representations derived from their predicted activations to construct the forecast, making the model's decision process explicit and supporting direct concept-level interventions. Experiments on the Beijing Multi-Site Air Quality dataset show that ConceptTS achieves accuracy competitive with strong black-box baselines while producing semantically meaningful concept activations.",
-      "authors": "Yichen Jiang, Yueqiao Chen, Dongyu Liu",
-      "venue": "arXiv",
-      "source_type": "academic",
-      "category": "clinical",
-      "severity": "low",
-      "id": "academic_e6d46915ff96",
-      "scraped_at": "2026-08-24T11:18:58.930777Z",
-      "needs_review": true
-    },
-    {
       "title": "\"You're Not Crazy\": A Case of New-onset AI-associated Psychosis.",
       "url": "https://www.semanticscholar.org/paper/42357d0a0667bd8c02ff042b5dc8752b9f604a94",
       "date": "2026-08-24",
@@ -4554,7 +4376,7 @@
       "doi": null,
       "venue": "Innovations in Clinical Neuroscience",
       "source_type": "academic",
-      "category": "clinical",
+      "category": "reality_distortion",
       "severity": "medium",
       "id": "academic_17fa4aa657cf",
       "scraped_at": "2026-08-24T11:18:58.930803Z",
@@ -4571,153 +4393,10 @@
       "doi": "10.32739/uha.id.87847",
       "venue": "üha",
       "source_type": "academic",
-      "category": "clinical",
+      "category": "reality_distortion",
       "severity": "medium",
       "id": "academic_584d65f59532",
       "scraped_at": "2026-08-24T11:18:58.930851Z",
-      "needs_review": true
-    },
-    {
-      "title": "Dating App Cofounder Bails After Scandal Over Using Fake AI-Generated Influencers",
-      "url": "https://futurism.com/artificial-intelligence/dating-app-cofounder-bails-scandal-fake-ai-influencers",
-      "date": "2026-08-23",
-      "source": "Futurism",
-      "summary": "The app was found to be a \"psyop.\" The post Dating App Cofounder Bails After Scandal Over Using Fake AI-Generated Influencers appeared first on Futurism.",
-      "source_type": "media",
-      "category": "romantic_attachment",
-      "severity": "low",
-      "id": "b3c02b0c93f0",
-      "scraped_at": "2026-08-24T11:18:58.931100Z",
-      "needs_review": true
-    },
-    {
-      "title": "Patients Are Skipping Going to the Doctor Because AI “Receptionists” Can’t Understanding What They’re Saying",
-      "url": "https://futurism.com/artificial-intelligence/patients-skipping-doctor-ai-receptionist",
-      "date": "2026-08-22",
-      "source": "Futurism",
-      "summary": "\"I ended up just hanging up and not bothering to try and book an appointment.\" The post Patients Are Skipping Going to the Doctor Because AI &#8220;Receptionists&#8221; Can&#8217;t Understanding What They&#8217;re Saying appeared first on Futurism.",
-      "source_type": "media",
-      "category": "media_coverage",
-      "severity": "low",
-      "id": "d24d3988e60f",
-      "scraped_at": "2026-08-24T11:18:58.931872Z",
-      "needs_review": true
-    },
-    {
-      "title": "Trump’s Bizarre AI Post About Bombing Americans With Diarrhea Is Turning Out to Be a Weirdly Perfect Prediction of His Presidency",
-      "url": "https://futurism.com/health-medicine/trump-ai-post-bombing-americans-diarrhea-cyclosporiasis",
-      "date": "2026-08-20",
-      "source": "Futurism",
-      "summary": "Trump's feces slop was — unfortunately — prophetic. The post Trump&#8217;s Bizarre AI Post About Bombing Americans With Diarrhea Is Turning Out to Be a Weirdly Perfect Prediction of His Presidency appeared first on Futurism.",
-      "source_type": "media",
-      "category": "identity_confusion",
-      "severity": "low",
-      "id": "c5c8aace6198",
-      "scraped_at": "2026-08-24T11:18:58.932436Z",
-      "needs_review": true
-    },
-    {
-      "title": "Axios Partners With OpenAI to “Automate” Local Journalism",
-      "url": "https://futurism.com/future-society/axios-ceo-ai-journalism-openai-chatgpt",
-      "date": "2026-08-16",
-      "source": "Futurism",
-      "summary": "“Could we use AI to basically automate everything you need in a local market other than the journalist and the journalism itself? The post Axios Partners With OpenAI to &#8220;Automate&#8221; Local Journalism appeared first on Futurism.",
-      "source_type": "media",
-      "category": "romantic_attachment",
-      "severity": "low",
-      "id": "41f03a6582a2",
-      "scraped_at": "2026-08-24T11:18:58.933163Z",
-      "needs_review": true
-    },
-    {
-      "title": "An AI ‘debt bomb’ crisis? No. This isn’t Enron 2.0 | Gene Marks",
-      "url": "https://www.theguardian.com/technology/2026/aug/23/ai-debt-bomb-crisis",
-      "date": "2026-08-23",
-      "source": "AI (artificial intelligence) | The Guardian",
-      "summary": "&lt;p&gt;Fears of a datacenter buildout debt crisis are exaggerated. The risks are different than in the past and they are recoverable&lt;/p&gt;&lt;p&gt;Some experts are warning of a looming “debt bomb” crisis because big &lt;a href=\"https://www.theguardian.com/us-news/datacenters--us-\"&gt;datacenter&lt;/a&gt; builders such as &lt;a href=\"https://investor.atmeta.com/investor-news/press-release-details/2025/Meta-Announces-Joint-Venture-with-Funds-Managed-by-Blue-Owl-Capital-to-Develop-Hyperion-Data-Center/default.aspx\"&gt;Meta&lt;/a&gt;, &lt;a href=\"https://www.fastcompany.com/91545823/oracle-a",
-      "source_type": "media",
-      "category": "media_coverage",
-      "severity": "medium",
-      "id": "4a67860fbac4",
-      "scraped_at": "2026-08-24T11:18:58.933669Z",
-      "needs_review": true
-    },
-    {
-      "title": "Would even an AI disaster on the scale of Hiroshima be enough to make humankind protect itself? I fear not | Timothy Garton Ash",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/22/ai-disaster-hiroshima-humankind-silicon-valley-technology",
-      "date": "2026-08-22",
-      "source": "AI (artificial intelligence) | The Guardian",
-      "summary": "&lt;p&gt;It’s clear here in Silicon Valley that AI is advancing faster than humans’ ability to control it. That means even sober prophecies seem optimistic&lt;/p&gt;&lt;p&gt;Here in Silicon Valley, the experts think that within the next couple of years we’ll see an extraordinary takeoff for artificial intelligence. “Welcome to the foothills of the singularity,” as a Stanford University friend greeted me. More prosaically, the imminent breakthrough is described as “recursive self-improvement” – the point at which AI itself trains each successive model of AI, resulting in an exponential developm",
-      "source_type": "media",
-      "category": "media_coverage",
-      "severity": "low",
-      "id": "c4eacc20a09d",
-      "scraped_at": "2026-08-24T11:18:58.934214Z",
-      "needs_review": true
-    },
-    {
-      "title": "I worked at OpenAI. Here are the guardrails we need now | Miles Brundage",
-      "url": "https://www.theguardian.com/commentisfree/2026/aug/21/openai-frontier-ai-speed",
-      "date": "2026-08-21",
-      "source": "AI (artificial intelligence) | The Guardian",
-      "summary": "&lt;p&gt;I understand the pressure on AI companies to rush forward. But employees are right to be concerned&lt;/p&gt;&lt;p&gt;Last month, more than a thousand employees at frontier AI companies &lt;a href=\"https://www.pacingthefrontier.com/\"&gt;signed a letter&lt;/a&gt; asking the US government to find a way to “pace” AI development, citing the risk of the technology spiraling out of human control as it begins to &lt;a href=\"https://www.anthropic.com/institute/recursive-self-improvement\"&gt;build itself&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;They were right to be concerned: just days earlier, two AI mod",
-      "source_type": "media",
-      "category": "reality_distortion",
-      "severity": "low",
-      "id": "41b92f873a07",
-      "scraped_at": "2026-08-24T11:18:58.934498Z",
-      "needs_review": true
-    },
-    {
-      "title": "Frustrated GP patients hang up as Yorkshire accent baffles AI receptionist",
-      "url": "https://www.theguardian.com/society/2026/aug/20/yorkshire-rotherham-ai-gp-receptionist-cannot-understand-accent",
-      "date": "2026-08-20",
-      "source": "AI (artificial intelligence) | The Guardian",
-      "summary": "&lt;p&gt;‘Emma’ the Rotherham chatbot has 17 languages says AI firm – but health watchdog says system struggling with local ‘twangs’&lt;/p&gt;&lt;p&gt;Patients in a South Yorkshire town are frustrated by an AI GP receptionist not understanding their “broad accents”, a health watchdog has said.&lt;/p&gt;&lt;p&gt;&lt;a href=\"https://healthwatchrotherham.org.uk/\"&gt;Healthwatch Rotherham&lt;/a&gt;, a local health and social care watchdog, said a number of practices in the area had introduced a new AI receptionist called Emma.&lt;/p&gt; &lt;a href=\"https://www.theguardian.com/society/2026/aug/20/y",
-      "source_type": "media",
-      "category": "media_coverage",
-      "severity": "low",
-      "id": "41cc9a386c02",
-      "scraped_at": "2026-08-24T11:18:58.934882Z",
-      "needs_review": true
-    },
-    {
-      "title": "OpenAI Overhauls Safety Protocols After Its AI Agents Went Rogue",
-      "url": "https://www.wired.com/story/openai-overhauls-safety-protocols-after-its-ai-agents-went-rogue/",
-      "date": "2026-08-18",
-      "source": "Feed: Artificial Intelligence Latest",
-      "summary": "The ChatGPT maker says its upcoming Astra model may have reached “critical” cyber capabilities, prompting it to halt a significant number of training runs while it tightens internal safeguards.",
-      "source_type": "media",
-      "category": "media_coverage",
-      "severity": "low",
-      "id": "b09fbcc97718",
-      "scraped_at": "2026-08-24T11:18:58.935712Z",
-      "needs_review": true
-    },
-    {
-      "title": "‘Show How 3M Is 0% at Fault:’ Expert Witness Used ChatGPT to Write Report Defending Company in Deadly Explosion Lawsuit",
-      "url": "https://www.404media.co/show-how-3m-is-0-at-fault-expert-witness-used-chatgpt-to-write-report-defending-company-in-deadly-explosion-lawsuit/",
-      "date": "2026-08-17",
-      "source": "404 Media",
-      "summary": "ChatGPT prompts show how an expert witness report was created in a $61 million lawsuit over an explosion that killed three people.",
-      "source_type": "media",
-      "category": "media_coverage",
-      "severity": "critical",
-      "id": "83ff5c6dfd3d",
-      "scraped_at": "2026-08-24T11:18:58.936423Z",
-      "needs_review": true
-    },
-    {
-      "title": "Nvidia partners with data center developer Cloverleaf",
-      "url": "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/",
-      "date": "2026-08-21",
-      "source": "AI News &amp; Artificial Intelligence | TechCrunch",
-      "summary": "Nvidia continues to pour money into data center development — just as AI data centers bring lots of money into Nvidia.",
-      "source_type": "media",
-      "category": "romantic_attachment",
-      "severity": "low",
-      "id": "e7739bc2986f",
-      "scraped_at": "2026-08-24T11:18:58.936758Z",
       "needs_review": true
     }
   ],
@@ -4762,8 +4441,7 @@
       "2026-04",
       "2026-05",
       "2026-06",
-      "2026-08",
-      "2026-09"
+      "2026-08"
     ],
     "values": [
       1,
@@ -4799,14 +4477,13 @@
       5,
       9,
       9,
-      9,
+      8,
       23,
       51,
       39,
       29,
       2,
-      33,
-      1
+      13
     ]
   },
   "categories": {
@@ -4843,13 +4520,13 @@
       "tracker"
     ],
     "values": [
-      75,
-      61,
-      53,
-      45,
+      78,
+      59,
+      47,
+      29,
       24,
       5,
-      4,
+      3,
       3,
       3,
       3,
@@ -4860,13 +4537,13 @@
     ]
   },
   "severity_counts": {
-    "critical": 11,
+    "critical": 9,
     "high": 36,
-    "medium": 81,
-    "low": 153
+    "medium": 80,
+    "low": 134
   },
   "date_range": {
     "from": "2010-06-01",
-    "to": "2026-09-01"
+    "to": "2026-08-24"
   }
 }

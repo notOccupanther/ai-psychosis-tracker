@@ -13,6 +13,7 @@ partial update beats a failed run.
 """
 
 import argparse
+import html
 import json
 import os
 import re
@@ -27,8 +28,8 @@ from datetime import datetime, timedelta, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from classify import guess_category, guess_severity, is_relevant  # noqa: E402
-from common import (USER_AGENT, existing_urls, load_data, make_id,  # noqa: E402
-                    normalise_url, recompute, save_data)
+from common import (USER_AGENT, existing_urls, load_data, load_excluded,  # noqa: E402
+                    make_id, normalise_url, recompute, save_data)
 
 TIMEOUT = 20
 
@@ -52,15 +53,32 @@ SEMANTIC_SCHOLAR_QUERIES = [
     'AI companion emotional dependence',
 ]
 
-RSS_FEEDS = [
-    'https://futurism.com/feed',
-    'https://www.psypost.org/feed/',
-    'https://www.theguardian.com/technology/artificialintelligenceai/rss',
-    'https://www.wired.com/feed/tag/ai/latest/rss',
-    'https://www.technologyreview.com/feed/',
-    'https://arstechnica.com/ai/feed/',
-    'https://www.404media.co/rss/',
-    'https://techcrunch.com/category/artificial-intelligence/feed/',
+# Mapped to publisher names rather than feed titles: the feeds announce
+# themselves as things like "AI (artificial intelligence) | The Guardian", which
+# is what ends up displayed next to each case on the site.
+RSS_FEEDS = {
+    'https://futurism.com/feed': 'Futurism',
+    'https://www.psypost.org/feed/': 'PsyPost',
+    'https://www.theguardian.com/technology/artificialintelligenceai/rss': 'The Guardian',
+    'https://www.wired.com/feed/tag/ai/latest/rss': 'WIRED',
+    'https://www.technologyreview.com/feed/': 'MIT Technology Review',
+    'https://arstechnica.com/ai/feed/': 'Ars Technica',
+    'https://www.404media.co/rss/': '404 Media',
+    'https://techcrunch.com/category/artificial-intelligence/feed/': 'TechCrunch',
+}
+
+# Query-targeted news search, keyless. The general AI feeds above carry mostly
+# unrelated industry news; these are what actually surface media cases, and are
+# what the pre-2026 data was built from (its URLs point at news.google.com).
+GOOGLE_NEWS_QUERIES = [
+    '"AI psychosis"',
+    '"chatbot psychosis" OR "ChatGPT psychosis"',
+    'chatbot delusions mental health',
+    '"AI companion" harm teen OR child',
+    'chatbot linked suicide lawsuit',
+    '"AI girlfriend" OR "AI boyfriend" relationship',
+    'Character.AI OR Replika mental health',
+    'chatbot encouraged delusions family',
 ]
 
 BRAVE_QUERIES = [
@@ -81,7 +99,22 @@ def fetch(url, headers=None, timeout=TIMEOUT):
 
 
 def strip_html(text):
-    return re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '', text or '')).strip()
+    """Entity-decode, remove markup, collapse whitespace.
+
+    Feeds commonly double-encode: the description holds "&lt;p&gt;text&lt;/p&gt;"
+    rather than "<p>text</p>", so a single tag-strip pass sees no tags and the
+    markup ends up rendered as visible text on the site.
+    """
+    out = text or ''
+    # Repeat rather than assume a fixed depth: feeds vary between one and two
+    # layers of encoding, and a single pass leaves the markup visible.
+    for _ in range(3):
+        decoded = html.unescape(out)
+        stripped = re.sub(r'<[^>]+>', ' ', decoded)
+        if stripped == out:
+            break
+        out = stripped
+    return re.sub(r'\s+', ' ', out).strip()
 
 
 def tag(name, text):
@@ -213,9 +246,9 @@ def parse_date(s):
         return m.group(1) if m else ''
 
 
-def scrape_rss(feed_url, days):
+def scrape_rss(feed_url, days, source_name=None):
     content = fetch(feed_url, {'Accept': 'application/rss+xml, application/xml, text/xml, */*'}).decode('utf-8', 'replace')
-    feed_title = strip_html(tag('title', content[:3000])) or urllib.parse.urlsplit(feed_url).netloc
+    feed_title = source_name or urllib.parse.urlsplit(feed_url).netloc.removeprefix('www.')
     cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).strftime('%Y-%m-%d')
 
     out = []
@@ -237,6 +270,23 @@ def scrape_rss(feed_url, days):
             'summary': summary[:600], 'source_type': 'media',
         })
     return out
+
+
+# ── Google News search (keyless) ──────────────────────────────────────────────
+
+def scrape_google_news(query, days):
+    """Google News RSS search. Titles arrive as "Headline - Publisher"."""
+    params = urllib.parse.urlencode({'q': query, 'hl': 'en-GB', 'gl': 'GB', 'ceid': 'GB:en'})
+    entries = scrape_rss(f'https://news.google.com/rss/search?{params}', days,
+                         source_name='Google News')
+    for e in entries:
+        # Recover the real publisher so the site credits the outlet, not the feed.
+        if ' - ' in e['title']:
+            headline, _, publisher = e['title'].rpartition(' - ')
+            if headline and len(publisher) < 60:
+                e['title'] = headline.strip()
+                e['source'] = publisher.strip()
+    return entries
 
 
 # ── Brave (optional) ──────────────────────────────────────────────────────────
@@ -268,7 +318,8 @@ def collect(days):
     jobs = [(f'pubmed: {q[:45]}', scrape_pubmed, (q, days)) for q in PUBMED_QUERIES]
     jobs += [(f'arxiv: {q}', scrape_arxiv, (q,)) for q in ARXIV_QUERIES]
     jobs += [(f's2: {q}', scrape_semantic_scholar, (q, days)) for q in SEMANTIC_SCHOLAR_QUERIES]
-    jobs += [(f'rss: {urllib.parse.urlsplit(f).netloc}', scrape_rss, (f, days)) for f in RSS_FEEDS]
+    jobs += [(f'rss: {name}', scrape_rss, (url, days, name)) for url, name in RSS_FEEDS.items()]
+    jobs += [(f'news: {q[:40]}', scrape_google_news, (q, days)) for q in GOOGLE_NEWS_QUERIES]
 
     brave_key = os.environ.get('BRAVE_API_KEY', '').strip()
     if brave_key:
@@ -297,8 +348,9 @@ def main():
 
     data = load_data()
     before = len(data['cases'])
-    seen = existing_urls(data)
-    log(f'Existing cases: {before}')
+    excluded = load_excluded()
+    seen = existing_urls(data) | {normalise_url(u) for u in excluded}
+    log(f'Existing cases: {before} (plus {len(excluded)} previously rejected URLs)')
 
     candidates, failures, total = collect(args.days)
     log(f'\nFetched {len(candidates)} candidates ({total - failures}/{total} sources ok)')

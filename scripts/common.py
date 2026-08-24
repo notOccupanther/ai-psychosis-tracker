@@ -16,6 +16,7 @@ from datetime import datetime, timezone
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_PATH = os.path.join(ROOT, 'data.json')
+EXCLUDED_PATH = os.path.join(ROOT, 'excluded.json')
 
 SITE_URL = 'https://aipsychosis.watch'
 USER_AGENT = 'AIPsychosisWatch/2.0 (+https://aipsychosis.watch)'
@@ -46,6 +47,24 @@ def load_data():
 def save_data(data):
     with open(DATA_PATH, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
+        f.write('\n')
+
+
+def load_excluded():
+    """URLs reviewed and rejected as off-topic.
+
+    Without this, anything removed from data.json is simply re-scraped the
+    following week, so a human or review-pass deletion would not stick.
+    """
+    if not os.path.exists(EXCLUDED_PATH):
+        return {}
+    with open(EXCLUDED_PATH, encoding='utf-8') as f:
+        return json.load(f)
+
+
+def save_excluded(excluded):
+    with open(EXCLUDED_PATH, 'w', encoding='utf-8') as f:
+        json.dump(excluded, f, indent=2, ensure_ascii=False, sort_keys=True)
         f.write('\n')
 
 
