@@ -47,7 +47,11 @@ them by hand.
 | arXiv | no |
 | Semantic Scholar | no |
 | RSS (Guardian, Futurism, PsyPost, WIRED, MIT TR, Ars Technica, 404 Media, TechCrunch) | no |
+| Google News search (query-targeted) | no |
 | Brave News Search | `BRAVE_API_KEY` secret — skipped if absent |
+
+The general AI feeds carry mostly unrelated industry news; the Google News
+search queries are what actually surface media cases.
 
 A single source failing is logged and the run continues. If *every* source
 fails, the run refuses to write `data.json` rather than publishing an empty
@@ -55,13 +59,26 @@ tracker.
 
 ### Filtering
 
-A candidate must match an AI term **and** either a psychological-harm term or a
-relational term (`scripts/classify.py`). Requiring both keeps out articles that
-merely mention "delusion" in an unrelated context.
+A candidate must match an AI term **and** a term from a strict harm vocabulary
+(`scripts/classify.py`). Both halves are required, and the harm vocabulary
+deliberately excludes generic words: an earlier version accepted `depend`,
+`isolat`, `attach`, `vulnerable` and `harm`, which match ordinary technical
+prose. On its first live run that version scored **39% precision**, publishing a
+datacentre financing story and a microarchitectural side-channel paper as AI
+psychosis cases.
 
-Category and severity are assigned by keyword. That is deliberately coarser than
-the hand-curated labels already in `data.json` — new entries are written with
-`"needs_review": true` so a weekly Claude pass can refine them.
+`scripts/eval_cases.json` holds that run, hand-labelled, and the test suite
+asserts precision and recall against it so the regression cannot recur.
+Current: **82% precision, 93% recall** on the curated corpus.
+
+Category and severity are assigned by keyword, which is coarser than the
+hand-curated labels in `data.json` — new entries carry `"needs_review": true`
+for a weekly Claude pass to refine. Academic entries cap at `medium` severity:
+they are literature, not incidents, and a suicide-prevention paper should not
+display as a death.
+
+Entries rejected on review go into `excluded.json`. Without that list a deletion
+would simply be re-scraped the following week.
 
 ## Local use
 

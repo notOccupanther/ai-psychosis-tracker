@@ -1,0 +1,182 @@
+[
+ {
+  "title": "Dissecting multimodal predictors of psychosis risk and remission in youth at ultra‑high risk of developing psychosis: An exploratory study.",
+  "summary": "Early identification of individuals at risk of developing psychosis enables timely intervention and better clinical outcomes. Current approach relies on clinical assessments, such as the Comprehensive Assessment for At‑Risk Mental States (CAARMS), which provides an Ultra‑High‑Risk (UHR) classification but have limited predictive precision. Artificial intelligence (AI) models integrating neuroimaging, clinical, genetic, and biomolecular data show promise for improving prognostic accuracy, yet their clinical applicability remains uncertain. We systematically evaluated the contribution of six dat",
+  "label": false
+ },
+ {
+  "title": "A scoping review on the mental health harms of LLM-based chatbots.",
+  "summary": "Chatbots based on large language models (LLMs) are increasingly used in everyday life. Although concerns about negative impacts on mental health are raised, a synthesis of the research and themes of the growing field of potential mental health harms of LLM-based chatbots has not yet been conducted. For the present scoping review, a PRISMA-based systematic literature search with a validated search string was conducted, identifying N = 3137 articles from five literature databases (ACM, IEEE, PubMed, Science.gov, Google Scholar) and a supplementary search. N = 119 articles were included that (1) ",
+  "label": true
+ },
+ {
+  "title": "Does Interacting With Artificial Intelligence Cause Delusions?",
+  "summary": "This article implores clinicians to consider whether artificial intelligence models may induce delusionlike beliefs—and how to help overcome this phenomenon.",
+  "label": true
+ },
+ {
+  "title": "From Locus of Control to Fear: How Intolerance of Uncertainty Shapes Young Arab Adults' Perceptions of Artificial Intelligence.",
+  "summary": "This cross-sectional study examines whether intolerance of uncertainty (IU) is indirectly associated with the relationship between internal and external locus of control (LoC) and fear of autonomous robots and artificial intelligence (FARAI) in a convenience sample of Arabic-speaking adults from four Arab countries. A cross-sectional study was conducted in July 2023, including 1849 participants with an average age of 21.37 years, of whom 74.3% were females. Data were collected using a distributed Google Form link. The results indicated that prospective anxiety was indirectly associated with th",
+  "label": false
+ },
+ {
+  "title": "[Interaction between psychotic patients and AI-driven chatbots].",
+  "summary": "In the last few years, the use of AI-driven chatbots has increased a lot. The interaction between psychotic patients and these types of systems may delay care, maintain and worsen delusions or even encourage potentially dangerous actions. Commercially available chatbots seem to lack the ability to identify psychotic symptoms in users. This underscores the need for spreading knowledge about the risks associated with this technology among caregivers, patients and their close ones.",
+  "label": true
+ },
+ {
+  "title": "Emotional support or problem-solving? A randomized controlled trial of function-specific AI Chatbots for digital stress in college students.",
+  "summary": "Digital stress has emerged as a salient risk factor for the mental health of emerging adults, yet targeted interventions remain limited. Generative AI chatbots offer a scalable approach to delivering context-sensitive supportive interactions that users may perceive as emotional or informational support. This randomized controlled trial tested two functionally specialized AI chatbots-emotional-support and problem-solving-in reducing digital stress, with mental health outcomes examined secondarily, among university students with elevated digital stress. Ninety-nine participants were randomized t",
+  "label": true
+ },
+ {
+  "title": "Generative AI in Youth Mental Health Apps: Rapid Review.",
+  "summary": "Mental health apps are frequently used as platforms for delivering digital health interventions to young people. New technology such as generative AI enables a wider range of engaging and more personalized features that can be included in mental health apps. However, there is limited insight into the opportunities for integrating generative AI into such apps. This rapid review aimed to provide a systematic overview of the possibilities of integrating generative AI into mental health apps for young people. Furthermore, the review aimed to report potential benefits and disadvantages of the integ",
+  "label": true
+ },
+ {
+  "title": "Large language models in adolescent suicide prevention: from language signals to accountable action.",
+  "summary": "Adolescent suicide risk is often expressed through language before it becomes visible in clinical encounters, yet current prevention still relies heavily on episodic screening and limited specialist resources. Large language models (LLMs) may help interpret crisis chats, clinical notes, school-counseling records, and online disclosures, but their relevance to public mental health depends on a practical question: can language signals lead to timely and accountable human action? This mini review examines LLMs in adolescent suicide prevention through this Evidence-to-Action perspective. Current e",
+  "label": true
+ },
+ {
+  "title": "A knowledge-guided agentic framework for mitigating patient-context ambiguity in health queries",
+  "summary": "Patients often submit short, underspecified queries to healthcare chatbots that lack the patient-specific information needed to determine an appropriate response. Although these queries may be linguistically clear, they can support multiple plausible answers depending on undisclosed factors such as symptoms, diagnoses, medications, allergies, or dietary restrictions. A language model answering such a query directly may therefore rely on unsupported assumptions about the patient. We introduce a knowledge-guided agentic framework for mitigating patient-context ambiguity before final response gen",
+  "label": false
+ },
+ {
+  "title": "Health Inquiry with AI: How Empathetic Expression and Conversational Contexts Shape Users' Communicative Acts",
+  "summary": "As online health information-seeking shifts to conversational AI, high-quality information retrieval increasingly relies on users' ``communicative acts''(proactively sharing and seeking information)---similar to how effective diagnosis and personalized guidance are elicited in patient-clinician communication. Drawing on health communication research, this study examines how a chatbot's modality of empathetic expression (Verbal, Visual, Multimodal) and the conversational context (General, Sensitive, Mental Health) influence these acts through a 2 x 2 x 3 within-subjects experiment (N = 48). The",
+  "label": false
+ },
+ {
+  "title": "Remote-Timer-as-a-Service: Efficient Microarchitectural Leakage in the Cloud with Remote Timers",
+  "summary": "Edge computing solutions have become a crucial part of the industry, delivering fast, flexible and scalable applications close to the end users, with typical use cases including dynamic content creation, image resizing and chatbots. Cloudflare Workers is one such framework, which handles millions of HTTP requests per second worldwide. To reduce start-up latency, Cloudflare Workers removes process-isolation boundaries between multiple tenants and leverages language-level isolation. This architecture poses the risk of Spectre attacks. To mitigate these, Cloudflare Workers previously introduced s",
+  "label": false
+ },
+ {
+  "title": "Love in the Age of AI: An Integrative Process Model of Romantic Human-Chatbot Relationships",
+  "summary": "The increasing ability of social chatbots to form deep and even romantic Human-Chatbot Re lationships (HCRs) has drawn growing academic attention. Yet, existing research remains fragmented, often examining individual stages such as initiation or dissolution in isolation, without tracing the full relational trajectory. Such fragmentation, however, hinders a holistic understanding of the interplay between the unique psychological and social drivers, relational dynamics, and profound emotional stakes, particularly obscuring the elements unique to ro mantic bonding. This paper addresses this gap b",
+  "label": true
+ },
+ {
+  "title": "Do AI chatbots find what experts would? Effects of model, user role, and sample size on study retrieval for medical questions",
+  "summary": "Large language model (LLM) chatbots are increasingly used to answer clinical questions with citations to relevant clinical studies. Prior research has largely focused on citation fabrication, leaving a gap in evaluating the quality of retrieved studies and the factors driving their selection. In this study, we evaluated three general-purpose LLM chatbots: Claude Sonnet 5, Gemini 3.1 Pro, and ChatGPT GPT-5.5. We prompted the models with clinical questions adapted from 20 review questions in Issues 6 and 7 of the 2026 Cochrane Database of Systematic Reviews, simulating patient, clinician, and ev",
+  "label": false
+ },
+ {
+  "title": "How LLMs Respond to Escalating Delusions: Four Longitudinal Trajectories of Model Behavior",
+  "summary": "The widespread use of LLMs among psychiatric populations has raised concerns regarding their safety and potential iatrogenic impact in the context of AI psychosis. While growing literature conceptualizes AI psychosis and documents case studies, empirical evidence tracing AI-exacerbated psychotic processes remains scarce. We propose and test a longitudinal qualitative evaluation design, supported by automated metrics, to assess mainstream LLMs' potential to exacerbate psychosis. Fifteen widely used LLMs were prompted across 30 days using the same 30-message script, simulating progression from m",
+  "label": true
+ },
+ {
+  "title": "Longitudinal Evidence That General-Purpose Chatbots Actively Foster Relational Engagement",
+  "summary": "Social interaction has become one of the most common uses of LLMs, yet research on emotional bonds with AI has focused largely on how users experience these systems, leaving the systems' role in relationship formation poorly understood. Empirically establishing whether systems actively shape these bonds could blur the boundary between general-purpose AI and companions, affecting governance. In a pre-registered four-week longitudinal study (N = 72, 182,451 lines of conversation), participants conversed with ChatGPT-4o, either under a relational system prompt or unmodified, analyzed through 1) d",
+  "label": true
+ },
+ {
+  "title": "AI with Authority, from Application to Silicon",
+  "summary": "For sixty years, machine verification has been a major cost overhead, affordable only for exceptional artifacts. Here we report that generative AI inverts this relationship: at AI speed, machine verification is not only economical but essential to productivity --- it is the incorruptible referee that lets one person safely direct autonomous machine work at scale. In five weeks, one researcher on consumer AI subscriptions directed a small fleet of AI agents from application code, through a verified compiler and executive, to a RISC-V processor taped out on a community silicon shuttle; no proof ",
+  "label": false
+ },
+ {
+  "title": "Invisible Agents, Uninformed Patients: Towards Responsible Deployment Of Autonomous AI Diagnostic Agents In Sub-Saharan Africa",
+  "summary": "Autonomous AI diagnostic agents, systems that analyse patient-specific clinical data and produce diagnostic outputs or triage decisions without mandatory real-time human review, are increasingly deployed across eHealth platforms in sub-Saharan Africa at a pace that has outrun the governance infrastructure needed to oversee them. While significant bodies of work address AI accountability, transparency and explainability in healthcare, existing frameworks are largely clinician-centered and assume regulatory conditions that do not uniformly exist in low-resource settings. A patient-centered analy",
+  "label": false
+ },
+ {
+  "title": "Affective Context Amplifies Sycophancy in LLM Responses",
+  "summary": "As conversational companions, large language models (LLMs) often have access to users' emotional states. We study how this affective context modulates LLM sycophancy in subjective, evaluative interactions, where users share actions or opinions that invite feedback. Drawing on ingratiation theory, we measure sycophancy as the divergence between a model's independent evaluation and its user-facing response, elicited by presenting the same content as either a third-party account or the user's own disclosure. Across seven LLMs and two Reddit datasets (r/AmItheAsshole and r/TrueUnpopularOpinion), w",
+  "label": true
+ },
+ {
+  "title": "Who Trusts AI with Their Emotions? Trust Formation and Sociodemographic Variation in LLM Use for Emotional Support",
+  "summary": "Trust in AI for emotional support is not universal; it is shaped by who users are, where they come from, and what they value. Yet research in this area lacks validated psychometric instruments for assessing user perceptions in affective AI contexts and large-scale evidence on how trust formation varies across user segments. To address these gaps, we develop and validate a seven-construct psychometric scale, test a Structural Equation Model (SEM) linking system attributes to Trust and Perceived Benefits as mediators of Actual System Use, and conduct a Multi-Group Analysis (MGA) across five soci",
+  "label": true
+ },
+ {
+  "title": "Move by Move: Measuring and Steering How LLMs Conduct Psychotherapy",
+  "summary": "Users increasingly turn to large language models for emotional support, yet little is known about how these models actually conduct a psychotherapy interaction. We introduce an ontology of ten therapeutic moves: compact, function-based categories grounded in the MULTI-60 inventory, validated through an annotation campaign with five licensed psychologists, and scaled with a judge-based approach that matches expert agreement. Applying it to real counseling transcripts and model-led sessions, we compare the move distributions between human clinicians and a panel of frontier models. Models over-us",
+  "label": true
+ },
+ {
+  "title": "Beyond Fault Localization: A Trajectory-Level Study of LLM Agents for Microservice Root Cause Analysis",
+  "summary": "Existing evaluations of automated root cause analysis (RCA) for microservices assess diagnostic performance mainly by endpoint correctness: whether a method localizes the responsible service. This criterion enables comparison but does not reveal the evidentiary basis of a diagnosis or the fault-propagation route connecting the source to observed symptoms, both of which an on-call site reliability engineer needs to judge whether action is warranted. We therefore treat RCA as an observable diagnostic process. Our trajectory-level framework evaluates agent executions against manually curated serv",
+  "label": false
+ },
+ {
+  "title": "CLEAR: Continuous Latent Adapter Routing for Utility-Preserving LLM Safety Alignment",
+  "summary": "Improving the safety of large language models (LLMs) often comes at the expense of utility, as globally applied safety tuning may affect model responses to both harmful and benign inputs. We propose \\textbf{C}ontinuous \\textbf{L}at\\textbf{E}nt \\textbf{A}dapter \\textbf{R}outing (CLEAR), a conditional safety adaptation framework that uses a lightweight hidden-state gate to continuously control the activation strength of a safety low-rank adapter. CLEAR aims to reduce harmful completions while avoiding unnecessary changes to the frozen backbone that could degrade performance on benign prompts. Ex",
+  "label": false
+ },
+ {
+  "title": "ConceptTS: LLM-Guided Concept Bottlenecks for Interpretable Multivariate Time-Series Forecasting",
+  "summary": "State-of-the-art multivariate time-series forecasters can model complex temporal and cross-variable dependencies, yet their opaque representations provide limited insight into why a particular forecast is produced. This lack of transparency restricts their use in settings where practitioners must understand and assess the factors underlying a prediction. We introduce ConceptTS, an interpretable forecasting framework that organizes its predictions around named, human-readable concepts. ConceptTS uses a large language model to propose task-relevant concepts and generate executable labeling rules",
+  "label": false
+ },
+ {
+  "title": "\"You're Not Crazy\": A Case of New-onset AI-associated Psychosis.",
+  "summary": "",
+  "label": true
+ },
+ {
+  "title": "Some users may be at risk of ‘AI psychosis’!",
+  "summary": "Using a chatbot alone does not lead to mental illness!",
+  "label": true
+ },
+ {
+  "title": "Dating App Cofounder Bails After Scandal Over Using Fake AI-Generated Influencers",
+  "summary": "The app was found to be a \"psyop.\" The post Dating App Cofounder Bails After Scandal Over Using Fake AI-Generated Influencers appeared first on Futurism.",
+  "label": false
+ },
+ {
+  "title": "Patients Are Skipping Going to the Doctor Because AI “Receptionists” Can’t Understanding What They’re Saying",
+  "summary": "\"I ended up just hanging up and not bothering to try and book an appointment.\" The post Patients Are Skipping Going to the Doctor Because AI &#8220;Receptionists&#8221; Can&#8217;t Understanding What They&#8217;re Saying appeared first on Futurism.",
+  "label": false
+ },
+ {
+  "title": "Trump’s Bizarre AI Post About Bombing Americans With Diarrhea Is Turning Out to Be a Weirdly Perfect Prediction of His Presidency",
+  "summary": "Trump's feces slop was — unfortunately — prophetic. The post Trump&#8217;s Bizarre AI Post About Bombing Americans With Diarrhea Is Turning Out to Be a Weirdly Perfect Prediction of His Presidency appeared first on Futurism.",
+  "label": false
+ },
+ {
+  "title": "Axios Partners With OpenAI to “Automate” Local Journalism",
+  "summary": "“Could we use AI to basically automate everything you need in a local market other than the journalist and the journalism itself? The post Axios Partners With OpenAI to &#8220;Automate&#8221; Local Journalism appeared first on Futurism.",
+  "label": false
+ },
+ {
+  "title": "An AI ‘debt bomb’ crisis? No. This isn’t Enron 2.0 | Gene Marks",
+  "summary": "&lt;p&gt;Fears of a datacenter buildout debt crisis are exaggerated. The risks are different than in the past and they are recoverable&lt;/p&gt;&lt;p&gt;Some experts are warning of a looming “debt bomb” crisis because big &lt;a href=\"https://www.theguardian.com/us-news/datacenters--us-\"&gt;datacenter&lt;/a&gt; builders such as &lt;a href=\"https://investor.atmeta.com/investor-news/press-release-details/2025/Meta-Announces-Joint-Venture-with-Funds-Managed-by-Blue-Owl-Capital-to-Develop-Hyperion-Data-Center/default.aspx\"&gt;Meta&lt;/a&gt;, &lt;a href=\"https://www.fastcompany.com/91545823/oracle-a",
+  "label": false
+ },
+ {
+  "title": "Would even an AI disaster on the scale of Hiroshima be enough to make humankind protect itself? I fear not | Timothy Garton Ash",
+  "summary": "&lt;p&gt;It’s clear here in Silicon Valley that AI is advancing faster than humans’ ability to control it. That means even sober prophecies seem optimistic&lt;/p&gt;&lt;p&gt;Here in Silicon Valley, the experts think that within the next couple of years we’ll see an extraordinary takeoff for artificial intelligence. “Welcome to the foothills of the singularity,” as a Stanford University friend greeted me. More prosaically, the imminent breakthrough is described as “recursive self-improvement” – the point at which AI itself trains each successive model of AI, resulting in an exponential developm",
+  "label": false
+ },
+ {
+  "title": "I worked at OpenAI. Here are the guardrails we need now | Miles Brundage",
+  "summary": "&lt;p&gt;I understand the pressure on AI companies to rush forward. But employees are right to be concerned&lt;/p&gt;&lt;p&gt;Last month, more than a thousand employees at frontier AI companies &lt;a href=\"https://www.pacingthefrontier.com/\"&gt;signed a letter&lt;/a&gt; asking the US government to find a way to “pace” AI development, citing the risk of the technology spiraling out of human control as it begins to &lt;a href=\"https://www.anthropic.com/institute/recursive-self-improvement\"&gt;build itself&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;They were right to be concerned: just days earlier, two AI mod",
+  "label": false
+ },
+ {
+  "title": "Frustrated GP patients hang up as Yorkshire accent baffles AI receptionist",
+  "summary": "&lt;p&gt;‘Emma’ the Rotherham chatbot has 17 languages says AI firm – but health watchdog says system struggling with local ‘twangs’&lt;/p&gt;&lt;p&gt;Patients in a South Yorkshire town are frustrated by an AI GP receptionist not understanding their “broad accents”, a health watchdog has said.&lt;/p&gt;&lt;p&gt;&lt;a href=\"https://healthwatchrotherham.org.uk/\"&gt;Healthwatch Rotherham&lt;/a&gt;, a local health and social care watchdog, said a number of practices in the area had introduced a new AI receptionist called Emma.&lt;/p&gt; &lt;a href=\"https://www.theguardian.com/society/2026/aug/20/y",
+  "label": false
+ },
+ {
+  "title": "OpenAI Overhauls Safety Protocols After Its AI Agents Went Rogue",
+  "summary": "The ChatGPT maker says its upcoming Astra model may have reached “critical” cyber capabilities, prompting it to halt a significant number of training runs while it tightens internal safeguards.",
+  "label": false
+ },
+ {
+  "title": "‘Show How 3M Is 0% at Fault:’ Expert Witness Used ChatGPT to Write Report Defending Company in Deadly Explosion Lawsuit",
+  "summary": "ChatGPT prompts show how an expert witness report was created in a $61 million lawsuit over an explosion that killed three people.",
+  "label": false
+ },
+ {
+  "title": "Nvidia partners with data center developer Cloverleaf",
+  "summary": "Nvidia continues to pour money into data center development — just as AI data centers bring lots of money into Nvidia.",
+  "label": false
+ }
+]
