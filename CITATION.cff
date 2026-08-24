@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+title: "AI Psychosis Watch"
+message: "If you use this dataset, please cite it and record your access date — the data changes weekly."
+type: dataset
+authors:
+  - name: "AI Psychosis Watch"
+    website: "https://aipsychosis.watch"
+repository-code: "https://github.com/notOccupanther/ai-psychosis-tracker"
+url: "https://aipsychosis.watch"
+abstract: >-
+  A weekly-updated record of reported psychological harm associated with
+  conversational AI systems — delusional reinforcement, distorted reality
+  testing, identity confusion, paranoia and dependent attachment — alongside the
+  clinical and research literature examining those phenomena. Entries document
+  reports rather than verified diagnoses, and counts reflect coverage rather
+  than incidence.
+keywords:
+  - AI psychosis
+  - chatbot harm
+  - mental health
+  - human-AI interaction
+  - parasocial attachment
+  - AI safety
+license: CC-BY-4.0

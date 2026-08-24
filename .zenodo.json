@@ -1,0 +1,21 @@
+{
+  "title": "AI Psychosis Watch — dataset of reported AI-associated psychological harm",
+  "upload_type": "dataset",
+  "access_right": "open",
+  "license": "cc-by-4.0",
+  "creators": [
+    { "name": "AI Psychosis Watch" }
+  ],
+  "description": "<p>A weekly-updated record of reported psychological harm associated with conversational AI systems: delusional reinforcement, distorted reality testing, identity confusion, paranoia and dependent attachment, alongside the clinical and research literature examining those phenomena.</p><p>Entries document <em>reports</em> rather than verified clinical diagnoses. Counts reflect media and research <em>coverage</em>, not population incidence. Full inclusion criteria, classification scheme and limitations are documented at <a href=\"https://aipsychosis.watch/methodology.html\">aipsychosis.watch/methodology.html</a>.</p>",
+  "keywords": [
+    "AI psychosis",
+    "chatbot harm",
+    "mental health",
+    "human-AI interaction",
+    "parasocial attachment",
+    "AI safety"
+  ],
+  "related_identifiers": [
+    { "identifier": "https://aipsychosis.watch", "relation": "isSupplementTo", "scheme": "url" }
+  ]
+}

@@ -16,6 +16,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 import classify  # noqa: E402
 import common  # noqa: E402
+import generate_sitemap  # noqa: E402
 import scrape  # noqa: E402
 
 ARXIV_FIXTURE = b'''<?xml version="1.0" encoding="UTF-8"?>
@@ -271,6 +272,30 @@ class TestParsers(unittest.TestCase):
         got = self.parse(S2_FIXTURE, scrape.scrape_semantic_scholar, 'q', 100000)
         self.assertEqual(got[0]['url'], 'https://doi.org/10.1000/xyz')
         self.assertEqual(got[1]['url'], 'https://www.semanticscholar.org/paper/def')
+
+
+class TestSitemap(unittest.TestCase):
+    def test_lists_every_page_with_a_lastmod(self):
+        import xml.etree.ElementTree as ET
+        generate_sitemap.main()
+        ns = {'s': 'http://www.sitemaps.org/schemas/sitemap/0.9'}
+        root = ET.parse(os.path.join(common.ROOT, 'sitemap.xml')).getroot()
+        urls = root.findall('s:url', ns)
+        self.assertEqual(len(urls), len(generate_sitemap.PAGES))
+        expected = (common.load_data()['generated_at'] or '')[:10]
+        for u in urls:
+            self.assertTrue(u.findtext('s:loc', namespaces=ns).startswith(common.SITE_URL))
+            self.assertEqual(u.findtext('s:lastmod', namespaces=ns), expected,
+                             'crawlers need a real lastmod to know the data changed')
+
+    def test_methodology_page_is_listed_and_exists(self):
+        self.assertIn('methodology.html', [p for p, _, _ in generate_sitemap.PAGES])
+        self.assertTrue(os.path.exists(os.path.join(common.ROOT, 'methodology.html')))
+
+    def test_site_links_to_methodology(self):
+        with open(os.path.join(common.ROOT, 'index.html'), encoding='utf-8') as f:
+            self.assertIn('methodology.html', f.read(),
+                          'an unlinked methodology page will not be found')
 
 
 class TestExclusions(unittest.TestCase):

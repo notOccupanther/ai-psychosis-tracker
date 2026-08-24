@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Methodology — AI Psychosis Watch</title>
+  <link rel="canonical" href="https://aipsychosis.watch/methodology.html" />
+  <meta name="description" content="How AI Psychosis Watch collects, classifies and publishes cases — inclusion criteria, sources, severity scale, and known limitations." />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><rect width='80' height='80' rx='16' fill='%236366f1'/><text x='40' y='52' text-anchor='middle' font-family='Inter,system-ui,sans-serif' font-weight='800' font-size='26' fill='white' letter-spacing='-1'>APW</text></svg>" />
+  <link rel="alternate" type="application/rss+xml" title="AI Psychosis Watch" href="https://aipsychosis.watch/feed.xml" />
+  <style>
+    :root {
+      --bg:#0e1018; --surface:#13161f; --surface2:#181c27; --surface3:#1e2333;
+      --border:#262c3d; --text:#e2e8f0; --muted:#8892a4; --accent:#6366f1;
+      --accent2:#818cf8; --high:#ef4444; --medium:#f59e0b; --low:#22c55e;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; background:var(--bg); color:var(--text);
+      font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+      line-height:1.7; -webkit-font-smoothing:antialiased;
+    }
+    .wrap { max-width:760px; margin:0 auto; padding:2.5rem 1.25rem 4rem; }
+    a { color:var(--accent2); }
+    .back { display:inline-block; color:var(--muted); text-decoration:none; font-size:0.85rem; margin-bottom:2rem; }
+    .back:hover { color:var(--accent2); }
+    h1 { font-size:clamp(1.8rem,4vw,2.4rem); line-height:1.2; letter-spacing:-0.02em; margin:0 0 0.5rem; }
+    .lede { color:var(--muted); font-size:1.02rem; margin:0 0 2.5rem; }
+    h2 {
+      font-size:1.15rem; letter-spacing:-0.01em; margin:2.75rem 0 0.75rem;
+      padding-top:1.5rem; border-top:1px solid var(--border);
+    }
+    h3 { font-size:0.95rem; margin:1.75rem 0 0.5rem; color:var(--accent2); }
+    p, li { color:#c8d1de; }
+    ul { padding-left:1.15rem; }
+    li { margin-bottom:0.4rem; }
+    code {
+      background:var(--surface3); border:1px solid var(--border); border-radius:0.25rem;
+      padding:0.1rem 0.35rem; font-size:0.85em; font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    }
+    table { width:100%; border-collapse:collapse; margin:1rem 0; font-size:0.9rem; }
+    th, td { text-align:left; padding:0.6rem 0.75rem; border-bottom:1px solid var(--border); vertical-align:top; }
+    th { color:var(--muted); font-weight:600; font-size:0.78rem; text-transform:uppercase; letter-spacing:0.06em; }
+    .tw { overflow-x:auto; }
+    .note {
+      background:var(--surface2); border:1px solid var(--border); border-left:3px solid var(--accent);
+      border-radius:0.4rem; padding:1rem 1.15rem; margin:1.5rem 0; font-size:0.93rem;
+    }
+    .note.warn { border-left-color:var(--medium); }
+    .note strong { color:var(--text); }
+    .sev { display:inline-block; padding:0.1rem 0.5rem; border-radius:0.3rem; font-size:0.75rem; font-weight:700; }
+    .s-critical { background:rgba(239,68,68,0.15); color:#ef4444; }
+    .s-high { background:rgba(239,68,68,0.12); color:#f87171; }
+    .s-medium { background:rgba(245,158,11,0.15); color:var(--medium); }
+    .s-low { background:rgba(34,197,94,0.13); color:var(--low); }
+    .stats { display:flex; gap:0.75rem; flex-wrap:wrap; margin:1.25rem 0 0; }
+    .stat { background:var(--surface2); border:1px solid var(--border); border-radius:0.5rem; padding:0.75rem 1rem; }
+    .stat b { display:block; font-size:1.35rem; letter-spacing:-0.02em; }
+    .stat span { color:var(--muted); font-size:0.72rem; text-transform:uppercase; letter-spacing:0.07em; }
+    footer { border-top:1px solid var(--border); margin-top:3rem; padding-top:1.5rem; color:var(--muted); font-size:0.85rem; }
+    footer a { color:var(--accent2); text-decoration:none; }
+    footer a:hover { text-decoration:underline; }
+  </style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="/">← Back to the tracker</a>
+
+  <h1>Methodology</h1>
+  <p class="lede">How cases reach this tracker, how they are classified, and — importantly — what the data cannot tell you.</p>
+
+  <div class="stats" id="stats"></div>
+
+  <h2>What this tracks</h2>
+  <p>
+    AI Psychosis Watch documents <strong>reported instances of psychological harm associated with
+    conversational AI systems</strong>: delusional reinforcement, distorted reality-testing, identity
+    confusion, paranoia, and romantic or dependent attachment to chatbots — together with the
+    clinical and research literature examining those phenomena.
+  </p>
+  <p>
+    A "case" here is <em>a documented report</em>, not a verified clinical diagnosis. Most entries are
+    journalism or peer-reviewed literature. The tracker records that something was reported by a
+    credible source; it does not independently verify the clinical facts of any individual account.
+  </p>
+
+  <div class="note warn">
+    <strong>This tracker documents harm because harm is what is verifiable.</strong> Positive or
+    neutral outcomes do not appear in court filings, case reports or news investigations. Nothing
+    here should be read as a claim that harm outweighs benefit across AI use generally — it is a
+    record of what can be systematically tracked.
+  </div>
+
+  <h2>Inclusion criteria</h2>
+  <p>An item is included when it meets <em>both</em> conditions:</p>
+  <ul>
+    <li>It concerns an AI system capable of conversation — a chatbot, assistant, or companion app.</li>
+    <li>It concerns psychological harm to a person, or research into that harm.</li>
+  </ul>
+  <p>Requiring both is deliberate. Material excluded on this basis includes:</p>
+  <ul>
+    <li>General AI industry, policy or business news, however prominent.</li>
+    <li>Research using machine learning <em>to study or treat</em> mental illness, where the AI is a tool rather than a possible cause of harm.</li>
+    <li>AI safety and alignment work with no human psychological dimension.</li>
+    <li>Misuse of AI with no psychological harm — fabricated legal filings, deepfakes, plagiarism.</li>
+  </ul>
+  <p>
+    Items reviewed and rejected are recorded in
+    <a href="https://github.com/notOccupanther/ai-psychosis-tracker/blob/main/excluded.json">excluded.json</a>
+    so that a rejection persists and the same item is not re-added on a later run.
+  </p>
+
+  <h2>Sources</h2>
+  <div class="tw">
+  <table>
+    <tr><th>Source</th><th>Type</th><th>What it contributes</th></tr>
+    <tr><td>PubMed</td><td>Academic</td><td>Indexed biomedical and psychiatric literature</td></tr>
+    <tr><td>Europe PMC</td><td>Academic</td><td>Wider journal coverage plus preprints (medRxiv, PsyArXiv)</td></tr>
+    <tr><td>OpenAlex</td><td>Academic</td><td>Broad scholarly index across disciplines</td></tr>
+    <tr><td>Semantic Scholar</td><td>Academic</td><td>Cross-disciplinary coverage</td></tr>
+    <tr><td>arXiv</td><td>Preprint</td><td>Computer science and HCI work, often months ahead of publication</td></tr>
+    <tr><td>Google News search</td><td>Media</td><td>Query-targeted reporting across outlets</td></tr>
+    <tr><td>Publisher feeds</td><td>Media</td><td>Guardian, Futurism, PsyPost, WIRED, MIT Technology Review, Ars Technica, 404 Media, TechCrunch</td></tr>
+  </table>
+  </div>
+  <p>
+    All sources are queried weekly. A source that fails is logged and skipped; if every source fails,
+    the run refuses to write rather than publish an empty tracker.
+  </p>
+
+  <h2>Classification</h2>
+  <h3>Categories</h3>
+  <p>
+    Each case is assigned one category: <code>reality_distortion</code>,
+    <code>romantic_attachment</code>, <code>identity_confusion</code>, <code>paranoia</code>,
+    <code>clinical</code>, <code>media_coverage</code>, or <code>other</code>. Categories are
+    single-assignment and therefore lossy — a case involving both romantic attachment and delusion
+    is filed under one heading.
+  </p>
+
+  <h3>Severity</h3>
+  <div class="tw">
+  <table>
+    <tr><th>Level</th><th>Meaning</th></tr>
+    <tr><td><span class="sev s-critical">Critical</span></td><td>A death occurred — suicide, homicide, or fatal violence</td></tr>
+    <tr><td><span class="sev s-high">High</span></td><td>Hospitalisation, involuntary commitment, arrest, or litigation</td></tr>
+    <tr><td><span class="sev s-medium">Medium</span></td><td>Documented psychological disturbance without those outcomes</td></tr>
+    <tr><td><span class="sev s-low">Low</span></td><td>Commentary, analysis, or research without an individual incident</td></tr>
+  </table>
+  </div>
+  <p>
+    Academic entries are capped at <span class="sev s-medium">Medium</span>. A study <em>of</em>
+    suicide is literature, not a death, and should not inflate the critical count.
+  </p>
+
+  <h3>How classification happens</h3>
+  <p>
+    Candidates are matched by keyword, then flagged <code>needs_review</code> and revisited in a
+    weekly review pass that corrects categories and severity and removes false positives. Keyword
+    matching alone is not sufficient for this material, and the tracker does not pretend otherwise.
+  </p>
+
+  <h2>Limitations</h2>
+  <div class="note warn">
+    <strong>The trend chart measures coverage, not incidence.</strong> A rise reflects more
+    <em>reporting</em> being found, which is a function of media attention, research output, and
+    which sources this tracker queries. It is not a measurement of how often AI-associated
+    psychological harm occurs in the population. Adding a source produces a step change in the
+    series that has nothing to do with the underlying phenomenon.
+  </div>
+  <ul>
+    <li><strong>Language and geography.</strong> Sources are English-language and skew heavily toward the US, UK and Ireland. Harm reported in other languages is largely invisible here.</li>
+    <li><strong>Automated precision.</strong> Roughly one in six newly scraped items is off-topic before review. Items on the site have passed review, but the pipeline is not self-sufficient.</li>
+    <li><strong>Reporting bias.</strong> Severe and unusual cases attract coverage. Ordinary distress does not.</li>
+    <li><strong>Dates.</strong> The date is publication date, not the date the harm occurred, which is frequently much earlier.</li>
+    <li><strong>Duplication.</strong> Syndicated stories are de-duplicated by URL, so the same event carried by several outlets may appear more than once.</li>
+    <li><strong>No causal claim.</strong> Inclusion records an association reported by a source. It does not assert that an AI system caused an outcome.</li>
+  </ul>
+
+  <h2>Data and reuse</h2>
+  <p>
+    The full dataset is available as
+    <a href="/data.json">data.json</a>, updated weekly, with an
+    <a href="/feed.xml">RSS feed</a> of recent additions. The pipeline that produces it is open
+    source at
+    <a href="https://github.com/notOccupanther/ai-psychosis-tracker">github.com/notOccupanther/ai-psychosis-tracker</a>,
+    including the exact inclusion vocabulary and its measured precision and recall.
+  </p>
+  <p>
+    Corrections are welcome and taken seriously. If an entry is wrong, miscategorised, or should not
+    be listed, please write to
+    <a href="mailto:contact@aipsychosis.watch">contact@aipsychosis.watch</a>.
+  </p>
+
+  <h2>Citation</h2>
+  <p>
+    Cite the dataset as: <em>AI Psychosis Watch. aipsychosis.watch. Accessed [date].</em>
+    Machine-readable citation metadata is in
+    <a href="https://github.com/notOccupanther/ai-psychosis-tracker/blob/main/CITATION.cff">CITATION.cff</a>.
+    Because the dataset changes weekly, please record the access date and, where possible, the
+    <code>generated_at</code> timestamp from <code>data.json</code>.
+  </p>
+
+  <footer>
+    <a href="/">← Back to the tracker</a> ·
+    <a href="/data.json">Raw JSON</a> ·
+    <a href="/feed.xml">RSS</a> ·
+    <a href="mailto:contact@aipsychosis.watch">Contact</a>
+  </footer>
+</div>
+
+<script>
+  // Live figures rather than numbers baked in at publication time.
+  fetch('data.json?t=' + Date.now())
+    .then(function (r) { return r.json(); })
+    .then(function (d) {
+      var sources = new Set(d.cases.map(function (c) { return c.source; })).size;
+      var academic = d.cases.filter(function (c) { return c.source_type === 'academic'; }).length;
+      var range = d.date_range || {};
+      var tiles = [
+        [d.total_cases, 'Cases'],
+        [academic, 'Academic'],
+        [sources, 'Sources'],
+        [(range.from || '').slice(0, 4) + '–' + (range.to || '').slice(0, 4), 'Span']
+      ];
+      document.getElementById('stats').innerHTML = tiles.map(function (t) {
+        return '<div class="stat"><b>' + t[0] + '</b><span>' + t[1] + '</span></div>';
+      }).join('');
+    })
+    .catch(function () { /* the page stands on its own without the figures */ });
+</script>
+</body>
+</html>
