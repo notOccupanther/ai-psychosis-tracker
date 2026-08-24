@@ -15,7 +15,9 @@ the site to silently stop updating after 31 May 2026.
 1. `scripts/test_pipeline.py` — offline test suite, runs first so a broken
    parser fails the job before any network call.
 2. `scripts/scrape.py` — fetches candidates, filters, appends to `data.json`.
-3. `scripts/generate_rss.py` — regenerates `feed.xml`.
+3. `scripts/generate_rss.py` and `scripts/generate_sitemap.py` — regenerate
+   `feed.xml` and `sitemap.xml` (the sitemap carries a real `lastmod` so
+   crawlers can see the data changes weekly).
 4. Commits and pushes, which triggers the GitHub Pages build.
 
 Run it by hand from the Actions tab ("Weekly update" → Run workflow). It takes a
@@ -106,6 +108,22 @@ python scripts/generate_rss.py            # rebuild feed.xml
 ```
 
 Python 3.11+, standard library only.
+
+## Citation and archiving
+
+`methodology.html` documents inclusion criteria, the classification scheme and
+the limitations of the data — including that counts measure coverage, not
+incidence. Keep it current when the pipeline changes; it is what makes the
+dataset citable.
+
+`CITATION.cff` and `.zenodo.json` carry the citation metadata. Pushing a tag
+matching `v*` triggers `.github/workflows/release.yml`, which publishes a GitHub
+Release with `data.json`, `feed.xml` and `excluded.json` attached.
+
+**Zenodo requires one manual step before the first release**: sign in at
+[zenodo.org](https://zenodo.org) with GitHub and enable this repository. Zenodo
+then archives each subsequent release and mints a DOI for it. Releases created
+before that switch is flipped are not archived.
 
 ## Maintenance notes
 

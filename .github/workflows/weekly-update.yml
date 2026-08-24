@@ -46,20 +46,22 @@ jobs:
             --days "${{ github.event.inputs.days || 8 }}" \
             ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
 
-      - name: Regenerate feed
+      - name: Regenerate feed and sitemap
         if: github.event.inputs.dry_run != 'true'
-        run: python scripts/generate_rss.py
+        run: |
+          python scripts/generate_rss.py
+          python scripts/generate_sitemap.py
 
       - name: Commit and push
         if: github.event.inputs.dry_run != 'true'
         run: |
-          if git diff --quiet -- data.json feed.xml; then
+          if git diff --quiet -- data.json feed.xml sitemap.xml; then
             echo "No new cases this week — nothing to commit."
             exit 0
           fi
           count=$(python -c "import json; print(json.load(open('data.json'))['total_cases'])")
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data.json feed.xml
+          git add data.json feed.xml sitemap.xml
           git commit -m "Weekly update: ${count} cases"
           git push
