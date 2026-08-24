@@ -74,6 +74,24 @@ PUBMED_FETCH = b'''<?xml version="1.0"?>
 </ArticleIdList></PubmedData>
 </PubmedArticle></PubmedArticleSet>'''
 
+EPMC_FIXTURE = json.dumps({'resultList': {'result': [
+    {'title': 'AI-associated psychosis: a case report', 'doi': '10.1000/epmc1',
+     'pmid': '41000001', 'firstPublicationDate': '2026-08-10',
+     'authorString': 'Nolan A, Byrne B.', 'journalTitle': 'Ir J Psych Med',
+     'abstractText': '<p>A patient developed delusions after chatbot use.</p>'},
+    {'title': 'Preprint: chatbot delusion trajectories', 'pmid': '', 'doi': None,
+     'firstPublicationDate': '2026-08-12', 'source': 'PPR',
+     'authorString': 'Quinn C.', 'abstractText': 'No identifier at all.'},
+]}}).encode()
+
+OPENALEX_FIXTURE = json.dumps({'results': [
+    {'display_name': 'Emotional dependence on AI companions',
+     'doi': 'https://doi.org/10.1000/oa1', 'publication_date': '2026-08-14',
+     'abstract_inverted_index': {'Users': [0], 'report': [1], 'attachment': [2]},
+     'authorships': [{'author': {'display_name': 'D Author'}}],
+     'primary_location': {'source': {'display_name': 'JMIR'}}},
+]}).encode()
+
 S2_FIXTURE = json.dumps({'data': [
     {'title': 'Emotional dependence on AI companions', 'abstract': 'Users report attachment.',
      'url': 'https://www.semanticscholar.org/paper/abc', 'venue': 'JMIR',
@@ -265,6 +283,35 @@ class TestExclusions(unittest.TestCase):
         for url in excluded:
             self.assertNotIn(common.normalise_url(url), published,
                              f'{url} is both excluded and published')
+
+
+class TestNewAcademicSources(unittest.TestCase):
+    def parse(self, fixture, fn, *args):
+        with mock.patch.object(scrape, 'fetch', return_value=fixture):
+            return fn(*args)
+
+    def test_europe_pmc(self):
+        got = self.parse(EPMC_FIXTURE, scrape.scrape_europe_pmc, 'q', 100000)
+        self.assertEqual(len(got), 1, 'entry with no DOI or PMID must be skipped')
+        c = got[0]
+        self.assertEqual(c['url'], 'https://doi.org/10.1000/epmc1')
+        self.assertEqual(c['venue'], 'Ir J Psych Med')
+        self.assertEqual(c['source_type'], 'academic')
+        self.assertNotIn('<p>', c['summary'])
+        self.assertTrue(classify.is_relevant(c['title'], c['summary']))
+
+    def test_europe_pmc_date_cutoff(self):
+        self.assertEqual(self.parse(EPMC_FIXTURE, scrape.scrape_europe_pmc, 'q', 1), [])
+
+    def test_openalex_rebuilds_inverted_abstract(self):
+        got = self.parse(OPENALEX_FIXTURE, scrape.scrape_openalex, 'q', 100000)
+        self.assertEqual(got[0]['summary'], 'Users report attachment')
+        self.assertEqual(got[0]['doi'], '10.1000/oa1', 'DOI prefix should be stripped')
+        self.assertEqual(got[0]['venue'], 'JMIR')
+
+    def test_openalex_abstract_helper_handles_empty(self):
+        self.assertEqual(scrape._openalex_abstract(None), '')
+        self.assertEqual(scrape._openalex_abstract({}), '')
 
 
 class TestAggregates(unittest.TestCase):

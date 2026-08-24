@@ -47,6 +47,25 @@ ARXIV_QUERIES = [
     'LLM sycophancy user wellbeing',
 ]
 
+# Europe PMC indexes PubMed plus preprint servers (medRxiv, PsyArXiv via SRC:PPR)
+# and more non-US journals, so it catches case reports months before they reach
+# a journal — and before PubMed indexes them.
+EUROPE_PMC_QUERIES = [
+    '("AI psychosis" OR "chatbot psychosis" OR "ChatGPT psychosis")',
+    '(chatbot OR "large language model") AND (delusion OR psychosis)',
+    '("AI companion" OR "social chatbot") AND (attachment OR loneliness OR dependence)',
+    'SRC:PPR AND (chatbot OR "large language model") AND ("mental health" OR psychiatric)',
+]
+
+# OpenAlex has broader coverage than Semantic Scholar and needs no key (the
+# mailto parameter just requests the faster "polite pool").
+OPENALEX_QUERIES = [
+    'AI chatbot psychosis delusion',
+    'large language model mental health harm',
+    'AI companion emotional dependence loneliness',
+    'chatbot sycophancy user wellbeing',
+]
+
 SEMANTIC_SCHOLAR_QUERIES = [
     'AI chatbot psychosis',
     'large language model delusion mental health',
@@ -233,6 +252,84 @@ def scrape_semantic_scholar(query, days):
     return out
 
 
+# ── Europe PMC ────────────────────────────────────────────────────────────────
+
+def scrape_europe_pmc(query, days):
+    params = urllib.parse.urlencode({
+        'query': query, 'format': 'json', 'pageSize': 25,
+        'sort': 'P_PDATE_D desc', 'resultType': 'core',
+    })
+    data = json.loads(fetch(
+        f'https://www.ebi.ac.uk/europepmc/webservices/rest/search?{params}'))
+    cutoff = (datetime.now(timezone.utc) - timedelta(days=days)).strftime('%Y-%m-%d')
+
+    out = []
+    for r in (data.get('resultList') or {}).get('result', []):
+        date = r.get('firstPublicationDate') or ''
+        if date and date < cutoff:
+            continue
+        doi = r.get('doi')
+        pmid = r.get('pmid') or ''
+        abstract = strip_html(r.get('abstractText') or '')
+        if doi:
+            url = f'https://doi.org/{doi}'
+        elif pmid:
+            url = f'https://pubmed.ncbi.nlm.nih.gov/{pmid}/'
+        else:
+            continue
+        out.append({
+            'title': strip_html(r.get('title') or ''), 'url': url, 'date': date,
+            'source': 'Europe PMC', 'summary': abstract[:600],
+            'abstract': abstract[:2000] or None,
+            'authors': (r.get('authorString') or None), 'doi': doi,
+            'venue': r.get('journalTitle') or ('Preprint' if r.get('source') == 'PPR' else None),
+            'source_type': 'academic',
+        })
+    return out
+
+
+# ── OpenAlex ──────────────────────────────────────────────────────────────────
+
+def _openalex_abstract(inverted):
+    """OpenAlex ships abstracts as {word: [positions]}; rebuild the text."""
+    if not inverted:
+        return ''
+    positions = {}
+    for word, spots in inverted.items():
+        for i in spots:
+            positions[i] = word
+    return ' '.join(positions[i] for i in sorted(positions))
+
+
+def scrape_openalex(query, days):
+    since = (datetime.now(timezone.utc) - timedelta(days=days)).strftime('%Y-%m-%d')
+    params = urllib.parse.urlencode({
+        'search': query, 'per-page': 25, 'sort': 'publication_date:desc',
+        'filter': f'from_publication_date:{since}',
+        'mailto': 'hello@aipsychosis.watch',
+    })
+    data = json.loads(fetch(f'https://api.openalex.org/works?{params}'))
+
+    out = []
+    for w in data.get('results', []):
+        abstract = _openalex_abstract(w.get('abstract_inverted_index'))
+        doi = (w.get('doi') or '').removeprefix('https://doi.org/') or None
+        url = w.get('doi') or (w.get('primary_location') or {}).get('landing_page_url') or w.get('id')
+        if not url:
+            continue
+        venue = ((w.get('primary_location') or {}).get('source') or {}).get('display_name')
+        out.append({
+            'title': w.get('display_name') or '', 'url': url,
+            'date': w.get('publication_date') or '', 'source': 'OpenAlex',
+            'summary': abstract[:600], 'abstract': abstract[:2000] or None,
+            'authors': ', '.join(
+                (a.get('author') or {}).get('display_name', '')
+                for a in (w.get('authorships') or [])[:8]) or None,
+            'doi': doi, 'venue': venue, 'source_type': 'academic',
+        })
+    return out
+
+
 # ── RSS ───────────────────────────────────────────────────────────────────────
 
 def parse_date(s):
@@ -318,6 +415,8 @@ def collect(days):
     jobs = [(f'pubmed: {q[:45]}', scrape_pubmed, (q, days)) for q in PUBMED_QUERIES]
     jobs += [(f'arxiv: {q}', scrape_arxiv, (q,)) for q in ARXIV_QUERIES]
     jobs += [(f's2: {q}', scrape_semantic_scholar, (q, days)) for q in SEMANTIC_SCHOLAR_QUERIES]
+    jobs += [(f'epmc: {q[:40]}', scrape_europe_pmc, (q, days)) for q in EUROPE_PMC_QUERIES]
+    jobs += [(f'openalex: {q[:34]}', scrape_openalex, (q, days)) for q in OPENALEX_QUERIES]
     jobs += [(f'rss: {name}', scrape_rss, (url, days, name)) for url, name in RSS_FEEDS.items()]
     jobs += [(f'news: {q[:40]}', scrape_google_news, (q, days)) for q in GOOGLE_NEWS_QUERIES]
 
