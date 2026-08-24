@@ -1,0 +1,65 @@
+name: Weekly update
+
+on:
+  schedule:
+    # Mondays 08:00 UTC — the cadence the tracker ran on until 25 May 2026.
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+    inputs:
+      days:
+        description: 'Look-back window in days'
+        required: false
+        default: '8'
+      dry_run:
+        description: 'Report findings without committing'
+        type: boolean
+        required: false
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: weekly-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run tests
+        run: python scripts/test_pipeline.py
+
+      - name: Scrape
+        env:
+          # Optional. Every other source is keyless; without this the run
+          # simply skips Brave.
+          BRAVE_API_KEY: ${{ secrets.BRAVE_API_KEY }}
+        run: |
+          python scripts/scrape.py \
+            --days "${{ github.event.inputs.days || 8 }}" \
+            ${{ github.event.inputs.dry_run == 'true' && '--dry-run' || '' }}
+
+      - name: Regenerate feed
+        if: github.event.inputs.dry_run != 'true'
+        run: python scripts/generate_rss.py
+
+      - name: Commit and push
+        if: github.event.inputs.dry_run != 'true'
+        run: |
+          if git diff --quiet -- data.json feed.xml; then
+            echo "No new cases this week — nothing to commit."
+            exit 0
+          fi
+          count=$(python -c "import json; print(json.load(open('data.json'))['total_cases'])")
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data.json feed.xml
+          git commit -m "Weekly update: ${count} cases"
+          git push
