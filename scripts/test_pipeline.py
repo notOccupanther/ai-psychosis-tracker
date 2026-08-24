@@ -199,13 +199,27 @@ class TestAggregates(unittest.TestCase):
         self.assertEqual(d['trend'], {'labels': ['2026-01', '2026-02'], 'values': [2, 1]})
         self.assertEqual(d['categories']['labels'][0], 'Clinical Cases')
         self.assertEqual(d['severity_counts'], {'critical': 1, 'high': 1, 'low': 1})
-        self.assertEqual(d['date_range'], {'start': '2026-01-05', 'end': '2026-02-02'})
+        self.assertEqual(d['date_range'], {'from': '2026-01-05', 'to': '2026-02-02'})
 
     def test_recompute_is_idempotent(self):
         a = common.recompute(self.sample())
         b = common.recompute(common.recompute(self.sample()))
         for k in ('trend', 'categories', 'severity_counts', 'date_range', 'total_cases'):
             self.assertEqual(a[k], b[k], k)
+
+    def test_recompute_preserves_published_schema(self):
+        """recompute() must not rename keys that data.json already publishes."""
+        published = common.load_data()
+        recomputed = common.recompute(json.loads(json.dumps(published)))
+        for key in ('trend', 'categories', 'severity_counts', 'date_range'):
+            self.assertEqual(set(published[key]), set(recomputed[key]),
+                             f'{key} key set changed')
+        # Same counts, order is not significant.
+        self.assertEqual(
+            dict(zip(published['categories']['labels'], published['categories']['values'])),
+            dict(zip(recomputed['categories']['labels'], recomputed['categories']['values'])))
+        self.assertEqual(published['severity_counts'], recomputed['severity_counts'])
+        self.assertEqual(published['trend'], recomputed['trend'])
 
     def test_live_data_matches_frontend_contract(self):
         """index.html reads these keys directly; a missing one blanks the page."""

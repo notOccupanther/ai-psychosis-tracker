@@ -95,7 +95,10 @@ def recompute(data):
 
     cats = Counter(c.get('category') or 'other' for c in cases)
     ordered = cats.most_common()
+    # 'keys' carries the raw slugs so consumers can map to colours; index.html
+    # builds its own copy of this structure and relies on the same three fields.
     data['categories'] = {
+        'keys': [k for k, _ in ordered],
         'labels': [CAT_LABELS.get(k, k) for k, _ in ordered],
         'values': [v for _, v in ordered],
     }
@@ -104,7 +107,9 @@ def recompute(data):
     data['severity_counts'] = {k: sev.get(k, 0) for k in SEVERITIES if sev.get(k)}
 
     dates = sorted(c['date'] for c in cases if c.get('date'))
-    data['date_range'] = {'start': dates[0], 'end': dates[-1]} if dates else {}
+    # Keys match the schema already published in data.json; index.html does not
+    # read this field, but external consumers of data.json may.
+    data['date_range'] = {'from': dates[0], 'to': dates[-1]} if dates else {}
 
     data['total_cases'] = len(cases)
     data['generated_at'] = datetime.now(timezone.utc).isoformat().replace('+00:00', 'Z')

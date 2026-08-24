@@ -21,6 +21,10 @@ the site to silently stop updating after 31 May 2026.
 Run it by hand from the Actions tab ("Weekly update" → Run workflow). It takes a
 `dry_run` input that reports what it would add without committing.
 
+`.github/workflows/tests.yml` runs on every push to `main` and every pull
+request: the test suite, plus a check that the derived fields in `data.json`
+still match what `common.recompute()` produces from the cases.
+
 ## Data model
 
 `data.json` in the repo root is the **single source of truth**. There is no

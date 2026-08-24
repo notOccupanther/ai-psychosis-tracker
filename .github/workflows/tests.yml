@@ -1,0 +1,52 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run test suite
+        run: python scripts/test_pipeline.py
+
+      - name: Check data.json is internally consistent
+        run: |
+          python - <<'PY'
+          import json, sys
+          sys.path.insert(0, 'scripts')
+          import common
+
+          published = common.load_data()
+          rebuilt = common.recompute(json.loads(json.dumps(published)))
+
+          def as_map(cats):
+              return dict(zip(cats['keys'], cats['values']))
+
+          problems = []
+          if published['total_cases'] != len(published['cases']):
+              problems.append('total_cases disagrees with len(cases)')
+          if published['trend'] != rebuilt['trend']:
+              problems.append('trend')
+          if published['severity_counts'] != rebuilt['severity_counts']:
+              problems.append('severity_counts')
+          if published['date_range'] != rebuilt['date_range']:
+              problems.append('date_range')
+          # Ordering is not significant, counts are.
+          if as_map(published['categories']) != as_map(rebuilt['categories']):
+              problems.append('categories')
+
+          if problems:
+              print('Derived fields are stale. Regenerate with scripts/scrape.py.')
+              print('Mismatched: ' + ', '.join(problems))
+              sys.exit(1)
+          print(f'data.json consistent: {published["total_cases"]} cases')
+          PY
