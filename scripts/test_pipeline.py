@@ -299,6 +299,43 @@ class TestSitemap(unittest.TestCase):
                           'an unlinked methodology page will not be found')
 
 
+class TestCommentary(unittest.TestCase):
+    """index.html reads these fields directly; a rename blanks the card."""
+
+    def load(self):
+        with open(os.path.join(common.ROOT, 'commentary.json'), encoding='utf-8') as f:
+            return json.load(f)
+
+    def test_required_fields(self):
+        c = self.load()
+        for key in ('week', 'date', 'title', 'commentary'):
+            self.assertIn(key, c)
+        self.assertTrue(c['commentary'].strip())
+
+    def test_has_multiple_paragraphs(self):
+        # The card shows paragraph one as a preview and hides the rest behind
+        # "Read more"; a single-paragraph entry hides the toggle entirely.
+        paras = [p for p in c.split('\n\n') if p.strip()] if (c := self.load()['commentary']) else []
+        self.assertGreater(len(paras), 1)
+
+    def test_spotlight_shape(self):
+        spot = self.load().get('spotlight')
+        if spot is None:
+            self.skipTest('no spotlight this week')
+        for key in ('title', 'context', 'url'):
+            self.assertTrue(spot.get(key), f'spotlight.{key} is rendered and must not be empty')
+        self.assertTrue(spot['url'].startswith('http'))
+
+    def test_spotlight_points_at_a_tracked_case(self):
+        spot = self.load().get('spotlight')
+        if spot is None:
+            self.skipTest('no spotlight this week')
+        urls = {common.normalise_url(c['url'])
+                for c in common.load_data()['cases'] if c.get('url')}
+        self.assertIn(common.normalise_url(spot['url']), urls,
+                      'the case in focus should be a case the tracker actually holds')
+
+
 class TestReleaseNotes(unittest.TestCase):
     def test_notes_describe_the_snapshot(self):
         import contextlib, io
