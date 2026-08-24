@@ -160,6 +160,34 @@
     matching alone is not sufficient for this material, and the tracker does not pretend otherwise.
   </p>
 
+  <h2>The companion watchlist</h2>
+  <p>
+    The Companions tab is a <strong>register of the companion and AI mental-health app space</strong>,
+    monitored for proliferation. It is deliberately not a list of implicated products. An app appears
+    there because it exists and is worth watching — the premise being that a rapidly growing category
+    of emotionally engaging chatbots is a risk worth tracking <em>before</em> harm is documented, not
+    after.
+  </p>
+  <p>
+    Because of that, entries are held in <code>companions.json</code>, separately from the case data,
+    and are excluded from every case statistic on the site. They were previously stored as cases,
+    which put app launch dates into the harm trend chart — several early points on that chart were
+    entirely product releases rather than reported harm — and counted eight product listings among
+    the medium-severity cases. Both are now fixed.
+  </p>
+  <p>
+    Each entry shows how many cases in this tracker name that product. <strong>Zero is a finding, not
+    an omission.</strong> Most entries have no cases recorded against them, which is the expected
+    state for a watchlist.
+  </p>
+  <p>
+    The four groupings — structured therapy apps, empathic assistants, mood trackers, open companion
+    apps — describe how a product presents itself and whether it claims clinical oversight. They are
+    descriptive, drawn from each vendor's own material, and are not a safety rating or a risk score.
+    Lifecycle status is shown only where it has been verified; where we have not checked, no status
+    is displayed rather than an assumed one.
+  </p>
+
   <h2>Limitations</h2>
   <div class="note warn">
     <strong>The trend chart measures coverage, not incidence.</strong> A rise reflects more
@@ -175,6 +203,7 @@
     <li><strong>Dates.</strong> The date is publication date, not the date the harm occurred, which is frequently much earlier.</li>
     <li><strong>Duplication.</strong> Syndicated stories are de-duplicated by URL, so the same event carried by several outlets may appear more than once.</li>
     <li><strong>No causal claim.</strong> Inclusion records an association reported by a source. It does not assert that an AI system caused an outcome.</li>
+    <li><strong>The watchlist is not exhaustive.</strong> It covers a fraction of a fast-moving category and, until recently, had not been updated since 2023. Absence from it means only that it has not been added.</li>
   </ul>
 
   <h2>Data and reuse</h2>

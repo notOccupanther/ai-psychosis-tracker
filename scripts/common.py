@@ -17,6 +17,7 @@ from datetime import datetime, timezone
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_PATH = os.path.join(ROOT, 'data.json')
 EXCLUDED_PATH = os.path.join(ROOT, 'excluded.json')
+COMPANIONS_PATH = os.path.join(ROOT, 'companions.json')
 
 SITE_URL = 'https://aipsychosis.watch'
 USER_AGENT = 'AIPsychosisWatch/2.0 (+https://aipsychosis.watch)'
@@ -48,6 +49,19 @@ def save_data(data):
     with open(DATA_PATH, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
         f.write('\n')
+
+
+def load_companions():
+    """The companion-app watchlist.
+
+    Deliberately separate from data.json: these are products being monitored
+    for proliferation, not incidents. Holding them as cases put app launch
+    dates into the harm trend chart and their entries into the severity counts.
+    """
+    if not os.path.exists(COMPANIONS_PATH):
+        return {'companions': []}
+    with open(COMPANIONS_PATH, encoding='utf-8') as f:
+        return json.load(f)
 
 
 def load_excluded():
