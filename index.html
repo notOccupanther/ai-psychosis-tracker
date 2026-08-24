@@ -805,8 +805,8 @@
   <!-- Companions charts -->
   <div class="charts-grid" id="companionCharts" style="display:none">
     <div class="card">
-      <h2>🛡 By Safety Level</h2>
-      <div class="chart-wrapper"><canvas id="compSafetyChart"></canvas></div>
+      <h2>📈 Apps Tracked Over Time</h2>
+      <div class="chart-wrapper"><canvas id="compGrowthChart"></canvas></div>
     </div>
     <div class="card">
       <h2>🗂 By Type</h2>
@@ -1415,6 +1415,7 @@ const CAT_COLORS = {
 const SEV_ORDER = { high: 0, medium: 1, low: 2 };
 
 let allData = null;
+let allCompanions = [];
 let expandedId = null;
 
 async function loadData() {
@@ -1422,6 +1423,12 @@ async function loadData() {
     const r = await fetch('data.json?t=' + Date.now());
     if (!r.ok) throw new Error('HTTP ' + r.status);
     allData = await r.json();
+    // Watchlist lives in its own file: these are products being monitored, not
+    // incidents, and holding them as cases put launch dates in the harm trend.
+    try {
+      const cr = await fetch('companions.json?t=' + Date.now());
+      if (cr.ok) allCompanions = (await cr.json()).companions || [];
+    } catch (e) { allCompanions = []; }
     if (!allData || !Array.isArray(allData.cases)) throw new Error('Invalid data format');
     render();
   } catch(e) {
@@ -1625,21 +1632,20 @@ function renderTimeline() {
     return;
   }
 
-  // Companions tab
+  // Companions tab — a watchlist of the companion-app space, not a case list.
   if (currentTab === 'companion') {
-    // Group by category
     const compCats = ['therapy_structured','assistant_empathic','tracker','companion_open'];
-    const compLabels = {'therapy_structured':'✅ Structured Therapy Apps','assistant_empathic':'💬 Empathic Assistants','tracker':'📊 Mood Trackers','companion_open':'⚠️ Open Companion Apps'};
+    const compLabels = {'therapy_structured':'Structured Therapy Apps','assistant_empathic':'Empathic Assistants','tracker':'Mood Trackers','companion_open':'Open Companion Apps'};
     const compColors = {'therapy_structured':'#22c55e','assistant_empathic':'#3b82f6','tracker':'#8b5cf6','companion_open':'#ef4444'};
+    let list = allCompanions.slice();
+    if (search) list = list.filter(c => ((c.name||'') + ' ' + (c.vendor||'') + ' ' + (c.approach||'')).toLowerCase().includes(search));
     const grouped = {};
-    cases.forEach(c => {
-      let meta = {}; try { meta = JSON.parse(c.abstract||'{}'); } catch(e) {}
-      const key = meta.category || 'companion_open';
-      if (!grouped[key]) grouped[key] = [];
-      grouped[key].push(c);
+    list.forEach(c => {
+      const key = c.category || 'companion_open';
+      (grouped[key] = grouped[key] || []).push(c);
     });
     const intro = `<div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.6rem;padding:1rem 1.25rem;margin-bottom:1rem;font-size:0.85rem;color:var(--muted);line-height:1.7">
-      🤝 <strong style="color:var(--text)">AI Mental Health Companions</strong> — tracking the social response to the crisis documented above. These apps range from clinically-supervised therapy tools to open-ended companion chatbots with little oversight. Understanding the landscape matters.
+      🤝 <strong style="color:var(--text)">Companion app watchlist</strong> — a register of the companion and AI mental-health space, monitored for proliferation. These are <em>not</em> cases: an app appears here because it exists and is worth watching, not because harm has been reported. Each entry shows whether any case in this tracker names it. Counts here are excluded from the case statistics above.
     </div>`;
     const groups = compCats.filter(k => grouped[k]);
     timeline.innerHTML = intro + (groups.length
@@ -1659,7 +1665,7 @@ function renderTimeline() {
             </div>
           </div>`;
         }).join('')
-      : '<div class="empty">No companion data yet.</div>');
+      : '<div class="empty">No watchlist entries match.</div>');
     return;
   }
 
@@ -1822,7 +1828,7 @@ loadCommentary();
 
 let currentTab = 'media';
 
-let _compSafetyChart = null, _compCatChart = null;
+let _compGrowthChart = null, _compCatChart = null;
 
 function switchTab(tab) {
   currentTab = tab;
@@ -1852,41 +1858,65 @@ function switchTab(tab) {
 }
 
 function renderCompanionCharts() {
-  const companions = allData.cases.filter(c => c.source_type === 'companion');
+  const companions = allCompanions || [];
 
-  // Safety chart
-  let supervised = 0, unsupervised = 0;
-  companions.forEach(c => {
-    let meta = {}; try { meta = JSON.parse(c.abstract||'{}'); } catch(e){}
-    if (meta.clinical_oversight) supervised++; else unsupervised++;
+  // Proliferation: cumulative apps on the watchlist by launch year. This is
+  // what the section exists to show, and it is the correct home for launch
+  // dates — feeding them into the harm trend chart made app releases look
+  // like incidents.
+  const byYear = {};
+  companions.forEach(function (c) {
+    const y = (c.launched || '').slice(0, 4);
+    if (y) byYear[y] = (byYear[y] || 0) + 1;
   });
+  const years = Object.keys(byYear).sort();
+  let running = 0;
+  const cumulative = years.map(function (y) { running += byYear[y]; return running; });
 
-  const safetyCtx = document.getElementById('compSafetyChart').getContext('2d');
-  if (_compSafetyChart) _compSafetyChart.destroy();
-  _compSafetyChart = new Chart(safetyCtx, {
-    type: 'doughnut',
+  const growthCtx = document.getElementById('compGrowthChart').getContext('2d');
+  if (_compGrowthChart) _compGrowthChart.destroy();
+  _compGrowthChart = new Chart(growthCtx, {
+    type: 'line',
     data: {
-      labels: ['✅ Clinically Supervised', '⚠️ No Clinical Oversight'],
-      datasets: [{ data: [supervised, unsupervised],
-        backgroundColor: ['#22c55e', '#ef4444'],
-        borderColor: '#161a23', borderWidth: 2, hoverOffset: 6 }]
+      labels: years,
+      datasets: [{
+        label: 'Apps tracked',
+        data: cumulative,
+        borderColor: '#6366f1',
+        backgroundColor: 'rgba(99,102,241,0.08)',
+        borderWidth: 2.5, fill: true, tension: 0.35,
+        pointBackgroundColor: '#6366f1', pointRadius: 4, pointHoverRadius: 6,
+      }]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
+      interaction: { intersect: false, mode: 'index' },
       plugins: {
-        legend: { position: 'right', labels: { color: '#8892a4', font: { size: 11 }, padding: 10, boxWidth: 12 } },
-        tooltip: { backgroundColor: '#1e2330', borderColor: '#2a2f3d', borderWidth: 1, titleColor: '#e2e8f0', bodyColor: '#8892a4' }
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#1e2330', borderColor: '#2a2f3d', borderWidth: 1,
+          titleColor: '#e2e8f0', bodyColor: '#8892a4',
+          callbacks: {
+            label: function (i) { return ' ' + i.raw + ' app' + (i.raw === 1 ? '' : 's') + ' tracked'; },
+            afterLabel: function (i) {
+              const added = byYear[i.label];
+              return added ? '  +' + added + ' launched this year' : '';
+            }
+          }
+        }
+      },
+      scales: {
+        x: { grid: { color: '#1e2330' }, ticks: { color: '#8892a4', font: { size: 11 } } },
+        y: { grid: { color: '#1e2330' }, ticks: { color: '#8892a4', stepSize: 1, font: { size: 11 } }, beginAtZero: true }
       }
     }
   });
 
-  // Category chart
   const catCounts = {};
   const catLabels = {'therapy_structured':'Structured Therapy','companion_open':'Open Companion','assistant_empathic':'Empathic Assistant','tracker':'Mood Tracker'};
-  const catColors = {'therapy_structured':'#6366f1','companion_open':'#ef4444','assistant_empathic':'#3b82f6','tracker':'#8b5cf6'};
-  companions.forEach(c => {
-    let meta = {}; try { meta = JSON.parse(c.abstract||'{}'); } catch(e){}
-    const k = meta.category || 'other';
+  const catColors = {'therapy_structured':'#22c55e','companion_open':'#ef4444','assistant_empathic':'#3b82f6','tracker':'#8b5cf6'};
+  companions.forEach(function (c) {
+    const k = c.category || 'other';
     catCounts[k] = (catCounts[k] || 0) + 1;
   });
 
@@ -1895,9 +1925,9 @@ function renderCompanionCharts() {
   _compCatChart = new Chart(catCtx, {
     type: 'doughnut',
     data: {
-      labels: Object.keys(catCounts).map(k => catLabels[k] || k),
+      labels: Object.keys(catCounts).map(function (k) { return catLabels[k] || k; }),
       datasets: [{ data: Object.values(catCounts),
-        backgroundColor: Object.keys(catCounts).map(k => catColors[k] || '#6b7280'),
+        backgroundColor: Object.keys(catCounts).map(function (k) { return catColors[k] || '#6b7280'; }),
         borderColor: '#161a23', borderWidth: 2, hoverOffset: 6 }]
     },
     options: {
@@ -1909,65 +1939,65 @@ function renderCompanionCharts() {
     }
   });
 }
-
 function renderCompanionCard(c) {
-  let meta = {};
-  try { meta = JSON.parse(c.abstract || '{}'); } catch(e) {}
-  const safeIcon = meta.clinical_oversight ? '✅ Clinically supervised' : '⚠️ No clinical oversight';
-  const safeColor = meta.clinical_oversight ? '#22c55e' : '#f59e0b';
   const catColors = {
-    'therapy_structured': '#6366f1',
+    'therapy_structured': '#22c55e',
     'companion_open': '#ef4444',
     'assistant_empathic': '#3b82f6',
     'tracker': '#8b5cf6',
   };
-  const catColor = catColors[meta.category] || 'var(--accent)';
+  const catColor = catColors[c.category] || 'var(--accent)';
+
+  // Oversight is a stated property of the product, not a safety rating.
+  const oversight = c.clinical_oversight === true
+    ? '<span class="badge" style="background:transparent;color:#22c55e;border-color:#22c55e44;font-size:0.7rem">Clinical oversight</span>'
+    : c.clinical_oversight === false
+      ? '<span class="badge" style="background:transparent;color:#f59e0b;border-color:#f59e0b44;font-size:0.7rem">No clinical oversight</span>'
+      : '';
+
+  // Only shown once verified — an unchecked status is worse than none.
+  const status = c.status
+    ? '<span class="badge" style="background:transparent;color:var(--muted);border-color:var(--border);font-size:0.7rem">' + esc(c.status) + '</span>'
+    : '';
+
+  // Harm signal: how many cases in this tracker name the product. Zero is a
+  // finding in a watchlist, not an omission.
+  const n = (allData && allData.cases)
+    ? allData.cases.filter(function (x) { return x.product === c.name; }).length : 0;
+  const signal = n > 0
+    ? '<span class="badge" style="background:rgba(239,68,68,0.12);color:#ef4444;border-color:#ef444433;font-size:0.7rem">' + n + ' case' + (n === 1 ? '' : 's') + ' in tracker</span>'
+    : '<span class="badge" style="background:transparent;color:var(--muted);border-color:var(--border);font-size:0.7rem">No cases recorded</span>';
+
+  const row = function (label, value) {
+    return value ? '<div style="margin-bottom:0.5rem"><span style="font-size:0.7rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--accent2)">' + label + '</span><div style="font-size:0.85rem;color:var(--muted);line-height:1.6">' + esc(value) + '</div></div>' : '';
+  };
 
   return `
   <div class="case-card" style="border-left:3px solid ${catColor}" onclick="toggleCase('${esc(c.id)}', this)" data-id="${esc(c.id)}">
     <div class="case-header">
       <div class="case-header-left">
         <div class="case-meta">
-          <span class="badge" style="background:rgba(99,102,241,0.12);color:${catColor};border-color:${catColor}33">${esc(meta.category_label || meta.category || '')}</span>
-          <span class="badge" style="background:transparent;color:${safeColor};border-color:${safeColor}44;font-size:0.7rem">${safeIcon}</span>
-          <span class="case-date">Since ${esc(meta.launched || c.date?.slice(0,4) || '?')}</span>
+          <span class="badge" style="background:rgba(99,102,241,0.12);color:${catColor};border-color:${catColor}33">${esc(c.category_label || c.category || '')}</span>
+          ${signal}
+          ${oversight}
+          ${status}
+          <span class="case-date">Since ${esc((c.launched || '').slice(0, 4) || '?')}</span>
         </div>
-        <div class="case-title">${esc(c.title)}</div>
-        <div class="case-source">🏢 ${esc(meta.developer || c.source || '')}</div>
+        <div class="case-title">${esc(c.name)}</div>
+        <div class="case-source">${esc(c.vendor || '')}</div>
       </div>
-      <div class="expand-btn">▼</div>
+      <span class="chevron">▼</span>
     </div>
-    <div class="synopsis">
-      <div class="synopsis-inner">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem">
-          <div>
-            <div class="synopsis-label">🎯 Approach</div>
-            <div class="synopsis-text">${esc(meta.approach || '')}</div>
-          </div>
-          <div>
-            <div class="synopsis-label">🎪 Target Users</div>
-            <div class="synopsis-text">${esc(meta.target || '')}</div>
-          </div>
-        </div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem">
-          <div>
-            <div class="synopsis-label" style="color:#22c55e">✅ Safety Features</div>
-            <div class="synopsis-text">${esc(meta.safety || '')}</div>
-          </div>
-          <div>
-            <div class="synopsis-label" style="color:#f59e0b">⚠️ Concerns</div>
-            <div class="synopsis-text">${esc(meta.concerns || '')}</div>
-          </div>
-        </div>
-        <div class="synopsis-footer">
-          <a class="source-link" href="${esc(c.url)}" target="_blank" rel="noopener" onclick="event.stopPropagation()">↗ Visit Site</a>
-          <span style="font-size:0.78rem;color:var(--muted)">💰 ${esc(meta.cost || '')}</span>
-        </div>
-      </div>
+    <div class="case-body">
+      ${row('Approach', c.approach)}
+      ${row('Stated safety measures', c.safety)}
+      ${row('Concerns', c.concerns)}
+      ${row('Target use', c.target)}
+      ${row('Cost', c.cost)}
+      <a href="${esc(c.url)}" target="_blank" rel="noopener" style="font-size:0.78rem;color:var(--accent);text-decoration:none;font-weight:600">Visit ${esc(c.name)} →</a>
     </div>
   </div>`;
 }
-
 function renderAcademicCard(c) {
   const year = (c.date || '').slice(0, 4) || 'n.d.';
   const authors = c.authors ? c.authors.split(',').slice(0,3).join(', ') + (c.authors.split(',').length > 3 ? ' et al.' : '') : 'Unknown authors';

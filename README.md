@@ -109,6 +109,19 @@ python scripts/generate_rss.py            # rebuild feed.xml
 
 Python 3.11+, standard library only.
 
+## Companion watchlist
+
+`companions.json` is a register of companion and AI mental-health apps, tracked
+for proliferation rather than as incidents. It is separate from `data.json` on
+purpose: these entries were previously stored as cases, which put app launch
+dates into the harm trend chart and their listings into the severity counts.
+
+The watchlist also drives its own scraping — `watchlist_queries()` builds one
+targeted news query per app name. Naming the product is what makes those
+queries precise, and any case naming a watchlist app is tagged with `product`
+so per-app harm signal is visible on each card. Zero cases against an entry is
+the expected state, not a gap.
+
 ## Citation and archiving
 
 `methodology.html` documents inclusion criteria, the classification scheme and

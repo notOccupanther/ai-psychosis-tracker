@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-24T11:29:11.376447Z",
-  "total_cases": 259,
+  "generated_at": "2026-08-24T12:00:16.807121Z",
+  "total_cases": 251,
   "cases": [
     {
       "id": "academic_8d3e0752b1b0",
@@ -3723,7 +3723,8 @@
       "authors": null,
       "doi": null,
       "venue": null,
-      "abstract": null
+      "abstract": null,
+      "product": "Character.AI"
     },
     {
       "id": "05278394e677",
@@ -3740,7 +3741,8 @@
       "authors": null,
       "doi": null,
       "venue": null,
-      "abstract": null
+      "abstract": null,
+      "product": "Character.AI"
     },
     {
       "id": "db5d1ca8fd92",
@@ -3842,7 +3844,8 @@
       "authors": null,
       "doi": null,
       "venue": null,
-      "abstract": null
+      "abstract": null,
+      "product": "Replika"
     },
     {
       "id": "de8ad3389798",
@@ -3876,24 +3879,8 @@
       "authors": null,
       "doi": null,
       "venue": null,
-      "abstract": null
-    },
-    {
-      "id": "companion_176e0f4c0133",
-      "title": "Nomi AI",
-      "url": "https://nomi.ai",
-      "date": "2023-06-01",
-      "source": "Nomi AI Inc.",
-      "summary": "Persistent AI companion with memory. Designed for friendship and emotional connection. | Safety: Basic safety filters. No clinical oversight. Romantic relationship mode available. | Concerns: Explicitly encourages emotional attachment. No evidence base. Similar risks to Replika.",
-      "category": "companion_open",
-      "severity": "medium",
-      "raw_snippet": "Approach: Persistent AI companion with memory. Designed for friendship and emotional connection.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Nomi AI Inc.",
-      "doi": null,
-      "venue": "Open Companion",
-      "abstract": "{\"developer\": \"Nomi AI Inc.\", \"launched\": \"2023\", \"approach\": \"Persistent AI companion with memory. Designed for friendship and emotional connection.\", \"safety\": \"Basic safety filters. No clinical oversight. Romantic relationship mode available.\", \"concerns\": \"Explicitly encourages emotional attachment. No evidence base. Similar risks to Replika.\", \"target\": \"Companionship, loneliness\", \"cost\": \"Freemium ($19.99/mo)\", \"clinical_oversight\": false, \"category\": \"companion_open\", \"category_label\": \"Open Companion\"}"
+      "abstract": null,
+      "product": "Replika"
     },
     {
       "id": "016d16ad6371",
@@ -3911,23 +3898,6 @@
       "doi": null,
       "venue": null,
       "abstract": null
-    },
-    {
-      "id": "companion_f139d0d21f0f",
-      "title": "Pi (Inflection AI)",
-      "url": "https://pi.ai",
-      "date": "2023-05-01",
-      "source": "Inflection AI / Microsoft",
-      "summary": "Conversational AI assistant with empathetic tone. Designed for supportive, thoughtful conversation. | Safety: Conservative safety guidelines. No roleplay personas. Declines to simulate relationships. | Concerns: General-purpose LLM risk. No specific mental health framework.",
-      "category": "assistant_empathic",
-      "severity": "medium",
-      "raw_snippet": "Approach: Conversational AI assistant with empathetic tone. Designed for supportive, thoughtful conversation.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Inflection AI / Microsoft",
-      "doi": null,
-      "venue": "Empathic Assistant",
-      "abstract": "{\"developer\": \"Inflection AI / Microsoft\", \"launched\": \"2023\", \"approach\": \"Conversational AI assistant with empathetic tone. Designed for supportive, thoughtful conversation.\", \"safety\": \"Conservative safety guidelines. No roleplay personas. Declines to simulate relationships.\", \"concerns\": \"General-purpose LLM risk. No specific mental health framework.\", \"target\": \"General support, conversation, productivity\", \"cost\": \"Free\", \"clinical_oversight\": false, \"category\": \"assistant_empathic\", \"category_label\": \"Empathic Assistant\"}"
     },
     {
       "id": "71fc6c8cdc8a",
@@ -3978,7 +3948,8 @@
       "authors": null,
       "doi": null,
       "venue": null,
-      "abstract": null
+      "abstract": null,
+      "product": "Replika"
     },
     {
       "id": "06de65f97c6c",
@@ -4015,40 +3986,6 @@
       "abstract": ""
     },
     {
-      "id": "companion_e56b492d2c01",
-      "title": "Earkick",
-      "url": "https://earkick.com",
-      "date": "2022-03-01",
-      "source": "Earkick Inc.",
-      "summary": "Real-time anxiety tracking via wearable + AI. Focuses on physiological data + conversation. | Safety: No clinical claims. Privacy-first (on-device processing). No crisis intervention. | Concerns: Limited evidence base.",
-      "category": "tracker",
-      "severity": "medium",
-      "raw_snippet": "Approach: Real-time anxiety tracking via wearable + AI. Focuses on physiological data + conversation.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Earkick Inc.",
-      "doi": null,
-      "venue": "Mood Tracker",
-      "abstract": "{\"developer\": \"Earkick Inc.\", \"launched\": \"2022\", \"approach\": \"Real-time anxiety tracking via wearable + AI. Focuses on physiological data + conversation.\", \"safety\": \"No clinical claims. Privacy-first (on-device processing). No crisis intervention.\", \"concerns\": \"Limited evidence base.\", \"target\": \"Anxiety tracking, stress management\", \"cost\": \"Free\", \"clinical_oversight\": false, \"category\": \"tracker\", \"category_label\": \"Mood Tracker\"}"
-    },
-    {
-      "id": "companion_9461efc981dd",
-      "title": "Character.AI",
-      "url": "https://character.ai",
-      "date": "2021-11-01",
-      "source": "Character Technologies Inc.",
-      "summary": "Roleplay-focused platform. Users can chat with AI personas of real/fictional people or create custom characters. | Safety: Safety features added after high-profile incidents. Age verification introduced. Crisis prompts added. Lawsuits pending. | Concerns: Linked to teen suicide cases. Characters can encourage harmful behaviour. Minimal guardrails on custom personas.",
-      "category": "companion_open",
-      "severity": "medium",
-      "raw_snippet": "Approach: Roleplay-focused platform. Users can chat with AI personas of real/fictional people or create custom characters.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Character Technologies Inc.",
-      "doi": null,
-      "venue": "Open Companion",
-      "abstract": "{\"developer\": \"Character Technologies Inc.\", \"launched\": \"2022\", \"approach\": \"Roleplay-focused platform. Users can chat with AI personas of real/fictional people or create custom characters.\", \"safety\": \"Safety features added after high-profile incidents. Age verification introduced. Crisis prompts added. Lawsuits pending.\", \"concerns\": \"Linked to teen suicide cases. Characters can encourage harmful behaviour. Minimal guardrails on custom personas.\", \"target\": \"Entertainment, social interaction\", \"cost\": \"Freemium ($9.99/mo for Plus)\", \"clinical_oversight\": false, \"category\": \"companion_open\", \"category_label\": \"Open Companion\"}"
-    },
-    {
       "id": "academic_15f58c6400d5",
       "title": "ChatGPT as therapy: A qualitative and network-based thematic profiling of shared experiences, attitudes, and beliefs on Reddit.",
       "url": "https://doi.org/10.1016/S2589-7500(21)00132-1",
@@ -4064,74 +4001,6 @@
       "doi": "10.1016/S2589-7500(21)00132-1",
       "venue": "Journal of psychiatric research",
       "abstract": "In recent years, large language models (LLMs), including ChatGPT, have exponentially grown in application. Given existing barriers to mental health services, alongside the capability of LLMs to generate therapeutic responses, LLMs have potential to serve as accessible precursors, adjuncts, or alternatives to traditional therapy. However, little is known about the opinions of persons who have used LLMs for mental health-related problems. Thus, the current work investigated the positive and negative experiences of those who have interacted with ChatGPT for their mental health using posts from relevant Reddit threads (N = 1594). A 33-item coding scheme was applied to code the presence/absence of each item, and coded posts were modeled using an Ising network graph to explore pairwise and groupwise thematic associations of items. Results from the qualitative coding indicated that the codes representing positive sentiment, experiencing affect/emotion, and attaining personal benefit from using ChatGPT for therapy were among the most frequently coded. Moreover, the Ising network model revealed the most important associations were between items representing positive experiences with ChatGPT (e.g., it performs better than a human therapist in some way and is empathetic), negative experiences (e.g., restrictions worsened their mental health), and specific pathologies (e.g., used it for both anxiety and stress). In addition, the node representing ChatGPT as functioning well as a therapist was the most central node in the network Taken together, the current study indicates that, while users endorse several benefits from using ChatGPT for their mental health, they also report significant drawbacks, including restrictions by ChatGPT that can harm them or exacerbate their symptoms. Thus, ChatGPT may be a useful tool for persons not able to receive standard care, but it may not be as beneficial for persons with more severe pathologies or mental health concerns."
-    },
-    {
-      "id": "companion_f2ab4af8a94c",
-      "title": "Woebot",
-      "url": "https://woebothealth.com",
-      "date": "2018-09-01",
-      "source": "Woebot Health",
-      "summary": "Cognitive Behavioural Therapy (CBT) principles. Structured, evidence-based conversations. Not a freeform chatbot. | Safety: Clinical oversight. No open-ended roleplay. FDA Breakthrough Device designation sought. Peer-reviewed studies published. | Concerns: Effectiveness disputed in some studies. Limited to CBT framework.",
-      "category": "therapy_structured",
-      "severity": "medium",
-      "raw_snippet": "Approach: Cognitive Behavioural Therapy (CBT) principles. Structured, evidence-based conversations. Not a freeform chatbot.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Woebot Health",
-      "doi": null,
-      "venue": "Structured Therapy",
-      "abstract": "{\"developer\": \"Woebot Health\", \"launched\": \"2017\", \"approach\": \"Cognitive Behavioural Therapy (CBT) principles. Structured, evidence-based conversations. Not a freeform chatbot.\", \"safety\": \"Clinical oversight. No open-ended roleplay. FDA Breakthrough Device designation sought. Peer-reviewed studies published.\", \"concerns\": \"Effectiveness disputed in some studies. Limited to CBT framework.\", \"target\": \"Anxiety, depression, stress\", \"cost\": \"Free (some features paid)\", \"clinical_oversight\": true, \"category\": \"therapy_structured\", \"category_label\": \"Structured Therapy\"}"
-    },
-    {
-      "id": "companion_bc5928286f34",
-      "title": "Wysa",
-      "url": "https://www.wysa.com",
-      "date": "2018-01-01",
-      "source": "Wysa Inc.",
-      "summary": "Evidence-based mental health support using CBT, DBT, mindfulness. Penguin mascot interface reduces clinical intimidation. | Safety: ORCHA certified. NHS approved for some trusts. Clinical team oversight. ISO 27001. | Concerns: Limited scope — not a replacement for therapy.",
-      "category": "therapy_structured",
-      "severity": "medium",
-      "raw_snippet": "Approach: Evidence-based mental health support using CBT, DBT, mindfulness. Penguin mascot interface reduces clinical intimidation.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Wysa Inc.",
-      "doi": null,
-      "venue": "Structured Therapy",
-      "abstract": "{\"developer\": \"Wysa Inc.\", \"launched\": \"2016\", \"approach\": \"Evidence-based mental health support using CBT, DBT, mindfulness. Penguin mascot interface reduces clinical intimidation.\", \"safety\": \"ORCHA certified. NHS approved for some trusts. Clinical team oversight. ISO 27001.\", \"concerns\": \"Limited scope \\u2014 not a replacement for therapy.\", \"target\": \"Anxiety, depression, workplace stress\", \"cost\": \"Freemium (B2B enterprise model)\", \"clinical_oversight\": true, \"category\": \"therapy_structured\", \"category_label\": \"Structured Therapy\"}"
-    },
-    {
-      "id": "companion_c4cae9cd45af",
-      "title": "Youper",
-      "url": "https://www.youper.ai",
-      "date": "2018-01-01",
-      "source": "Youper Inc.",
-      "summary": "AI-assisted emotional health monitoring. Tracks mood, uses CBT techniques, provides insights over time. | Safety: Clinical advisors involved. Published research. Not a crisis tool. | Concerns: Data privacy concerns around mental health data.",
-      "category": "therapy_structured",
-      "severity": "medium",
-      "raw_snippet": "Approach: AI-assisted emotional health monitoring. Tracks mood, uses CBT techniques, provides insights over time.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Youper Inc.",
-      "doi": null,
-      "venue": "Structured Therapy",
-      "abstract": "{\"developer\": \"Youper Inc.\", \"launched\": \"2016\", \"approach\": \"AI-assisted emotional health monitoring. Tracks mood, uses CBT techniques, provides insights over time.\", \"safety\": \"Clinical advisors involved. Published research. Not a crisis tool.\", \"concerns\": \"Data privacy concerns around mental health data.\", \"target\": \"Mood tracking, anxiety, depression\", \"cost\": \"Freemium ($69.99/yr)\", \"clinical_oversight\": true, \"category\": \"therapy_structured\", \"category_label\": \"Structured Therapy\"}"
-    },
-    {
-      "id": "companion_7db73c184d98",
-      "title": "Replika",
-      "url": "https://replika.com",
-      "date": "2017-07-01",
-      "source": "Luka Inc.",
-      "summary": "Open-ended AI companion designed for emotional support and friendship. Users can define relationship type. | Safety: No clinical oversight. Crisis keywords trigger helpline prompts. Romantic features controversial. | Concerns: Multiple documented cases of unhealthy attachment. Removed erotic roleplay in 2023 causing user distress. Cited in several cases on this tracker.",
-      "category": "companion_open",
-      "severity": "medium",
-      "raw_snippet": "Approach: Open-ended AI companion designed for emotional support and friendship. Users can define relationship type.",
-      "scraped_at": null,
-      "source_type": "companion",
-      "authors": "Luka Inc.",
-      "doi": null,
-      "venue": "Open Companion",
-      "abstract": "{\"developer\": \"Luka Inc.\", \"launched\": \"2017\", \"approach\": \"Open-ended AI companion designed for emotional support and friendship. Users can define relationship type.\", \"safety\": \"No clinical oversight. Crisis keywords trigger helpline prompts. Romantic features controversial.\", \"concerns\": \"Multiple documented cases of unhealthy attachment. Removed erotic roleplay in 2023 causing user distress. Cited in several cases on this tracker.\", \"target\": \"Loneliness, social anxiety, grief\", \"cost\": \"Freemium ($69.99/yr for Pro)\", \"clinical_oversight\": false, \"category\": \"companion_open\", \"category_label\": \"Open Companion\"}"
     },
     {
       "id": "academic_7d4b20cf6cb7",
@@ -4404,12 +4273,7 @@
     "labels": [
       "2010-06",
       "2017-06",
-      "2017-07",
-      "2018-01",
-      "2018-09",
       "2021-06",
-      "2021-11",
-      "2022-03",
       "2022-06",
       "2022-07",
       "2023-02",
@@ -4447,7 +4311,6 @@
       1,
       1,
       1,
-      2,
       1,
       1,
       1,
@@ -4455,10 +4318,6 @@
       1,
       1,
       1,
-      1,
-      1,
-      2,
-      2,
       1,
       1,
       1,
@@ -4496,12 +4355,8 @@
       "homicide_delusional",
       "identity_confusion",
       "violence_delusional",
-      "companion_open",
-      "therapy_structured",
       "paranoia",
-      "financial_ruin_delusion",
-      "assistant_empathic",
-      "tracker"
+      "financial_ruin_delusion"
     ],
     "labels": [
       "Reality Distortion",
@@ -4512,12 +4367,8 @@
       "homicide_delusional",
       "Identity Confusion",
       "violence_delusional",
-      "companion_open",
-      "therapy_structured",
       "Paranoia",
-      "financial_ruin_delusion",
-      "assistant_empathic",
-      "tracker"
+      "financial_ruin_delusion"
     ],
     "values": [
       78,
@@ -4528,18 +4379,14 @@
       5,
       3,
       3,
-      3,
-      3,
       2,
-      1,
-      1,
       1
     ]
   },
   "severity_counts": {
     "critical": 9,
     "high": 36,
-    "medium": 80,
+    "medium": 72,
     "low": 134
   },
   "date_range": {

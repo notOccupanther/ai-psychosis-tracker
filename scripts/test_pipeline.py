@@ -299,6 +299,65 @@ class TestSitemap(unittest.TestCase):
                           'an unlinked methodology page will not be found')
 
 
+class TestCompanionWatchlist(unittest.TestCase):
+    """The watchlist is a register of products, not a list of incidents."""
+
+    def test_no_companions_left_in_the_case_corpus(self):
+        cases = common.load_data()['cases']
+        stray = [c for c in cases if c.get('source_type') == 'companion']
+        self.assertEqual(stray, [], 'product entries inflate the trend and severity counts')
+
+    def test_launch_dates_are_absent_from_the_harm_trend(self):
+        """App launches once formed entire early points on the trend chart."""
+        launches = {(c['launched'] or '')[:7]
+                    for c in common.load_companions()['companions'] if c.get('launched')}
+        case_months = {common.month_key(c.get('date')) for c in common.load_data()['cases']}
+        trend = dict(zip(*(common.load_data()['trend'][k] for k in ('labels', 'values'))))
+        for month in launches - case_months:
+            self.assertNotIn(month, trend, f'{month} appears in the trend with no case behind it')
+
+    def test_watchlist_entries_have_what_the_ui_renders(self):
+        comps = common.load_companions()['companions']
+        self.assertTrue(comps)
+        seen = set()
+        for c in comps:
+            for key in ('id', 'name', 'url', 'category', 'launched'):
+                self.assertTrue(c.get(key), f'{c.get("name")} missing {key}')
+            self.assertNotIn(c['id'], seen, 'duplicate watchlist id')
+            seen.add(c['id'])
+
+    def test_status_is_null_until_verified(self):
+        """Asserting a lifecycle we have not checked is worse than admitting none."""
+        for c in common.load_companions()['companions']:
+            if c.get('status') is not None:
+                self.assertTrue(c.get('status_checked'),
+                                f'{c["name"]} claims a status with no check date')
+
+    def test_watchlist_drives_its_own_queries(self):
+        import scrape
+        queries = scrape.watchlist_queries()
+        names = [c['name'] for c in common.load_companions()['companions']]
+        self.assertEqual(len(queries), len(names))
+        for name in names:
+            self.assertTrue(any(f'"{name}"' in q for q in queries), name)
+
+    def test_product_attribution(self):
+        import scrape
+        comps = common.load_companions()['companions']
+        self.assertEqual(
+            scrape.attribute_product({'title': 'Character.AI sued over teen death', 'summary': ''}, comps),
+            'Character.AI')
+        self.assertIsNone(
+            scrape.attribute_product({'title': 'Nvidia earnings beat estimates', 'summary': ''}, comps))
+
+    def test_attributed_products_exist_on_the_watchlist(self):
+        names = {c['name'] for c in common.load_companions()['companions']}
+        for c in common.load_data()['cases']:
+            if c.get('product'):
+                self.assertIn(c['product'], names,
+                              'a case attributed to an app not on the watchlist')
+
+
 class TestCommentary(unittest.TestCase):
     """index.html reads these fields directly; a rename blanks the card."""
 

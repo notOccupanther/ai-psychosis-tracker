@@ -28,8 +28,9 @@ from datetime import datetime, timedelta, timezone
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from classify import guess_category, guess_severity, is_relevant  # noqa: E402
-from common import (USER_AGENT, existing_urls, load_data, load_excluded,  # noqa: E402
-                    make_id, normalise_url, recompute, save_data)
+from common import (USER_AGENT, existing_urls, load_companions,  # noqa: E402
+                    load_data, load_excluded, make_id, normalise_url,
+                    recompute, save_data)
 
 TIMEOUT = 20
 
@@ -99,6 +100,33 @@ GOOGLE_NEWS_QUERIES = [
     'Character.AI OR Replika mental health',
     'chatbot encouraged delusions family',
 ]
+
+# Harm terms paired with a watchlist app name. Naming the product is what makes
+# these queries precise: "Replika" plus "lawsuit" has almost no false-positive
+# surface, where a generic query for chatbot harm has a great deal.
+WATCHLIST_HARM_TERMS = (
+    'psychosis OR delusion OR suicide OR lawsuit OR "mental health" '
+    'OR addiction OR banned OR investigation'
+)
+
+
+def watchlist_queries():
+    """One targeted news query per app on the companion watchlist."""
+    names = [c['name'] for c in load_companions().get('companions', []) if c.get('name')]
+    return [f'"{name}" ({WATCHLIST_HARM_TERMS})' for name in names]
+
+
+def attribute_product(case, companions):
+    """Tag a case with the watchlist app it names, if any."""
+    text = ((case.get('title') or '') + ' ' + (case.get('summary') or '')).lower()
+    for comp in companions:
+        name = (comp.get('name') or '').lower()
+        # "Pi (Inflection AI)" would never match literally; use the leading token.
+        short = name.split(' (')[0].strip()
+        if short and len(short) > 2 and short in text:
+            return comp['name']
+    return None
+
 
 BRAVE_QUERIES = [
     'AI psychosis chatbot delusion',
@@ -419,6 +447,7 @@ def collect(days):
     jobs += [(f'openalex: {q[:34]}', scrape_openalex, (q, days)) for q in OPENALEX_QUERIES]
     jobs += [(f'rss: {name}', scrape_rss, (url, days, name)) for url, name in RSS_FEEDS.items()]
     jobs += [(f'news: {q[:40]}', scrape_google_news, (q, days)) for q in GOOGLE_NEWS_QUERIES]
+    jobs += [(f'watchlist: {q[:38]}', scrape_google_news, (q, days)) for q in watchlist_queries()]
 
     brave_key = os.environ.get('BRAVE_API_KEY', '').strip()
     if brave_key:
@@ -448,6 +477,7 @@ def main():
     data = load_data()
     before = len(data['cases'])
     excluded = load_excluded()
+    companions = load_companions().get('companions', [])
     seen = existing_urls(data) | {normalise_url(u) for u in excluded}
     log(f'Existing cases: {before} (plus {len(excluded)} previously rejected URLs)')
 
@@ -474,6 +504,9 @@ def main():
         if not c.get('date'):
             c['date'] = datetime.now(timezone.utc).strftime('%Y-%m-%d')
         # Flags the keyword-assigned labels for the weekly Claude review pass.
+        product = attribute_product(c, companions)
+        if product:
+            c['product'] = product
         c['needs_review'] = True
         added.append(c)
 
