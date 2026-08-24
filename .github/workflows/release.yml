@@ -1,8 +1,8 @@
 name: Release
 
 # Zenodo archives a repository when GitHub publishes a release, minting a DOI
-# for that snapshot. Pushing a tag is enough to trigger it; the release itself
-# is created here so no manual step is needed at tag time.
+# for that snapshot. Pushing a v* tag is enough; the release is created here so
+# there is no manual step at tag time.
 on:
   push:
     tags: ['v*']
@@ -20,33 +20,17 @@ jobs:
         with:
           python-version: '3.11'
 
+      # Written to a file rather than a step output: release notes are
+      # multi-line, and interpolating them into a shell command breaks on any
+      # quote or newline in the data.
       - name: Build release notes from the dataset
-        id: notes
-        run: |
-          python - <<'PY' >> "$GITHUB_OUTPUT"
-          import json, sys
-          sys.path.insert(0, 'scripts')
-          import common
-          d = common.load_data()
-          r = d.get('date_range', {})
-          sources = len({c.get('source') for c in d['cases']})
-          academic = sum(1 for c in d['cases'] if c.get('source_type') == 'academic')
-          print('body<<EOF')
-          print(f"Snapshot of the AI Psychosis Watch dataset.\n")
-          print(f"- **{d['total_cases']}** cases ({academic} academic) from **{sources}** sources")
-          print(f"- Coverage: {r.get('from', '?')} to {r.get('to', '?')}")
-          print(f"- Generated: {d.get('generated_at', '?')}\n")
-          print("Entries document reports, not verified diagnoses, and counts reflect "
-                "coverage rather than incidence. See "
-                "https://aipsychosis.watch/methodology.html")
-          print('EOF')
-          PY
+        run: python scripts/release_notes.py > RELEASE_NOTES.md
 
       - name: Publish release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" \
-            --title "${GITHUB_REF_NAME}" \
-            --notes "${{ steps.notes.outputs.body }}" \
-            data.json feed.xml excluded.json
+          gh release create "$GITHUB_REF_NAME" \
+            data.json feed.xml excluded.json \
+            --title "$GITHUB_REF_NAME" \
+            --notes-file RELEASE_NOTES.md
