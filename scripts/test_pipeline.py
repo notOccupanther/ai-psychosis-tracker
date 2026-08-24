@@ -17,6 +17,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import classify  # noqa: E402
 import common  # noqa: E402
 import generate_sitemap  # noqa: E402
+import release_notes  # noqa: E402
 import scrape  # noqa: E402
 
 ARXIV_FIXTURE = b'''<?xml version="1.0" encoding="UTF-8"?>
@@ -296,6 +297,20 @@ class TestSitemap(unittest.TestCase):
         with open(os.path.join(common.ROOT, 'index.html'), encoding='utf-8') as f:
             self.assertIn('methodology.html', f.read(),
                           'an unlinked methodology page will not be found')
+
+
+class TestReleaseNotes(unittest.TestCase):
+    def test_notes_describe_the_snapshot(self):
+        import contextlib, io
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            release_notes.main()
+        out = buf.getvalue()
+        d = common.load_data()
+        self.assertIn(str(d['total_cases']), out)
+        self.assertIn('methodology.html', out)
+        self.assertIn(d['date_range']['to'], out)
+        self.assertTrue(out.strip(), 'empty notes would publish a blank release')
 
 
 class TestExclusions(unittest.TestCase):
