@@ -1,11 +1,17 @@
 name: Release
 
 # Zenodo archives a repository when GitHub publishes a release, minting a DOI
-# for that snapshot. Pushing a v* tag is enough; the release is created here so
-# there is no manual step at tag time.
+# for that snapshot.
+#
+# Releases are driven by the VERSION file rather than by pushing a tag,
+# because tag pushes are not available to every contributor here. Bump VERSION
+# on main and this creates the matching tag and release — gh creates the tag
+# as part of publishing, so no tag push is needed.
 on:
   push:
-    tags: ['v*']
+    branches: [main]
+    paths: ['VERSION']
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -20,17 +26,39 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Resolve version
+        id: v
+        run: |
+          version="v$(tr -d '[:space:]' < VERSION)"
+          echo "tag=$version" >> "$GITHUB_OUTPUT"
+          echo "Releasing $version"
+
+      - name: Skip if already released
+        id: check
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh release view "${{ steps.v.outputs.tag }}" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+            echo "${{ steps.v.outputs.tag }} already released — nothing to do."
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+
       # Written to a file rather than a step output: release notes are
       # multi-line, and interpolating them into a shell command breaks on any
       # quote or newline in the data.
       - name: Build release notes from the dataset
+        if: steps.check.outputs.exists == 'false'
         run: python scripts/release_notes.py > RELEASE_NOTES.md
 
       - name: Publish release
+        if: steps.check.outputs.exists == 'false'
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "$GITHUB_REF_NAME" \
+          gh release create "${{ steps.v.outputs.tag }}" \
             data.json feed.xml excluded.json \
-            --title "$GITHUB_REF_NAME" \
+            --target "$GITHUB_SHA" \
+            --title "${{ steps.v.outputs.tag }}" \
             --notes-file RELEASE_NOTES.md
