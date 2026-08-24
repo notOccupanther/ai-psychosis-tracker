@@ -44,6 +44,8 @@ them by hand.
 | Source | Key required |
 |---|---|
 | PubMed (E-utilities) | no |
+| Europe PMC | no |
+| OpenAlex | no |
 | arXiv | no |
 | Semantic Scholar | no |
 | RSS (Guardian, Futurism, PsyPost, WIRED, MIT TR, Ars Technica, 404 Media, TechCrunch) | no |
@@ -52,6 +54,20 @@ them by hand.
 
 The general AI feeds carry mostly unrelated industry news; the Google News
 search queries are what actually surface media cases.
+
+Europe PMC indexes PubMed plus preprint servers (medRxiv, PsyArXiv under
+`SRC:PPR`) and more non-US journals, so case reports are picked up before they
+reach a journal. A separate medRxiv API is therefore not needed. OpenAlex has
+broader coverage than Semantic Scholar; both run, and duplicates collapse on the
+normalised URL since all four academic sources resolve to a DOI where one
+exists.
+
+**Not yet covered.** Non-English media, and primary legal/regulatory sources
+(court filings, FTC and state AG actions, Garante, Ofcom) — the latter being
+where the strongest evidence in this domain lives, currently reaching the
+tracker only via secondary reporting. Note that adding non-English feeds
+requires extending the vocabulary in `classify.py` first: it is English-only, so
+foreign-language results would be silently rejected by the relevance filter.
 
 A single source failing is logged and the run continues. If *every* source
 fails, the run refuses to write `data.json` rather than publishing an empty
