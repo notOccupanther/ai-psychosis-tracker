@@ -333,6 +333,30 @@ class TestCompanionWatchlist(unittest.TestCase):
                 self.assertTrue(c.get('status_checked'),
                                 f'{c["name"]} claims a status with no check date')
 
+    def test_companion_branch_runs_before_the_empty_case_guard(self):
+        """The watchlist is not sourced from allData.cases.
+
+        renderTimeline() filters cases by tab and bails out early when none
+        match. Once companions left the case corpus that filter returned
+        nothing, so the guard fired first and the tab rendered "No cases match
+        the current filters" — the watchlist branch below it was unreachable.
+        """
+        with open(os.path.join(common.ROOT, 'index.html'), encoding='utf-8') as f:
+            html = f.read()
+        branch = html.index('// Companions tab')
+        guard = html.index('No cases match the current filters')
+        self.assertLess(branch, guard,
+                        'the watchlist branch must run before the case-based empty guard')
+
+    def test_charts_cannot_take_down_the_data(self):
+        """Chart.js is a CDN dependency; the case list must survive its absence."""
+        with open(os.path.join(common.ROOT, 'index.html'), encoding='utf-8') as f:
+            html = f.read()
+        for call in ('renderTrend(); renderCatChart();', 'renderCompanionCharts();'):
+            i = html.index(call)
+            self.assertIn('try {', html[max(0, i - 120):i],
+                          f'{call} must be guarded so a CDN failure cannot blank the page')
+
     def test_watchlist_drives_its_own_queries(self):
         import scrape
         queries = scrape.watchlist_queries()

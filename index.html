@@ -1446,8 +1446,8 @@ async function loadData() {
 function render() {
   if (!allData) return;
   renderStats();
-  renderTrend();
-  renderCatChart();
+  try { renderTrend(); renderCatChart(); }
+  catch (e) { console.error('chart rendering failed (data is unaffected):', e); }
   renderTimeline();
   document.getElementById('lastUpdated').textContent =
     'Updated: ' + new Date(allData.generated_at).toLocaleString('en-IE');
@@ -1580,10 +1580,49 @@ function renderTimeline() {
   const sortBy = document.getElementById('sortBy').value;
   const search = document.getElementById('searchInput').value.toLowerCase().trim();
 
+  // Companions tab — a watchlist of the companion-app space, not a case list.
+  if (currentTab === 'companion') {
+    const compCats = ['therapy_structured','assistant_empathic','tracker','companion_open'];
+    const compLabels = {'therapy_structured':'Structured Therapy Apps','assistant_empathic':'Empathic Assistants','tracker':'Mood Trackers','companion_open':'Open Companion Apps'};
+    const compColors = {'therapy_structured':'#22c55e','assistant_empathic':'#3b82f6','tracker':'#8b5cf6','companion_open':'#ef4444'};
+    const timeline = document.getElementById('timeline');
+    let list = allCompanions.slice();
+    if (search) list = list.filter(c => ((c.name||'') + ' ' + (c.vendor||'') + ' ' + (c.approach||'')).toLowerCase().includes(search));
+    const grouped = {};
+    list.forEach(c => {
+      const key = c.category || 'companion_open';
+      (grouped[key] = grouped[key] || []).push(c);
+    });
+    const intro = `<div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.6rem;padding:1rem 1.25rem;margin-bottom:1rem;font-size:0.85rem;color:var(--muted);line-height:1.7">
+      🤝 <strong style="color:var(--text)">Companion app watchlist</strong> — a register of the companion and AI mental-health space, monitored for proliferation. These are <em>not</em> cases: an app appears here because it exists and is worth watching, not because harm has been reported. Each entry shows whether any case in this tracker names it. Counts here are excluded from the case statistics above.
+    </div>`;
+    const groups = compCats.filter(k => grouped[k]);
+    document.getElementById('resultsCount').textContent =
+      `${list.length} app${list.length !== 1 ? 's' : ''}`;
+    timeline.innerHTML = intro + (groups.length
+      ? groups.map(k => {
+          const items = grouped[k];
+          const gid = 'cgroup_' + k;
+          return `<div class="category-group" id="${gid}">
+            <div class="category-group-header" onclick="toggleGroup('${gid}')">
+              <div style="display:flex;align-items:center;gap:0.7rem">
+                <span style="font-weight:700;color:${compColors[k]};font-size:0.95rem">${compLabels[k]}</span>
+                <span style="background:var(--surface3);border:1px solid var(--border);border-radius:1rem;padding:0.15rem 0.6rem;font-size:0.72rem;color:var(--muted)">${items.length}</span>
+              </div>
+              <span class="group-chevron open">▼</span>
+            </div>
+            <div class="category-group-body" style="display:flex;flex-direction:column;gap:0.6rem;padding:0.75rem 0 0.25rem 0">
+              ${items.map(c => renderCompanionCard(c)).join('')}
+            </div>
+          </div>`;
+        }).join('')
+      : '<div class="empty">No watchlist entries match.</div>');
+    return;
+  }
+
   // Split by tab
   let cases = allData.cases.filter(c => {
     if (currentTab === 'academic') return c.source_type === 'academic';
-    if (currentTab === 'companion') return c.source_type === 'companion';
     return c.source_type === 'media' || !c.source_type;
   });
 
@@ -1629,43 +1668,6 @@ function renderTimeline() {
     timeline.innerHTML = cases.length
       ? academicIntro + cases.map(c => renderAcademicCard(c)).join('')
       : academicIntro + '<div class="empty">No academic papers found yet — scraper runs weekly.</div>';
-    return;
-  }
-
-  // Companions tab — a watchlist of the companion-app space, not a case list.
-  if (currentTab === 'companion') {
-    const compCats = ['therapy_structured','assistant_empathic','tracker','companion_open'];
-    const compLabels = {'therapy_structured':'Structured Therapy Apps','assistant_empathic':'Empathic Assistants','tracker':'Mood Trackers','companion_open':'Open Companion Apps'};
-    const compColors = {'therapy_structured':'#22c55e','assistant_empathic':'#3b82f6','tracker':'#8b5cf6','companion_open':'#ef4444'};
-    let list = allCompanions.slice();
-    if (search) list = list.filter(c => ((c.name||'') + ' ' + (c.vendor||'') + ' ' + (c.approach||'')).toLowerCase().includes(search));
-    const grouped = {};
-    list.forEach(c => {
-      const key = c.category || 'companion_open';
-      (grouped[key] = grouped[key] || []).push(c);
-    });
-    const intro = `<div style="background:var(--surface2);border:1px solid var(--border);border-radius:0.6rem;padding:1rem 1.25rem;margin-bottom:1rem;font-size:0.85rem;color:var(--muted);line-height:1.7">
-      🤝 <strong style="color:var(--text)">Companion app watchlist</strong> — a register of the companion and AI mental-health space, monitored for proliferation. These are <em>not</em> cases: an app appears here because it exists and is worth watching, not because harm has been reported. Each entry shows whether any case in this tracker names it. Counts here are excluded from the case statistics above.
-    </div>`;
-    const groups = compCats.filter(k => grouped[k]);
-    timeline.innerHTML = intro + (groups.length
-      ? groups.map(k => {
-          const items = grouped[k];
-          const gid = 'cgroup_' + k;
-          return `<div class="category-group" id="${gid}">
-            <div class="category-group-header" onclick="toggleGroup('${gid}')">
-              <div style="display:flex;align-items:center;gap:0.7rem">
-                <span style="font-weight:700;color:${compColors[k]};font-size:0.95rem">${compLabels[k]}</span>
-                <span style="background:var(--surface3);border:1px solid var(--border);border-radius:1rem;padding:0.15rem 0.6rem;font-size:0.72rem;color:var(--muted)">${items.length}</span>
-              </div>
-              <span class="group-chevron open">▼</span>
-            </div>
-            <div class="category-group-body" style="display:flex;flex-direction:column;gap:0.6rem;padding:0.75rem 0 0.25rem 0">
-              ${items.map(c => renderCompanionCard(c)).join('')}
-            </div>
-          </div>`;
-        }).join('')
-      : '<div class="empty">No watchlist entries match.</div>');
     return;
   }
 
@@ -1853,7 +1855,10 @@ function switchTab(tab) {
   document.getElementById('mediaCharts').style.display = isMedia ? '' : 'none';
   document.getElementById('companionCharts').style.display = isCompanion ? '' : 'none';
   document.getElementById('tab-about').style.display = isAbout ? '' : 'none';
-  if (isCompanion) renderCompanionCharts();
+  if (isCompanion) {
+    try { renderCompanionCharts(); }
+    catch (e) { console.error('chart rendering failed (data is unaffected):', e); }
+  }
   renderTimeline();
 }
 
